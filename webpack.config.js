@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -22,6 +23,10 @@ var webpackConfig = {
         // your Angular Async Route paths relative to this root directory
       }
     ),
+    new CopyWebpackPlugin([{
+      from: 'src/assets',
+      to: 'assets'
+    }]),
   ],
 
   module: {
@@ -36,7 +41,8 @@ var webpackConfig = {
         ]
       },
       { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' }
+      { test: /\.html$/, loader: 'raw-loader' },
+      { test: /\.(png|jpg|gif)$/, exclude: /node_modules/, loader: "url?limit=8092" }
     ]
   }
 
