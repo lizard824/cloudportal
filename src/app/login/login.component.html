@@ -1,0 +1,6 @@
+<form [formGroup]="loginForm">
+  Username: <input type="text" name="username" formControlName="username">
+  Password: <input type="password" name="username" formControlName="password">
+  <span style="color:red">{{ formErrors.password }}</span>
+  <button type="submit">Login</button>
+</form>
