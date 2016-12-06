@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset=UTF-8>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Angular2 Seed</title>
     <base href="/">
   </head>
@@ -16,7 +16,7 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
 p,h4,h5{
 	cursor:pointer
@@ -36,6 +36,15 @@ body{
 	font-family: 微软雅黑;
 }
   </style>
+  <script type="text/javascript">
+  	onload=function(){
+  		// rem布局
+           document.documentElement.style.fontSize = innerWidth / 16+'px';
+	     onresize = function(){
+		       document.documentElement.style.fontSize = innerWidth / 16+'px';
+	          };
+  	}
+  </script>
   <body>
 
     <app>
