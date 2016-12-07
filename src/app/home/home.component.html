@@ -1,42 +1,50 @@
 <!--<h3>Home Component</h3>-->
-<!--导航-->
-<div class="xhead">
+<div id="china">
+	<!--导航-->
+<div class="xhead" id="xhead">
 	<div class="xnav">
+
 		<ul class="xnav_ul">
 			<li class="no_margin">
-				<a href="javascript:;">
-					Lenovo 联想
+				<a href="#first" name="first">
+					<img src="images/logo.png" alt="logo" id="change_src">
 				</a>
 			</li>
 			<li>
-				<a href="javascript:;">
+				<a href="#second" name="second"> 
 				IaaS
 				</a>
 			</li>
 			<li>
-				<a href="javascript:;">
-				PaaS
+				<a href="#third" name="third">
+				PaaS	
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="javascript:;">
 					产品
 				</a>
-			</li>
+			</li> -->
 		</ul>
+
 		<div class="texttab">
 			<p>
-				<span>中文</span>/<span>English</span>
+				<span>中文</span>/<span id="eng">English</span>
 			</p>
 		</div>
 		
 			<ul class="nav_log">
 				<li class="no_margin">
-					<a href="javascript:;">
+					<a href="javascript:;" id="login">
 						登录
 					</a>
 				</li>
 				<li>
+					<a href="javascript:;">
+						/
+					</a>
+				</li>
+				<li id="sign">
 					<a href="javascript:;">
 						注册
 					</a>
@@ -45,18 +53,377 @@
 		
 	</div>
 </div>
+
+<!-- 登录 -->
+   <div class="login" id="wlog">
+	<div class="xlog logopt" id="log">
+        <img src="images/close.png" alt="" class="close" id="close">
+		<div class="form">
+			<form class="">
+			  <div class="inpu">
+				<img src="images/name.png" alt="">
+				<input type="text" value="user name">
+			   </div>
+			   <div class="inpu">
+				<img src="images/password.png" alt="">
+				<input type="text" value="passworder">
+			   </div>
+		    </form>
+		    <div class="rember">
+		    	<span class="wite">
+		    		<span class="dot">
+		    			
+		    		</span>
+		    	</span>
+		    	<p>Rember me</p>
+		    </div>
+		    <button class="buton" type="button">
+		    	login
+		    </button>
+		</div>					
+	</div>
+</div>	
+<!-- 登录结束 -->
+<!-- 注册 -->
+<!-- 注册 -->
+<div class="login sign" id="signbj">
+	<div class="xlog logopt" id="sig">
+        	<img src="images/close.png" alt="" class="close" id="closesig">
+		<div class="form">
+			<form class="">
+			  <div class="inpu">
+				 <img src="images/name.png" alt="">
+				 <input type="text" value="user name">
+			   </div>
+			   <div class="inpu">
+				 <img src="images/email.png" alt="">
+				 <input type="text" value="email">
+			   </div>
+			   <div class="inpu">
+				 <img src="images/name.png" alt="">
+				 <input type="text" value="real name">
+			   </div>
+			   <div class="inpu">
+				 <img src="images/password.png" alt="">
+				 <input type="text" value="passworder">
+			   </div>
+		    </form>
+		    <button class="buton sbuton" type="button">
+		    	sign in
+		    </button>
+		</div>
+				
+	</div>
+</div>	
+<!-- 注册结束 -->
 <!--导航结束-->
 <!--第一屏-->
-<div class="top_banner">
+
+<div class="top_banner" id="first">
+  <video autoplay="autoplay" loop="loop">
+   <source src="assets/file.mp4" type="video/mp4" />          
+  </video> 
+ 
+  <div class="banner_first" id="banner_first" style="display:block;">
+  	   <span class="banner_first_one">
+  	   	  <p class="h4">
+  	   	  	Hello PaaS and Iaas
+  	   	  </p>
+    	<p>
+    		简化现代应用程序的开发、运行和维护管理
+    	</p>
+  	   </span>   	
+  </div>
+
+  <div class="banner_first banner_second" id="banner_second">
+  	   <span class="banner_first_two">
+  	   	 
+  	   </span>   	
+  </div>
+  <div class="banner_first banner_second" id="banner_third">
+  	   <span class="banner_first_two black">
+  	   	 
+  	   </span>   	
+  </div>
+   <div class="banner_first banner_second" id="banner_forth">
+  	   <span class="banner_first_two red">
+  	   	 
+  	   </span>   	
+  </div>
+   <div class="banner_first banner_second" id="banner_fifth">
+  	   <span class="banner_first_two yellow">
+  	   	 
+  	   </span>   	
+  </div>
+   <ul class="tab_ul" id="tab_ul">
+  	<li class="active"></li>
+  	<li></li>
+  	<li></li>
+  	<li></li>
+  	<li></li>
+  </ul>
+</div>
+<!--第一屏结束-->
+
+
+<!--第二屏开始-->
+	
+<div class="cen_banner" id="second">
+		<div class="cen_left">
+			<p class="h3">IaaS</p>
+			<p>
+				shake it like I`m supposed to do! 	<br>
+				We know that shit ain't real Com on now,make it stop
+			</p>			
+			<p>
+				I'm all 'bout that bass,
+			</p>
+			<p class="cen_more">
+				To view more > >
+			</p>			
+		</div>
+ <img src="images/pass.png" alt="iaas" class="cen_right" />
+</div>
+	
+<!--第二屏结束-->
+	
+<!--第三屏开始-->
+<div class="th_banner" id="third">
+	   	  
+	   	  <div class="th_right">
+			<p  class=" h3">PaaS</p>
+			<p class="">
+				shake it like I`m supposed to do! 	<br>
+				We know that shit ain't real Com on now,make it stop
+			</p>
+			
+			<p  class="">
+				I'm all 'bout that bass,
+			</p>
+			<p class="cen_more">
+				To view more > >
+			</p>			
+		</div>
+   <div id="div" class="th_left">
+	<div class="font"><img src="images/5.jpg"></div>
+	<div class="botto"><img src="images/6.jpg"></div>
+	<div class="left"><img src="images/7.jpg"></div>
+	<div class="right"><img src="images/8.jpg"></div>
+   </div>
+		
+</div>
+<!--第三屏结束-->
+
+<!-- 第四屏 -->
+<div class="forth" style="display:none;">
+	<ul class="forth_ul">
+		<li class="forth_no">
+			<p class="ul_first">可部署到每个员工</p>
+			<img src="images/peo.png" alt="">
+			<p>在移动和PC设备上都可安全的访问</p>
+		</li>
+		<li>
+			<p class="ul_first">可部署到每个员工</p>
+			<img src="images/cloud.png" alt="">
+			<p>在移动和PC设备上都可安全的访问</p>
+		</li>
+		<li>
+			<p class="ul_first">可部署到每个员工</p>
+			<img src="images/yingyong.png" alt="">
+			<p>在移动和PC设备上都可安全的访问</p>
+		</li>
+	</ul>
+</div>
+
+<!-- 第四屏结束 -->
+
+
+ <!-- 底部 -->
+ <div class="footer">
+ 	<div class="footer_center" id="footer_center">
+ 		<ul class="footer_ul_first">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_cen">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_rig">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<p class="last">IAAS AND PAAS有限公司版权所有    Lenovo  ALL RIGHT RESERVED</p>
+ 	</div>
+ </div>
+     <!-- 底部结束 -->
+</div>
+
+
+<!-- 英文版 -->
+<div id="english">
+	<!--导航-->
+<div class="xhead" id="enxhead">
+	<div class="xnav">
+		<ul class="xnav_ul">
+			<li class="no_margin">
+				<a href="#firsta" name="firsta">
+					<img src="images/logo.png" alt="logo" id="enchange_src">
+				</a>
+			</li>
+			<li>
+				<a href="#secondb" name="secondb"> 
+				IaaS
+				</a>
+			</li>
+			<li>
+				<a href="#thirdc" name="thirdc">
+				PaaS	
+				</a>
+			</li>
+			<!-- <li>
+				<a href="javascript:;">
+					Pro
+				</a>
+			</li> -->
+		</ul>
+		<div class="texttab">
+			<p>
+				<span id="cha">中文</span>/<span>English</span>
+			</p>
+		</div>
+		
+			<ul class="nav_log">
+				<li class="no_margin">
+					<a href="javascript:;" id="enlogin">
+						Login
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">/</a>
+					
+				</li>
+				<li>
+					<a href="javascript:;" id="ensign">
+						sign in
+					</a>
+				</li>
+			</ul>		
+	</div>
+</div>
+<!--导航结束-->
+<!-- 登录 -->
+   <div class="login" id="enwlog">
+	<div class="xlog logopt" id="enlog">
+        	<img src="images/close.png" alt="" class="close" id="enclose">
+		<div class="form">
+			<form class="">
+			  <div class="inpu">
+				<img src="images/name.png" alt="">
+				<input type="text" value="user name">
+			   </div>
+			   <div class="inpu">
+				<img src="images/password.png" alt="">
+				<input type="text" value="passworder">
+			   </div>
+		    </form>
+		    <div class="rember">
+		    	<span class="wite">
+		    		<span class="dot">
+		    			
+		    		</span>
+		    	</span>
+		    	<p>Rember me</p>
+		    </div>
+		    <button class="buton" type="button">
+		    	login
+		    </button>
+		</div>	
+				
+	</div>
+</div>	
+<!-- 登录结束 -->
+<!-- 注册 -->
+<!-- 注册 -->
+
+<div class="login sign" id="ensignbj">
+	<div class="xlog logopt" id="ensig">
+        	<img src="images/close.png" alt="" class="close" id="enclosesig">
+		<div class="form">
+			<form class="">
+			  <div class="inpu">
+				<img src="images/name.png" alt="">
+				<input type="text" value="user name">
+			   </div>
+			   <div class="inpu">
+				<img src="images/email.png" alt="">
+				<input type="text" value="email">
+			   </div>
+			   <div class="inpu">
+				<img src="images/name.png" alt="">
+				<input type="text" value="real name">
+			   </div>
+			   <div class="inpu">
+				<img src="images/password.png" alt="">
+				<input type="text" value="passworder">
+			   </div>
+		    </form>
+		    <button class="buton sbuton" type="button">
+		    	sign in
+		    </button>
+		</div>
+				
+	</div>
+</div>	
+<!-- 注册结束 -->
+<!-- 注册结束 -->
+<!--第一屏-->
+<div class="top_banner" id="firsta">
 	<video autoplay="autoplay" loop="loop">
-        <source src="/assets/file.mp4" type="video/mp4" />          
+        <source src="assets/file.mp4" type="video/mp4" />          
     </video> 
     <div class="banner_first">
-    	<h4>Hello PaaS and Iaas</h4>
-    	<p>简化现代应用程序的开发、运行和维护管理</p>
-    	<span class="spa">
-    		查看详情
-    	</span>
+    	<p class="h4">Hello PaaS and Iaas</p>
+    	<p>To simplify the development, operation and maintenance of modern applications</p>
     </div>
 </div>
 <!--第一屏结束-->
@@ -64,9 +431,9 @@
 
 	<!--第二屏开始-->
 	
-	<div class="cen_banner">
-		<div class="cen_left opt">
-			<h3>IaaS</h3>
+	<div class="cen_banner" id="secondb">
+		<div class="cen_left">
+			<p class="h3">IaaS</p>
 			<p>
 				shake it like I`m supposed to do! 	<br>
 				We know that shit ain't real Com on now,make it stop
@@ -78,21 +445,21 @@
 				To view more > >
 			</p>			
 		</div>
-		<img src="/images/iaas.png" alt="iaas" class="cen_right opta" />
+		<img src="images/iaas.png" alt="iaas" class="cen_right" />
 	</div>
 	
 	<!--第二屏结束-->
 	
 	<!--第三屏开始-->
-	   <div class="th_banner">
-	   	  <img src="/images/paas.jpg" alt="paas" class="th_left" />
+	   <div class="th_banner" id="thirdc">
+	   	  
 	   	  <div class="th_right">
 			
 			<p>
 				shake it like I`m supposed to do! 	<br>
 				We know that shit ain't real Com on now,make it stop
 			</p>
-			<h3>PaaS</h3>
+			<p class="h3">PaaS</p>
 			<p>
 				I'm all 'bout that bass,
 			</p>
@@ -100,101 +467,79 @@
 				To view more > >
 			</p>			
 		</div>
-	   </div>
+	<div id="div1" class="th_left">
+		<div class="font"><img src="images/1.png"></div>
+		<div class="botto"><img src="images/3.png"></div>
+	
+		<div class="left"><img src="images/4.png"></div>
+		<div class="right"><img src="images/2.png"></div>			
+	</div>
+</div>
 	<!--第三屏结束-->
 
 
 
  <!-- 底部 -->
-     <div class="footer" id="top4">
-     	<div class="footer_center">
-     		<ul class="footer_ul">
-     			<li class="footerfirst">
-     				<h4>产品中心</h4>
-     				<ol>
-     					<li>
-     						<a href="javascript:;">
-     							热销榜单
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							核心产品
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 新闻资讯
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 企业招聘
-     						</a>
-     					</li>
-     				</ol>
-     			</li>
+ <div class="footer">
+ 	
 
-     			<li>
-     				<h4>账号支付</h4>
-     				<ol>
-     					<li>
-     						<a href="javascript:;">
-     							企业介绍
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							最新活动
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 工作理念
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 合作商
-     						</a>
-     					</li>
-     				</ol>
-     			</li>
-
-            <li>
-     				<h4>联系我们</h4>
-     				<ol>
-     					<li>
-     						<a href="javascript:;">
-     							信誉保证
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							合作加盟
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 工作理念
-     						</a>
-     					</li>
-     					<li>
-     						<a href="javascript:;">
-     							 关于我们
-     						</a>
-     					</li>
-     				</ol>
-     			</li>
-
-     		</ul>
-
-     		<div class="serve">
-     			<p>全国服务热线</p>
-     			<h4>400 8868 400</h4>
-     		</div>
-     		<img src="/images/code.jpg" alt="二维码">
-     		<p class="last">IAAS AND PAAS有限公司版权所有    Lenovo  ALL RIGHT RESERVED</p>
-     	</div>
-     </div>
+ <div class="footer_center" id="footer_centerb">
+ 		<ul class="footer_ul_first">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					Product
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Hot
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Core
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_cen">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					Product
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Hot
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Core
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_rig">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					Product
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Hot
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					Core
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<p class="last">IAAS AND PAAS有限公司版权所有    Lenovo  ALL RIGHT RESERVED</p>
+ 	</div>
+  </div>
      <!-- 底部结束 -->
+</div>
+
+<!--<login></login>-->
+
