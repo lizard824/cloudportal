@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Document</title>
+	<link rel="shortcut icon" href="images/function.ico">
+	<link rel="stylesheet" href="css/detail.css">
+	 <script src="js/jquery-2.1.3.min.js"></script>
+	<script src='js/detail.js'></script>
+</head>
+<body>
+		<!--导航-->
+<div class="xhead" id="xhead">
+	<div class="xnav">
+
+		<ul class="xnav_ul">
+			<li class="no_margin">
+				<a href="indexa.html">
+					<img src="images/logo.png" alt="logo" id="change_src">
+				</a>
+			</li>
+			<!-- <li>
+				<a href="iaas.html"> 
+				IaaS
+				</a>
+			</li>
+			<li>
+				<a href="paas.html">
+				PaaS	
+				</a>
+			</li>
+			<li>
+				<a href="#forth" name="forth">
+					产品
+				</a>
+			</li> -->
+		</ul>
+
+		<!-- <div class="texttab">
+			<p>
+				<span>中文</span>/<span id="eng">English</span>
+			</p>
+		</div> -->
+		
+			<ul class="nav_log">
+				<li class="no_margin">
+					<a href="javascript:;" id="login">
+						登录
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						/
+					</a>
+				</li>
+				<li id="sign">
+					<a href="javascript:;">
+						注册
+					</a>
+				</li>
+			</ul>
+		
+	</div>
+</div>
+<!-- 登录 -->
+  <div class="login" id="wlog">
+	<div class="xlog logopt" id="log">
+        <img src="images/close.png" alt="" class="close" id="close">
+		<div class="form">
+			<form class="">
+				<div class="input">
+					<div class="inpu">
+				      <img src="images/name.png" alt="">
+				      <input type="text" value="user name" id="luname">
+			        </div>
+			        <p>*请输入用户名</p>
+				</div>
+			  <div class="input">
+			  	<div class="inpu">
+				<img src="images/password.png" alt="">
+				<input type="text" value="password" id="lpword">
+			   </div>
+			   <p>*请输入密码</p>
+			  </div>
+			   
+		    
+		    <div class="rember">
+		    	<span class="wite" id="rember">
+		    		<span class="dot" id="dot"></span>
+		    	</span>
+		    	<p>Rember me</p>
+		    </div>
+		    <button class="buton" type="button" disabled="disabled">
+		    	login
+		    </button>
+		 </form>
+		</div>					
+	</div>
+</div>	
+<!-- 登录结束 -->
+<!-- 注册 -->
+<div class="login sign" id="signbj">
+	<div class="xlog logopt" id="sig">
+        	<img src="images/close.png" alt="" class="close" id="closesig">
+		<div class="form">
+			<form class="" id="form">
+				<div class="input">
+				 <div class="inpu">
+				   <img src="images/name.png" alt="">
+				   <input type="text" value="" id="uname">
+			   </div>
+			    <p>*请输入用户名</p>
+				</div>
+				<div class="input">
+					<div class="inpu">
+				 <img src="images/email.png" alt="">
+				 <input type="text" value="" id="email">
+			   </div>
+			    <p>*请输入邮箱</p>
+				</div>
+				<div class="input">
+				<div class="inpu">
+				 <img src="images/name.png" alt="">
+				 <input type="text" value="" id="rname">
+			   </div>
+			    <p>*请输入真实姓名</p>
+				</div>
+				<div class="input">
+					<div class="inpu">
+				 <img src="images/password.png" alt="">
+				 <input type="text" value="" id="pword">
+			   </div>
+			    <p>*请输入密码</p>
+				</div>			  			   						   		    
+		    <button class="buton sbuton" type="button" disabled="disabled">
+		    	sign in
+		    </button>
+		</form>
+		</div>
+				
+	</div>
+</div>	
+<!-- 注册结束 -->
+<!--导航结束-->
+
+<!-- 背景 -->
+ <video autoplay="autoplay" loop="loop">
+   <source src="assets/file.mp4" type="video/mp4" />           
+  </video> 
+<!-- 背景结束 -->
+<!-- banner -->
+<div class="banner">
+	<div class="ba_center">
+		<div class="ban_left">
+			<p class="paas">PaaS</p>
+		<p>简化现代应用程序的开发、运行和维护管理</p>
+		</div>
+		<img src="images/topiaas.png" alt="">
+	</div>
+</div>
+<!-- banner结束 -->
+<!-- 详情 -->
+
+<div class="decenter">
+
+    <div class="dea_cen">
+      
+		<ul class="center_ul" id="cen_ul">
+		   <li class="active">概述</li>
+		   <li>产品详情</li>
+		   <li> IaaS实例</li>
+		   <li> IaaS场景</li>
+		   <li>使用入门</li>
+	    </ul>
+	  
+	 <div class="center_right" id="cen_right">
+	 	<div class="cen_first" id="cen_first">
+	 		 <p class="cen_p">IaaS</p>
+	  	     <img src="images/hr.png" alt="" class="hr">
+	  	     <p class="cen_dea">
+	  	 	PaaS服务器 (ECS) 是一种在线云计算服务，提供可靠.可扩
+	  	 	展和按需求而定的分布式云计算能力。ECS具有大容量内容，
+	  	 	并基于高端 Intel CPU，具有强大的计
+           算性能，助您更快速获得计算结果。	<br>		
+		   运维更高效。ECS 让您可以快速部署大规模的计算资源，
+		   同时.借助阿里云提供的“弹性伸缩”功能，可以根据业
+		    务的需求（ Web 
+			应用等）实现实时扩展或缩
+			减计算资源。	<br>	
+			数据更安全性。阿里云是中国首个获得ISC27001信息安全
+			管理系统
+			认证的云服务提供商。	<br>	
+			业务无边界。如果您需要扩展全球业务，阿里云的数据中心
+			基础设施遍布全球，您可以借助阿里云将应用部署在全球各
+			地，大幅提升用户的访问速度。
+			对于需要在中国部署网站或应用的企业，阿里云将是您的
+			最佳选择。作为中国最大的云服务提供商，阿里云在中国
+			拥有五个数据中心节点.并且为中国最大的电
+			商提供云基础设施服务，服务的用户数量超过两百万。 
+			需要注意的是，如果您需要将网站部署在中国的ECS上，
+			或者是需要使用中国的CDN来加速您的网站，
+			需要您先进行ICP备案。为了帮助全球企业更好地开展中国
+			业务，阿里云成立了专门的服务团队，来帮助企业实现ICP备案。
+	  	    </p>
+	  	 <img src="images/deiaas.png" alt="" class="cen_img">
+	 	</div>	
+       
+       <div class="cen_one">
+	 		 <p class="cen_p">IaaS23</p>
+	  	     <img src="images/hr.png" alt="" class="hr">
+	  	     <p class="cen_dea">
+	  	 	PaaS服务器 (ECS) 是一种在线云计算服务，提供可靠.可扩
+	  	 	展和按需求而定的分布式云计算能力。ECS具有大容量内容，
+	  	 	并基于高端 Intel CPU，具有强大的计
+           算性能，助您更快速获得计算结果。	<br>		
+		   运维更高效。ECS 让您可以快速部署大规模的计算资源，
+		   同时.借助阿里云提供的“弹性伸缩”功能，可以根据业
+		    务的需求（ Web 
+			应用等）实现实时扩展或缩
+			减计算资源。	<br>	
+			数据更安全性。阿里云是中国首个获得ISC27001信息安全
+			管理系统
+			认证的云服务提供商。	<br>	
+			业务无边界。如果您需要扩展全球业务，阿里云的数据中心
+			基础设施遍布全球，您可以借助阿里云将应用部署在全球各
+			地，大幅提升用户的访问速度。
+			对于需要在中国部署网站或应用的企业，阿里云将是您的
+			最佳选择。作为中国最大的云服务提供商，阿里云在中国
+			拥有五个数据中心节点.并且为中国最大的电
+			商提供云基础设施服务，服务的用户数量超过两百万。 
+			需要注意的是，如果您需要将网站部署在中国的ECS上，
+			或者是需要使用中国的CDN来加速您的网站，
+			需要您先进行ICP备案。为了帮助全球企业更好地开展中国
+			业务，阿里云成立了专门的服务团队，来帮助企业实现ICP备案。
+	  	    </p>
+	  	 <img src="images/deiaas.png" alt="" class="cen_img">
+	 	</div>
+         
+         <div class="cen_one">
+	 		 <p class="cen_p">IaaS24</p>
+	  	     <img src="images/hr.png" alt="" class="hr">
+	  	     <p class="cen_dea">
+	  	 	PaaS服务器 (ECS) 是一种在线云计算服务，提供可靠.可扩
+	  	 	展和按需求而定的分布式云计算能力。ECS具有大容量内容，
+	  	 	并基于高端 Intel CPU，具有强大的计
+           算性能，助您更快速获得计算结果。	<br>		
+		   运维更高效。ECS 让您可以快速部署大规模的计算资源，
+		   同时.借助阿里云提供的“弹性伸缩”功能，可以根据业
+		    务的需求（ Web 
+			应用等）实现实时扩展或缩
+			减计算资源。	<br>	
+			数据更安全性。阿里云是中国首个获得ISC27001信息安全
+			管理系统
+			认证的云服务提供商。	<br>	
+			业务无边界。如果您需要扩展全球业务，阿里云的数据中心
+			基础设施遍布全球，您可以借助阿里云将应用部署在全球各
+			地，大幅提升用户的访问速度。
+			对于需要在中国部署网站或应用的企业，阿里云将是您的
+			最佳选择。作为中国最大的云服务提供商，阿里云在中国
+			拥有五个数据中心节点.并且为中国最大的电
+			商提供云基础设施服务，服务的用户数量超过两百万。 
+			需要注意的是，如果您需要将网站部署在中国的ECS上，
+			或者是需要使用中国的CDN来加速您的网站，
+			需要您先进行ICP备案。为了帮助全球企业更好地开展中国
+			业务，阿里云成立了专门的服务团队，来帮助企业实现ICP备案。
+	  	    </p>
+	  	 <img src="images/depaas.png" alt="" class="cen_img">
+	 	</div>
+	 	<div class="cen_one">
+	 		 <p class="cen_p">IaaS25</p>
+	  	     <img src="images/hr.png" alt="" class="hr">
+	  	     <p class="cen_dea">
+	  	 	PaaS服务器 (ECS) 是一种在线云计算服务，提供可靠.可扩
+	  	 	展和按需求而定的分布式云计算能力。ECS具有大容量内容，
+	  	 	并基于高端 Intel CPU，具有强大的计
+           算性能，助您更快速获得计算结果。	<br>		
+		   运维更高效。ECS 让您可以快速部署大规模的计算资源，
+		   同时.借助阿里云提供的“弹性伸缩”功能，可以根据业
+		    务的需求（ Web 
+			应用等）实现实时扩展或缩
+			减计算资源。	<br>	
+			数据更安全性。阿里云是中国首个获得ISC27001信息安全
+			管理系统
+			认证的云服务提供商。	<br>	
+			业务无边界。如果您需要扩展全球业务，阿里云的数据中心
+			基础设施遍布全球，您可以借助阿里云将应用部署在全球各
+			地，大幅提升用户的访问速度。
+			对于需要在中国部署网站或应用的企业，阿里云将是您的
+			最佳选择。作为中国最大的云服务提供商，阿里云在中国
+			拥有五个数据中心节点.并且为中国最大的电
+			商提供云基础设施服务，服务的用户数量超过两百万。 
+			需要注意的是，如果您需要将网站部署在中国的ECS上，
+			或者是需要使用中国的CDN来加速您的网站，
+			需要您先进行ICP备案。为了帮助全球企业更好地开展中国
+			业务，阿里云成立了专门的服务团队，来帮助企业实现ICP备案。
+	  	    </p>
+	  	 <img src="images/deiaas.png" alt="" class="cen_img">
+	 	</div>
+	 	<div class="cen_one">
+	 		 <p class="cen_p">IaaS26</p>
+	  	     <img src="images/hr.png" alt="" class="hr">
+	  	     <p class="cen_dea">
+	  	 	PaaS服务器 (ECS) 是一种在线云计算服务，提供可靠.可扩
+	  	 	展和按需求而定的分布式云计算能力。ECS具有大容量内容，
+	  	 	并基于高端 Intel CPU，具有强大的计
+           算性能，助您更快速获得计算结果。	<br>		
+		   运维更高效。ECS 让您可以快速部署大规模的计算资源，
+		   同时.借助阿里云提供的“弹性伸缩”功能，可以根据业
+		    务的需求（ Web 
+			应用等）实现实时扩展或缩
+			减计算资源。	<br>	
+			数据更安全性。阿里云是中国首个获得ISC27001信息安全
+			管理系统
+			认证的云服务提供商。	<br>	
+			业务无边界。如果您需要扩展全球业务，阿里云的数据中心
+			基础设施遍布全球，您可以借助阿里云将应用部署在全球各
+			地，大幅提升用户的访问速度。
+			对于需要在中国部署网站或应用的企业，阿里云将是您的
+			最佳选择。作为中国最大的云服务提供商，阿里云在中国
+			拥有五个数据中心节点.并且为中国最大的电
+			商提供云基础设施服务，服务的用户数量超过两百万。 
+			需要注意的是，如果您需要将网站部署在中国的ECS上，
+			或者是需要使用中国的CDN来加速您的网站，
+			需要您先进行ICP备案。为了帮助全球企业更好地开展中国
+			业务，阿里云成立了专门的服务团队，来帮助企业实现ICP备案。
+	  	    </p>
+	  	 <img src="images/deiaas.png" alt="" class="cen_img">
+	 	</div>
+	  </div>
+
+
+  </div>	
+</div>
+
+
+<!-- 详情结束 -->
+
+
+
+
+<!-- 底部 -->
+ <div class="footer">
+ 	<div class="footer_center" id="footer_center">
+ 		<ul class="footer_ul_first">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_cen">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<ul class="footer_ul_first footer_ul_rig">
+ 			<li class="footerfirst">
+ 				<a href="javascript:;">
+ 					产品中心
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					热销榜单
+ 				</a>
+ 			</li>
+ 			<li>
+ 				<a href="javascript:;">
+ 					核心产品
+ 				</a>
+ 			</li>
+ 		</ul>
+ 		<p class="last">IAAS AND PAAS有限公司版权所有    Lenovo  ALL RIGHT RESERVED</p>
+ 	</div>
+ </div>
+     <!-- 底部结束 -->
+
+</body>
+</html>
