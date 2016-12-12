@@ -740,7 +740,7 @@ button{
 
 
 .nav_log {
-	width:17%;
+	width:20%;
 	height:11px;
 	line-height: 25px;
 	float:right;
@@ -1377,7 +1377,7 @@ button{
 
 
 .nav_log {
-	width:17%;
+	width:23%;
 	height:64px;
 	line-height: 35px;
 	float:right;
@@ -1946,7 +1946,7 @@ button{
 	margin:0 auto;
 }
 .xnav_ul{
-	width:7.5rem;
+	width:9rem;
 	height:100%;
     float: left;
 }

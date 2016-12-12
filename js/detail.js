@@ -164,16 +164,19 @@ var tbUl = document.getElementById('cen_ul');
 var tbLi = tbUl.getElementsByTagName('li');
 var tbDiv = document.getElementById('cen_right');
 var subDiv = tbDiv.getElementsByTagName('div');
+var tbspan = tbUl.getElementsByTagName('span');
+
+
 var allIndex = 0;
  for(var i = 0;i < tbLi.length;i++){
  	  tbLi[i].index = i;
  	  tbLi[i].onclick = function(){
  	  	 for(var i = 0;i < tbLi.length;i++){
- 	  	 	tbLi[i].className = '';
+ 	  	 	tbspan[i].className = '';
  	  	 	subDiv[i].style.display = 'none';
  	  	 }
  	  	 allIndex = this.index;
- 	  	 this.className = 'active';
+ 	  	 tbspan[this.index].className = 'active';
  	  	 subDiv[this.index].style.display = 'block';
  	  }
  }

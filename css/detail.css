@@ -319,17 +319,26 @@ source{
 
 .center_ul .active{
 	background: #63aee4;
-	color:#fff;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
 }
 
 .center_ul li{
 	margin-top: 10px;
-	background: #f3f3f3;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	cursor: pointer;
 }
-
+.center_ul li span{
+	display: block;
+	position: relative;
+	top:18px;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
+	border:1px solid #97d7ff;
+}
 .center_right{
 	margin-top: 50px;
 	float: right;
@@ -496,7 +505,7 @@ source{
 
 
 .nav_log {
-	width:17%;
+	width:23%;
 	height:11px;
 	line-height: 25px;
 	float:right;
@@ -720,12 +729,22 @@ source{
 
 .center_ul .active{
 	background: #63aee4;
-	color:#fff;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
+}
+.center_ul li span{
+	display: block;
+	position: relative;
+	top:18px;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
+	border:1px solid #97d7ff;
 }
 
 .center_ul li{
 	margin-top: 10px;
-	background: #f3f3f3;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	cursor: pointer;
@@ -900,7 +919,7 @@ source{
 
 
 .nav_log {
-	width:17%;
+	width:24%;
 	height:64px;
 	line-height: 35px;
 	float:right;
@@ -1131,12 +1150,22 @@ source{
 
 .center_ul .active{
 	background: #63aee4;
-	color:#fff;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
+}
+.center_ul li span{
+	display: block;
+	position: relative;
+	top:18px;
+	width:10px;
+	height:10px;
+	border-radius: 50px;
+	border:1px solid #97d7ff;
 }
 
 .center_ul li{
 	margin-top: 10px;
-	background: #f3f3f3;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	cursor: pointer;
@@ -1548,13 +1577,24 @@ source{
 }
 
 .center_ul .active{
-    background: #63aee4;
-    color:#fff;
+	background: #63aee4;
+	width:0.25rem;
+	height:0.25rem;
+	border-radius: 50px;
+}
+.center_ul li span{
+	display: block;
+	position: relative;
+	top:0.6rem;
+	right:0.2rem;
+	width:0.25rem;
+	height:0.25rem;
+	border-radius: 50px;
+	border:1px solid #97d7ff;
 }
 
 .center_ul li{
     margin-top: 0.25rem;
-    background: #f3f3f3;
     padding-top: 0.175rem;
     padding-bottom: 0.175rem;
     cursor: pointer;
