@@ -547,6 +547,7 @@ button{
 .forth_ul li{
 	width:400px;
 	height:300px;
+	/*background: #366687;*/
 	background: #fff;
 	border:1px solid #e3e3e3;
 	float: left;
@@ -1179,7 +1180,7 @@ button{
 	margin:auto;
 }
 .forth_ul{
-	width:120%;
+	width:140%;
 	height:260px;
 	position:absolute;
 	top:0;
@@ -1195,7 +1196,7 @@ button{
 	box-shadow: 0 5px 9px #ccc;
 }
 .forth_ul li{
-	width:26%;
+	width:320px;
 	height:260px;
 	background: #fff;
 	border:1px solid #e3e3e3;
@@ -1799,7 +1800,7 @@ button{
 	overflow: hidden;
 }
 .forth_ul{
-	width:120%;
+	width:150%;
 	height:255px;
 	position:absolute;
 	top:0;
@@ -1815,12 +1816,12 @@ button{
 	box-shadow: 0 5px 9px #ccc;
 }
 .forth_ul li{
-	width:280px;
+	width:260px;
 	height:200px;
 	background: #fff;
 	border:1px solid #e3e3e3;
 	float: left;
-	margin-left:2%;
+	margin-left:1%;
 	top:20px;
 	position: relative;
 	transition:1s all ease;
@@ -2429,7 +2430,7 @@ button{
 	overflow: hidden;
 }
 .forth_ul{
-	width:25rem;
+	width:150%;
 	height:5.5rem;
 	position:absolute;
 	top:0;
@@ -2439,12 +2440,13 @@ button{
 	margin:auto;
 }
 .forth_ul .factive{
-	background: #4871a2;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	border-radius: 0.45rem;
 	box-shadow: 0 0.125rem 0.225rem #ccc;
 }
 .forth_ul li{
-	width:6rem;
+	width:5rem;
 	height:4.2rem;
 	background: #fff;
 	border:1px solid #e3e3e3;
