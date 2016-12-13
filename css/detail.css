@@ -276,15 +276,15 @@ source{
     margin:auto;
 }
 .ban_left{
-	margin-top:150px;
+	margin-top:120px;
 	float: left;
 }
 .paas{
-	font-size:23px ;
+	font-size:26px ;
 	color:#fff;
 }
 .banner p{
-   font-size:23px ;
+   font-size:26px ;
    color:#fff;
 }
 .ba_center img{
@@ -345,8 +345,8 @@ source{
 	width:80%;
 	height:100%;
 }
-.cen_p{
-	font-size:19px ;
+.center_right .cen_p{
+	font-size:26px ;
 	color:#000;
 	margin-left: 10px;
 
@@ -756,8 +756,8 @@ source{
 	width:75%;
 	height:100%;
 }
-.cen_p{
-	font-size:19px ;
+.center_right .cen_p{
+	font-size:24px ;
 	color:#000;
 	margin-left: 10px;
 
@@ -1107,15 +1107,15 @@ source{
     margin:auto;
 }
 .ban_left{
-	margin-top:150px;
+	margin-top:120px;
 	float: left;
 }
 .paas{
-	font-size:16px ;
+	font-size:20px ;
 	color:#fff;
 }
 .banner p{
-   font-size:16px ;
+   font-size:20px ;
    color:#fff;
 }
 .ba_center img{
@@ -1177,8 +1177,8 @@ source{
 	width:75%;
 	height:100%;
 }
-.cen_p{
-	font-size:19px ;
+.center_right .cen_p{
+	font-size:22px ;
 	color:#000;
 	margin-left: 10px;
 
@@ -1530,17 +1530,17 @@ source{
     padding-top: 5rem;
 }
 .ban_left{
-    margin-top:2rem;
+    margin-top:1rem;
     width:12rem;
     height:2rem;
     clear: right;
 }
 .paas{
-    font-size:0.4rem;
+    font-size:0.55rem;
     color:#fff;
 }
 .banner p{
-   font-size:0.4rem;
+   font-size:0.55rem;
    color:#fff;
 }
 .ba_center img{
@@ -1606,8 +1606,8 @@ source{
     width:75%;
     height:auto;
 }
-.cen_p{
-    font-size:0.45rem;
+.center_right .cen_p{
+    font-size:0.5rem;
     color:#000;
     margin-left: 0.25rem;
 

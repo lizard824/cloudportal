@@ -1155,7 +1155,7 @@ button{
 }
 .forth_ul .ul_first{
 	font-size:23px ;
-	color:#fff;
+	color:#000;
 	text-align: center;
 	position: absolute;
 	top:20px;
@@ -1168,7 +1168,7 @@ button{
 	width:300px;
 	height:45px;
 	font-size: 16px;
-	color:#fff;
+	color:#000;
 	margin-top:50px;
 	text-align: center;
 	position: absolute;
@@ -1189,14 +1189,16 @@ button{
 	margin:auto;
 }
 .forth_ul .factive{
-	background: #4871a2;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	border-radius: 18px;
 	box-shadow: 0 5px 9px #ccc;
 }
 .forth_ul li{
 	width:26%;
 	height:260px;
-	background: #366687;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	float: left;
 	margin-left:2%;
 	position: relative;
@@ -1807,14 +1809,16 @@ button{
 	margin:auto;
 }
 .forth_ul .factive{
-	background: #4871a2;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	border-radius: 18px;
 	box-shadow: 0 5px 9px #ccc;
 }
 .forth_ul li{
 	width:280px;
 	height:200px;
-	background: #366687;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	float: left;
 	margin-left:2%;
 	top:20px;
@@ -1824,7 +1828,7 @@ button{
 }
 .forth_ul .ul_first{
 	font-size:18px ;
-	color:#fff;
+	color:#000;
 	text-align: center;
 	position: absolute;
 	top:20px;
@@ -1848,7 +1852,7 @@ button{
 	width:240px;
 	height:45px;
 	font-size: 14px;
-	color:#fff;
+	color:#000;
 	margin-top:50px;
 	text-align: center;
 	position: absolute;
@@ -2442,7 +2446,8 @@ button{
 .forth_ul li{
 	width:6rem;
 	height:4.2rem;
-	background: #366687;
+	background: #fff;
+	border:1px solid #e3e3e3;
 	float: left;
 	margin-left:2%;
 	position: relative;
@@ -2452,7 +2457,7 @@ button{
 }
 .forth_ul .ul_first{
 	font-size:0.35rem;
-	color:#fff;
+	color:#000;
 	text-align: center;
 	position: absolute;
 	top:0.5rem;
@@ -2476,7 +2481,7 @@ button{
 	width:4.3rem;
 	height:0.7rem;
 	font-size: 0.3rem;
-	color:#fff;
+	color:#000;
 	text-align: center;
 	position: absolute;
 	bottom:0.5rem;
