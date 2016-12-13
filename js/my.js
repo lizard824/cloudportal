@@ -116,6 +116,35 @@ onload = function(){
 		};
 
 
+//移动端导航事件-------------------------------------
+   var nav_ul = document.getElementById('xnav_ul');
+   //alert(nav_ul.innerHTML)
+   var navLi = nav_ul.getElementsByTagName('li');
+   var phone_open = document.getElementById('ph_open');
+
+   var heig = navLi[0].offsetHeight;
+
+   //alert(heig)
+   var ntrn = true;
+   nav_ul.style.transition = '0.5s all ease';
+
+   phone_open.onclick = function(){
+      
+      if(ntrn == true){
+        nav_ul.style.height = heig + 'px';
+        nav_ul.style.overFlow = 'none';
+        ntrn = false
+      }else{
+        nav_ul.style.height = 0;
+        nav_ul.style.overFlow = 'hidden';
+        ntrn = true
+      }
+
+   };
+
+
+
+
 //更换图片-----------------------------------------
      var chanSrc = document.getElementById('change_src');
      // var enchanSrc = document.getElementById('enchange_src');
@@ -129,7 +158,9 @@ onload = function(){
     };
     change(chanSrc,'images/lo.png','images/logo.png');
     // change(enchanSrc,'images/lo.png','images/logo.png');
- 
+
+  //移动端---------------
+    change(phone_open,'images/lo.png','images/logo.png');
 
 
 // 轮播图
@@ -189,6 +220,34 @@ onload = function(){
    var fImg = dLeft.getElementsByTagName('img')[0];
  
 //左右动
+  
+
+ // //点击事件
+ //  //$('.forth_ul').css('left','-='+440).stop().find(".oone:first-child").prependTo(".forth_ul")
+ //     function por(){
+ //      $(".forth_ul").animate({left:-440},1200,function(){                        
+ //        $(this).css("left","0").find(".oone:first").prependTo(".forth_ul")            
+ //      }) 
+                         
+ //    }
+
+ // //点击事件
+ //     $(".onleft").click(function(){
+ //        $('.forth_ul').stop().animate({left:'+='+440},1200,function(){
+ //         $('.forth_ul').css("left","-="+440).stop().find(".oone:last-child").prependTo(".forth_ul")
+
+ //      })
+ //     })
+ //     $(".onright").click(function(){
+ //        $('.forth_ul').stop().animate({left:'+='+440},1200,function(){
+ //         $('.forth_ul').css("left","-="+440).stop().find(".oone:last-child").prependTo(".forth_ul")
+
+ //      })
+
+ //     })
+
+
+
    var fleft  = document.getElementById('onleft');
    var fright = document.getElementById('onright');
    var fUl    = document.getElementById('forth_ul');
@@ -214,36 +273,11 @@ onload = function(){
                
           };
       };
-// $(function(){
-//           function pl(){            
-//             $("#forth_ul").animate({left:-440},1000,function(){
-//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")
-//       })                        
-//           }
-//     //点击事件
-//      $("#onleft").click(function(){
-                  
-//              pl()                      
-          
-//      });
 
-//           $("#onright").click(function(){
-//              $("#forth_ul").animate({left:440},1000,function(){
-//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul");
-//            })
-//      });
-    
-// });
- 
 
-// $(function(){
-//            setInterval(function pl(){            
-//             $("#forth_ul").animate({left:-440},1000,function(){
-//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")
-//       })                        
-//           },1500)
-      
-//        })
+
+
+
 // 正则验证--------------------------------------------------------------------------
    var name = /^[a-zA-Z]\w{5,15}$/ig;
    var emal = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
