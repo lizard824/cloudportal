@@ -71,12 +71,12 @@ onload = function(){
             	c.style.display = "none";
             	d.style.display = "none";
                 };
-           }
+           };
 // 登录
-   bloc(login,log,wlog,signbj,sig)
+   bloc(login,log,wlog,signbj,sig);
  //  bloc(enlogin,enlog,enwlog,ensignbj,ensig)
 // 注册
-    bloc(sign,signbj,sig,log,wlog)
+    bloc(sign,signbj,sig,log,wlog);
  //   bloc(ensign,ensignbj,ensig,enlog,enwlog)
 
 
@@ -91,15 +91,15 @@ onload = function(){
             	a.style.display = "none";
             	b.style.display = "none";         
             };
-  }
-  clo(clos,log,wlog)
-  clo(closig,signbj,sig)
+  };
+  clo(clos,log,wlog);
+  clo(closig,signbj,sig);
   // clo(enclos,enlog,enwlog)
   // clo(enclosig,ensignbj,ensig)
 
 
 // 导航背景------------------------------------------
-    var aUl = document.getElementById('xhead');
+  var aUl = document.getElementById('xhead');
 	var twoDiv = document.getElementById('second');
 	// var enaUl = document.getElementById('enxhead');
 	// var entwoDiv = document.getElementById('secondb');
@@ -113,7 +113,7 @@ onload = function(){
 			aUl.style.backgroundColor='rgba(0,0,0,0)';
 		  }
 			
-		}
+		};
 
 
 //更换图片-----------------------------------------
@@ -193,63 +193,57 @@ onload = function(){
    var fright = document.getElementById('onright');
    var fUl    = document.getElementById('forth_ul');
    var li     = fUl.getElementsByTagName('li');
-      for(var i=0;i<li.length;i++){
-          li[i].index=i 
+      for(var i = 0;i < li.length;i++){
+          li[i].index = i ;
           li[i].onmouseover = function(){
                 for(var i=0;i<li.length;i++){
                   li[i].style.transform='scale(1,1)';
                   li[i].className='';
                    
-                }
+                };
                 this.style.transform='scale(1.1,1.1)';
-                this.className='factive'
+                this.className='factive';
 
-          }
+          };
           li[i].onmouseout = function(){
                 for(var i=0;i<li.length;i++){
                   li[i].style.transform='scale(1,1)';
                   li[i].className=''
-                }
+                };
                 this.style.transform='scale(1,1)';
                
-          }
-      }
-   var index  = 0;
-   var stop
- fUl.style.width = li[0].offsetWidth*(li.length+1)+'px';
+          };
+      };
+// $(function(){
+//           function pl(){            
+//             $("#forth_ul").animate({left:-440},1000,function(){
+//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")
+//       })                        
+//           }
+//     //点击事件
+//      $("#onleft").click(function(){
+                  
+//              pl()                      
+          
+//      });
+
+//           $("#onright").click(function(){
+//              $("#forth_ul").animate({left:440},1000,function(){
+//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul");
+//            })
+//      });
+    
+// });
  
 
-   fleft.onmousedown = function(){
-      stop = setInterval(function(){
-                
-                if(index == -460){
-                    clearInterval(stop)
-                }else{
-                    index--
-                }
-                fUl.style.left = index+"px";
-            },-100)
-   }
-   fleft.onmouseup = function(){
-             clearInterval(stop)       
-        }
-  fright.onmousedown = function(){
-      stop = setInterval(function(){
-                
-                if(index == 0){
-                    clearInterval(stop)
-                }else{
-                    index++
-                }
-                fUl.style.left = index+"px";
-            },-100)
-   }
-   fright.onmouseup = function(){
-             clearInterval(stop)       
-        }
-
-
-
+// $(function(){
+//            setInterval(function pl(){            
+//             $("#forth_ul").animate({left:-440},1000,function(){
+//              $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")
+//       })                        
+//           },1500)
+      
+//        })
 // 正则验证--------------------------------------------------------------------------
    var name = /^[a-zA-Z]\w{5,15}$/ig;
    var emal = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
@@ -270,38 +264,38 @@ onload = function(){
 
           e.onblur=function(){
           if(this.value==''){
-            e.type="text"
-            e.value=a          
-           }
-         }
+            e.type="text";
+            e.value=a;        
+           };
+         };
          e.onfocus=function(){
           if(this.value==a){
-             e.type="text"
-             e.value=''
+             e.type="text";
+             e.value='';
              
-                 }
-             }
-     }
-     // blu(uname,'username')
-     // blu(email,'email')
-     // blu(rname,'realname')
-       blu(luname,'user name')
+                 };
+             };
+     };
+     // blu(uname,'username');
+     // blu(email,'email');
+     // blu(rname,'realname');
+       blu(luname,'user name');
    
          lpwo.onblur=function(){
           if(this.value=='' ){
-            lpwo.type="text"
-            lpwo.value='password'
+            lpwo.type="text";
+            lpwo.value='password';
           
-           }
-         }
+           };
+         };
          lpwo.onfocus=function(){
           if(this.value=='password'){
 
-            lpwo.type="text"
-             lpwo.value=''
+            lpwo.type="text";
+             lpwo.value='';
              
-                 }
-             }
+                 };
+             };
  
  // 验证
     
@@ -310,14 +304,13 @@ onload = function(){
       e.onblur = function(){
         if(this.value.match(a)){
             c.innerHTML=b;
-            return true
-           }
-           else{
+            return true;
+           }else{
             d.innerHTML=f;
-            return false
+            return false;
            }
-      }        
-    }
+      };        
+    };
 
 
 pro(nama,name,suP[0],'*用户名正确',suP[0],'*用户名错误');
@@ -332,17 +325,17 @@ pro(word,pass,suP[3],'*密码正确',suP[3],'*密码错误');
 
 //rember me
 
-var rem = document.getElementById('rember')
-var clic = true
+var rem = document.getElementById('rember');
+var clic = true;
 rem.onclick=function(){
      if(clic==true){
-      dot.style.float='right'         
-          clic=false
+      dot.style.float='right';        
+          clic=false;
      }else{
-        dot.style.float='left'
-        clic=true
+        dot.style.float='left';
+        clic=true;
      }
-}
+};
 
 
 }
@@ -394,3 +387,4 @@ $(document).ready(function () {
             });
 
 });
+
