@@ -103,6 +103,21 @@ body{
 	line-height:11px;
 	float:right;
 }
+.top_cli{
+	width:40px;
+	height:25px;
+	float: left;
+	display: none;
+}
+.top_cli img{
+	width:40px;
+	height:25px;
+	float: left;
+	padding-top: 15px;
+}
+#xnav_ul{
+	display: none;
+}
 /*head end*/
 /*登录*/
 .login{
@@ -127,6 +142,10 @@ display: none;
 	z-index: 100;
 	overflow: hidden;
     background: rgba(0,0,0,0.2);	
+}
+#sign a{
+  padding:1px;
+  border:1px solid #fff;
 }
 #log,#enlog{
 	display: none;
@@ -171,6 +190,9 @@ input{
     padding-top:30px ;
     padding-bottom: 30px;
     float: right;
+    background: none;
+    border:0;
+    outline: none;
 }
 .inpu img{
 	float: left;
@@ -243,7 +265,7 @@ button{
 
 
 /*背景*/
- video{
+/* video{
 	 position: fixed;  
      right: 0px;  
      bottom: 0px;  
@@ -258,12 +280,13 @@ source{
      min-height: 100%;  
      height: auto;  
      width: auto; 
-}
+}*/
 /*背景结束*/
 /*banner*/
 .banner{
 	width:100%;
-	height:600px;
+	height:550px;
+	background: url(../images/topbj.png) no-repeat;
 }
 .ba_center{
 	width:78%;
@@ -510,6 +533,21 @@ source{
 	line-height: 25px;
 	float:right;
 }
+.top_cli{
+	width:40px;
+	height:25px;
+	float: left;
+	display: none;
+}
+.top_cli img{
+	width:40px;
+	height:25px;
+	float: left;
+	padding-top: 15px;
+}
+#xnav_ul{
+	display: none;
+}
 /*head end*/
 /*登录*/
 .login{
@@ -534,6 +572,10 @@ display: none;
 	z-index: 100;
 	overflow: hidden;
     background: rgba(0,0,0,0.3);	
+}
+#sign a{
+  padding:1px;
+  border:1px solid #fff;
 }
 #log,#enlog{
 	display: none;
@@ -578,6 +620,9 @@ input{
     padding-top:30px ;
     padding-bottom: 30px;
     float: right;
+    background: none;
+	border:0;
+	outline: none;
 }
 .inpu img{
 	float: left;
@@ -652,24 +697,7 @@ button{
 
 
 
-/*背景*/
- video{
-	 position: fixed;  
-     right: 0px;  
-     bottom: 0px;  
-     min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto;
-     z-index: -9999;
-}
-source{
-	 min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto; 
-}
-/*背景结束*/
+
 /*banner*/
 .banner{
 	width:100%;
@@ -924,6 +952,21 @@ source{
 	line-height: 35px;
 	float:right;
 }
+.top_cli{
+	width:40px;
+	height:25px;
+	float: left;
+	display: none;
+}
+.top_cli img{
+	width:40px;
+	height:25px;
+	float: left;
+	padding-top: 15px;
+}
+#xnav_ul{
+	display: none;
+}
 /*head end*/
 /*登录*/
 .login{
@@ -950,6 +993,10 @@ display: none;
 	z-index: 100;
 	overflow: hidden;
     background: rgba(0,0,0,0.3);	
+}
+#sign a{
+  padding:1px;
+  border:1px solid #fff;
 }
 #log,#enlog{
 	display: none;
@@ -994,6 +1041,9 @@ input{
     padding-top:30px ;
     padding-bottom: 30px;
     float: right;
+    background: none;
+	border:0;
+	outline: none;
 }
 .input p{
 	font-size: 14px;
@@ -1300,6 +1350,31 @@ source{
     height:100%;
     float: left;
 }
+.top_cli{
+	width:1rem;
+	height:0.625rem;
+	float: left;
+	display: block;
+}
+.top_cli img{
+	width:1.55rem;
+	height:1rem;
+	float: left;
+	padding-top: 0.5rem;
+	cursor: pointer;
+}
+#no_ul{
+	display: none;
+}
+#xnav_ul{
+	position: fixed;
+	overflow: hidden;
+	transition:0.5s all ease;
+	top:1.6rem;
+	width:100%;
+	height:0rem;
+    float: left;
+}
 .xnav_ul li{
     font-size: 0.475rem;
     line-height: 2.2rem;
@@ -1382,6 +1457,10 @@ display: none;
     z-index: 100;
 
 }
+#sign a{
+  padding:1px;
+  border:1px solid #fff;
+}
 #log,#enlog{
     display: none;
 }
@@ -1425,6 +1504,9 @@ input{
     padding-top:0.75rem;
     padding-bottom: 0.75rem;
     float: right;
+    background: none;
+	border:0;
+	outline: none;
 }
 .inpu img{
     float: left;

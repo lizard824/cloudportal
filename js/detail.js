@@ -6,6 +6,30 @@ onload = function(){
 		document.documentElement.style.fontSize = innerWidth / 16+'px';
 	          };
 
+//移动端导航事件-------------------------------------
+   var nav_ul = document.getElementById('xnav_ul');
+   var navLi = nav_ul.getElementsByTagName('li');
+   var phone_open = document.getElementById('ph_open');
+
+   var heig = navLi[0].offsetHeight;
+   var ntrn = true;
+   
+   nav_ul.style.transition = '0.5s all ease';
+
+   phone_open.onclick = function(){
+      
+      if(ntrn == true){
+        nav_ul.style.height = heig + 'px';
+        nav_ul.style.overFlow = 'none';
+        ntrn = false
+      }else{
+        nav_ul.style.height = 0;
+        nav_ul.style.overFlow = 'hidden';
+        ntrn = true
+      }
+
+   };
+
 
 //更换图片-----------------------------------------
      var chanSrc = document.getElementById('change_src');
@@ -19,7 +43,9 @@ onload = function(){
          };
     };
     change(chanSrc,'images/lo.png','images/logo.png');
-
+    
+     //移动端---------------
+    change(phone_open,'images/lo.png','images/logo.png');
 
 
 // 登录-----------------------------------------------
