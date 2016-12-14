@@ -132,7 +132,12 @@ body{
 	background: rgba(0,0,0,0.4);
 }
 #sign a{
-  padding:1px;
+	line-height: 1;
+	text-align: center;
+  padding-top: 2px;
+  padding-right: 3px;
+  padding-bottom: 5px;
+  padding-left: 3px;
   border:1px solid #fff;
 }
 #wlog,#enwlog{
@@ -331,13 +336,13 @@ button{
 	background: #fff;
 }
 .tab_ul{
-	width:500px;
+	width:300px;
 	height:30px;
 	margin:auto;
-	position: absolute;	
+	position: relative;	
 	z-index: 10;
-	bottom: 130px;
-	left:35%;
+	top: -60px;
+
 }
 
 .tab_ul li{
@@ -572,6 +577,7 @@ button{
 	right:0;
 	bottom:0;
 	margin:auto;
+
 }
 .forth_ul .factive{
 	background: #fff;
@@ -587,11 +593,12 @@ button{
 	margin-left:2%;
 	position: relative;
 	left:0;
-	transition:1s all ease;
+	
 	cursor: pointer;
 	opacity: 0.5;
 }
 .forth_ul li:hover {
+	transition:1s all ease;
     transform:scale(1.05,1.05);
     -moz-transform:scale(1.05,1.05);
     background: #fff;
@@ -815,7 +822,7 @@ display: none;
 }
 #sign a{
 	border:1px solid #fff;
-	padding:1px;
+	padding:2px 3px 5px 3px;
 }
 #log,#enlog{
 	display: none;
@@ -981,12 +988,12 @@ button{
 	background: #fff;
 }
 .tab_ul{
-	width:400px;
+	width:300px;
 	height:30px;
 	margin:auto;
 	position: relative;	
 	z-index: 10;
-	bottom: 90px;
+	top: -50px;
 }
 .tab_ul li{
 	width:11px;
@@ -1471,7 +1478,7 @@ display: none;
 }
 #sign a{
 	border:1px solid #fff;
-	padding:1px;
+	padding:2px 3px 5px 3px;
 }
 #log,#enlog{
 	display: none;
@@ -1646,12 +1653,12 @@ button{
 	background: #fff;
 }
 .tab_ul{
-	width:400px;
+	width:300px;
 	height:30px;
 	margin:auto;
 	position: relative;	
 	z-index: 10;
-	bottom: 50px;
+	top: -50px;
 	
 }
 .tab_ul li{
@@ -1946,6 +1953,7 @@ button{
 	width:100%;
 	height:0rem;
     float: left;
+        margin-left: 1.4rem;
 }
 .xnav_ul li{
 	font-size: 0.475rem;
@@ -1974,8 +1982,8 @@ button{
 	margin-top: 0.55rem;
 }
 .top_cli{
-	width:1rem;
-	height:0.625rem;
+	width:5rem;
+	height:1.625rem;
 	float: left;
 	display: block;
 }
@@ -1985,6 +1993,13 @@ button{
 	float: left;
 	padding-top: 0.5rem;
 	cursor: pointer;
+	display: block;
+}
+.top_cli #ph_open{
+	margin-left:0.5rem;
+	width:1rem;
+	height:0.6rem;
+	margin-top: 0.3rem;
 }
 
 .texttab{
@@ -2040,7 +2055,7 @@ display: none;
 }
 #sign a{
 	border:1px solid #fff;
-	padding:1px;
+	padding:0.05rem 0.075rem 0.125rem 0.075rem;
 }
 #log,#enlog{
 	display: none;
@@ -2201,12 +2216,12 @@ button{
 	background:#fff;
 }
 .tab_ul{
-	width:6rem;
+	width:5rem;
 	height:0.75rem;
 	margin:auto;
 	position: relative;	
 	z-index: 10;
-	bottom: -8rem;
+	top: 8rem;
 }
 
 .tab_ul li{
@@ -2220,7 +2235,7 @@ button{
 }
 .banner_second img{
 	width:100%;
-	height:8rem;
+	height:9rem;
 }
 
 .banner_first p{

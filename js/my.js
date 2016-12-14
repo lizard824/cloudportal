@@ -161,58 +161,58 @@ onload = function(){
     // change(enchanSrc,'images/lo.png','images/logo.png');
 
   //移动端---------------
-    change(phone_open,'images/lo.png','images/logo.png');
+    change(phone_open,'images/topcli.png','images/topcli.png');
 
 
 // 轮播图
- //    var tabUl = document.getElementById('tab_ul');
-	// var allInput = tabUl.getElementsByTagName('li');
-	// var tabFirst = document.getElementById('first')
-	// var allDiv  = tabFirst.getElementsByTagName('div');
-	// var allIndex = 0;
-	// var timer = null;
-	// time();
+    var tabUl = document.getElementById('tab_ul');
+	var allInput = tabUl.getElementsByTagName('li');
+	var tabFirst = document.getElementById('first')
+	var allDiv  = tabFirst.getElementsByTagName('div');
+	var allIndex = 0;
+	var timer = null;
+	time();
 
-	// first.onmouseover = function(){
-	// 	clearInterval(timer);
-	// };
-	// first.onmouseout = function(){
-	// 	time();
-	// }
+	first.onmouseover = function(){
+		clearInterval(timer);
+	};
+	first.onmouseout = function(){
+		time();
+	}
 
 
-	// for(var i = 0;i < allInput.length;i++){
+	for(var i = 0;i < allInput.length;i++){
      
-	// 	allInput[i].index = i; //记录值
+		allInput[i].index = i; //记录值
 
-	// 	allInput[i].onclick = function(){
-	// 		for(var i = 0; i < allInput.length;i++){
-	// 			allInput[i].className = '';
-	// 			allDiv[i].style.display = 'none';
-	// 		}
-	// 		allDiv[this.index].style.display = 'block';
-	// 		this.className = 'active';
-	// 		allIndex = this.index;
-	// 	}
-	// };
+		allInput[i].onclick = function(){
+			for(var i = 0; i < allInput.length;i++){
+				allInput[i].className = '';
+				allDiv[i].style.display = 'none';
+			}
+			allDiv[this.index].style.display = 'block';
+			this.className = 'active';
+			allIndex = this.index;
+		}
+	};
 
-	// function startMove(){
-	// 	for(var i = 0; i < allInput.length;i++){
-	// 			allInput[i].className = '';
-	// 			allDiv[i].style.display = 'none';
-	// 		}
+	function startMove(){
+		for(var i = 0; i < allInput.length;i++){
+				allInput[i].className = '';
+				allDiv[i].style.display = 'none';
+			}
 
-	// 	allDiv[allIndex].style.display = 'block';
-	// 	allInput[allIndex].className = 'active';
-	// }
+		allDiv[allIndex].style.display = 'block';
+		allInput[allIndex].className = 'active';
+	}
 
-	// function time(){
-	// 	timer = setInterval(function(){
-	// 		allIndex++;
-	// 		if(allIndex == allInput.length)allIndex=0;
-	// 		startMove();
-	// 	},3500);
-	// }
+	function time(){
+		timer = setInterval(function(){
+			allIndex++;
+			if(allIndex == allInput.length)allIndex=0;
+			startMove();
+		},2500);
+	}
 
 //第四屏动画-------------------------------------------
  
@@ -231,7 +231,7 @@ function por(){
         por()
      })
      $(".onright").click(function(){
-         $('.forth_ul').stop().animate({left:'+='+ulWidth},1200,function(){
+         $('.forth_ul').stop().animate({left:'+='+ulWidth},1000,function(){
          $('.forth_ul').css("left","-="+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul")
 
          })
