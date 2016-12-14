@@ -274,7 +274,7 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:550px;
+	height:600px;
 }
 .top_banner video{
 	 position: fixed;  
@@ -293,13 +293,16 @@ button{
             width: auto; 
 }
 .top_banner .banner_first{
-	background: url(../images/topbj.png)no-repeat;
+	background: url(../images/topbj.png)left center no-repeat;
 	width:100%;
-	height:550px;
+	height:600px;
 	position: relative;
 	top:0;
 	left:0;
 	z-index: 1;
+	 background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 .banner_first .h4{
 	font-size: 50px;
@@ -322,7 +325,7 @@ button{
 }
 .top_banner .banner_second img{
 	width:100%;
-	height:550px;
+	height:600px;
 }
 #first div
 {
@@ -944,19 +947,22 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:550px;
+	height:600px;
 	clear: both;
 	background: url();
 }
 
 .top_banner .banner_first{
 	width:100%;
-	height:550px;
-	background: url(../images/topbj.png)no-repeat;
+	height:600px;
+	background: url(../images/topbj.png)left center no-repeat;
 	position: relative;
 	top:0;
 	left:0;
 	z-index: 10;
+	background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 .banner_first .h4{
 	font-size: 42px;
@@ -980,7 +986,7 @@ button{
 
 .banner_second img{
 	width:100%;
-	height:550px;
+	height:600px;
 }
 .tab_ul .active{
 	width:13px;
@@ -1605,14 +1611,17 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:550px;
+	height:600px;
 	clear: both;
-	background: url(../images/topbj.png)no-repeat;
+	background: url(../images/topbj.png)left center no-repeat;
+	 background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 
 .top_banner .banner_first{
 	width:100%;
-	height:550px;
+	height:600px;
 	position:relative; 
 	top:0;
 	left:0;
@@ -1645,7 +1654,7 @@ button{
 
 .banner_second img{
 	width:100%;
-	height:550px;
+	height:600px;
 }
 .tab_ul .active{
 	width:13px;
@@ -1949,18 +1958,25 @@ button{
 	position: fixed;
 	overflow: hidden;
 	transition:0.5s all ease;
-	top:1.6rem;
-	width:100%;
+	top:0.8rem;
+	left:2.5rem;
+	width:0rem;
 	height:0rem;
-    float: left;
-        margin-left: 1.4rem;
+    margin-left: 1.4rem;
+    border:1px solid #fff;
+    text-align: center;
+    opacity: 0;
+}
+#xnav_ul .top_li{
+	margin-top: 0.2rem;
 }
 .xnav_ul li{
 	font-size: 0.475rem;
 	line-height: 1.6rem;
-	float: left;
-	height:1.6rem;
-	margin-left: 0.6rem;
+	height:1rem;
+	width:2.3rem;
+	line-height: 0.5rem;
+	/*margin-top: 0.3rem;*/
 }
 .xnav_ul .no_margin,
 .nav_log .no_margin
@@ -2176,16 +2192,19 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:9rem;
+	height:13rem;
 }
 
 .banner_first{
 	width:100%;
-	height:9rem;
+	height:13rem;
 	position: absolute;
 	top:0;
 	left:0;
-	background: url('../images/topbj.png');
+	background: url('../images/topbj.png')left center no-repeat;
+	 background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 .banner_first span .h4{
 	font-size:1rem ;
@@ -2221,7 +2240,7 @@ button{
 	margin:auto;
 	position: relative;	
 	z-index: 10;
-	top: 8rem;
+	top: 12rem;
 }
 
 .tab_ul li{
@@ -2235,7 +2254,7 @@ button{
 }
 .banner_second img{
 	width:100%;
-	height:9rem;
+	height:13rem;
 }
 
 .banner_first p{

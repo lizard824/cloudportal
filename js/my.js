@@ -123,8 +123,8 @@ onload = function(){
    var navLi = nav_ul.getElementsByTagName('li');
    var phone_open = document.getElementById('ph_open');
 
-   var heig = navLi[0].offsetHeight;
-
+   var heig = navLi[0].offsetHeight*navLi.length;
+   var topWid = navLi[0].offsetWidth;
    //alert(heig)
    var ntrn = true;
    nav_ul.style.transition = '0.5s all ease';
@@ -133,10 +133,14 @@ onload = function(){
       
       if(ntrn == true){
         nav_ul.style.height = heig + 'px';
+        nav_ul.style.width = topWid + 'px';
+        nav_ul.style.opacity = 1;
         nav_ul.style.overFlow = 'none';
         ntrn = false
       }else{
         nav_ul.style.height = 0;
+        nav_ul.style.width = 0;
+        nav_ul.style.opacity = 0;
         nav_ul.style.overFlow = 'hidden';
         ntrn = true
       }
