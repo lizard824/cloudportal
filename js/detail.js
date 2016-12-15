@@ -8,22 +8,28 @@ onload = function(){
 
 //移动端导航事件-------------------------------------
    var nav_ul = document.getElementById('xnav_ul');
+   //alert(nav_ul.innerHTML)
    var navLi = nav_ul.getElementsByTagName('li');
    var phone_open = document.getElementById('ph_open');
 
-   var heig = navLi[0].offsetHeight;
+   var heig = navLi[0].offsetHeight*navLi.length;
+   var topWid = navLi[0].offsetWidth;
+   //alert(heig)
    var ntrn = true;
-   
    nav_ul.style.transition = '0.5s all ease';
 
    phone_open.onclick = function(){
-      
+  
       if(ntrn == true){
         nav_ul.style.height = heig + 'px';
+        nav_ul.style.width = topWid + 'px';
+        nav_ul.style.opacity = 1;
         nav_ul.style.overFlow = 'none';
         ntrn = false
       }else{
         nav_ul.style.height = 0;
+        nav_ul.style.width = 0;
+        nav_ul.style.opacity = 0;
         nav_ul.style.overFlow = 'hidden';
         ntrn = true
       }
@@ -45,7 +51,7 @@ onload = function(){
     change(chanSrc,'images/lo.png','images/logo.png');
     
      //移动端---------------
-    change(phone_open,'images/lo.png','images/logo.png');
+     change(phone_open,'images/topcli.png','images/topcli.png');
 
 
 // 登录-----------------------------------------------
@@ -198,11 +204,11 @@ var allIndex = 0;
  	  tbLi[i].index = i;
  	  tbLi[i].onclick = function(){
  	  	 for(var i = 0;i < tbLi.length;i++){
- 	  	 	tbspan[i].className = '';
+ 	  	 	tbLi[i].className = '';
  	  	 	subDiv[i].style.display = 'none';
  	  	 }
  	  	 allIndex = this.index;
- 	  	 tbspan[this.index].className = 'active';
+ 	  	 this.className = 'active';
  	  	 subDiv[this.index].style.display = 'block';
  	  }
  }

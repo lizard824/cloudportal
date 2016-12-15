@@ -655,7 +655,7 @@ button{
 	width:100%;
 	height:200px;
 	clear: both;
-	background: url(../images/bottom.png)no-repeat;
+	background:#bcbcbc;
 }
 .footer_center{
 	width:57%;
@@ -1308,7 +1308,7 @@ button{
 	width:100%;
 	height:200px;
 	clear: both;
-	background: url('../images/bottom.png');
+	background: #bcbcbc;
 }
 .footer_center{
 	width:57%;
@@ -1878,7 +1878,7 @@ button{
 	width:100%;
 	height:170px;
 	clear: both;
-	background: url('../images/bottom.png');
+	background:#bcbcbc;
 }
 .footer_center{
 	width:80%;
@@ -2536,7 +2536,7 @@ button{
 .footer{
 	width:100%;
 	height:4rem;
-	background:url('../images/bottom.png');
+	background:#bcbcbc;
 	overflow: hidden;
 }
 .footer_center{

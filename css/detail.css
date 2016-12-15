@@ -144,7 +144,7 @@ display: none;
     background: rgba(0,0,0,0.2);	
 }
 #sign a{
-  padding:1px;
+  padding: 2px 3px 5px 3px;
   border:1px solid #fff;
 }
 #log,#enlog{
@@ -285,8 +285,11 @@ source{
 /*banner*/
 .banner{
 	width:100%;
-	height:550px;
-	background: url(../images/topbj.png) no-repeat;
+	height:600px;
+	background:#ccc url(../images/topbj.png)left center no-repeat;
+	 background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 .ba_center{
 	width:78%;
@@ -306,6 +309,13 @@ source{
 	font-size:26px ;
 	color:#fff;
 }
+.ban_left .paas img{
+	width:35px;
+	height:32px;
+	float: left;
+	margin-top: 0;
+	margin-right: 10px;
+}
 .banner p{
    font-size:26px ;
    color:#fff;
@@ -314,7 +324,7 @@ source{
 	width:418px;
 	height:298px;
 	float: right;
-	margin-top: 60px;
+	margin-top: 40px;
 }
 /*banner end*/
 /*详情*/
@@ -331,7 +341,7 @@ source{
 	clear: both;
 }
 .center_ul{
-	width:125px;
+	width:95px;
 	height:200px;
 	float: left;
 	margin-top: 43px;
@@ -341,17 +351,19 @@ source{
 }
 
 .center_ul .active{
-	background: #63aee4;
-	width:10px;
-	height:10px;
-	border-radius: 50px;
+	color:#63aee4;
 }
 
 .center_ul li{
-	margin-top: 10px;
-	padding-top: 7px;
+	width:100%;
+	height:40px;
+	line-height: 45px;
+/*	margin-top: 10px;
+	padding-top: 7px;*/
 	padding-bottom: 7px;
 	cursor: pointer;
+	color:#4b4b4b;
+	border-bottom: 1px solid #797979;
 }
 .center_ul li span{
 	display: block;
@@ -376,7 +388,7 @@ source{
 }
 .hr{
 	width:100%;
-	height:11px;
+	height:1px;
 	clear: both;
 	display: block;
 }
@@ -407,7 +419,7 @@ source{
 	width:100%;
 	height:200px;
 	clear: both;
-	/*background: #212121;*/
+	background: #bcbcbc;
 }
 .footer_center{
 	width:57%;
@@ -702,6 +714,10 @@ button{
 .banner{
 	width:100%;
 	height:600px;
+	background:#ccc url(../images/topbj.png)left center no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover
 }
 .ba_center{
 	width:80%;
@@ -718,15 +734,23 @@ button{
 	float: left;
 }
 .paas{
-	font-size:18px ;
+	font-size:20px ;
 	color:#fff;
 }
+.ban_left .paas img{
+	width:35px;
+	height:30px;
+	float: left;
+	margin-top: 0;
+	margin-right: 10px;
+}
 .banner p{
-   font-size:18px ;
+   font-size:20px ;
    color:#fff;
+   margin-top: 6px;
 }
 .ba_center img{
-	width:400px;
+	width:390px;
 	height:298px;
 	float: right;
 	margin-top: 60px;
@@ -746,7 +770,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:125px;
+	width:95px;
 	height:200px;
 	float: left;
 	margin-top: 43px;
@@ -756,10 +780,8 @@ button{
 }
 
 .center_ul .active{
-	background: #63aee4;
-	width:10px;
-	height:10px;
-	border-radius: 50px;
+	color: #63aee4;
+
 }
 .center_ul li span{
 	display: block;
@@ -772,8 +794,11 @@ button{
 }
 
 .center_ul li{
-	margin-top: 10px;
-	padding-top: 7px;
+	width:100%;
+	height:40px;
+	line-height: 43px;
+	border-bottom: 1px solid #797979;
+	color: :#4b4b4b;
 	padding-bottom: 7px;
 	cursor: pointer;
 }
@@ -792,7 +817,7 @@ button{
 }
 .hr{
 	width:100%;
-	height:8px;
+	height:1px;
 	clear: both;
 	display: block;
 }
@@ -828,7 +853,7 @@ button{
 	width:100%;
 	height:200px;
 	clear: both;
-	/*background: #212121;*/
+	background: #bcbcbc;
 }
 .footer_center{
 	width:57%;
@@ -1121,30 +1146,14 @@ button{
 
 
 
-
-
-/*背景*/
- video{
-	 position: fixed;  
-     right: 0px;  
-     bottom: 0px;  
-     min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto;
-     z-index: -9999;
-}
-source{
-	 min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto; 
-}
-/*背景结束*/
 /*banner*/
 .banner{
 	width:100%;
 	height:600px;
+	background:#ccc url(../images/topbj.png)left center no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
 }
 .ba_center{
 	width:90%;
@@ -1164,9 +1173,18 @@ source{
 	font-size:20px ;
 	color:#fff;
 }
+.ban_left .paas img{
+	width:35px;
+	height:32px;
+	margin-top: 0;
+	margin-left: 10px;
+	float: left;
+
+}
 .banner p{
    font-size:20px ;
    color:#fff;
+   margin-top: 6px;
 }
 .ba_center img{
 	width:300px;
@@ -1189,7 +1207,7 @@ source{
 	clear: both;
 }
 .center_ul{
-	width:125px;
+	width:95px;
 	height:200px;
 	float: left;
 	margin-top: 43px;
@@ -1199,25 +1217,16 @@ source{
 }
 
 .center_ul .active{
-	background: #63aee4;
-	width:10px;
-	height:10px;
-	border-radius: 50px;
-}
-.center_ul li span{
-	display: block;
-	position: relative;
-	top:18px;
-	width:10px;
-	height:10px;
-	border-radius: 50px;
-	border:1px solid #97d7ff;
+	color: #63aee4;
 }
 
+
 .center_ul li{
-	margin-top: 10px;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	width:100%;
+	height:40px;
+	line-height: 43px;
+	color:#4b4b4b;
+	border-bottom: 1px solid #797979;
 	cursor: pointer;
 }
 
@@ -1235,7 +1244,7 @@ source{
 }
 .hr{
 	width:100%;
-	height:8px;
+	height:1px;
 	clear: both;
 	display: block;
 }
@@ -1270,7 +1279,7 @@ source{
 	width:100%;
 	height:170px;
 	clear: both;
-	/*background: #212121;*/
+	background: #bcbcbc;
 }
 .footer_center{
 	width:80%;
@@ -1311,10 +1320,6 @@ source{
 	line-height: 30px;
 }
 /*footer end*/
-#english{
-	display: none;
-}
-
   
  }
 
@@ -1332,27 +1337,68 @@ source{
     }
     /*head start*/
 .xhead{
-    width:100%;
-    height:2rem;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 1000;
-    background: rgba(0,0,0,0.3);
+	width:100%;
+	height:2rem;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 1000;
+	background: rgba(0,0,0,0.3);
 }
 .xnav{
-    width:15rem;
-    height:100%;
-    margin:0 auto;
+	width:15rem;
+	height:100%;
+	margin:0 auto;
 }
-.xnav_ul{
-    width:7.5rem;
-    height:100%;
-    float: left;
+#no_ul{
+	display: none;
+}
+#xnav_ul{
+	position: fixed;
+	overflow: hidden;
+	transition:0.5s all ease;
+	top:0.8rem;
+	left:2.5rem;
+	width:0rem;
+	height:0rem;
+    margin-left: 1.4rem;
+    border:1px solid #fff;
+    text-align: center;
+    opacity: 0;
+}
+#xnav_ul .top_li{
+	margin-top: 0.2rem;
+}
+.xnav_ul li{
+	font-size: 0.475rem;
+	line-height: 1.6rem;
+	height:1rem;
+	width:2.3rem;
+	line-height: 0.5rem;
+	/*margin-top: 0.3rem;*/
+}
+.xnav_ul .no_margin,
+.nav_log .no_margin
+{
+	margin-left: 0;
+}
+.xnav_ul li a{
+   color:#fff;
+}
+.xnav_ul li a:hover{
+	font-size: 0.5rem;
+	color:#0089ff;
+}
+
+.xnav_ul .no_margin a img{
+	display: block;
+	width:1.55rem;
+	height:1rem;
+	margin-top: 0.55rem;
 }
 .top_cli{
-	width:1rem;
-	height:0.625rem;
+	width:5rem;
+	height:1.625rem;
 	float: left;
 	display: block;
 }
@@ -1362,72 +1408,37 @@ source{
 	float: left;
 	padding-top: 0.5rem;
 	cursor: pointer;
+	display: block;
 }
-#no_ul{
-	display: none;
+.top_cli #ph_open{
+	margin-left:0.5rem;
+	width:1rem;
+	height:0.6rem;
+	margin-top: 0.3rem;
 }
-#xnav_ul{
-	position: fixed;
-	overflow: hidden;
-	transition:0.5s all ease;
-	top:1.6rem;
-	width:100%;
-	height:0rem;
-    float: left;
-}
-.xnav_ul li{
-    font-size: 0.475rem;
-    line-height: 2.2rem;
-    float: left;
-    margin-left: 0.6rem;
-}
-.xnav_ul .no_margin,
-.nav_log .no_margin
-{
-    margin-left: 0;
-}
-.xnav_ul li a{
-   color:#fff;
-}
-.xnav_ul li a:hover{
-    font-size: 0.5rem;
-    color:#0089ff;
-}
-.xnav_ul li a img{
-    width:1.85rem;
-    height:1.15rem;
-    margin-top: 0.55rem;
-}
-.xnav_ul .no_margin a img{
-    display: block;
-    width:1.85rem;
-    height:1.15rem;
-    margin-top: 0.55rem;
-}
-
 
 .texttab{
-    width:3.7rem;
-    height:2.2rem;
-    text-align: center;
-    line-height: 2.2rem;
-    font-size: 0.4rem;
-    color:#fff;
-    float: left;
+	width:3.7rem;
+	height:2.2rem;
+	text-align: center;
+	line-height: 2.2rem;
+	font-size: 0.4rem;
+	color:#fff;
+	float: left;
 }
 .nav_log{
-    width:;
-    height:2.2rem;
-    font-size: 0.475rem;
-    float: right;
-    line-height: 2.2rem;
+	width:4.5rem;
+	height:2.2rem;
+	font-size: 0.475rem;
+	float: right;
+	line-height: 2.2rem;
 }
 .nav_log li{
-    margin-left: 0.15rem;
-    float: left;
+	margin-left: 0.15rem;
+	float: left;
 }
 .nav_log li a{
-    color:#fff;
+	color:#fff;
 }
 /*head end*/
 /*登录*/
@@ -1577,39 +1588,25 @@ button{
     margin-left: 2rem;
 } 
 
-/*背景*/
- video{
-     position: fixed;  
-     right: 0px;  
-     bottom: 0px;  
-     min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto;
-     z-index: -9999;
-}
-source{
-     min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto; 
-}
-/*背景结束*/
 /*banner*/
 .banner{
     width:100%;
-    height:16.675rem;
+    height:12rem;
+    position: relative;
+    background:#ccc url(../images/topbj.png)left center no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
 }
 .ba_center{
-    width:15rem;
-    height:8rem;
-   /* position: absolute;
+    width:11rem;
+    height:6rem;
+    position: absolute;
     top:0;
     left:0;
     right:0;
-    bottom: 0;*/
+    bottom: 0;
     margin:auto;
-    padding-top: 5rem;
 }
 .ban_left{
     margin-top:1rem;
@@ -1621,16 +1618,24 @@ source{
     font-size:0.55rem;
     color:#fff;
 }
+.ban_left .paas img{
+	float: left;
+	margin-top: 0;
+	margin-right: 0.25rem;
+	width:0.875rem;
+	height:0.8rem;
+}
 .banner p{
    font-size:0.55rem;
    color:#fff;
+   margin-top: 0.15rem;
 }
 .ba_center img{
     width:5rem;
     height:4rem;
     float: right;
-    margin-right: 1.5rem;
-    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-top: 0rem;
 }
 /*banner end*/
 /*详情*/
@@ -1649,7 +1654,7 @@ source{
     clear: both;
 }
 .center_ul{
-    width:3.125rem;
+    width:2.375rem;
     height:5rem;
     float: left;
     margin-top: 1rem;
@@ -1659,26 +1664,15 @@ source{
 }
 
 .center_ul .active{
-	background: #63aee4;
-	width:0.25rem;
-	height:0.25rem;
-	border-radius: 50px;
-}
-.center_ul li span{
-	display: block;
-	position: relative;
-	top:0.6rem;
-	right:0.2rem;
-	width:0.25rem;
-	height:0.25rem;
-	border-radius: 50px;
-	border:1px solid #97d7ff;
+	color: #63aee4;
 }
 
 .center_ul li{
-    margin-top: 0.25rem;
-    padding-top: 0.175rem;
-    padding-bottom: 0.175rem;
+   width:100%;
+   height:1rem;
+   line-height: 1.075rem;
+   color:#4b4b4b;
+   border-bottom: 1px solid #797979;
     cursor: pointer;
 }
 
@@ -1694,9 +1688,13 @@ source{
     margin-left: 0.25rem;
 
 }
+.center_right .cen_p img{
+	width:0.875rem;
+	height:0.8rem;
+}
 .hr{
     width:100%;
-    height:0.2rem;
+    height:1px;
     clear: both;
     display: block;
 }
@@ -1732,7 +1730,7 @@ source{
 .footer{
     width:100%;
     height:4rem;
-/*  background: #212121;*/
+  background: #bcbcbc;
     overflow: hidden;
 }
 .footer_center{
