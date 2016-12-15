@@ -589,7 +589,7 @@ button{
 	box-shadow: 0 5px 9px #ccc;
 }
 .forth_ul li{
-	width:320px;
+	width:23%;
 	height:330px;
 	background: #fff;
 	float: left;
@@ -604,8 +604,8 @@ button{
 	transition:1s all ease;
     transform:scale(1.05,1.05);
     -moz-transform:scale(1.05,1.05);
-    background: #fff;
-	border-radius: 18px;
+    /*background: #fff;*/
+	/*border-radius: 18px;*/
 	/*box-shadow: 0 5px 9px #ccc;*/
 	opacity: 1;
 }
@@ -690,7 +690,7 @@ button{
 
 .footer_center .last{
 	width:100%;
-	height:50px;
+	height:25px;
 	text-align: center;
 	font-size: 14px;
 	color:#fff;
@@ -1343,7 +1343,7 @@ button{
 
 .footer_center .last{
 	width:100%;
-	height:50px;
+	height:25px;
 	text-align: center;
 	font-size: 14px;
 	color:#fff;
@@ -1912,7 +1912,7 @@ button{
 }
 .footer_center .last{
 	width:100%;
-	height:30px;
+	height:25px;
 	text-align: center;
 	font-size: 14px;
 	color:#fff;

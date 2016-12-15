@@ -223,11 +223,16 @@ onload = function(){
 //左右动
 
   var ulWidth = $('#forth_ul li').width();
-function por(){
-      $("#forth_ul").animate({left:-ulWidth},1000,function(){                        
+   
+  var num = parseInt( $('#forth_ul li').css('marginLeft') );
+  var allNum = ulWidth+num
+  alert(allNum)
+  function por(){
+      $("#forth_ul").animate({left:-allNum},1000,function(){
+                       console.log($("#forth_ul")[0].offsetLeft)                
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")            
       }) 
-                         
+               
     }
 
  //点击事件    
@@ -235,14 +240,32 @@ function por(){
         por()
      })
      $(".onright").click(function(){
-         $('.forth_ul').stop().animate({left:'+='+ulWidth},1000,function(){
-         $('.forth_ul').css("left","-="+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul")
+         $('.forth_ul').animate({left:'+='+(ulWidth+num)},1000,function(){
+          console.log( $("#forth_ul")[0].offsetLeft)
+         $('.forth_ul').css("left","-="+(ulWidth+num)).stop().find(".oone:last-child").prependTo(".forth_ul")
 
          })
      })
     
 
 
+  //  var fleft  = document.getElementById('onleft');
+  //  var fright = document.getElementById('onright');
+  //  var fUl    = document.getElementById('forth_ul');
+  //  var li     = fUl.getElementsByTagName('li');
+
+  // var liLeft = li[0].style.marginLeft; 
+  // var index = li[0].offsetWidth
+     
+  //    fleft.onclick = function(){
+  //     // alert(1)
+  //     for(var i = 0;i < li.length;i++){
+  //             li[i].index = i;
+  //       fUl.style.left = -li[i].offsetWidth + liLeft +'px';
+  //       i ++
+  //    }
+
+  //  }
 
 
    // var fleft  = document.getElementById('onleft');
