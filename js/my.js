@@ -224,8 +224,8 @@ onload = function(){
 
   var ulWidth = $('#forth_ul li').width();
    
-  var num = parseInt( $('#forth_ul li').css('marginLeft') );
-  var allNum = ulWidth+num
+  // var num = parseInt( $('#forth_ul li').css('marginLeft') );
+  // var allNum = ulWidth+num
   // alert(allNum)
   function por(){
       $("#forth_ul").animate({left:-allNum},1000,function(){
