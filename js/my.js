@@ -226,7 +226,7 @@ onload = function(){
    
   var num = parseInt( $('#forth_ul li').css('marginLeft') );
   var allNum = ulWidth+num
-  alert(allNum)
+  // alert(allNum)
   function por(){
       $("#forth_ul").animate({left:-allNum},1000,function(){
                        console.log($("#forth_ul")[0].offsetLeft)                
@@ -248,51 +248,6 @@ onload = function(){
      })
     
 
-
-  //  var fleft  = document.getElementById('onleft');
-  //  var fright = document.getElementById('onright');
-  //  var fUl    = document.getElementById('forth_ul');
-  //  var li     = fUl.getElementsByTagName('li');
-
-  // var liLeft = li[0].style.marginLeft; 
-  // var index = li[0].offsetWidth
-     
-  //    fleft.onclick = function(){
-  //     // alert(1)
-  //     for(var i = 0;i < li.length;i++){
-  //             li[i].index = i;
-  //       fUl.style.left = -li[i].offsetWidth + liLeft +'px';
-  //       i ++
-  //    }
-
-  //  }
-
-
-   // var fleft  = document.getElementById('onleft');
-   // var fright = document.getElementById('onright');
-   // var fUl    = document.getElementById('forth_ul');
-   // var li     = fUl.getElementsByTagName('li');
-   //    for(var i = 0;i < li.length;i++){
-   //        li[i].index = i ;
-   //        li[i].onmouseover = function(){
-   //              for(var i=0;i<li.length;i++){
-   //                li[i].style.transform='scale(1,1)';
-   //                li[i].className='';
-                   
-   //              };
-   //              this.style.transform='scale(1.1,1.1)';
-   //              this.className='factive';
-
-   //        };
-   //        li[i].onmouseout = function(){
-   //              for(var i=0;i<li.length;i++){
-   //                li[i].style.transform='scale(1,1)';
-   //                li[i].className=''
-   //              };
-   //              this.style.transform='scale(1,1)';
-               
-   //        };
-   //    };
 
 
 
