@@ -288,9 +288,9 @@ onload = function(){
      // blu(uname,'username');
      // blu(email,'email');
      // blu(rname,'realname');
-       blu(luname,'user name');
+       //blu(luname,'user name');
    
-         lpwo.onblur=function(){
+        /* lpwo.onblur=function(){
           if(this.value=='' ){
             lpwo.type="text";
             lpwo.value='password';
@@ -304,7 +304,7 @@ onload = function(){
              lpwo.value='';
              
                  };
-             };
+             };*/
  
  // 验证
     
