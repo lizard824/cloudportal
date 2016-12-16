@@ -21,18 +21,19 @@ $(document).ready(function () {
             toptip = userId+","+realname;
             v_head.$set("login", "Hello, "+userId);
             v_head.$set("isLogged", true);
+            clo(clos,log,wlog);
         }else if(!result.success){
             var loginMsg = result.msg;
             if(loginMsg=="failedLogin"){
-                toptip = "密码不对!";
+                toptip = "Wrong password";
             }else if(loginMsg=="notFound"){
-                toptip = "用户不存在!";
+                toptip = "User does not exist!";
             }else{
-                toptip = "出现异常!";
+                toptip = "Error!";
             }
+            v_login.$set("valid", false);
+            v_login.$set("error", toptip);
         }
-        error.style.visibility = 'visible';
-        error.innerText = toptip;
     }
 
 });
@@ -44,7 +45,9 @@ function iniLogin() {
             username: '',
             password: '',
             passValid: true,
-            userValid: true
+            userValid: true,
+            valid:true,
+            error:''
         },
         methods: {
             login: function () {
@@ -90,6 +93,18 @@ function iniHead(){
             isLogged:false
         },
         methods: {
+            logout:function () {
+                var _self = this;
+                $.ajax({
+                    type: "POST",
+                    url: "http://127.0.0.1:8080/sso/caslogout",
+                    dataType: "json",
+                    success: function (data) {
+                        _self.isLogged = false;
+                        _self.login = "Login";
+                    }
+                });
+            }
         }
     });
 }
