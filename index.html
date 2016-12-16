@@ -102,7 +102,7 @@
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname">
+                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()">
                             <input type="hidden" name="auto" value="true"/>
                             <input type="hidden" name="service" value="http://127.0.0.1:8080/sso/index"/>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="input">
                         <div class="inpu">
                             <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password">
+                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
                         <p v-show="!valid">{{error}}</p>

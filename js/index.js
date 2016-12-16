@@ -18,7 +18,7 @@ $(document).ready(function () {
             var userId = result.userId;
             var realname = result.realname;
             toptip = userId+","+realname;
-            v_head.$set("login", "Hello, "+userId);
+            v_head.$set("login", "Hello, "+realname);
             v_head.$set("isLogged", true);
             myClo(log,wlog);
         }else if(!result.success){
@@ -92,18 +92,6 @@ function iniHead(){
             isLogged:false
         },
         methods: {
-           /* logout:function () {
-                var _self = this;
-                $.ajax({
-                    type: "POST",
-                    url: "http://127.0.0.1:8080/sso/caslogout",
-                    dataType: "json",
-                    success: function (data) {
-                        _self.isLogged = false;
-                        _self.login = "Login";
-                    }
-                });
-            }*/
         }
     });
 }
