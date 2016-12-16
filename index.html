@@ -7,10 +7,6 @@
     <title>lenovo</title>
     <link rel="shortcut icon" href="images/function.ico">
     <link rel="stylesheet" href="css/main1.css">
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/vue.min.js"></script>
-
-
 
 </head>
 <body>
@@ -83,9 +79,10 @@
                     </a>
                 </li>
                 <li>&nbsp;</li>
-                <li id="sign">
-                    <a v-show="isLogged" href="#" @click="logout()">Logout</a>
-                    <a v-show="!isLogged" href="javascript:;">
+                <li><a v-show="isLogged" href="http://127.0.0.1:8080/sso/caslogout" style="border:1px solid #fff;
+	padding:2px 3px 5px 3px;">Logout</a></li>
+                <li id="sign" v-show="!isLogged">
+                    <a  href="javascript:;">
                         Sign in
                     </a>
                 </li>
@@ -128,7 +125,7 @@
                         <p>Remember me</p>
                     </div>
                     <button class="buton" type="button" @click="login()">
-                        login
+                        Login
                     </button>
                 </form>
             </div>
@@ -400,6 +397,8 @@
     </div>
     <!-- 底部结束 -->
 </div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/vue.min.js"></script>
 <script src="js/my.js"></script>
 <script src="js/index.js"></script>
 </body>

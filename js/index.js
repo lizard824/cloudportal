@@ -14,14 +14,13 @@ $(document).ready(function () {
     {
         //成功处理
         var toptip = "";
-        var error = document.getElementById("error");
         if(result.success){
             var userId = result.userId;
             var realname = result.realname;
             toptip = userId+","+realname;
             v_head.$set("login", "Hello, "+userId);
             v_head.$set("isLogged", true);
-            clo(clos,log,wlog);
+            myClo(log,wlog);
         }else if(!result.success){
             var loginMsg = result.msg;
             if(loginMsg=="failedLogin"){
@@ -93,7 +92,7 @@ function iniHead(){
             isLogged:false
         },
         methods: {
-            logout:function () {
+           /* logout:function () {
                 var _self = this;
                 $.ajax({
                     type: "POST",
@@ -104,7 +103,7 @@ function iniHead(){
                         _self.login = "Login";
                     }
                 });
-            }
+            }*/
         }
     });
 }
