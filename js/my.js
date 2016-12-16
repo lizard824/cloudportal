@@ -221,18 +221,27 @@ onload = function(){
 //第四屏动画-------------------------------------------
  
 //左右动
-
-  var ulWidth = $('#forth_ul li').width();
-
-  var num = parseInt( $('#forth_ul li').css('marginLeft') );
+   // alert($(window).width())
+  var ulWidth  = $('#forth_ul li').width();
+  // var num = parseInt( $('#forth_ul li').css('marginLeft') );
   //alert(num)
-  var allNum = ulWidth+num
+  
+  // var allNum = ulWidth+num
   //alert(allNum)
   function por(){
-      $("#forth_ul").animate({left:-allNum},1000,function(){
+    if($(window).width()>=1349){
+      ulWidth = 380;
+      $("#forth_ul").animate({left:-ulWidth},1000,function(){
            console.log($("#forth_ul")[0].offsetLeft);                
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       }) 
+  }else if($(window).width()<1349){
+      ulWidth = $('#forth_ul li').width()+parseInt( $('#forth_ul li').css('marginLeft') );
+      $("#forth_ul").animate({left:-ulWidth},1000,function(){
+           console.log($("#forth_ul")[0].offsetLeft);                
+        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
+      }) 
+     }
                
     };
   
