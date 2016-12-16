@@ -1,4 +1,4 @@
-onload = function(){
+
 
 // rem布局----------------------------------------
         document.documentElement.style.fontSize = innerWidth / 16+'px';
@@ -228,7 +228,7 @@ var allIndex = 0;
 
 
 
-}
+
 
 
 $(document).ready(function(){

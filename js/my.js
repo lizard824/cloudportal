@@ -1,4 +1,4 @@
-onload = function(){       
+
 // rem布局----------------------------------------
         document.documentElement.style.fontSize = innerWidth / 16+'px';
 	     onresize = function(){
@@ -92,7 +92,7 @@ onload = function(){
             	b.style.display = "none";         
             };
   };
-
+  clo(clos,log,wlog);
   clo(closig,signbj,sig);
   // clo(enclos,enlog,enwlog)
   // clo(enclosig,ensignbj,ensig)
@@ -221,26 +221,35 @@ onload = function(){
 //第四屏动画-------------------------------------------
  
 //左右动
-
+ console.log($(window).width())
   var ulWidth  = $('#forth_ul li').width();
   function por(){
-    if($(window).width()>=1349){
-      ulWidth = 380;
+    if($(window).width()>1343){
+      ulWidth = 440;
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
            console.log($("#forth_ul")[0].offsetLeft);
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;
       })
-  }else if($(window).width()<1349){
+  }
+  else if($(window).width()==1343){
+     ulWidth = 380;
+
+      $("#forth_ul").animate({left:-ulWidth},1000,function(){
+           console.log($("#forth_ul")[0].offsetLeft);                
+        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
+      })
+  }
+  else if($(window).width()<1343){
       ulWidth = $('#forth_ul li').width()+parseInt( $('#forth_ul li').css('marginLeft') );
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
            console.log($("#forth_ul")[0].offsetLeft);                
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       }) 
      }
-
+               
     };
   
-  //点击事件
+  //点击事件    
      $(".onleft").click(function(){
         por()
      })
@@ -350,10 +359,10 @@ rem.onclick=function(){
         dot.style.float='left';
         clic=true;
      }
-};
-
-
 }
+
+
+
 
 
 

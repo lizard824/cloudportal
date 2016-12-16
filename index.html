@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="css/main1.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/vue.min.js"></script>
-    <script src="js/my.js"></script>
-    <script src="js/index.js"></script>
+
 
 
 </head>
@@ -83,6 +82,7 @@
                         {{login}}
                     </a>
                 </li>
+                <li>&nbsp;</li>
                 <li id="sign">
                     <a v-show="isLogged" href="#" @click="logout()">Logout</a>
                     <a v-show="!isLogged" href="javascript:;">
@@ -399,7 +399,8 @@
     </div>
     <!-- 底部结束 -->
 </div>
-
+<script src="js/my.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
 
