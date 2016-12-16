@@ -221,13 +221,8 @@ onload = function(){
 //第四屏动画-------------------------------------------
  
 //左右动
-   // alert($(window).width())
+
   var ulWidth  = $('#forth_ul li').width();
-  // var num = parseInt( $('#forth_ul li').css('marginLeft') );
-  //alert(num)
-  
-  // var allNum = ulWidth+num
-  //alert(allNum)
   function por(){
     if($(window).width()>=1349){
       ulWidth = 380;
@@ -245,7 +240,7 @@ onload = function(){
                
     };
   
- //点击事件    
+  //点击事件    
      $(".onleft").click(function(){
         por()
      })
