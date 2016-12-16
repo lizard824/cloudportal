@@ -50,7 +50,7 @@
  //    tab(cha,china,english);
 
 // 登录注册切换中英文---------------------------------
-// 登录
+// 登录 窗口打开
     var login  = document.getElementById('login');
     var log    = document.getElementById('log');
     var wlog   = document.getElementById('wlog');
@@ -58,44 +58,39 @@
     var signbj = document.getElementById('signbj');
     var sig    = document.getElementById('sig');
 
-    // var enlogin  = document.getElementById('enlogin');
-    // var enlog    = document.getElementById('enlog');
-    // var enwlog   = document.getElementById('enwlog');
-    // var ensign   = document.getElementById('ensign');
-    // var ensignbj = document.getElementById('ensignbj');
-    // var ensig    = document.getElementById('ensig'); 
-        function bloc(e,a,b,c,d){
-            e.onclick = function(){
-            	a.style.display = "block";
-            	b.style.display = "block";          
-            	c.style.display = "none";
-            	d.style.display = "none";
-                };
-           };
-// 登录
-   bloc(login,log,wlog,signbj,sig);
- //  bloc(enlogin,enlog,enwlog,ensignbj,ensig)
-// 注册
-    bloc(sign,signbj,sig,log,wlog);
- //   bloc(ensign,ensignbj,ensig,enlog,enwlog)
+    var clLig = function bl(a,b,c,d){
+             a.style.display = "block";
+             b.style.display = "block";          
+             c.style.display = "none";
+             d.style.display = "none"; 
+        };
+    login.onclick = function(){
+          clLig(log,wlog,signbj,sig);
+        };
+    sign.onclick = function(){
+          clLig(signbj,sig,log,wlog);
+    };
+
 
 
 
 // 关闭-------------------------------------------------
     var clos = document.getElementById('close');
     var closig = document.getElementById('closesig');
-    // var enclos = document.getElementById('enclose');
-    // var enclosig = document.getElementById('enclosesig');
-  function clo(e,a,b){
-          e.onclick =function(){
-            	a.style.display = "none";
-            	b.style.display = "none";         
-            };
-  };
-  clo(clos,log,wlog);
-  clo(closig,signbj,sig);
-  // clo(enclos,enlog,enwlog)
-  // clo(enclosig,ensignbj,ensig)
+
+// 关闭窗口   
+    var myClo = function cl(a,b){
+         a.style.display = "none";
+         b.style.display = "none"; 
+    };
+
+clos.onclick = function(){
+     myClo(log,wlog);
+};
+closig.onclick = function(){
+     myClo(signbj,sig);
+};
+
 
 
 // 导航背景------------------------------------------

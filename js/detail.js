@@ -1,5 +1,4 @@
 
-
 // rem布局----------------------------------------
         document.documentElement.style.fontSize = innerWidth / 16+'px';
 	     onresize = function(){
@@ -62,19 +61,18 @@
     var signbj = document.getElementById('signbj');
     var sig    = document.getElementById('sig');
 
-   
-        function bloc(e,a,b,c,d){
-            e.onclick = function(){
-            	a.style.display = "block";
-            	b.style.display = "block";          
-            	c.style.display = "none";
-            	d.style.display = "none";
-                };
-           }
-// 登录
-   bloc(login,log,wlog,signbj,sig)
-// 注册
-    bloc(sign,signbj,sig,log,wlog)
+     var clLig = function bl(a,b,c,d){
+             a.style.display = "block";
+             b.style.display = "block";          
+             c.style.display = "none";
+             d.style.display = "none"; 
+        };
+    login.onclick = function(){
+          clLig(log,wlog,signbj,sig);
+        };
+    sign.onclick = function(){
+          clLig(signbj,sig,log,wlog);
+    };
 
 
 
@@ -83,14 +81,18 @@
     var clos = document.getElementById('close');
     var closig = document.getElementById('closesig');
    
-  function clo(e,a,b){
-          e.onclick =function(){
-            	a.style.display = "none";
-            	b.style.display = "none";         
-            };
-  }
-  clo(clos,log,wlog)
-  clo(closig,signbj,sig)
+// 关闭窗口   
+    var myClo = function cl(a,b){
+         a.style.display = "none";
+         b.style.display = "none"; 
+    };
+
+clos.onclick = function(){
+     myClo(log,wlog);
+};
+closig.onclick = function(){
+     myClo(signbj,sig);
+};
 
 
 
