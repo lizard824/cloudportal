@@ -223,28 +223,30 @@ onload = function(){
 //左右动
 
   var ulWidth = $('#forth_ul li').width();
-   
-  // var num = parseInt( $('#forth_ul li').css('marginLeft') );
-  // var allNum = ulWidth+num
-  // alert(allNum)
+
+  var num = parseInt( $('#forth_ul li').css('marginLeft') );
+  //alert(num)
+  var allNum = ulWidth+num
+  //alert(allNum)
   function por(){
       $("#forth_ul").animate({left:-allNum},1000,function(){
-                       console.log($("#forth_ul")[0].offsetLeft)                
-        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul")            
+           console.log($("#forth_ul")[0].offsetLeft);                
+        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       }) 
                
-    }
-
+    };
+  
  //点击事件    
      $(".onleft").click(function(){
         por()
      })
-     $(".onright").click(function(){
-         $('.forth_ul').animate({left:'+='+(ulWidth+num)},1000,function(){
-          console.log( $("#forth_ul")[0].offsetLeft)
-         $('.forth_ul').css("left","-="+(ulWidth+num)).stop().find(".oone:last-child").prependTo(".forth_ul")
 
-         })
+     $(".onright").click(function(){
+         // $('.forth_ul').stop().animate({left:'+='+ulWidth},1000,function(){
+         //  //console.log( $("#forth_ul")[0].offsetLeft)
+         // $('.forth_ul').css("left","-="+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul");
+          $('.forth_ul').css('left','-='+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul").parent().stop().animate({left:'+='+ulWidth},1000,function(){})
+
      })
     
 
@@ -288,7 +290,7 @@ onload = function(){
      // blu(uname,'username');
      // blu(email,'email');
      // blu(rname,'realname');
-       blu(luname,'user name');
+       blu(lnam,'user name');
    
          lpwo.onblur=function(){
           if(this.value=='' ){
