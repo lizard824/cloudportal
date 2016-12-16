@@ -5,27 +5,37 @@ var v_login, v_head;
 $(document).ready(function () {
     iniLogin();
     iniHead();
-});
+    window.addEventListener('message', function(event) {
+        console.log(event.data);
+        logincallback(event.data);
+    });
 
-var index = function (result) {
-    var userId = result.userId;
-    var realname = result.realname;
-    console.log(userId);
-    v_head.$set("login", "Hello, "+userId);
-};
-
-var logincallback = function (result) {
-    var loginMsg = result.msg;
-    console.log(loginMsg);
-    var error = document.getElementById("error");
-    if (loginMsg == "failedLogin") {
+    var logincallback = function(result)
+    {
+        //成功处理
+        var toptip = "";
+        var error = document.getElementById("error");
+        if(result.success){
+            var userId = result.userId;
+            var realname = result.realname;
+            toptip = userId+","+realname;
+            v_head.$set("login", "Hello, "+userId);
+            v_head.$set("isLogged", true);
+        }else if(!result.success){
+            var loginMsg = result.msg;
+            if(loginMsg=="failedLogin"){
+                toptip = "密码不对!";
+            }else if(loginMsg=="notFound"){
+                toptip = "用户不存在!";
+            }else{
+                toptip = "出现异常!";
+            }
+        }
         error.style.visibility = 'visible';
-        error.innerText = "密码不对!";
-    } else if (loginMsg == "notFound") {
-        error.style.visibility = 'visible';
-        error.innerText = "用户不存在!";
+        error.innerText = toptip;
     }
-};
+
+});
 
 function iniLogin() {
     v_login = new Vue({
@@ -76,7 +86,8 @@ function iniHead(){
     v_head = new Vue({
         el: "#xhead",
         data: {
-            login:'Login'
+            login:'Login',
+            isLogged:false
         },
         methods: {
         }

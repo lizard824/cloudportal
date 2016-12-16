@@ -130,7 +130,7 @@ body{
 	width:100%;
 	height:100%;
 	background: rgba(0,0,0,0.4);
-	/*overflow: scroll;*/
+	overflow: scroll;
 }
 #sign a{
 	line-height: 1;
@@ -152,7 +152,7 @@ display: none;
 	right:0;
 	top:64px;
 	z-index: 100;
-	overflow: scroll;
+	/*overflow: scroll;*/
     background: rgba(0,0,0,0.2);	
 }
 #log,#enlog{
@@ -166,7 +166,7 @@ display: none;
 	height:512px;
 	margin: auto;
 	position: absolute;
-	overflow-y: auto;
+	/*overflow-y: auto;*/
     left:0;
     top:0;
     right:0;
@@ -1944,7 +1944,7 @@ button{
  	/*head start*/
 .xhead{
 	width:100%;
-	height:3rem;
+	height:2.2rem;
 	position: fixed;
 	top:0;
 	left: 0;
