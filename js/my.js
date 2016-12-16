@@ -1,4 +1,4 @@
-       
+
 // rem布局----------------------------------------
         document.documentElement.style.fontSize = innerWidth / 16+'px';
 	     onresize = function(){
@@ -222,9 +222,9 @@ closig.onclick = function(){
     if($(window).width()>1343){
       ulWidth = 440;
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
-           console.log($("#forth_ul")[0].offsetLeft);                
-        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
-      }) 
+           console.log($("#forth_ul")[0].offsetLeft);
+        $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;
+      })
   }
   else if($(window).width()==1343){
      ulWidth = 380;
@@ -298,9 +298,9 @@ closig.onclick = function(){
      // blu(uname,'username');
      // blu(email,'email');
      // blu(rname,'realname');
-       blu(lnam,'user name');
+       //blu(luname,'user name');
    
-         lpwo.onblur=function(){
+        /* lpwo.onblur=function(){
           if(this.value=='' ){
             lpwo.type="text";
             lpwo.value='password';
@@ -314,7 +314,7 @@ closig.onclick = function(){
              lpwo.value='';
              
                  };
-             };
+             };*/
  
  // 验证
     
@@ -354,7 +354,7 @@ rem.onclick=function(){
         dot.style.float='left';
         clic=true;
      }
-};
+}
 
 
 
