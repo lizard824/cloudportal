@@ -124,22 +124,24 @@ closig.onclick = function(){
    var ntrn = true;
    nav_ul.style.transition = '0.5s all ease';
 
-   phone_open.onclick = function(){
-      
+ var navOpen = function navFn(e){
       if(ntrn == true){
-        nav_ul.style.height = heig + 'px';
-        nav_ul.style.width = topWid + 'px';
-        nav_ul.style.opacity = 1;
-        nav_ul.style.overFlow = 'none';
+        e.style.height = heig + 'px';
+        e.style.width = topWid + 'px';
+        e.style.opacity = 1;
+        e.style.overFlow = 'none';
         ntrn = false
       }else{
-        nav_ul.style.height = 0;
-        nav_ul.style.width = 0;
-        nav_ul.style.opacity = 0;
-        nav_ul.style.overFlow = 'hidden';
+        e.style.height = 0;
+        e.style.width = 0;
+        e.style.opacity = 0;
+        e.style.overFlow = 'hidden';
         ntrn = true
       }
-
+  }
+  
+   phone_open.onclick = function(){
+       navOpen(nav_ul)
    };
 
 
@@ -148,19 +150,18 @@ closig.onclick = function(){
 //更换图片-----------------------------------------
      var chanSrc = document.getElementById('change_src');
      // var enchanSrc = document.getElementById('enchange_src');
-     function change(e,a,b){
-     	e.onmouseover=function(){
-     	 e.src=a;
-          };
-        e.onmouseout=function(){
-     	 e.src=b;
-         };
-    };
-    change(chanSrc,'images/lo.png','images/logo.png');
-    // change(enchanSrc,'images/lo.png','images/logo.png');
+  
+    var chanImg = function change(e,a){
+          e.src = a;
+    }
+   chanSrc.onmouseover = function(){
+        chanImg(chanSrc,'images/lo.png')
+   }
+   chanSrc.onmouseout = function(){
+        chanImg(chanSrc,'images/logo.png')
+   }
 
-  //移动端---------------
-    change(phone_open,'images/topcli.png','images/topcli.png');
+
 
 
 // 轮播图
@@ -216,8 +217,9 @@ closig.onclick = function(){
 //第四屏动画-------------------------------------------
  
 //左右动
- console.log($(window).width())
+ // console.log($(window).width())
   var ulWidth  = $('#forth_ul li').width();
+  
   function por(){
     if($(window).width()>1343){
       ulWidth = 440;
