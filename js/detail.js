@@ -7,50 +7,51 @@
 
 //移动端导航事件-------------------------------------
    var nav_ul = document.getElementById('xnav_ul');
-   //alert(nav_ul.innerHTML)
    var navLi = nav_ul.getElementsByTagName('li');
    var phone_open = document.getElementById('ph_open');
-
    var heig = navLi[0].offsetHeight*navLi.length;
    var topWid = navLi[0].offsetWidth;
-   //alert(heig)
    var ntrn = true;
    nav_ul.style.transition = '0.5s all ease';
-
-   phone_open.onclick = function(){
   
+   var phOpen = function phshow(e){
+      
       if(ntrn == true){
-        nav_ul.style.height = heig + 'px';
-        nav_ul.style.width = topWid + 'px';
-        nav_ul.style.opacity = 1;
-        nav_ul.style.overFlow = 'none';
+        e.style.height = heig + 'px';
+        e.style.width = topWid + 'px';
+        e.style.opacity = 1;
+        e.style.overFlow = 'none';
         ntrn = false
       }else{
-        nav_ul.style.height = 0;
-        nav_ul.style.width = 0;
-        nav_ul.style.opacity = 0;
-        nav_ul.style.overFlow = 'hidden';
+        e.style.height = 0;
+        e.style.width = 0;
+        e.style.opacity = 0;
+        e.style.overFlow = 'hidden';
         ntrn = true
       }
 
    };
 
+  phone_open.onclick = function(){
+  	   phOpen(nav_ul)
+  }
+
 
 //更换图片-----------------------------------------
-     var chanSrc = document.getElementById('change_src');
-     // var enchanSrc = document.getElementById('enchange_src');
-     function change(e,a,b){
-     	e.onmouseover=function(){
-     	 e.src=a;
-          };
-        e.onmouseout=function(){
-     	 e.src=b;
-         };
+      var chanSrc = document.getElementById('change_src');
+  
+    var chanImg = function change(e,a){
+    	
+    	e.src=a;
+    	
     };
-    change(chanSrc,'images/lo.png','images/logo.png');
     
-     //移动端---------------
-     change(phone_open,'images/topcli.png','images/topcli.png');
+    chanSrc.onmousover = function(){
+    	chanImg(chanSrc,'images/lo.png');
+    };
+    chanSrc.onmousover = function(){
+    	chanImg(chanSrc,'images/logo.png');
+    };
 
 
 // 登录-----------------------------------------------
