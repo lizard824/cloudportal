@@ -102,7 +102,7 @@
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()">
+                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
                             <input type="hidden" name="auto" value="true"/>
                             <input type="hidden" name="service" value="http://127.0.0.1:8080/sso/index"/>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="input">
                         <div class="inpu">
                             <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()">
+                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
                         <p v-show="!valid">{{error}}</p>
@@ -140,37 +140,37 @@
         <div class="xlog logopt" id="sig">
             <img src="images/close.png" alt="" class="close" id="closesig">
             <div class="form">
-                <form class="" id="form">
+                <form class="" id="signForm" action="http://127.0.0.1:8080/sso/">
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" value="" id="uname">
+                            <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username">
                         </div>
-                        <p>*请输入用户名</p>
+                        <p v-show="!userValid">*Please input username</p>
                     </div>
                     <div class="input">
                         <div class="inpu">
                             <img src="images/email.png" alt="">
-                            <input type="text" value="" id="email">
+                            <input type="text" name="email" v-model="email" id="email" placeholder="Please input email">
                         </div>
-                        <p>*请输入邮箱</p>
+                        <p v-show="!emailValid">*Please input valid email</p>
                     </div>
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" value="" id="rname">
+                            <input type="text" name="name" v-model="name" id="rname" placeholder="Please input name">
                         </div>
-                        <p>*请输入真实姓名</p>
+                        <p v-show="!nameValid">*Please input name</p>
                     </div>
                     <div class="input">
                         <div class="inpu">
                             <img src="images/password.png" alt="">
-                            <input type="text" value="" id="pword">
+                            <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
                         </div>
-                        <p>*请输入密码</p>
+                        <p v-show="!passValid">*Please input password</p>
                     </div>
-                    <button class="buton sbuton" type="button" disabled="disabled">
-                        sign in
+                    <button class="buton sbuton" type="submit">
+                        Sign in
                     </button>
                 </form>
             </div>
@@ -398,6 +398,7 @@
     <!-- 底部结束 -->
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.form.js"></script>
 <script src="js/vue.min.js"></script>
 <script src="js/my.js"></script>
 <script src="js/index.js"></script>
