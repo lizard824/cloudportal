@@ -180,6 +180,7 @@ input{
 .input{
 	margin-top: 30px;
 	height:70px;
+	clear: both;
 }
 .input p{
 	font-size: 14px;
@@ -208,10 +209,10 @@ input{
 	float: left;
 	width:26px;
 	height:28px;
-	margin-top: 24px;
+	margin-top: 30px;
 }
 .rember{
-	width:150px;
+	width:170px;
 	height:40px;
 	margin:auto;
 	margin-top: 65px;
@@ -250,7 +251,7 @@ button{
 	border:0;
 	font-size: 24px;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 60px;
 	color:#fff;
 	cursor: pointer;
 	float: right;
@@ -268,7 +269,7 @@ button{
 .sign .input{
 	margin-top: 15px;
 }
-.sbuton{
+#signForm .sbuton{
 	float: none;
 	margin-left: 80px;
 }
@@ -276,7 +277,7 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:600px;
+	height:500px;
 }
 .top_banner video{
 	 position: fixed;  
@@ -297,7 +298,7 @@ button{
 .top_banner .banner_first{
 	background: url(../images/topbj.png)left center no-repeat;
 	width:100%;
-	height:600px;
+	height:500px;
 	position: relative;
 	top:0;
 	left:0;
@@ -327,7 +328,7 @@ button{
 }
 .top_banner .banner_second img{
 	width:100%;
-	height:600px;
+	height:500px;
 }
 #first div
 {
@@ -388,13 +389,42 @@ button{
 	margin:auto;
 	clear: both;
 }
+ .centop{
+	width:390px;
+	height:80px;
+	margin:auto;
+}
+ .centop .cen_title{
+	width:100%;
+	height:35px;
+	padding-top: 30px;
+}
+ .centop .cen_title .title_no{
+	margin-left: 0;
+}
+ .centop .cen_title li{
+	float: left;
+	margin-left: 87px;
+	font-size: 23px;
+	color:#797979;
+}
+ .centop p{
+	clear: both;
+	width:100%;
+	height:20px;
+	font-size:18px ;
+	color:#797979;
+	text-align: center;
+}
 .cen_ban_left{
 	width:50%;
 	float: left;
+	padding-top: 20px;
 }
 .cen_ban_right{
 	width:50%;
 	float: right;
+	padding-top: 20px;
 }
 .cen_left{
 	width:60%;
@@ -552,7 +582,7 @@ button{
 /*forth screen start*/
 .forth{
 	width:100%;
-	height:400px;
+	height:500px;
 	background: #fff;
 	position: relative;
 }
@@ -565,7 +595,7 @@ button{
 	width:80%;
 	height:400px;
 	position:absolute;
-	top:0;
+	top:80px;
 	left:0;
 	right:0;
 	bottom:0;
@@ -951,14 +981,13 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:600px;
+	height:500px;
 	clear: both;
-	/*background: url(../images/topbj.png);*/
 }
 
 .top_banner .banner_first{
 	width:100%;
-	height:600px;
+	height:500px;
 	background: url(../images/topbj.png)left center no-repeat;
 	position: relative;
 	top:0;
@@ -990,7 +1019,7 @@ button{
 
 .banner_second img{
 	width:100%;
-	height:600px;
+	height:500px;
 }
 .tab_ul .active{
 	width:13px;
@@ -1045,6 +1074,33 @@ button{
 	height:100%;
 	margin:auto;
 	clear: both;
+}
+ .centop{
+	width:390px;
+	height:80px;
+	margin:auto;
+}
+ .centop .cen_title{
+	width:100%;
+	height:35px;
+	padding-top: 30px;
+}
+ .centop .cen_title .title_no{
+	margin-left: 0;
+}
+ .centop .cen_title li{
+	float: left;
+	margin-left: 87px;
+	font-size: 23px;
+	color:#797979;
+}
+ .centop p{
+	clear: both;
+	width:100%;
+	height:20px;
+	font-size:18px ;
+	color:#797979;
+	text-align: center;
 }
 .cen_ban_left{
 	width:50%;
@@ -1209,7 +1265,7 @@ button{
 /*forth screen start*/
 .forth{
 	width:100%;
-	height:350px;
+	height:450px;
 	background: #fff;
 	position: relative;
 }
@@ -1222,7 +1278,7 @@ button{
 	width:80%;
 	height:325px;
 	position:absolute;
-	top:0;
+	top:80px;
 	left:0;
 	right:0;
 	bottom:0;
@@ -1290,7 +1346,7 @@ button{
 .onleft{
 	float: left;
 	cursor: pointer;
-	margin-top: 30px;
+	margin-top: 60px;
 	display: block;
 	position: relative;
 	
@@ -1300,7 +1356,7 @@ button{
 	display: block;
 	float: right;
 	cursor: pointer;
-	margin-top: 30px;
+	margin-top: 60px;
 	position: relative;
 	z-index: 50;
 
@@ -1480,7 +1536,7 @@ display: none;
 .xlog{
 	
 	width:500px;
-	height:800px;
+	height:700px;
 	position: fixed;
 	right:0;
 	top:64px;
@@ -1617,7 +1673,7 @@ button{
 /*first screen*/
 .top_banner{
 	width:100%;
-	height:600px;
+	height:500px;
 	clear: both;
 	background: url(../images/topbj.png)left center no-repeat;
 	 background-size:cover;
@@ -1627,7 +1683,7 @@ button{
 
 .top_banner .banner_first{
 	width:100%;
-	height:600px;
+	height:500px;
 	position:relative; 
 	top:0;
 	left:0;
@@ -1660,7 +1716,7 @@ button{
 
 .banner_second img{
 	width:100%;
-	height:600px;
+	height:500px;
 }
 .tab_ul .active{
 	width:13px;
@@ -1713,6 +1769,35 @@ button{
 	margin:auto;
 	clear: both;
 }
+
+.centop{
+	width:390px;
+	height:80px;
+	margin:auto;
+}
+ .centop .cen_title{
+	width:100%;
+	height:35px;
+	padding-top: 30px;
+}
+ .centop .cen_title .title_no{
+	margin-left: 0;
+}
+ .centop .cen_title li{
+	float: left;
+	margin-left: 87px;
+	font-size: 23px;
+	color:#797979;
+}
+ .centop p{
+	clear: both;
+	width:100%;
+	height:20px;
+	font-size:18px ;
+	color:#797979;
+	text-align: center;
+}
+
 .cen_ban_left{
 	width:50%;
 	float: left;
@@ -1779,7 +1864,7 @@ button{
 /*forth screen start*/
 .forth{
 	width:100%;
-	height:300px;
+	height:430px;
 	background: #fff;
 	position: relative;
 }
@@ -1790,9 +1875,9 @@ button{
 }
 .forth_out{
 	width:80%;
-	height:300px;
+	height:330px;
 	position:absolute;
-	top:0;
+	top:100px;
 	left:0;
 	right:0;
 	bottom:0;
@@ -1800,8 +1885,8 @@ button{
 	overflow: hidden;
 }
 .forth_ul{
-	width:150%;
-	height:290px;
+	width:180%;
+	height:300px;
 	position:absolute;
 	left:0;
 	top:0;
@@ -1860,7 +1945,7 @@ button{
 .onleft{
 	float: left;
 	cursor: pointer;
-	margin-top: 30px;
+	margin-top: 60px;
 	display: block;
 	position: relative;
 	
@@ -1870,7 +1955,7 @@ button{
 	display: block;
 	float: right;
 	cursor: pointer;
-	margin-top: 30px;
+	margin-top: 60px;
 	position: relative;
 	z-index: 50;
 
@@ -2289,7 +2374,7 @@ button{
 
 .cen_banner{
 	width:100%;
-	height:21rem;
+	height:22rem;
 	background: #ffffff;
 	clear: both;
 }
@@ -2298,6 +2383,37 @@ button{
 	height:100%;
 	margin:auto;
 	clear: both;
+}
+.centop{
+	width:10rem;
+	height:2rem;
+	margin:auto;
+}
+ .centop .cen_title{
+	width:100%;
+	height:0.875rem;
+	padding-top: 0.75rem;
+}
+ .centop .cen_title .title_no{
+	margin-left: 0;
+}
+ .centop .cen_title li{
+	float: left;
+	margin-left:2.175rem;
+	font-size: 0.575rem;
+	color:#797979;
+}
+ .centop .cen_title li img{
+ 	width:1.6rem;
+ 	height:0.3rem;
+ }
+ .centop p{
+	clear: both;
+	width:100%;
+	height:0.5rem;
+	font-size:0.3rem ;
+	color:#797979;
+	text-align: center;
 }
 .cen_ban_left{
 	width:50%;
@@ -2438,7 +2554,7 @@ button{
 /*forth screen start*/
 .forth{
 	width:100%;
-	height:6rem;
+	height:9.5rem;
 	background: #fff;
 	position: relative;
 }
@@ -2449,9 +2565,9 @@ button{
 }
 .forth_out{
 	width:90%;
-	height:5.5rem;
+	height:7rem;
 	position:absolute;
-	top:0;
+	top:2.5rem;
 	left:0;
 	right:0;
 	bottom:0;
@@ -2460,7 +2576,7 @@ button{
 }
 .forth_ul{
 	width:150%;
-	height:5rem;
+	height:7rem;
 	position:absolute;
 	top:0;
 	left:0;
@@ -2520,7 +2636,7 @@ button{
 .onleft{
 	float: left;
 	cursor: pointer;
-	margin-top: 1rem;
+	margin-top: 1.8rem;
 	display: block;
 	position: relative;
 	z-index: 50;
@@ -2531,7 +2647,7 @@ button{
 	display: block;
 	float: right;
 	cursor: pointer;
-	margin-top: 1rem;
+	margin-top: 1.8rem;
 	position: relative;
 	z-index: 50;
 	width:0.3rem;

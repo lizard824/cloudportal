@@ -152,11 +152,11 @@ closig.onclick = function(){
     	e.src=a;
     	
     };
-    
-    chanSrc.onmousover = function(){
+ 
+    chanSrc.onmouseover = function(){
     	chanImg(chanSrc,'images/lo.png');
     };
-    chanSrc.onmousover = function(){
+    chanSrc.onmouseout = function(){
     	chanImg(chanSrc,'images/logo.png');
     };
     
@@ -217,7 +217,6 @@ closig.onclick = function(){
 //第四屏动画-------------------------------------------
  
 //左右动
- console.log($(window).width())
   var ulWidth  = $('#forth_ul li').width();
   function por(){
     if($(window).width()>1343){
@@ -277,7 +276,7 @@ closig.onclick = function(){
    var mail = document.getElementById('email');
    var namc  = document.getElementById('rname');
    var word = document.getElementById('pword');
-   var aPte = document.getElementById('form');
+   var aPte = document.getElementById('signForm');
    var suP  = aPte.getElementsByTagName('p');
 // 获取焦点/失去焦点
      function blu(e,a){

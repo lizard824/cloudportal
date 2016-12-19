@@ -287,11 +287,11 @@ source{
 /*banner*/
 .banner{
 	width:100%;
-	height:600px;
+	height:500px;
 	background:#ccc url(../images/topbj.png)left center no-repeat;
 	 background-size:cover;
     -moz-background-size:cover;
-    -webkit-background-size:cover
+    -webkit-background-size:cover;
 }
 .ba_center{
 	width:78%;
@@ -716,11 +716,11 @@ button{
 /*banner*/
 .banner{
 	width:100%;
-	height:600px;
+	height:500px;
 	background:#ccc url(../images/topbj.png)left center no-repeat;
     background-size:cover;
     -moz-background-size:cover;
-    -webkit-background-size:cover
+    -webkit-background-size:cover;
 }
 .ba_center{
 	width:80%;
@@ -1155,7 +1155,7 @@ button{
 /*banner*/
 .banner{
 	width:100%;
-	height:600px;
+	height:500px;
 	background:#ccc url(../images/topbj.png)left center no-repeat;
     background-size:cover;
     -moz-background-size:cover;
