@@ -1,33 +1,34 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_login, v_head;
+var v_login, v_head, v_sign;
+var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
     iniHead();
-    window.addEventListener('message', function(event) {
+    iniSign();
+    window.addEventListener('message', function (event) {
         console.log(event.data);
         logincallback(event.data);
     });
 
-    var logincallback = function(result)
-    {
+    var logincallback = function (result) {
         //成功处理
         var toptip = "";
-        if(result.success){
+        if (result.success) {
             var userId = result.userId;
             var realname = result.realname;
-            toptip = userId+","+realname;
-            v_head.$set("login", "Hello, "+realname);
+            toptip = userId + "," + realname;
+            v_head.$set("login", "Hello, " + userId);
             v_head.$set("isLogged", true);
-            myClo(log,wlog);
-        }else if(!result.success){
+            myClo(log, wlog);
+        } else if (!result.success) {
             var loginMsg = result.msg;
-            if(loginMsg=="failedLogin"){
+            if (loginMsg == "failedLogin") {
                 toptip = "Wrong password";
-            }else if(loginMsg=="notFound"){
+            } else if (loginMsg == "notFound") {
                 toptip = "User does not exist!";
-            }else{
+            } else {
                 toptip = "Error!";
             }
             v_login.$set("valid", false);
@@ -45,8 +46,8 @@ function iniLogin() {
             password: '',
             passValid: true,
             userValid: true,
-            valid:true,
-            error:''
+            valid: true,
+            error: ''
         },
         methods: {
             login: function () {
@@ -84,14 +85,92 @@ function iniLogin() {
     });
 }
 
-function iniHead(){
+function iniHead() {
     v_head = new Vue({
         el: "#xhead",
         data: {
-            login:'Login',
-            isLogged:false
+            login: 'Login',
+            isLogged: false
+        },
+        methods: {}
+    });
+}
+
+function iniSign() {
+    v_sign = new Vue({
+        el: "#signForm",
+        data: {
+            email: '',
+            username: '',
+            password: '',
+            name: '',
+            passValid: true,
+            userValid: true,
+            emailValid: true,
+            nameValid: true
         },
         methods: {
+            sign: function () {
+                var _self = this;
+                if (_self.username === "") {
+                    _self.userValid = false;
+                } else {
+                    _self.userValid = true;
+                }
+                if (_self.password === "") {
+                    _self.passValid = false;
+                } else {
+                    _self.passValid = true;
+                }
+                if (!(_self.passValid && _self.userValid)) {
+                    return;
+                } else {
+                    $("#loginForm").submit();
+                }
+
+            }
+        }
+    });
+    v_sign.$watch("username", function (val) {
+        if (val === "")
+            v_sign.$set("userValid", false);
+        else
+            v_sign.$set("userValid", true);
+    });
+    v_sign.$watch("password", function (val) {
+        if (val === "")
+            v_sign.$set("passValid", false);
+        else
+            v_sign.$set("passValid", true);
+    });
+    v_sign.$watch("email", function (val) {
+        if (val === "" || !val.match(email))
+            v_sign.$set("emailValid", false);
+        else
+            v_sign.$set("emailValid", true);
+    });
+    v_sign.$watch("name", function (val) {
+        if (val === "")
+            v_sign.$set("nameValid", false);
+        else
+            v_sign.$set("nameValid", true);
+    });
+    $('#signForm').on('submit', function (e) {
+        e.preventDefault(); // prevent native submit
+        var username = v_sign.username;
+        var email = v_sign.email;
+        var name = v_sign.name;
+        var password = v_sign.password;
+        if (username == '' || email == '' || name == '' || password == '') {
+            return;
+        } else {
+            $(this).ajaxSubmit({
+                success: function (data) {
+                    if (data.success == true) {
+                    } else {
+                    }
+                }
+            });
         }
     });
 }

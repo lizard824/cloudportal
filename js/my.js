@@ -255,8 +255,9 @@ closig.onclick = function(){
          // $('.forth_ul').css("left","-="+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul");
           $('.forth_ul').css('left','-='+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul").parent().stop().animate({left:'+='+ulWidth},1000,function(){})
 
-     })
+     });
     
+
 
 
 
@@ -340,7 +341,6 @@ pro(namc,name,suP[2],'*真实姓名正确',suP[2],'*真实姓名错误');
 
 pro(word,pass,suP[3],'*密码正确',suP[3],'*密码错误');
  
-
 
 //rember me
 

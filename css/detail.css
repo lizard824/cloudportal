@@ -801,7 +801,7 @@ button{
 	height:40px;
 	line-height: 43px;
 	border-bottom: 1px solid #797979;
-	color: :#4b4b4b;
+	color :#4b4b4b;
 	padding-bottom: 7px;
 	cursor: pointer;
 }
