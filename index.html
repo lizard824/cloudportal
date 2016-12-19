@@ -10,86 +10,86 @@
 
 </head>
 <body>
-<div id="china">
-    <!--导航-->
-    <div class="xhead" id="xhead">
-        <div class="xnav">
-            <div class="top_cli">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="">
-                </a>
-
-                <img src="images/topcli.png" id="ph_open" alt="logo">
-            </div>
-            <ul class="xnav_ul" id="no_ul">
-                <li class="no_margin">
-                    <a href="#first" name="first">
-                        <img src="images/logo.png" alt="logo" id="change_src">
-
+    <div id="china">
+        <!--导航-->
+        <div class="xhead" id="xhead">
+            <div class="xnav">
+                <div class="top_cli">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="">
                     </a>
-                </li>
-                <li>
-                    <a href="iaas.html">
+
+                    <img src="images/topcli.png" id="ph_open" alt="logo">
+                </div>
+                <ul class="xnav_ul" id="no_ul">
+                    <li class="no_margin">
+                        <a href="#first" name="first">
+                            <img src="images/logo.png" alt="logo" id="change_src">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://iaas.lenovo.com/">
                         IaaS
                     </a>
-                </li>
-                <li>
-                    <a href="paas.html">
+                    </li>
+                    <li>
+                        <a href="http://earth.xpaas.lenovo.com/">
                         PaaS
                     </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
+                    </li>
+                    <li>
+                        <a href="javascript:;">
                         Service
                     </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
 
-            <!-- 点击出现的导航 -->
-            <ul class="xnav_ul" id="xnav_ul">
-                <li class="top_li">
-                    <a href="iaas.html">
+                <!-- 点击出现的导航 -->
+                <ul class="xnav_ul" id="xnav_ul">
+                    <li class="top_li">
+                        <a href="iaas.html">
                         IaaS
                     </a>
-                </li>
-                <li>
-                    <a href="paas.html">
+                    </li>
+                    <li>
+                        <a href="paas.html">
                         PaaS
                     </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
+                    </li>
+                    <li>
+                        <a href="javascript:;">
                         Service
                     </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
 
-            <!-- <div class="texttab">
+                <!-- <div class="texttab">
                 <p>
                     <span>中文</span>/<span id="eng">English</span>
                 </p>
             </div> -->
 
-            <ul class="nav_log">
-                <li class="no_margin">
-                    <a href="javascript:;" id="login">
+                <ul class="nav_log">
+                    <li class="no_margin">
+                        <a href="javascript:;" id="login">
                         {{login}}
                     </a>
-                </li>
-                <li>&nbsp;</li>
-                <li><a v-show="isLogged" href="http://127.0.0.1:8080/sso/caslogout" style="border:1px solid #fff;
+                    </li>
+                    <li>&nbsp;</li>
+                    <li><a v-show="isLogged" href="http://127.0.0.1:8080/sso/caslogout" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
-                <li id="sign" v-show="!isLogged">
-                    <a  href="javascript:;">
+                    <li id="sign" v-show="!isLogged">
+                        <a href="javascript:;">
                         Sign in
                     </a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
 
+            </div>
         </div>
-    </div>
 
 
     <!-- 登录 -->
@@ -118,153 +118,171 @@
                     </div>
 
 
-                    <div class="rember">
-		    	<span class="wite" id="rember">
+                        <div class="rember">
+                            <span class="wite" id="rember">
 		    		<span class="dot" id="dot"></span>
-		    	</span>
-                        <p>Remember me</p>
-                    </div>
-                    <button class="buton" type="button" @click="login()">
+                            </span>
+                            <p>Remember me</p>
+                        </div>
+                        <button class="buton" type="button" @click="login()">
                         Login
                     </button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <iframe style="display:none;width:0;height:0" id="rlogin" name="rlogin">
+        <iframe style="display:none;width:0;height:0" id="rlogin" name="rlogin">
     </iframe>
-    <!-- 登录结束 -->
-    <!-- 注册 -->
-    <!-- 注册 -->
-    <div class="login sign" id="signbj">
-        <div class="xlog logopt" id="sig">
-            <img src="images/close.png" alt="" class="close" id="closesig">
-            <div class="form">
-                <form class="" id="signForm" action="http://127.0.0.1:8080/sso/">
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username">
+        <!-- 登录结束 -->
+        <!-- 注册 -->
+        <!-- 注册 -->
+        <div class="login sign" id="signbj">
+            <div class="xlog logopt" id="sig">
+                <img src="images/close.png" alt="" class="close" id="closesig">
+                <div class="form">
+                    <form class="" id="signForm" action="http://127.0.0.1:8080/sso/">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username">
+                            </div>
+                            <p v-show="!userValid">*Please input username</p>
                         </div>
-                        <p v-show="!userValid">*Please input username</p>
-                    </div>
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/email.png" alt="">
-                            <input type="text" name="email" v-model="email" id="email" placeholder="Please input email">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/email.png" alt="">
+                                <input type="text" name="email" v-model="email" id="email" placeholder="Please input email">
+                            </div>
+                            <p v-show="!emailValid">*Please input valid email</p>
                         </div>
-                        <p v-show="!emailValid">*Please input valid email</p>
-                    </div>
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/name.png" alt="">
-                            <input type="text" name="name" v-model="name" id="rname" placeholder="Please input name">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="name" v-model="name" id="rname" placeholder="Please input name">
+                            </div>
+                            <p v-show="!nameValid">*Please input name</p>
                         </div>
-                        <p v-show="!nameValid">*Please input name</p>
-                    </div>
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/password.png" alt="">
-                            <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
                         </div>
-                        <p v-show="!passValid">*Please input password</p>
-                    </div>
-                    <button class="buton sbuton" type="submit">
+                        <button class="buton sbuton" type="submit">
                         Sign in
                     </button>
-                </form>
+                    </form>
+                </div>
+
             </div>
-
         </div>
-    </div>
-    <!-- 注册结束 -->
-    <!--导航结束-->
-    <!--第一屏-->
+        <!-- 注册结束 -->
+        <!--导航结束-->
+        <!--第一屏-->
 
-    <div class="top_banner" id="first">
-        <!--  <video autoplay="autoplay" loop="loop">
+        <div class="top_banner" id="first">
+            <!--  <video autoplay="autoplay" loop="loop">
           <source src="assets/file.mp4" type="video/mp4" />
          </video>  -->
 
-        <div class="banner_first banner_second" id="banner_second" style="display:block;">
-            <img src="images/pict1.jpg" alt="">
-
-        </div>
-        <div class="banner_first" id="banner_first">
-  	   <span class="banner_first_one">
-  	   	  <p class="h4">
-  	   	  	Merry Christmas
+            <div class="banner_first banner_second" id="banner_second" style="display:block;">
+                <img src="images/pict1.jpg" alt="">
+                <span class="banner_first_one">
+                <p class="h2">
+                    Save time, Innovate more.
+                </p>
+                </span>
+            </div>
+            <div class="banner_first" id="banner_first">
+                <span class="banner_first_one">
+  	   	  <p class="h2">
+                   Explore Lenovo Devops platform,Cloud products.
   	   	  </p>
-           <!-- <p>
-               简化现代应用程序的开发、运行和维护管理
-           </p> -->
   	   </span>
+            </div>
+
+
+            <div class="banner_first banner_second" id="banner_third">
+                <img src="images/pict.jpg" alt="">
+                <span class="banner_first_one">
+                <p class="h2">
+                    Get ready and run it immediately.
+                </p>
+                </span>
+            </div>
+            <ul class="tab_ul" id="tab_ul">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+
+            </ul>
         </div>
+        <!--第一屏结束-->
 
 
-        <div class="banner_first banner_second" id="banner_third">
-            <img src="images/pict.jpg" alt="">
-        </div>
-        <ul class="tab_ul" id="tab_ul">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
+        <!--第二屏开始-->
 
-        </ul>
-    </div>
-    <!--第一屏结束-->
+        <div class="cen_banner" id="second">
+
+            <div class="cen_center">
+
+                <div class="centop">
+                    <ul class="cen_title">
+                        <li class="title_no"><img src="images/topleft.png" alt=""></li>
+                        <li>Product</li>
+                        <li><img src="images/topright.png" alt=""></li>
+                    </ul>
+                    <p>The next moment How strong we are</p>
+                </div>
+                <div class="cen_ban_left">
+                    <img src="images/iasle.png" alt="iaas" id="cen_right" class="cen_right" />
+                    <div class="cen_left" id="cen_left">
+                        <p class="h3">
+                            <a href="http://earth.xpaas.lenovo.com/">PaaS</a>
+                        </p>
+                        <p>
+                            Increase developer productivity and utilization rate while also decrease an applications' time to market.
+                        </p>
+                        <p class="cen_more">
+
+                            <a href="paas.html">
 
 
-    <!--第二屏开始-->
-
-    <div class="cen_banner" id="second">
-
-        <div class="cen_center">
-
-            <div class="cen_ban_left">
-                <img src="images/iasle.png" alt="iaas" id="cen_right" class="cen_right"/>
-                <div class="cen_left" id="cen_left">
-                    <p class="h3">
-                        PaaS
-                    </p>
-                    <p>
-                        shake it like I`m supposed to do!
-                        We know that shit ain't real Com on now,make it stop
-                        I'm all 'bout that bass,
-                    </p>
-                    <p class="cen_more">
-                        <a href="paas.html">
                             To view more > >
                         </a>
-                    </p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cen_ban_right">
+                    <img src="images/pasri.png" class="cen_right" alt="">
+                    <div class="th_right">
+                        <p class=" h3">
+                            <a href="http://iaas.lenovo.com/">IaaS</a>
+                        </p>
+                        <p class="">
+                            Use high-compatibility and reliable infrastuctrues by lowest consumption.
+                        </p>
+                        <p class="cen_more">
+
+                            <a href="iaas.html">
+
+
+                                To view more > >
+                        </a>
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="cen_ban_right">
-                <img src="images/pasri.png" class="cen_right" alt="">
-                <div class="th_right">
-                    <p class=" h3">IaaS</p>
-                    <p class="">
-                        shake it like I`m supposed to do!
-                        We know that shit ain't real Com on now,make it stop
-                        I'm all 'bout that bass,
-                    </p>
-                    <p class="cen_more">
-                        <a href="iaas.html">
-                            To view more > >
-                        </a>
-                    </p>
-                </div>
-
-            </div>
         </div>
 
-    </div>
-
-    <!--第二屏结束
+        <!--第二屏结束
 
     <!--第三屏开始-->
-    <!-- <div class="th_banner" id="third">
+        <!-- <div class="th_banner" id="third">
 
                  <div class="th_right">
                 <p  class=" h3">PaaS</p>
@@ -283,127 +301,134 @@
                 </p>
             </div>
        <div id="div" class="th_left"> -->
-    <!-- 旋转 -->
-    <!-- <div class="font"><img src="images/5.jpg"></div>
+        <!-- 旋转 -->
+        <!-- <div class="font"><img src="images/5.jpg"></div>
     <div class="botto"><img src="images/6.jpg"></div>
     <div class="left"><img src="images/7.jpg"></div>
     <div class="right"><img src="images/8.jpg"></div> -->
-    <!-- <img src="images/thiaas.png" alt="">
+        <!-- <img src="images/thiaas.png" alt="">
    </div> -->
 
-    <!-- </div> -->
-    <!--第三屏结束-->
+        <!-- </div> -->
+        <!--第三屏结束-->
 
-    <!-- 第四屏 -->
-    <div class="forth" style="display:block;" id="forth">
-        <div class="for_cen">
-            <div class="onclick">
-                <img src="images/left.png" alt="" class="onleft" id="onleft">
-                <img src="images/right.png" alt="" class="onright" id="onright">
+        <!-- 第四屏 -->
+        <div class="forth" style="display:block;" id="forth">
+            <div class="for_cen">
+                <div class="centop">
+                    <ul class="cen_title">
+                        <li class="title_no"><img src="images/topleft.png" alt=""></li>
+                        <li>Service</li>
+                        <li><img src="images/topright.png" alt=""></li>
+                    </ul>
+                    <p>The next moment How strong we are</p>
+                </div>
+                <div class="onclick">
+                    <img src="images/left.png" alt="" class="onleft" id="onleft">
+                    <img src="images/right.png" alt="" class="onright" id="onright">
+                </div>
+                <div class="forth_out" id="forth_out">
+                    <ul class="forth_ul" id="forth_ul">
+                        <li class="oone" id="one">
+
+                            <img src="images/paas.png" alt="">
+                            <p class="ul_first">CMDB</p>
+                            <p class="ul_second">Holds asset data and descriptive <br>relationships between assets.</p>
+                        </li>
+                        <li class="oone" id="factive">
+
+                            <img src="images/iass.png" alt="">
+                            <p class="ul_first">XOPS</p>
+                            <p class="ul_second">Integrate deployment,installation <br>and log searching in one place.</p>
+                        </li>
+                        <li class="oone">
+
+                            <img src="images/start.png" alt="">
+                            <p class="ul_first">Xmsg</p>
+                            <p class="ul_second">Provide API to send,manage<br>and monitor message.</p>
+                        </li>
+                        <li class="oone" id="one">
+
+                            <img src="images/paas.png" alt="">
+                            <p class="ul_first">Ticket</p>
+                            <p class="ul_second">Collect tickets' information for tracking<br>and management.</p>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="forth_out" id="forth_out">
-                <ul class="forth_ul" id="forth_ul">
-                    <li class="oone" id="one">
 
-                        <img src="images/paas.png" alt="">
-                        <p class="ul_first">IaaS</p>
-                        <p class="ul_second">In the mobile and PC <br>devices can access security </p>
+
+        </div>
+
+        <!-- 第四屏结束 -->
+
+
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footer_center" id="footer_center">
+                <ul class="footer_ul_first">
+                    <li class="footerfirst">
+                        <a href="javascript:;">
+                        Lenovo Cloud&Serivce
+                    </a>
                     </li>
-                    <li class="oone" id="factive">
-
-                        <img src="images/iass.png" alt="">
-                        <p class="ul_first">PaaS</p>
-                        <p class="ul_second">In the mobile and PC <br>devices can access security </p>
+                    <li>
+                        <a href="javascript:;">
+                        Mangement Tools
+                    </a>
                     </li>
-                    <li class="oone">
-
-                        <img src="images/start.png" alt="">
-                        <p class="ul_first">operation and maintenance</p>
-                        <p class="ul_second">In the mobile and PC <br>devices can access security</p>
+                    <li>
+                        <a href="javascript:;">
+                        Computing
+                    </a>
                     </li>
-                    <li class="oone" id="one">
-
-                        <img src="images/paas.png" alt="">
-                        <p class="ul_first">IaaS</p>
-                        <p class="ul_second">In the mobile and PC <br>devices can access security </p>
-                    </li>
-
                 </ul>
+                <ul class="footer_ul_first footer_ul_cen">
+                    <li class="footerfirst">
+                        <a href="javascript:;">
+                        Support
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                        Getting Start
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                        Documentation
+                    </a>
+                    </li>
+                </ul>
+                <ul class="footer_ul_first footer_ul_rig">
+                    <li class="footerfirst">
+                        <a href="javascript:;">
+                        Contact Us
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                        Email
+                    </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                        Phone
+                    </a>
+                    </li>
+                </ul>
+                <p class="last">privacy|site Terms Lenovo©2016</p>
             </div>
         </div>
-
-
+        <!-- 底部结束 -->
     </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/index.js"></script>
 
-    <!-- 第四屏结束 -->
-
-
-    <!-- 底部 -->
-    <div class="footer">
-        <div class="footer_center" id="footer_center">
-            <ul class="footer_ul_first">
-                <li class="footerfirst">
-                    <a href="javascript:;">
-                        产品中心
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        热销榜单
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        核心产品
-                    </a>
-                </li>
-            </ul>
-            <ul class="footer_ul_first footer_ul_cen">
-                <li class="footerfirst">
-                    <a href="javascript:;">
-                        产品中心
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        热销榜单
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        核心产品
-                    </a>
-                </li>
-            </ul>
-            <ul class="footer_ul_first footer_ul_rig">
-                <li class="footerfirst">
-                    <a href="javascript:;">
-                        产品中心
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        热销榜单
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        核心产品
-                    </a>
-                </li>
-            </ul>
-            <p class="last">IAAS AND PAAS有限公司版权所有 Lenovo ALL RIGHT RESERVED</p>
-        </div>
-    </div>
-    <!-- 底部结束 -->
-</div>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/vue.min.js"></script>
-<script src="js/my.js"></script>
-<script src="js/index.js"></script>
 </body>
+
 </html>
-
-
-
