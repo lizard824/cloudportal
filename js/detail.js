@@ -4,6 +4,48 @@
 	     onresize = function(){
 		document.documentElement.style.fontSize = innerWidth / 16+'px';
 	          };
+// 导航背景------------------------------------------
+var aUl = document.getElementById('xhead');
+var twoDiv = document.getElementById('second');
+
+
+onscroll=function(ev){
+    var ev = ev || event;
+    var top = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if(top>twoDiv.offsetTop-65){
+        aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        pullDown.style.border='1px solid #000';
+        pullDown.style.marginTop='53px';
+        for(var i = 0;i<pullLi.length;i++){
+            pullLi[i].style.borderBottom = '1px solid #000';
+            pullAcol[i].style.color = ' #000';
+            pullAcol[i].onmouseover = function(){
+                this.style.color = '#005aff';
+            };
+            pullAcol[i].onmouseout = function(){
+                this.style.color = '#000';
+            };
+        }
+
+    }else{
+        aUl.style.backgroundColor='rgba(0,0,0,0)';
+        pullDown.style.border='1px solid #fff';
+        pullDown.style.marginTop='10px';
+        for(var i = 0;i<pullLi.length;i++){
+            pullLi[i].style.borderBottom = '1px solid #fff';
+            pullAcol[i].style.color = ' #fff';
+            pullAcol[i].onmouseover = function(){
+                this.style.color = '#005aff';
+            };
+            pullAcol[i].onmouseout = function(){
+                this.style.color = '#fff';
+            };
+        }
+    }
+
+};
+
 
 //移动端导航事件-------------------------------------
    var nav_ul = document.getElementById('xnav_ul');
@@ -37,6 +79,34 @@
   }
 
 
+var clicDown = document.getElementById("clic_down");
+var clicP = clicDown.getElementsByTagName('p');
+var clicA= clicDown.getElementsByTagName('a');
+var tim;
+navLi[2].onmouseover = function(){
+    clearTimeout(tim);
+    clicDown.style.display = "block";
+    clicDown.className= 'pullopt';
+};
+
+clicDown.onmouseover = function(){
+    clearTimeout(tim);
+    clicDown.style.display = "block";
+    clicDown.className= 'pullopt';
+};
+clicDown.onmouseout = function(){
+    clearTimeout(tim);
+
+    clicDown.style.display = "none";
+    clicDown.className= 'pullout';
+};
+navLi[2].onmouseout = function(){
+    tim = setTimeout(function(){
+
+        clicDown.style.display = "none";
+        clicDown.className= 'pullout';
+    },700)
+};
 //更换图片-----------------------------------------
       var chanSrc = document.getElementById('change_src');
   
@@ -55,28 +125,36 @@
     };
 
 //延时导航---------------------------------------------
-var noUL = document.getElementById("no_ul")
+var noUL = document.getElementById("no_ul");
 var downLi = noUL.getElementsByTagName('li')[3];
-//alert(downLi.innerHTML)
+
 var pullDown = document.getElementById("poll_down");
+var pullLi = pullDown.getElementsByTagName('li');
+var pullAcol = pullDown.getElementsByTagName('a');
 var tim;
 downLi.onmouseover = function(){
     clearTimeout(tim);
     pullDown.style.display = "block";
+    pullDown.className= 'pullopt';
 };
 
 pullDown.onmouseover = function(){
     clearTimeout(tim);
     pullDown.style.display = "block";
+    pullDown.className= 'pullopt';
 };
 pullDown.onmouseout = function(){
     clearTimeout(tim);
+
     pullDown.style.display = "none";
+    pullDown.className= 'pullout';
 };
 downLi.onmouseout = function(){
     tim = setTimeout(function(){
+
         pullDown.style.display = "none";
-    },1000)
+        pullDown.className= 'pullout';
+    },700)
 };
 
 // 登录-----------------------------------------------

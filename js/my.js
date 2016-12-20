@@ -95,9 +95,8 @@ closig.onclick = function(){
 
 // 导航背景------------------------------------------
   var aUl = document.getElementById('xhead');
-	var twoDiv = document.getElementById('second');
-	// var enaUl = document.getElementById('enxhead');
-	// var entwoDiv = document.getElementById('secondb');
+  var twoDiv = document.getElementById('second');
+
 
 	onscroll=function(ev){
 		var ev = ev || event;
@@ -105,8 +104,33 @@ closig.onclick = function(){
 			
 		if(top>twoDiv.offsetTop-65){
 			aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
+            pullDown.style.border='1px solid #000';
+            pullDown.style.marginTop='53px';
+            for(var i = 0;i<pullLi.length;i++){
+                pullLi[i].style.borderBottom = '1px solid #000';
+                pullAcol[i].style.color = ' #000';
+                pullAcol[i].onmouseover = function(){
+                    this.style.color = '#005aff';
+                };
+                pullAcol[i].onmouseout = function(){
+                    this.style.color = '#000';
+                };
+            }
+
 		  }else{
 			aUl.style.backgroundColor='rgba(0,0,0,0)';
+            pullDown.style.border='1px solid #fff';
+            pullDown.style.marginTop='10px';
+            for(var i = 0;i<pullLi.length;i++){
+                pullLi[i].style.borderBottom = '1px solid #fff';
+                pullAcol[i].style.color = ' #fff';
+                pullAcol[i].onmouseover = function(){
+                    this.style.color = '#005aff';
+                };
+                pullAcol[i].onmouseout = function(){
+                    this.style.color = '#fff';
+                };
+            }
 		  }
 			
 		};
@@ -127,7 +151,7 @@ closig.onclick = function(){
         e.style.height = heig + 'px';
         e.style.width = topWid + 'px';
         e.style.opacity = 1;
-        e.style.overFlow = 'none';
+        e.style.overFlow = '';
         ntrn = false
       }else{
         e.style.height = 0;
@@ -143,6 +167,36 @@ closig.onclick = function(){
   	   phOpen(nav_ul)
   }
 
+
+
+var clicDown = document.getElementById("clic_down");
+var clicP = clicDown.getElementsByTagName('p');
+var clicA= clicDown.getElementsByTagName('a');
+var tim;
+navLi[2].onmouseover = function(){
+    clearTimeout(tim);
+    clicDown.style.display = "block";
+    clicDown.className= 'pullopt';
+};
+
+clicDown.onmouseover = function(){
+    clearTimeout(tim);
+    clicDown.style.display = "block";
+    clicDown.className= 'pullopt';
+};
+clicDown.onmouseout = function(){
+    clearTimeout(tim);
+
+    clicDown.style.display = "none";
+    clicDown.className= 'pullout';
+};
+navLi[2].onmouseout = function(){
+    tim = setTimeout(function(){
+
+        clicDown.style.display = "none";
+        clicDown.className= 'pullout';
+    },700)
+};
 
 //更换图片-----------------------------------------
      var chanSrc = document.getElementById('change_src');
@@ -166,7 +220,8 @@ closig.onclick = function(){
 
 // 轮播图
     var tabUl = document.getElementById('tab_ul');
-	var allInput = tabUl.getElementsByTagName('sapn');
+	var allInput = tabUl.getElementsByTagName('li');
+    var allSpan = tabUl.getElementsByTagName('span');
 	var tabFirst = document.getElementById('first');
 	var allDiv  = tabFirst.getElementsByTagName('div');
 	var allIndex = 0;
@@ -187,23 +242,23 @@ closig.onclick = function(){
 
 		allInput[i].onclick = function(){
 			for(var i = 0; i < allInput.length;i++){
-				allInput[i].className = '';
+				allSpan[i].className = '';
 				allDiv[i].style.display = 'none';
 			}
 			allDiv[this.index].style.display = 'block';
-			this.className = 'active';
+            allSpan[this.index].className = 'active';
 			allIndex = this.index;
 		}
 	};
 
 	function startMove(){
 		for(var i = 0; i < allInput.length;i++){
-				allInput[i].className = '';
+            allSpan[i].className = '';
 				allDiv[i].style.display = 'none';
 			}
 
 		allDiv[allIndex].style.display = 'block';
-		allInput[allIndex].className = 'active';
+        allSpan[allIndex].className = 'active';
 	}
 
 	function time(){
@@ -215,28 +270,36 @@ closig.onclick = function(){
 	}
 
 //延时导航---------------------------------------------
-var noUL = document.getElementById("no_ul")
+var noUL = document.getElementById("no_ul");
 var downLi = noUL.getElementsByTagName('li')[3];
-//alert(downLi.innerHTML)
+
 var pullDown = document.getElementById("poll_down");
+var pullLi = pullDown.getElementsByTagName('li');
+var pullAcol = pullDown.getElementsByTagName('a');
 var tim;
     downLi.onmouseover = function(){
         clearTimeout(tim);
         pullDown.style.display = "block";
+        pullDown.className= 'pullopt';
     };
 
 pullDown.onmouseover = function(){
      clearTimeout(tim);
-      pullDown.style.display = "block";
+    pullDown.style.display = "block";
+    pullDown.className= 'pullopt';
   };
 pullDown.onmouseout = function(){
     clearTimeout(tim);
+
      pullDown.style.display = "none";
+    pullDown.className= 'pullout';
  };
 downLi.onmouseout = function(){
     tim = setTimeout(function(){
+
     pullDown.style.display = "none";
-    },1000)
+        pullDown.className= 'pullout';
+    },700)
 };
 //第四屏动画-------------------------------------------
 
