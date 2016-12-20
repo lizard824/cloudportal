@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign;
-var _CTX = 'http://127.0.0.1:8180/sso/index';
+var _CTX_ = 'http://127.0.0.1:8180';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
@@ -22,9 +22,8 @@ $(document).ready(function () {
             v_head.$set("login", "Hello, " + realname);
             v_head.$set("isLogged", true);
             myClo(log, wlog);
-            if(v_login.service!==_CTX){
-                window.location = v_login.service;
-                window.location.reload();
+            if(v_login.service!==_CTX_+"/sso/index"){
+                window.open(v_login.service);
             }
         } else if (!result.success) {
             var loginMsg = result.msg;
@@ -53,7 +52,7 @@ function iniLogin() {
             userValid: true,
             valid: true,
             error: '',
-            service: getParameterByName('service') == null ? _CTX : getParameterByName('service')
+            service: getParameterByName('service') == null ? _CTX_ : getParameterByName('service')
         },
         methods: {
             login: function () {
@@ -97,6 +96,21 @@ function iniHead() {
         data: {
             login: 'Login',
             isLogged: false
+        },
+        created:function(){
+            $.ajax({
+            type: "POST",
+            url: _CTX_ + "/sso/getSession/",
+            dataType: "json",
+            success: function (data) {
+                if (data !== null) {
+                    v_head.$set("isLogged",true);
+                    v_head.$set("login", "Hello, " + data.realname);
+                } else {
+                    return data;
+                }
+            }
+        });
         },
         methods: {}
     });
