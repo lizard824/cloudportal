@@ -104,33 +104,15 @@ closig.onclick = function(){
 			
 		if(top>twoDiv.offsetTop-65){
 			aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
-            pullDown.style.border='1px solid #000';
-            pullDown.style.marginTop='53px';
-            for(var i = 0;i<pullLi.length;i++){
-                pullLi[i].style.borderBottom = '1px solid #000';
-                pullAcol[i].style.color = ' #000';
-                pullAcol[i].onmouseover = function(){
-                    this.style.color = '#005aff';
-                };
-                pullAcol[i].onmouseout = function(){
-                    this.style.color = '#000';
-                };
-            }
+            pullDown.style.backgroundColor='rgba(0,0,0,0.3)';
+            pullDown.style.Top='64px';
+
 
 		  }else{
 			aUl.style.backgroundColor='rgba(0,0,0,0)';
-            pullDown.style.border='1px solid #fff';
-            pullDown.style.marginTop='10px';
-            for(var i = 0;i<pullLi.length;i++){
-                pullLi[i].style.borderBottom = '1px solid #fff';
-                pullAcol[i].style.color = ' #fff';
-                pullAcol[i].onmouseover = function(){
-                    this.style.color = '#005aff';
-                };
-                pullAcol[i].onmouseout = function(){
-                    this.style.color = '#fff';
-                };
-            }
+            pullDown.style.backgroundColor='rgba(0,0,0,0)';
+            pullDown.style.Top='64px';
+
 		  }
 			
 		};
@@ -276,29 +258,29 @@ var downLi = noUL.getElementsByTagName('li')[3];
 var pullDown = document.getElementById("poll_down");
 var pullLi = pullDown.getElementsByTagName('li');
 var pullAcol = pullDown.getElementsByTagName('a');
+var pullHeight = pullLi[0].offsetHeight;
 var tim;
     downLi.onmouseover = function(){
         clearTimeout(tim);
-        pullDown.style.display = "block";
-        pullDown.className= 'pullopt';
+        pullDown.style.height = pullHeight + "px";
     };
 
 pullDown.onmouseover = function(){
      clearTimeout(tim);
     pullDown.style.display = "block";
-    pullDown.className= 'pullopt';
+    pullDown.style.height = pullHeight + "px";
   };
 pullDown.onmouseout = function(){
     clearTimeout(tim);
 
-     pullDown.style.display = "none";
-    pullDown.className= 'pullout';
+    pullDown.style.height = 0;
+    pullDown.style.overFlow = 'hidden';
  };
 downLi.onmouseout = function(){
     tim = setTimeout(function(){
 
-    pullDown.style.display = "none";
-        pullDown.className= 'pullout';
+        pullDown.style.height = 0;
+        pullDown.style.overFlow = 'hidden';
     },700)
 };
 //第四屏动画-------------------------------------------
