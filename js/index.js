@@ -2,6 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign;
+var _CTX = 'http://127.0.0.1:8180/sso/index';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
@@ -18,12 +19,16 @@ $(document).ready(function () {
         if (result.success) {
             var userId = result.userId;
             var realname = result.realname;
-            toptip = userId + "," + realname;
-            v_head.$set("login", "Hello, " + userId);
+            v_head.$set("login", "Hello, " + realname);
             v_head.$set("isLogged", true);
             myClo(log, wlog);
+            if(v_login.service!==_CTX){
+                window.location = v_login.service;
+                window.location.reload();
+            }
         } else if (!result.success) {
             var loginMsg = result.msg;
+            var toptip = "";
             if (loginMsg == "failedLogin") {
                 toptip = "Wrong password";
             } else if (loginMsg == "notFound") {
@@ -47,7 +52,8 @@ function iniLogin() {
             passValid: true,
             userValid: true,
             valid: true,
-            error: ''
+            error: '',
+            service: getParameterByName('service') == null ? _CTX : getParameterByName('service')
         },
         methods: {
             login: function () {
@@ -173,4 +179,16 @@ function iniSign() {
             });
         }
     });
+}
+
+function getParameterByName(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

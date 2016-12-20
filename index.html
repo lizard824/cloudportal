@@ -120,14 +120,14 @@
         <div class="xlog logopt" id="log">
             <img src="images/close.png" alt="" class="close" id="close">
             <div class="form">
-                <form id="loginForm" class="" method="post" action="http://10.99.205.24:8580/casserver/login"
+                <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/casserver/login"
                       target="rlogin">
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
                             <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
                             <input type="hidden" name="auto" value="true"/>
-                            <input type="hidden" name="service" value="http://127.0.0.1:8180/sso/index"/>
+                            <input type="hidden" name="service" v-model="service"/>
                         </div>
                         <p v-show="!userValid">*Please input username</p>
                     </div>
@@ -362,7 +362,7 @@
                         <li class="oone" id="factive">
 
                             <img src="images/clise.png" alt="">
-                            <p class="ul_first">XOPS</p>
+                            <p class="ul_first"><a href="http://localhost:8080/xframe/dash/home" target="_blank">XOPS</a></p>
                             <p class="ul_second">Integrate deployment,installation <br>and log searching in one place.</p>
                         </li>
                         <li class="oone">
