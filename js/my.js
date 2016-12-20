@@ -166,8 +166,8 @@ closig.onclick = function(){
 
 // 轮播图
     var tabUl = document.getElementById('tab_ul');
-	var allInput = tabUl.getElementsByTagName('li');
-	var tabFirst = document.getElementById('first')
+	var allInput = tabUl.getElementsByTagName('sapn');
+	var tabFirst = document.getElementById('first');
 	var allDiv  = tabFirst.getElementsByTagName('div');
 	var allIndex = 0;
 	var timer = null;
@@ -214,19 +214,42 @@ closig.onclick = function(){
 		},2500);
 	}
 
+//延时导航---------------------------------------------
+var noUL = document.getElementById("no_ul")
+var downLi = noUL.getElementsByTagName('li')[3];
+//alert(downLi.innerHTML)
+var pullDown = document.getElementById("poll_down");
+var tim;
+    downLi.onmouseover = function(){
+        clearTimeout(tim);
+        pullDown.style.display = "block";
+    };
+
+pullDown.onmouseover = function(){
+     clearTimeout(tim);
+      pullDown.style.display = "block";
+  };
+pullDown.onmouseout = function(){
+    clearTimeout(tim);
+     pullDown.style.display = "none";
+ };
+downLi.onmouseout = function(){
+    tim = setTimeout(function(){
+    pullDown.style.display = "none";
+    },1000)
+};
 //第四屏动画-------------------------------------------
- 
-//左右动
+
   var ulWidth  = $('#forth_ul li').width();
   function por(){
-    if($(window).width()>1343){
+    if($(window).width()>1349){
       ulWidth = 440;
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
            console.log($("#forth_ul")[0].offsetLeft);
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;
       })
   }
-  else if($(window).width()==1343){
+  else if($(window).width()==1349){
      ulWidth = 380;
 
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
@@ -234,7 +257,7 @@ closig.onclick = function(){
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       })
   }
-  else if($(window).width()<1343){
+  else if($(window).width()<1349){
       ulWidth = $('#forth_ul li').width()+parseInt( $('#forth_ul li').css('marginLeft') );
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
            console.log($("#forth_ul")[0].offsetLeft);                

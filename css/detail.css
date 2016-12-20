@@ -84,6 +84,43 @@ body{
      color:#005aff;
 }
 
+	 /*下拉列表*/
+	 .down{
+		 width:120px;
+		 height:123px;
+		 margin-top:45px;
+		 margin-left:-22px;
+		 border:1px solid #fff;
+		 position:relative;
+		 clear:both;
+		 display:none;
+		 transition:1s all ease;
+		 -moz-transition:1s all ease;
+	 }
+	 .down li{
+		 width:95px;
+		 height:30px;
+		 line-height:30px;
+		 font-size:12px;
+		 text-align:center;
+		 border-bottom:1px solid #fff;
+	 }
+	 .down:before{
+		 width:0;
+		 height:0;
+		 content:'';
+		 position:absolute;
+		 left:45px;
+		 top:-10px;
+		 border-bottom:10px solid #fff;
+		 border-left:10px solid transparent;
+		 border-right:10px solid transparent;
+	 }
+	 .down .down_last{
+		 border-bottom:0;
+	 }
+	 /*下拉列表结束*/
+
 .texttab{
 	width:20%;
 	height:100%;

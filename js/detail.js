@@ -54,6 +54,30 @@
     	chanImg(chanSrc,'images/logo.png');
     };
 
+//延时导航---------------------------------------------
+var noUL = document.getElementById("no_ul")
+var downLi = noUL.getElementsByTagName('li')[3];
+//alert(downLi.innerHTML)
+var pullDown = document.getElementById("poll_down");
+var tim;
+downLi.onmouseover = function(){
+    clearTimeout(tim);
+    pullDown.style.display = "block";
+};
+
+pullDown.onmouseover = function(){
+    clearTimeout(tim);
+    pullDown.style.display = "block";
+};
+pullDown.onmouseout = function(){
+    clearTimeout(tim);
+    pullDown.style.display = "none";
+};
+downLi.onmouseout = function(){
+    tim = setTimeout(function(){
+        pullDown.style.display = "none";
+    },1000)
+};
 
 // 登录-----------------------------------------------
     var login  = document.getElementById('login');
