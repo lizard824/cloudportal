@@ -101,18 +101,19 @@ closig.onclick = function(){
 	onscroll=function(ev){
 		var ev = ev || event;
 		var top = document.documentElement.scrollTop || document.body.scrollTop;
-			
+
 		if(top>twoDiv.offsetTop-65){
 			aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
             pullDown.style.backgroundColor='rgba(0,0,0,0.3)';
             pullDown.style.Top='64px';
-
-
+            nav_ul.style.backgroundColor='rgba(0,0,0,0.3)';
+            clicDown.style.backgroundColor='rgba(0,0,0,0.3)';
 		  }else{
 			aUl.style.backgroundColor='rgba(0,0,0,0)';
             pullDown.style.backgroundColor='rgba(0,0,0,0)';
             pullDown.style.Top='64px';
-
+            nav_ul.style.backgroundColor='rgba(0,0,0,0)';
+            clicDown.style.backgroundColor='rgba(0,0,0,0)';
 		  }
 			
 		};
@@ -122,22 +123,20 @@ closig.onclick = function(){
    var nav_ul = document.getElementById('xnav_ul');
    var navLi = nav_ul.getElementsByTagName('li');
    var phone_open = document.getElementById('ph_open');
-   var heig = navLi[0].offsetHeight*navLi.length;
-   var topWid = navLi[0].offsetWidth;
+   var heig = navLi[0].offsetHeight;
+
    var ntrn = true;
    nav_ul.style.transition = '0.5s all ease';
   
    var phOpen = function phshow(e){
-      
+
       if(ntrn == true){
         e.style.height = heig + 'px';
-        e.style.width = topWid + 'px';
         e.style.opacity = 1;
         e.style.overFlow = '';
         ntrn = false
       }else{
         e.style.height = 0;
-        e.style.width = 0;
         e.style.opacity = 0;
         e.style.overFlow = 'hidden';
         ntrn = true
@@ -149,34 +148,35 @@ closig.onclick = function(){
   	   phOpen(nav_ul)
   }
 
-
-
 var clicDown = document.getElementById("clic_down");
 var clicP = clicDown.getElementsByTagName('p');
-var clicA= clicDown.getElementsByTagName('a');
+var clHeight = clicP[0].offsetHeight;
+var clicA= navLi[2].getElementsByTagName('a')[0];
 var tim;
 navLi[2].onmouseover = function(){
     clearTimeout(tim);
-    clicDown.style.display = "block";
-    clicDown.className= 'pullopt';
+    clicDown.style.height = clHeight + 'px';
+    clicA.style.borderBottom = '1px solid #fff';
 };
 
 clicDown.onmouseover = function(){
     clearTimeout(tim);
-    clicDown.style.display = "block";
-    clicDown.className= 'pullopt';
+    clicDown.style.height = clHeight+ 'px';
+    clicA.style.borderBottom = '1px solid #fff';
 };
 clicDown.onmouseout = function(){
     clearTimeout(tim);
 
-    clicDown.style.display = "none";
-    clicDown.className= 'pullout';
+    clicDown.style.height = 0;
+    clicDown.style.overFlow= 'hidden';
+    clicA.style.borderBottom = '0px solid #fff';
 };
 navLi[2].onmouseout = function(){
     tim = setTimeout(function(){
 
-        clicDown.style.display = "none";
-        clicDown.className= 'pullout';
+        clicDown.style.height = 0;
+        clicDown.style.overFlow= 'hidden';
+        clicA.style.borderBottom = '0px solid #fff';
     },700)
 };
 
@@ -254,6 +254,7 @@ navLi[2].onmouseout = function(){
 //延时导航---------------------------------------------
 var noUL = document.getElementById("no_ul");
 var downLi = noUL.getElementsByTagName('li')[3];
+var downA = downLi.getElementsByTagName('a')[0];
 
 var pullDown = document.getElementById("poll_down");
 var pullLi = pullDown.getElementsByTagName('li');
@@ -262,6 +263,7 @@ var pullHeight = pullLi[0].offsetHeight;
 var tim;
     downLi.onmouseover = function(){
         clearTimeout(tim);
+        downA.style.borderBottom = '1px solid #fff'
         pullDown.style.height = pullHeight + "px";
     };
 
@@ -269,18 +271,21 @@ pullDown.onmouseover = function(){
      clearTimeout(tim);
     pullDown.style.display = "block";
     pullDown.style.height = pullHeight + "px";
+    downA.style.borderBottom = '1px solid #fff'
   };
 pullDown.onmouseout = function(){
     clearTimeout(tim);
 
     pullDown.style.height = 0;
     pullDown.style.overFlow = 'hidden';
+    downA.style.borderBottom = '0px solid #fff'
  };
 downLi.onmouseout = function(){
     tim = setTimeout(function(){
 
         pullDown.style.height = 0;
         pullDown.style.overFlow = 'hidden';
+        downA.style.borderBottom = '0px solid #fff'
     },700)
 };
 //第四屏动画-------------------------------------------

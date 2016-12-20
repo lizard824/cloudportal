@@ -15,96 +15,79 @@ onscroll=function(ev){
 
     if(top>twoDiv.offsetTop-65){
         aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        pullDown.style.border='1px solid #000';
-        pullDown.style.marginTop='53px';
-        for(var i = 0;i<pullLi.length;i++){
-            pullLi[i].style.borderBottom = '1px solid #000';
-            pullAcol[i].style.color = ' #000';
-            pullAcol[i].onmouseover = function(){
-                this.style.color = '#005aff';
-            };
-            pullAcol[i].onmouseout = function(){
-                this.style.color = '#000';
-            };
-        }
-
+        pullDown.style.backgroundColor='rgba(0,0,0,0.3)';
+        pullDown.style.Top='64px';
+        nav_ul.style.backgroundColor='rgba(0,0,0,0.3)';
+        clicDown.style.backgroundColor='rgba(0,0,0,0.3)';
     }else{
         aUl.style.backgroundColor='rgba(0,0,0,0)';
-        pullDown.style.border='1px solid #fff';
-        pullDown.style.marginTop='10px';
-        for(var i = 0;i<pullLi.length;i++){
-            pullLi[i].style.borderBottom = '1px solid #fff';
-            pullAcol[i].style.color = ' #fff';
-            pullAcol[i].onmouseover = function(){
-                this.style.color = '#005aff';
-            };
-            pullAcol[i].onmouseout = function(){
-                this.style.color = '#fff';
-            };
-        }
+        pullDown.style.backgroundColor='rgba(0,0,0,0)';
+        pullDown.style.Top='64px';
+        nav_ul.style.backgroundColor='rgba(0,0,0,0)';
+        clicDown.style.backgroundColor='rgba(0,0,0,0)';
     }
 
 };
 
 
 //移动端导航事件-------------------------------------
-   var nav_ul = document.getElementById('xnav_ul');
-   var navLi = nav_ul.getElementsByTagName('li');
-   var phone_open = document.getElementById('ph_open');
-   var heig = navLi[0].offsetHeight*navLi.length;
-   var topWid = navLi[0].offsetWidth;
-   var ntrn = true;
-   nav_ul.style.transition = '0.5s all ease';
-  
-   var phOpen = function phshow(e){
-      
-      if(ntrn == true){
+var nav_ul = document.getElementById('xnav_ul');
+var navLi = nav_ul.getElementsByTagName('li');
+var phone_open = document.getElementById('ph_open');
+var heig = navLi[0].offsetHeight;
+
+var ntrn = true;
+nav_ul.style.transition = '0.5s all ease';
+
+var phOpen = function phshow(e){
+
+    if(ntrn == true){
         e.style.height = heig + 'px';
-        e.style.width = topWid + 'px';
         e.style.opacity = 1;
-        e.style.overFlow = 'none';
+        e.style.overFlow = '';
         ntrn = false
-      }else{
+    }else{
         e.style.height = 0;
-        e.style.width = 0;
         e.style.opacity = 0;
         e.style.overFlow = 'hidden';
         ntrn = true
-      }
+    }
 
-   };
+};
 
-  phone_open.onclick = function(){
-  	   phOpen(nav_ul)
-  }
-
+phone_open.onclick = function(){
+    phOpen(nav_ul)
+}
 
 var clicDown = document.getElementById("clic_down");
 var clicP = clicDown.getElementsByTagName('p');
-var clicA= clicDown.getElementsByTagName('a');
+var clHeight = clicP[0].offsetHeight;
+var clicA= navLi[2].getElementsByTagName('a')[0];
 var tim;
 navLi[2].onmouseover = function(){
     clearTimeout(tim);
-    clicDown.style.display = "block";
-    clicDown.className= 'pullopt';
+    clicDown.style.height = clHeight + 'px';
+    clicA.style.borderBottom = '1px solid #fff';
 };
 
 clicDown.onmouseover = function(){
     clearTimeout(tim);
-    clicDown.style.display = "block";
-    clicDown.className= 'pullopt';
+    clicDown.style.height = clHeight+ 'px';
+    clicA.style.borderBottom = '1px solid #fff';
 };
 clicDown.onmouseout = function(){
     clearTimeout(tim);
 
-    clicDown.style.display = "none";
-    clicDown.className= 'pullout';
+    clicDown.style.height = 0;
+    clicDown.style.overFlow= 'hidden';
+    clicA.style.borderBottom = '0px solid #fff';
 };
 navLi[2].onmouseout = function(){
     tim = setTimeout(function(){
 
-        clicDown.style.display = "none";
-        clicDown.className= 'pullout';
+        clicDown.style.height = 0;
+        clicDown.style.overFlow= 'hidden';
+        clicA.style.borderBottom = '0px solid #fff';
     },700)
 };
 //更换图片-----------------------------------------
@@ -124,36 +107,42 @@ navLi[2].onmouseout = function(){
     	chanImg(chanSrc,'images/logo.png');
     };
 
+
 //延时导航---------------------------------------------
 var noUL = document.getElementById("no_ul");
 var downLi = noUL.getElementsByTagName('li')[3];
+var downA = downLi.getElementsByTagName('a')[0];
 
 var pullDown = document.getElementById("poll_down");
 var pullLi = pullDown.getElementsByTagName('li');
 var pullAcol = pullDown.getElementsByTagName('a');
+var pullHeight = pullLi[0].offsetHeight;
 var tim;
 downLi.onmouseover = function(){
     clearTimeout(tim);
-    pullDown.style.display = "block";
-    pullDown.className= 'pullopt';
+    downA.style.borderBottom = '1px solid #fff'
+    pullDown.style.height = pullHeight + "px";
 };
 
 pullDown.onmouseover = function(){
     clearTimeout(tim);
     pullDown.style.display = "block";
-    pullDown.className= 'pullopt';
+    pullDown.style.height = pullHeight + "px";
+    downA.style.borderBottom = '1px solid #fff'
 };
 pullDown.onmouseout = function(){
     clearTimeout(tim);
 
-    pullDown.style.display = "none";
-    pullDown.className= 'pullout';
+    pullDown.style.height = 0;
+    pullDown.style.overFlow = 'hidden';
+    downA.style.borderBottom = '0px solid #fff'
 };
 downLi.onmouseout = function(){
     tim = setTimeout(function(){
 
-        pullDown.style.display = "none";
-        pullDown.className= 'pullout';
+        pullDown.style.height = 0;
+        pullDown.style.overFlow = 'hidden';
+        downA.style.borderBottom = '0px solid #fff'
     },700)
 };
 
