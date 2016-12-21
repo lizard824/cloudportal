@@ -350,7 +350,7 @@ source{
 	 }
 .ba_center{
 	width:78%;
-	height:300px;
+	height:370px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -361,6 +361,7 @@ source{
 .ban_left{
 	margin-top:160px;
 	float: left;
+	width:60%;
 }
 .paas{
 	font-size:26px ;
