@@ -16,13 +16,11 @@ $(document).ready(function () {
     var logincallback = function (result) {
         //成功处理
         if (result.success) {
-            var userId = result.userId;
-            var realname = result.realname;
-            v_head.$set("login", "Hello, " + realname);
-            v_head.$set("isLogged", true);
+            loadPage();
             myClo(log, wlog);
-            if(v_login.service!==_CTX_+"/sso/index"){
-                window.open(v_login.service);
+            var url = getParameterByName("service");
+            if (null !== url) {
+                window.location.href = url;
             }
         } else if (!result.success) {
             var loginMsg = result.msg;
@@ -51,7 +49,7 @@ function iniLogin() {
             userValid: true,
             valid: true,
             error: '',
-            service: getParameterByName('service') == null ? _CTX_+"/sso/index" : getParameterByName('service')
+            service: _CTX_ + "/sso/index"
         },
         methods: {
             login: function () {
@@ -96,22 +94,26 @@ function iniHead() {
             login: 'Login',
             isLogged: false
         },
-        created:function(){
-           /* $.ajax({
-            type: "GET",
-            url: _CTX_ + "/sso/getSession/",
-            dataType: "json",
-            success: function (data) {
-                if (data !== null) {
-                    v_head.$set("isLogged",true);
-                    v_head.$set("login", "Hello, " + data.realname);
-                } else {
-                    return data;
-                }
-            }
-        });*/
+        created: function () {
+            loadPage();
         },
         methods: {}
+    });
+}
+
+function loadPage() {
+    $.ajax({
+        type: "GET",
+        url: _CTX_ + "/sso/getSession/",
+        dataType: "json",
+        success: function (data) {
+            if (data.success == false) {
+                return data;
+            } else {
+                v_head.$set("isLogged", true);
+                v_head.$set("login", "Hello, " + data.realname);
+            }
+        }
     });
 }
 
