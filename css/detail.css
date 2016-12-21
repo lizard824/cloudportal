@@ -364,20 +364,22 @@ source{
 	width:60%;
 }
 .paas{
-	font-size:26px ;
+	font-size:30px ;
+	color:#fff;
+}
+.pass_sec{
+	margin-top:6px;
+	font-size:18px;
 	color:#fff;
 }
 .ban_left .paas img{
 	width:41px;
 	height:27px;
 	float: left;
-	margin-top: 0;
+	margin-top: 5px;
 	margin-right: 10px;
 }
-.banner p{
-   font-size:26px ;
-   color:#fff;
-}
+
 .ba_center img{
 	width:418px;
 	height:298px;
@@ -848,7 +850,7 @@ button{
 	}
 .ba_center{
 	width:80%;
-	height:350px;
+	height:370px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -862,21 +864,22 @@ button{
 	width:48%;
 }
 .paas{
-	font-size:20px ;
+	font-size:30px ;
+	color:#fff;
+}
+.pass_sec{
+	font-size:18px;
+	margin-top:6px;
 	color:#fff;
 }
 .ban_left .paas img{
 	width:41px;
 	height:27px;
 	float: left;
-	margin-top: 0;
+	margin-top: 5px;
 	margin-right: 10px;
 }
-.banner p{
-   font-size:20px ;
-   color:#fff;
-   margin-top: 6px;
-}
+
 .ba_center img{
 	width:390px;
 	height:298px;
@@ -1357,7 +1360,7 @@ button{
 	}
 .ba_center{
 	width:90%;
-	height:300px;
+	height:380px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -1371,22 +1374,23 @@ button{
 	float: left;
 }
 .paas{
-	font-size:20px ;
+	font-size:30px ;
 	color:#fff;
+}
+.pass_sec{
+	font-size:18px;
+	color:#fff;
+	margin-top:6px;
 }
 .ban_left .paas img{
 	width:41px;
 	height:27px;
-	margin-top: 0;
-	margin-left: 10px;
+	margin-top:6px;
+	margin-right: 10px;
 	float: left;
 
 }
-.banner p{
-   font-size:20px ;
-   color:#fff;
-   margin-top: 6px;
-}
+
 .ba_center img{
 	width:300px;
 	height:200px;
@@ -1885,21 +1889,22 @@ button{
     clear: right;
 }
 .paas{
-    font-size:0.55rem;
+    font-size:0.75rem;
     color:#fff;
+}
+.pass_sec{
+	font-size:0.45rem;
+	color:#fff;
+	margin-top:0.15rem;
 }
 .ban_left .paas img{
 	float: left;
-	margin-top: 0;
+	margin-top: 0.15rem;
 	margin-right: 0.25rem;
 	width:1.025rem;
 	height:0.675rem;
 }
-.banner p{
-   font-size:0.55rem;
-   color:#fff;
-   margin-top: 0.15rem;
-}
+
 .ba_center img{
     width:5rem;
     height:4rem;
