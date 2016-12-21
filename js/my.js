@@ -303,14 +303,14 @@ downLi.onmouseout = function(){
      ulWidth = 380;
 
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
-           console.log($("#forth_ul")[0].offsetLeft);                
+
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       })
   }
   else if($(window).width()<1349){
       ulWidth = $('#forth_ul li').width()+parseInt( $('#forth_ul li').css('marginLeft') );
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
-           console.log($("#forth_ul")[0].offsetLeft);                
+
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       }) 
      }
