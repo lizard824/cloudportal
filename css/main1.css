@@ -693,11 +693,14 @@ button{
 	padding-top: 45px;
 	margin:auto;
 }
+	 .forth_ul .ul_first a{
+		 color:#000;
+	 }
 .forth_ul li img{
 	margin:auto;
     display: block;
 	width:60px;
-	height:60px;
+	height:56px;
 }
 .forth_ul  .ul_second{
 	width:300px;
@@ -1452,6 +1455,9 @@ button{
 	padding-top: 40px;
 	margin:auto;
 }
+	 .forth_ul .ul_first a{
+		 color:#000;
+	 }
 .forth_ul li img{
 	margin:auto;
     display: block;
@@ -2125,6 +2131,9 @@ button{
 	padding-top:30px;
 	margin:auto;
 }
+	 .forth_ul .ul_first a{
+		 color:#000;
+	 }
 .forth_ul li img{
 	width:60px;
 	height:60px;
@@ -2883,6 +2892,9 @@ button{
 	margin:auto;
 	margin-top:0.5rem;
 }
+	 .forth_ul .ul_first a{
+		 color:#000;
+	 }
 .forth_ul li img{
 	margin:auto;
     display: block;
