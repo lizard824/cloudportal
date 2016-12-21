@@ -1309,7 +1309,6 @@ button{
 	text-align: center;
 	margin-top: 60px;
 	color:#fff;
-	/*background: #fff;*/
 	cursor: pointer;
 	float: right;
 }
@@ -1564,7 +1563,6 @@ button{
 	top:0;
 	left: 0;
 	z-index: 1000;
-	/*background: rgba(0,0,0,0.3);*/
 }
 .xnav{
 	width:15rem;
@@ -1576,7 +1574,6 @@ button{
 }
 	#xnav_ul{
 		position: fixed;
-		/*overflow: hidden;*/
 		transition:0.5s all ease;
 		-moz-transition:1s all ease;
 		top:1.6rem;
@@ -1593,7 +1590,6 @@ button{
 		height:1rem;
 		width:2.3rem;
 		float: left;
-		/*margin-top: 0.3rem;*/
 	}
 .xnav_ul .no_margin,
 .nav_log .no_margin
@@ -1647,7 +1643,6 @@ button{
 		left:0;
 		position:absolute;
 		clear:both;
-		/*display:none;*/
 		transition:1s all ease;
 		-moz-transition:1s all ease;
 		z-index:10;
@@ -2064,9 +2059,6 @@ button{
 		float:right;
 	}
 	/*footer end*/
-
-
-
 
 }
 

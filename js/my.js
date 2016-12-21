@@ -6,49 +6,6 @@
 	          };
 
 
-// 判断屏幕宽度 IE不兼容matchMedia----------------------------------
-   // var result = window.matchMedia('(max-width: 759px)');
-
-   // if (result.matches) {
-   //         console.log('页面宽度小于等于700px');
-   //     } else {
-   //       console.log('页面宽度大于700px');
-   //        }
-
-// 中文js----------------------------------------
-// 旋转 中文-------------------------------
-// function run(){
-// 	  var YY2 = 0
-//       var XX1 = 0;
-//       div.style.transform = "perspective(800px) rotateX("+XX1+"deg) rotateY("+YY2+"deg)"      
-//       var kg = false
-//        setInterval(function(){
-//         if(kg == true)return
-//         kg  = true
-//         XX1 = XX1 + 0
-//         YY2 = YY2 - 90
-//         div.style.transform = "perspective(800px) rotateX("+XX1+"deg) rotateY("+YY2+"deg)"
-//        },3500)         
-//       function fn(){
-//         kg = false
-//         div.removeEventListener('transitionend',false);
-//       }
-//       div.addEventListener('transitionend',fn,false); 
-// }    
-//  setTimeout(function(){
-//        run()
-// 	},2000)
-
-// 中英文切换-------------------------------------
- // function tab(e,c,d){
- //        e.onclick = function (){
- //           c.style.display = 'block'
- //           d.style.display = 'none'
- //        	}
- //        };
- //    tab(eng,english,china);
- //    tab(cha,china,english);
-
 // 登录注册切换中英文---------------------------------
 // 登录 窗口打开
     var login  = document.getElementById('login');
@@ -303,14 +260,14 @@ downLi.onmouseout = function(){
      ulWidth = 380;
 
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
-           console.log($("#forth_ul")[0].offsetLeft);                
+
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       })
   }
   else if($(window).width()<1349){
       ulWidth = $('#forth_ul li').width()+parseInt( $('#forth_ul li').css('marginLeft') );
       $("#forth_ul").animate({left:-ulWidth},1000,function(){
-           console.log($("#forth_ul")[0].offsetLeft);                
+
         $(this).css("left","0").find(".oone:first").appendTo("#forth_ul") ;           
       }) 
      }
