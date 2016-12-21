@@ -15,7 +15,6 @@ $(document).ready(function () {
 
     var logincallback = function (result) {
         //成功处理
-        var toptip = "";
         if (result.success) {
             var userId = result.userId;
             var realname = result.realname;
@@ -52,7 +51,7 @@ function iniLogin() {
             userValid: true,
             valid: true,
             error: '',
-            service: getParameterByName('service') == null ? _CTX_ : getParameterByName('service')
+            service: getParameterByName('service') == null ? _CTX_+"/sso/index" : getParameterByName('service')
         },
         methods: {
             login: function () {
@@ -98,8 +97,8 @@ function iniHead() {
             isLogged: false
         },
         created:function(){
-            $.ajax({
-            type: "POST",
+           /* $.ajax({
+            type: "GET",
             url: _CTX_ + "/sso/getSession/",
             dataType: "json",
             success: function (data) {
@@ -110,7 +109,7 @@ function iniHead() {
                     return data;
                 }
             }
-        });
+        });*/
         },
         methods: {}
     });
