@@ -305,24 +305,6 @@ button{
 }
 
 
-/*背景*/
-/* video{
-	 position: fixed;  
-     right: 0px;  
-     bottom: 0px;  
-     min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto;
-     z-index: -9999;
-}
-source{
-	 min-width: 100%;  
-     min-height: 100%;  
-     height: auto;  
-     width: auto; 
-}*/
-/*背景结束*/
 /*banner*/
 .banner{
 	width:100%;
@@ -349,7 +331,7 @@ source{
 		 -webkit-background-size:cover;
 	 }
 .ba_center{
-	width:78%;
+	width:80%;
 	height:370px;
 	position: absolute;
 	top:0;
@@ -359,26 +341,33 @@ source{
     margin:auto;
 }
 .ban_left{
-	margin-top:160px;
+	margin-top:125px;
 	float: left;
 	width:60%;
 }
 .paas{
-	font-size:30px ;
+	font-size:36px ;
 	color:#fff;
 }
 .pass_sec{
-	margin-top:6px;
-	font-size:18px;
+	margin-top:30px;
+	font-size:24px;
 	color:#fff;
 }
-.ban_left .paas img{
-	width:41px;
-	height:27px;
+.ban_left .paas .paastop{
+	width:46px;
+	height:46px;
 	float: left;
-	margin-top: 5px;
+	margin-top: 0px;
 	margin-right: 10px;
 }
+	 .ban_left .paas .iaastop{
+		 width:45px;
+		 height:30px;
+		 float: left;
+		 margin-top: 8px;
+		 margin-right: 10px;
+	 }
 
 .ba_center img{
 	width:418px;
@@ -401,11 +390,10 @@ source{
 	clear: both;
 }
 .center_ul{
-	width:120px;
+	width:147px;
 	height:200px;
 	float: left;
-	margin-top: 43px;
-	font-size: 17px;
+	margin-top:52px;
 	color:#000;
 	text-align: center;
 }
@@ -418,9 +406,7 @@ source{
 	width:100%;
 	height:40px;
 	line-height: 45px;
-	font-size:14px;
-/*	margin-top: 10px;
-	padding-top: 7px;*/
+	font-size:18px;
 	padding-bottom: 7px;
 	cursor: pointer;
 	color:#4b4b4b;
@@ -442,7 +428,7 @@ source{
 	height:100%;
 }
 .center_right .cen_p{
-	font-size:26px ;
+	font-size:24px ;
 	color:#000;
 	margin-left: 10px;
 
@@ -454,7 +440,7 @@ source{
 	display: block;
 }
 .center_right p{
-	font-size: 14px;
+	font-size: 18px;
 	color:#000;
 }
 .cen_dea{
@@ -869,16 +855,23 @@ button{
 }
 .pass_sec{
 	font-size:18px;
-	margin-top:6px;
+	margin-top:20px;
 	color:#fff;
 }
-.ban_left .paas img{
-	width:41px;
-	height:27px;
-	float: left;
-	margin-top: 5px;
-	margin-right: 10px;
-}
+	.ban_left .paas .paastop{
+		width:46px;
+		height:46px;
+		float: left;
+		margin-top: 0px;
+		margin-right: 10px;
+	}
+	.ban_left .paas .iaastop{
+		width:45px;
+		height:30px;
+		float: left;
+		margin-top: 4px;
+		margin-right: 10px;
+	}
 
 .ba_center img{
 	width:390px;
@@ -901,11 +894,10 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:120px;
+	width:150px;
 	height:200px;
 	float: left;
-	margin-top: 43px;
-	font-size: 17px;
+	margin-top: 52px;
 	color:#000;
 	text-align: center;
 }
@@ -932,7 +924,7 @@ button{
 	color :#4b4b4b;
 	padding-bottom: 7px;
 	cursor: pointer;
-	font-size:14px;
+	font-size:18px;
 }
 
 .center_right{
@@ -954,7 +946,7 @@ button{
 	display: block;
 }
 .center_right p{
-	font-size: 14px;
+	font-size: 18px;
 	color:#000;
 }
 .cen_dea{
@@ -1379,16 +1371,22 @@ button{
 .pass_sec{
 	font-size:18px;
 	color:#fff;
-	margin-top:6px;
+	margin-top:20px;
 }
-.ban_left .paas img{
-	width:41px;
-	height:27px;
-	margin-top:6px;
-	margin-right: 10px;
-	float: left;
-
-}
+	.ban_left .paas .paastop{
+		width:46px;
+		height:46px;
+		float: left;
+		margin-top: 0px;
+		margin-right: 10px;
+	}
+	.ban_left .paas .iaastop{
+		width:45px;
+		height:30px;
+		float: left;
+		margin-top: 3px;
+		margin-right: 10px;
+	}
 
 .ba_center img{
 	width:300px;
@@ -1414,8 +1412,7 @@ button{
 	width:120px;
 	height:200px;
 	float: left;
-	margin-top: 43px;
-	font-size: 17px;
+	margin-top: 57px;
 	color:#000;
 	text-align: center;
 }
@@ -1429,7 +1426,7 @@ button{
 	width:100%;
 	height:40px;
 	line-height: 43px;
-	font-size:14px;
+	font-size:16px;
 	color:#4b4b4b;
 	border-bottom: 1px solid #797979;
 	cursor: pointer;
@@ -1442,7 +1439,7 @@ button{
 	height:100%;
 }
 .center_right .cen_p{
-	font-size:22px ;
+	font-size:24px ;
 	color:#000;
 	margin-left: 10px;
 
@@ -1454,7 +1451,7 @@ button{
 	display: block;
 }
 .center_right p{
-	font-size: 14px;
+	font-size: 16px;
 	color:#000;
 }
 .cen_dea{
@@ -1890,22 +1887,29 @@ button{
 .pass_sec{
 	font-size:0.45rem;
 	color:#fff;
-	margin-top:0.15rem;
+	margin-top:0.7rem;
 }
-.ban_left .paas img{
+.ban_left .paas .paastop{
 	float: left;
-	margin-top: 0.15rem;
+	margin-top:-0.3rem;
 	margin-right: 0.25rem;
-	width:1.025rem;
-	height:0.675rem;
+	width:1.5rem;
+	height:1.5rem;
 }
+	.ban_left .paas .iaastop{
+		float: left;
+		margin-top: 0.08rem;
+		margin-right: 0.25rem;
+		width:1.025rem;
+		height:0.75rem;
+	}
 
 .ba_center img{
     width:5rem;
     height:4rem;
     float: right;
     margin-right: 1rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
 }
 /*banner end*/
 /*详情*/
@@ -1916,6 +1920,7 @@ button{
     overflow: auto;   
     display: block;
     background: #fff;
+	min-height: 11rem;
 }
 .dea_cen{
     width:90%;
@@ -1999,7 +2004,7 @@ button{
 	/*footer start*/
 	.footer{
 		width:100%;
-		height:7rem;
+		height:6rem;
 		background:#787878;
 		overflow: hidden;
 	}
@@ -2039,7 +2044,7 @@ button{
 		width:100%;
 		height:0.75rem;
 		clear:both;
-		padding-top:0.875rem;
+		padding-top:0.3rem;
 	}
 	.footer_center .last{
 		width:50%;
