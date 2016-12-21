@@ -248,7 +248,7 @@ navLi[2].onmouseout = function(){
 			allIndex++;
 			if(allIndex == allInput.length)allIndex=0;
 			startMove();
-		},2500);
+		},1500);
 	}
 
 //延时导航---------------------------------------------
