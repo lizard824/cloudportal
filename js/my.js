@@ -163,6 +163,7 @@ navLi[2].onmouseout = function(){
     var allSpan = tabUl.getElementsByTagName('span');
 	var tabFirst = document.getElementById('first');
 	var allDiv  = tabFirst.getElementsByTagName('div');
+
 	var allIndex = 0;
 	var timer = null;
 	time();
