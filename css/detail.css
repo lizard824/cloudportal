@@ -2131,44 +2131,4 @@ button{
 }
 
 
-	/*下拉菜单左右淡入*/
-	.pullopt{
-		-webkit-animation-name:pull;
-		-webkit-animation-duration:1s;
-		-webkit-animation-timing-function:ease;
-		-webkit-animation-iteration-count:1;
-		-webkit-animation-fill-mode : forwards;
-	}
-	@-webkit-keyframes pull
-	{
-		from{
-			opacity:0;
-			transform:translateX(-30px);
 
-		}
-		to{
-			opacity:1;
-			transform:translateX(0px);
-		}
-	}
-
-	/*下拉菜单左右淡出*/
-	.pullout{
-		-webkit-animation-name:puout;
-		-webkit-animation-duration:1s;
-		-webkit-animation-timing-function:ease;
-		-webkit-animation-iteration-count:1;
-		-webkit-animation-fill-mode : forwards;
-	}
-	@-webkit-keyframes puout
-	{
-		from{
-			opacity:0;
-			transform:translateX(0px);
-
-		}
-		to{
-			opacity:1;
-			transform:translateX(-30px);
-		}
-	}
