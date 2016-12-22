@@ -31,7 +31,12 @@ body{
 	font-family: 微软雅黑;
 }
  @media (min-width:1200px){
-
+	 body{
+		 width:100%;
+		 height:auto;
+		 background: #fff;
+		 font-family: 微软雅黑;
+	 }
  	/*head start*/
 .xhead{
 	width:100%;
@@ -531,7 +536,12 @@ button{
 
 /*笔记本------------------------------------*/
 @media (min-width:990px) and (max-width:1199px){
-
+	body{
+		width:100%;
+		height:auto;
+		background: #fff;
+		font-family: 微软雅黑;
+	}
 /*head start*/
 .xhead{
 	width:100%;
@@ -1041,7 +1051,12 @@ button{
 
 /*pad------------------------------------*/
 @media (min-width:760px) and (max-width:989px){
-
+	body{
+		width:100%;
+		height:auto;
+		background: #fff;
+		font-family: 微软雅黑;
+	}
 /*head start*/
 .xhead{
 	width:100%;
@@ -1551,7 +1566,10 @@ button{
         width:100%;
         height:auto;
         min-width: 16rem;
+	    background: #fff;
+	    font-family: 微软雅黑;
     }
+
     /*head start*/
 .xhead{
 	width:100%;
