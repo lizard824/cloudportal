@@ -7,36 +7,40 @@ onresize = function () {
 
 // 登录注册切换中英文---------------------------------
 // 登录 窗口打开
-var login = document.getElementById('login');
-var log = document.getElementById('log');
-var wlog = document.getElementById('wlog');
-var sign = document.getElementById('sign');
-var signbj = document.getElementById('signbj');
-var sig = document.getElementById('sig');
+    var login  = document.getElementById('login');
+    var log    = document.getElementById('log');
+    var wlog   = document.getElementById('wlog');
+    //var sign   = document.getElementById('sign');
+    var signbj = document.getElementById('signbj');
+    var sig    = document.getElementById('sig');
 
-var clLig = function bl(a, b, c, d) {
-    a.style.display = "block";
-    b.style.display = "block";
-    c.style.display = "none";
-    d.style.display = "none";
-};
-login.onclick = function () {
-    clLig(log, wlog, signbj, sig);
-};
+    var clLig = function bl(a,b,c,d){
+             a.style.display = "block";
+             b.style.display = "block";          
+             c.style.display = "none";
+             d.style.display = "none"; 
+        };
+    login.onclick = function(){
+          clLig(log,wlog,signbj,sig);
+        };
+    //sign.onclick = function(){
+    //      clLig(signbj,sig,log,wlog);
+    //};
+
+
 /*sign.onclick = function () {
-    $('#signForm').trigger("reset");
-    v_sign.$set("email", "");
-    v_sign.$set("username", "");
-    v_sign.$set("password", "");
-    v_sign.$set("realname", "");
-    v_sign.$set("error", "");
-    v_sign.$set("emailValid", true);
-    v_sign.$set("userValid", true);
-    v_sign.$set("passValid", true);
-    v_sign.$set("nameValid", true);
-    clLig(signbj, sig, log, wlog);
-};*/
-
+ $('#signForm').trigger("reset");
+ v_sign.$set("email", "");
+ v_sign.$set("username", "");
+ v_sign.$set("password", "");
+ v_sign.$set("realname", "");
+ v_sign.$set("error", "");
+ v_sign.$set("emailValid", true);
+ v_sign.$set("userValid", true);
+ v_sign.$set("passValid", true);
+ v_sign.$set("nameValid", true);
+ clLig(signbj, sig, log, wlog);
+ };*/
 
 // 关闭-------------------------------------------------
 var clos = document.getElementById('close');
