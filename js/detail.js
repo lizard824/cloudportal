@@ -150,7 +150,7 @@ downLi.onmouseout = function(){
     var login  = document.getElementById('login');
     var log    = document.getElementById('log');
     var wlog   = document.getElementById('wlog');
-    var sign   = document.getElementById('sign');
+    //var sign   = document.getElementById('sign');
     var signbj = document.getElementById('signbj');
     var sig    = document.getElementById('sig');
 
@@ -163,9 +163,9 @@ downLi.onmouseout = function(){
     login.onclick = function(){
           clLig(log,wlog,signbj,sig);
         };
-    sign.onclick = function(){
-          clLig(signbj,sig,log,wlog);
-    };
+    //sign.onclick = function(){
+    //      clLig(signbj,sig,log,wlog);
+    //};
 
 
 

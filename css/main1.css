@@ -332,8 +332,7 @@ button{
 	left:0;
 	z-index: 1;
 	 background-size:cover;
-    -moz-background-size:cover;
-    -webkit-background-size:cover
+    -webkit-background-size:cover;
 }
 .banner_first .h4{
 	font-size: 50px;
@@ -995,7 +994,6 @@ button{
 		 left:0;
 		 z-index: 1;
 		 background-size:cover;
-		 -moz-background-size:cover;
 		 -webkit-background-size:cover
 	 }
 	 .banner_first .h4{
@@ -1671,7 +1669,6 @@ button{
 		 left:0;
 		 z-index: 1;
 		 background-size:cover;
-		 -moz-background-size:cover;
 		 -webkit-background-size:cover
 	 }
 	 .banner_first .h4{
@@ -2348,7 +2345,6 @@ button{
 	left:0;
 	background:#a59564;
 	 background-size:cover;
-    -moz-background-size:cover;
     -webkit-background-size:cover
 }
 	 .top_banner .banner_second{
@@ -2720,23 +2716,33 @@ button{
 	 }
 /*footer end*/
 
-
-
-
-#english{
-	display: none;
-}
  }
 
 
 /*动画效果*/
 /*右淡入*/
 .opt{
+	animation-name:inse;
+	animation-duration:2s;
+	animation-timing-function:ease;
+	animation-iteration-count:1;
+	animation-fill-mode : forwards;
 	-webkit-animation-name:inse;
 	-webkit-animation-duration:2s;
 	-webkit-animation-timing-function:ease;
 	-webkit-animation-iteration-count:1;	
 	-webkit-animation-fill-mode : forwards;
+	-moz-animation-name:inse;
+	-moz-animation-duration:2s;
+	-moz-animation-timing-function:ease;
+	-moz-animation-iteration-count:1;
+	-moz-animation-fill-mode : forwards;
+	-ms-animation-name:inse;
+	-ms-animation-duration:2s;
+	-ms-animation-timing-function:ease;
+	-ms-animation-iteration-count:1;
+	-ms-animation-fill-mode : forwards;
+
 }
 @-webkit-keyframes inse
 {
@@ -2750,14 +2756,64 @@ button{
 		transform:translateX(0px);
 	}
 }
+	@-moz-keyframes inse
+	{
+		from{
+			opacity:0;
+			transform:translateX(-80px);
 
+		}
+		to{
+			opacity:1;
+			transform:translateX(0px);
+		}
+	}
+	@-ms-keyframes inse
+	{
+		from{
+			opacity:0;
+			transform:translateX(-80px);
+
+		}
+		to{
+			opacity:1;
+			transform:translateX(0px);
+		}
+	}
+	@keyframes inse
+	{
+		from{
+			opacity:0;
+			transform:translateX(-80px);
+
+		}
+		to{
+			opacity:1;
+			transform:translateX(0px);
+		}
+	}
 /*左淡入*/
 .opta{
+	animation-name:in;
+	animation-duration:2s;
+	animation-timing-function:ease;
+	animation-iteration-count:1;
+	animation-fill-mode : forwards;
 	-webkit-animation-name:in;
 	-webkit-animation-duration:2s;
 	-webkit-animation-timing-function:ease;
 	-webkit-animation-iteration-count:1;	
 	-webkit-animation-fill-mode : forwards;
+	-moz-animation-name:in;
+	-moz-animation-duration:2s;
+	-moz-animation-timing-function:ease;
+	-moz-animation-iteration-count:1;
+	-moz-animation-fill-mode : forwards;
+	-ms-animation-name:in;
+	-ms-animation-duration:2s;
+	-ms-animation-timing-function:ease;
+	-ms-animation-iteration-count:1;
+	-ms-animation-fill-mode : forwards;
 }
 @-webkit-keyframes in
 {
@@ -2770,14 +2826,60 @@ button{
 		transform:translateY(0px);
 	}
 }
-
-
+	@-moz-keyframes in
+	{
+		from{
+			opacity:0;
+			transform:translateY(-80px);
+		}
+		to{
+			opacity:1;
+			transform:translateY(0px);
+		}
+	}
+	@-ms-keyframes in
+	{
+		from{
+			opacity:0;
+			transform:translateY(-80px);
+		}
+		to{
+			opacity:1;
+			transform:translateY(0px);
+		}
+	}
+	@keyframes in
+	{
+		from{
+			opacity:0;
+			transform:translateY(-80px);
+		}
+		to{
+			opacity:1;
+			transform:translateY(0px);
+		}
+	}
 .ancen{
+	animation-name:inse_cen;
+	animation-duration:2s;
+	animation-timing-function:ease;
+	animation-iteration-count:1;
+	animation-fill-mode : forwards;
 	-webkit-animation-name:inse_cen;
 	-webkit-animation-duration:2s;
 	-webkit-animation-timing-function:ease;
 	-webkit-animation-iteration-count:1;	
 	-webkit-animation-fill-mode : forwards;
+	-moz-animation-name:inse_cen;
+	-moz-animation-duration:2s;
+	-moz-animation-timing-function:ease;
+	-moz-animation-iteration-count:1;
+	-moz-animation-fill-mode : forwards;
+	-ms-animation-name:inse_cen;
+	-ms-animation-duration:2s;
+	-ms-animation-timing-function:ease;
+	-ms-animation-iteration-count:1;
+	-ms-animation-fill-mode : forwards;
 }
 @-webkit-keyframes inse_cen
 {
@@ -2791,15 +2893,65 @@ button{
 		transform:translateY(0px);
 	}
 }
+	@-moz-keyframes inse_cen
+	{
+		from{
+			transform:translateY(80px);
+			opacity: 0;
 
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
+	@-ms-keyframes inse_cen
+	{
+		from{
+			transform:translateY(80px);
+			opacity: 0;
+
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
+	@keyframes inse_cen
+	{
+		from{
+			transform:translateY(80px);
+			opacity: 0;
+
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
 
 
 .bottom{
+	animation-name:inse_thre;
+	animation-duration:2s;
+	animation-timing-function:ease;
+	animation-iteration-count:1;
+	animation-fill-mode : forwards;
 	-webkit-animation-name:inse_thre;
 	-webkit-animation-duration:2s;
 	-webkit-animation-timing-function:ease;
 	-webkit-animation-iteration-count:1;	
 	-webkit-animation-fill-mode : forwards;
+	-moz-animation-name:inse_thre;
+	-moz-animation-duration:2s;
+	-moz-animation-timing-function:ease;
+	-moz-animation-iteration-count:1;
+	-moz-animation-fill-mode : forwards;
+	-ms-animation-name:inse_thre;
+	-ms-animation-duration:2s;
+	-ms-animation-timing-function:ease;
+	-ms-animation-iteration-count:1;
+	-ms-animation-fill-mode : forwards;
 }
 @-webkit-keyframes inse_thre
 {
@@ -2813,16 +2965,78 @@ button{
 		transform:translateY(0px);
 	}
 }
+	@-moz-keyframes inse_thre
+	{
+		from{
+			transform:translateY(20px);
+			opacity: 0;
 
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
+	@-ms-keyframes inse_thre
+	{
+		from{
+			transform:translateY(20px);
+			opacity: 0;
+
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
+	@keyframes inse_thre
+	{
+		from{
+			transform:translateY(20px);
+			opacity: 0;
+
+		}
+		to{
+			opacity: 1;
+			transform:translateY(0px);
+		}
+	}
 
 /*登录左右淡入*/
 .logopt{
+	animation-name:log;
+	animation-duration:1s;
+	animation-timing-function:ease;
+	animation-iteration-count:1;
+	animation-fill-mode : forwards;
 	-webkit-animation-name:log;
 	-webkit-animation-duration:1s;
 	-webkit-animation-timing-function:ease;
 	-webkit-animation-iteration-count:1;	
 	-webkit-animation-fill-mode : forwards;
+	-moz-animation-name:log;
+	-moz-animation-duration:1s;
+	-moz-animation-timing-function:ease;
+	-moz-animation-iteration-count:1;
+	-moz-animation-fill-mode : forwards;
+	-ms-animation-name:log;
+	-ms-animation-duration:1s;
+	-ms-animation-timing-function:ease;
+	-ms-animation-iteration-count:1;
+	-ms-animation-fill-mode : forwards;
 }
+	@keyframes log
+	{
+		from{
+			opacity:0;
+			transform:translateX(500px);
+
+		}
+		to{
+			opacity:1;
+			transform:translateX(0px);
+		}
+	}
 @-webkit-keyframes log
 {
 	from{
@@ -2835,21 +3049,23 @@ button{
 		transform:translateX(0px);
 	}
 }
-
-
-	/*下拉菜单左右淡入*/
-	.pullopt{
-		-webkit-animation-name:pull;
-		-webkit-animation-duration:1s;
-		-webkit-animation-timing-function:ease;
-		-webkit-animation-iteration-count:1;
-		-webkit-animation-fill-mode : forwards;
-	}
-	@-webkit-keyframes pull
+	@-moz-keyframes log
 	{
 		from{
 			opacity:0;
-			transform:translateX(-30px);
+			transform:translateX(500px);
+
+		}
+		to{
+			opacity:1;
+			transform:translateX(0px);
+		}
+	}
+	@-ms-keyframes log
+	{
+		from{
+			opacity:0;
+			transform:translateX(500px);
 
 		}
 		to{
@@ -2858,23 +3074,3 @@ button{
 		}
 	}
 
-	/*下拉菜单左右淡出*/
-	.pullout{
-		-webkit-animation-name:puout;
-		-webkit-animation-duration:1s;
-		-webkit-animation-timing-function:ease;
-		-webkit-animation-iteration-count:1;
-		-webkit-animation-fill-mode : forwards;
-	}
-	@-webkit-keyframes puout
-	{
-		from{
-			opacity:0;
-			transform:translateX(0px);
-
-		}
-		to{
-			opacity:1;
-			transform:translateX(-30px);
-		}
-	}
