@@ -45,11 +45,11 @@
                            Service
                         </a>
                         <ol id="poll_down">
-                             <li class="pull_first">
-                                 <a href="javascript:;">
+                            <li class="pull_first">
+                                <a href="javascript:;">
                                      CMDB
                                  </a>
-                             </li>
+                            </li>
                             <li>
                                 <a href="javascript:;">
                                     XOPS
@@ -73,7 +73,7 @@
                 <!-- 点击出现的导航 -->
                 <ul class="xnav_ul" id="xnav_ul">
                     <li class="top_li">
-                        <a  href="http://iaas.lenovo.com/" target="_blank">
+                        <a href="http://iaas.lenovo.com/" target="_blank">
                         IaaS
                     </a>
                     </li>
@@ -138,30 +138,29 @@
         </div>
 
 
-    <!-- 登录 -->
-    <div class="login" id="wlog">
-        <div class="xlog logopt" id="log">
-            <img src="images/close.png" alt="" class="close" id="close">
-            <div class="form">
-                <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/casserver/login"
-                      target="rlogin">
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
-                            <input type="hidden" name="auto" value="true"/>
-                            <input type="hidden" name="service" v-model="service"/>
+        <!-- 登录 -->
+        <div class="login" id="wlog">
+            <div class="xlog logopt" id="log">
+                <img src="images/close.png" alt="" class="close" id="close">
+                <div class="form">
+                    <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/casserver/login" target="rlogin">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
+                                <input type="hidden" name="auto" value="true" />
+                                <input type="hidden" name="service" v-model="service" />
+                            </div>
+                            <p v-show="!userValid">*Please input username</p>
                         </div>
-                        <p v-show="!userValid">*Please input username</p>
-                    </div>
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p v-show="!valid">{{error}}</p>
                         </div>
-                        <p v-show="!passValid">*Please input password</p>
-                        <p v-show="!valid">{{error}}</p>
-                    </div>
 
 
                         <div class="rember">
@@ -242,7 +241,7 @@
                 <img src="images/think.png" alt="">
                 <span class="banner_first_one">
   	   	         <p class="h2">
-                   Explore Lenovo Devops platform,Cloud products.
+                   Explore Lenovo DevOps platform,Cloud products.
   	   	         </p>
   	   </span>
             </div>
@@ -278,7 +277,7 @@
                         <li>Product</li>
                         <li><img src="images/topright.png" alt=""></li>
                     </ul>
-                    <p>The next moment How strong we are</p>
+                    <!--<p>The next moment How strong we are</p>-->
                 </div>
                 <div class="cen_ban_left">
                     <img src="images/iasle.png" alt="iaas" id="cen_right" class="cen_right" />
@@ -337,7 +336,7 @@
                         <li>Service</li>
                         <li><img src="images/topright.png" alt=""></li>
                     </ul>
-                    <p>The next moment How strong we are</p>
+                    <!--<p>The next moment How strong we are</p>-->
                 </div>
                 <div class="onclick">
                     <img src="images/left.png" alt="" class="onleft" id="onleft">
@@ -349,7 +348,7 @@
 
                             <img src="images/asset.png" alt="">
                             <p class="ul_first">CMDB</p>
-                            <p class="ul_second">Holds asset data and<br> descriptive  relationships between assets.</p>
+                            <p class="ul_second">Holds asset data and<br> descriptive relationships between assets.</p>
                         </li>
                         <li class="oone" id="factive">
 
@@ -431,7 +430,7 @@
                     </li>
                 </ul>
                 <div class="footer_bottom">
-                    <p class="last">privacy  |  site Terms</p>
+                    <p class="last">privacy | site terms</p>
                     <p class="forth_last"> Lenovo©2016</p>
                 </div>
 
