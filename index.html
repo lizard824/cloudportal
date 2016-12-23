@@ -127,11 +127,11 @@
                     <li>&nbsp;</li>
                     <li><a v-show="isLogged" href="http://127.0.0.1:8180/sso/caslogout" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
-                    <li id="sign" v-show="!isLogged">
+                    <!--<li id="sign" v-show="!isLogged">
                         <a href="javascript:;">
                         Sign in
                     </a>
-                    </li>
+                    </li>-->
                 </ul>
 
             </div>
@@ -150,7 +150,7 @@
                             <img src="images/name.png" alt="">
                             <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
                             <input type="hidden" name="auto" value="true"/>
-                            <input type="hidden" name="service" v-model="service"/>
+                            <input type="hidden" name="service" value="http://127.0.0.1:8180/sso/index"/>
                         </div>
                         <p v-show="!userValid">*Please input username</p>
                     </div>
@@ -160,7 +160,7 @@
                             <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
-                        <p v-show="!valid">{{error}}</p>
+                        <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
                     </div>
 
 
@@ -186,7 +186,7 @@
             <div class="xlog logopt" id="sig">
                 <img src="images/close.png" alt="" class="close" id="closesig">
                 <div class="form">
-                    <form class="" id="signForm" action="http://127.0.0.1:8080/sso/">
+                    <form class="" id="signForm" action="http://127.0.0.1:8180/sso/userAdd/">
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/name.png" alt="">
@@ -204,7 +204,7 @@
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/name.png" alt="">
-                                <input type="text" name="name" v-model="name" id="rname" placeholder="Please input name">
+                                <input type="text" name="realname" v-model="realname" id="rname" placeholder="Please input name">
                             </div>
                             <p v-show="!nameValid">*Please input name</p>
                         </div>
@@ -214,6 +214,7 @@
                                 <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
                             </div>
                             <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
                         </div>
                         <button class="buton sbuton" type="submit">
                         Sign in
@@ -366,7 +367,7 @@
                         <li class="oone" id="two">
 
                             <img src="images/piao.png" alt="">
-                            <p class="ul_first">Ticket</p>
+                            <p class="ul_first"><a href="http://localhost:8080/xframe/dash/home" target="_blank">Ticket</a></p>
                             <p class="ul_second">Collect tickets'<br> information for tracking and management.</p>
                         </li>
 
