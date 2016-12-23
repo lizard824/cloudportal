@@ -1,13 +1,14 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_login, v_head, v_sign;
+var v_login, v_head, v_sign,v_service;
 var _CTX_ = 'http://127.0.0.1:8180';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
     iniHead();
     iniSign();
+    iniService();
     window.addEventListener('message', function (event) {
         console.log(event.data);
         logincallback(event.data);
@@ -34,7 +35,7 @@ $(document).ready(function () {
             }
             v_login.$set("error", toptip);
         }
-    }
+    };
 
 });
 
@@ -111,7 +112,17 @@ function loadPage() {
             } else {
                 v_head.$set("isLogged", true);
                 v_head.$set("login", "Hello, " + data.realname);
+                v_service.$set("isLogged", true);
             }
+        }
+    });
+}
+
+function iniService() {
+    v_service = new Vue({
+        el: "#forth",
+        data: {
+            isLogged: false
         }
     });
 }
@@ -216,3 +227,4 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
