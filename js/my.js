@@ -8,11 +8,11 @@ onresize = function () {
 //动画-------------------------------------------
  var anMite = document.getElementById('animat');
  var anClos = document.getElementById('anclose');
+ var naImg = document.getElementById('animite');
 setTimeout(function(){
-    anMite.style.width=0;
-    anMite.style.height=0;
     anMite.style.backgroundColor='rgba(255,255,255,0)';
     anMite.style.opacity=0;
+    naImg.style.opacity=0;
 },6650);
 anClos.onclick = function(){
     anMite.style.display = 'none'
