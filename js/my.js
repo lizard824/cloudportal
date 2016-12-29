@@ -10,7 +10,6 @@ onresize = function () {
  var anClos = document.getElementById('anclose');
  var naImg = document.getElementById('animite');
 setTimeout(function(){
-    anMite.style.backgroundColor='rgba(255,255,255,0)';
     anMite.style.opacity=0;
     naImg.style.opacity=0;
 },6650);
