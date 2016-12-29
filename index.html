@@ -147,21 +147,20 @@
         <div class="xlog logopt" id="log">
             <img src="images/close.png" alt="" class="close" id="close">
             <div class="form">
-                <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/casserver/login"
-                      target="rlogin">
+                <form id="loginForm" class="" method="post" action="http://127.0.0.1：8180/sso/login">
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
+                            <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
                             <input type="hidden" name="auto" value="true"/>
-                            <input type="hidden" name="service" value="http://127.0.0.1:8180/sso/cas_sso/index"/>
+                            <input type="hidden" name="service" value="http://127.0.0.1:8180/ssoindex/index.html"/>
                         </div>
                         <p v-show="!userValid">*Please input username</p>
                     </div>
                     <div class="input">
                         <div class="inpu">
                             <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
+                            <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
                         <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
@@ -174,15 +173,13 @@
                             </span>
                             <p>Remember me</p>
                         </div>
-                        <button class="buton" type="button" @click="login()">
+                        <button class="buton" type="submit">
                         Login
                     </button>
                     </form>
                 </div>
             </div>
         </div>
-        <iframe style="display:none;width:0;height:0" id="rlogin" name="rlogin">
-    </iframe>
         <!-- 登录结束 -->
         <!-- 注册 -->
         <!-- 注册 -->

@@ -50,25 +50,36 @@ function iniLogin() {
             error: ''
         },
         methods: {
-            login: function () {
-                var _self = this;
-                if (_self.username === "") {
-                    _self.userValid = false;
-                } else {
-                    _self.userValid = true;
+        }
+    });
+    $('#loginForm').on('submit', function (e) {
+        e.preventDefault(); // prevent native submit
+        if (v_login.username === "") {
+            v_login.userValid = false;
+        } else {
+            v_login.userValid = true;
+        }
+        if (v_login.password === "") {
+            v_login.passValid = false;
+        } else {
+            v_login.passValid = true;
+        }
+        if (!(v_login.passValid && v_login.userValid)) {
+            return;
+        } else {
+            $(this).ajaxSubmit({
+                success: function (data) {
+                    if (data.result == true) {
+                        loadPage();
+                        myClo(log, wlog);
+                    } else {
+                        if (data.msg === "")
+                            v_sign.$set("error", "Login in failed!");
+                        else
+                            v_sign.$set("error", data.msg);
+                    }
                 }
-                if (_self.password === "") {
-                    _self.passValid = false;
-                } else {
-                    _self.passValid = true;
-                }
-                if (!(_self.passValid && _self.userValid)) {
-                    return;
-                } else {
-                    $("#loginForm").submit();
-                }
-
-            }
+            });
         }
     });
     v_login.$watch("username", function (val) {
