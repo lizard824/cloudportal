@@ -5,6 +5,19 @@ onresize = function () {
 };
 
 
+//动画-------------------------------------------
+ var anMite = document.getElementById('animat');
+ var anClos = document.getElementById('anclose');
+setTimeout(function(){
+    anMite.style.width=0;
+    anMite.style.height=0;
+},6650);
+anClos.onclick = function(){
+    anMite.style.display = 'none'
+}
+
+
+
 // 登录注册切换中英文---------------------------------
 // 登录 窗口打开
     var login  = document.getElementById('login');
@@ -157,7 +170,7 @@ var chanImg = function change(e, a) {
 };
 
 chanSrc.onmouseover = function () {
-    chanImg(chanSrc, 'images/lo.png');
+    chanImg(chanSrc, 'images/lo.gif');
 };
 chanSrc.onmouseout = function () {
     chanImg(chanSrc, 'images/logo.png');
