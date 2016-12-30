@@ -14,9 +14,14 @@ setTimeout(function(){
     anMite.style.zIndex=0;
     naImg.style.opacity=0;
 },6650);
+
+var anClose = function(e){
+     e.style.display = 'none';
+};
+
 anClos.onclick = function(){
-    anMite.style.display = 'none'
-}
+     anClose(anMite);
+};
 
 
 
