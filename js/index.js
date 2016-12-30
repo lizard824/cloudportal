@@ -106,7 +106,7 @@ function loadPage() {
     $.ajax({
         type: "GET",
         url: _CTX_ + "/sso/validate",
-        data:{service:'http://its.earth.xpaas.lenovo.com/index.html'},
+        data:{service:'http://cas.xpaas.lenovo.com/index.html'},
         dataType: "json",
         success: function (data) {
             var load_result = jwt_decode(data.response);
