@@ -19,112 +19,116 @@
                 <a href="index.html">
                     <img src="images/logo.png" alt="">
                 </a>
+
                 <img src="images/topcli.png" id="ph_open" alt="logo">
             </div>
             <ul class="xnav_ul" id="no_ul">
                 <li class="no_margin">
-                    <a href="index.html">
+                    <a href="#first" name="first">
                         <img src="images/logo.png" alt="logo" id="change_src">
+
                     </a>
                 </li>
                 <li>
                     <a href="http://iaas.lenovo.com/" target="_blank">
-				IaaS
-				</a>
+                        IaaS
+                    </a>
                 </li>
                 <li>
                     <a href="http://earth.xpaas.lenovo.com/" target="_blank">
-				PaaS	
-				</a>
+                        PaaS
+                    </a>
                 </li>
-
                 <li class="nohover">
                     <a href="javascript:;">
-					Service
-				</a>
+                        Service
+                    </a>
                     <ol id="poll_down">
                         <li class="pull_first">
                             <a href="javascript:;">
-							CMDB
-						</a>
+                                CMDB
+                            </a>
                         </li>
                         <li>
                             <a href="javascript:;">
-							XOPS
-						</a>
+                                XOPS
+                            </a>
                         </li>
                         <li>
                             <a href="javascript:;">
-							XMSG
-						</a>
+                                XMSG
+                            </a>
                         </li>
                         <li class="down_last">
                             <a href="javascript:;">
-							Ticket
-						</a>
+                                Ticket
+                            </a>
                         </li>
                     </ol>
                 </li>
             </ul>
 
+
             <!-- 点击出现的导航 -->
             <ul class="xnav_ul" id="xnav_ul">
                 <li class="top_li">
-                    <a href="iaas.html"> 
-				IaaS
-				</a>
+                    <a href="http://iaas.lenovo.com/" target="_blank">
+                        IaaS
+                    </a>
                 </li>
                 <li>
-                    <a href="paas.html">
-				PaaS	
-				</a>
+                    <a href="http://earth.xpaas.lenovo.com/" target="_blank">
+                        PaaS
+                    </a>
                 </li>
                 <li class="nohover">
                     <a href="javascript:;">
-					Service
-				</a>
+                        Service
+                    </a>
                     <div id="clic_down">
-                        <p>
+                        <p class="clic_first">
                             <a href="javascript:;">
-							Message
-						</a>
+                                CMDB
+                            </a>
                         </p>
                         <p>
                             <a href="javascript:;">
-							Asset
-						</a>
+                                XOPS
+                            </a>
                         </p>
                         <p>
                             <a href="javascript:;">
-							Docu
-						</a>
+                                XMSG
+                            </a>
                         </p>
                         <p class="down_last">
                             <a href="javascript:;">
-							Operation
-						</a>
+                                Ticket
+                            </a>
                         </p>
                     </div>
                 </li>
             </ul>
 
+
             <!-- <div class="texttab">
-			<p>
-				<span>中文</span>/<span id="eng">English</span>
-			</p>
-		</div> -->
+            <p>
+                <span>中文</span>/<span id="eng">English</span>
+            </p>
+        </div> -->
 
             <ul class="nav_log">
                 <li class="no_margin">
                     <a href="javascript:;" id="login">
-						Login
-					</a>
-
+                        {{login}}
+                    </a>
                 </li>
                 <li>&nbsp;</li>
-                <!--<li id="sign">-->
+                <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
+	padding:2px 3px 5px 3px;">Logout</a></li>
+                <!--<li id="sign" v-show="!isLogged">-->
                 <!--<a href="javascript:;">-->
-                <!--sign in-->
+                <!--Sign in-->
                 <!--</a>-->
                 <!--</li>-->
             </ul>
@@ -136,21 +140,18 @@
         <div class="xlog logopt" id="log">
             <img src="images/close.png" alt="" class="close" id="close">
             <div class="form">
-                <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/casserver/login"
-                      target="rlogin">
+                <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/sso/login">
                     <div class="input">
                         <div class="inpu">
                             <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname" @keyup.enter="login()" placeholder="Please input username">
-                            <input type="hidden" name="auto" value="true"/>
-                            <input type="hidden" name="service" value="http://127.0.0.1:8180/sso/index"/>
+                            <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
                         </div>
                         <p v-show="!userValid">*Please input username</p>
                     </div>
                     <div class="input">
                         <div class="inpu">
                             <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password" @keyup.enter="login()" placeholder="Please input password">
+                            <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
                         <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
@@ -163,15 +164,13 @@
                             </span>
                         <p>Remember me</p>
                     </div>
-                    <button class="buton" type="button" @click="login()">
+                    <button class="buton" type="submit">
                         Login
                     </button>
                 </form>
             </div>
         </div>
     </div>
-    <iframe style="display:none;width:0;height:0" id="rlogin" name="rlogin">
-    </iframe>
     <!-- 登录结束 -->
     <!-- 注册 -->
     <div class="login sign" id="signbj">
@@ -476,7 +475,8 @@
     <!-- 底部结束 -->
     </div>
     <script src="js/jquery-1.8.3.min.js"></script>
-
+    <script src="js/jwt-decode.min.js"></script>
+    <script src="js/jquery.form.js"></script>
     <script src='js/detail.js'></script>
     <script src="js/jquery.transform.js"></script>
     <script src="js/vue.min.js"></script>

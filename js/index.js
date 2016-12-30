@@ -2,41 +2,13 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://127.0.0.1:8180';
+var _CTX_ = 'http://its.earth.xpaas.lenovo.com/';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
     iniHead();
     iniSign();
     iniService();
-    window.addEventListener('message', function (event) {
-        console.log(event.data);
-        logincallback(event.data);
-    });
-
-    var logincallback = function (result) {
-        //成功处理
-        if (result.success) {
-            loadPage();
-            myClo(log, wlog);
-            var url = getParameterByName("service");
-            if (null !== url) {
-                window.location.href = url;
-            }
-        } else if (!result.success) {
-            var loginMsg = result.msg;
-            var toptip = "";
-            if (loginMsg == "failedLogin") {
-                toptip = "Wrong password";
-            } else if (loginMsg == "notFound") {
-                toptip = "User does not exist!";
-            } else {
-                toptip = "Error!";
-            }
-            v_login.$set("error", toptip);
-        }
-    };
-
 });
 
 function iniLogin() {
@@ -69,14 +41,15 @@ function iniLogin() {
         } else {
             $(this).ajaxSubmit({
                 success: function (data) {
-                    if (data.result == true) {
+                    var result = jwt_decode(data);
+                    if (result.success == true) {
                         loadPage();
                         myClo(log, wlog);
                     } else {
-                        if (data.msg === "")
+                        if (result.msg === "")
                             v_sign.$set("error", "Login in failed!");
                         else
-                            v_sign.$set("error", data.msg);
+                            v_sign.$set("error", result.msg);
                     }
                 }
             });
@@ -108,23 +81,45 @@ function iniHead() {
         created: function () {
             loadPage();
         },
-        methods: {}
+        methods: {
+            logout:function(){
+                $.ajax({
+                    type:'GET',
+                    url:_CTX_+"/sso/ssoLogout",
+                    dateType:"json",
+                    success:function (data) {
+                        var logout_result = jwt_decode(data.response);
+                        if(logout_result.success==true){
+                            loadPage();
+                        }else{
+                            return;
+                        }
+
+                    }
+                });
+            }
+        }
     });
 }
 
 function loadPage() {
     $.ajax({
         type: "GET",
-        url: _CTX_ + "/sso/getSession/",
+        url: _CTX_ + "/sso/validate",
+        data:{service:'http://its.earth.xpaas.lenovo.com/index.html'},
         dataType: "json",
         success: function (data) {
-            if (data.success == false) {
-                return;
+            var load_result = jwt_decode(data.response);
+            if (load_result.success == false) {
+                v_head.$set("isLogged",false);
+                v_head.$set("login","Login");
+                v_service.$set("isLogged",false);
             } else {
                 v_head.$set("isLogged", true);
-                v_head.$set("login", "Hello, " + data.realname);
+                v_head.$set("login", "Hello, " + load_result.realname);
                 v_service.$set("isLogged", true);
             }
+            anClose(anMite);
         }
     });
 }
