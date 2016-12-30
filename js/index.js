@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://its.earth.xpaas.lenovo.com/';
+var _CTX_ = 'http://cas.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
