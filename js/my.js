@@ -20,7 +20,7 @@ var anClose = function(e){
 };
 
 anClos.onclick = function(){
-     anClose(anClos);
+     anClose(anMite);
 };
 
 
