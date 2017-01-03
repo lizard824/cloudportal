@@ -75,7 +75,7 @@ body{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:64px;
+	line-height:32px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -276,6 +276,14 @@ input{
 	border-radius: 50px;
 	cursor: pointer;
 }
+	 .rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:16px;
+		 height:16px;
+	 }
 button{
 	background: rgba(0,0,0,0);
 }
@@ -581,7 +589,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:64px;
+	line-height:32px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -784,6 +792,14 @@ input{
 	border-radius: 50px;
 	cursor: pointer;
 }
+	.rember .wite .dot input{
+		background:none;
+		outline:none;
+		border:0;
+		opacity:0;
+		width:16px;
+		height:16px;
+	}
 button{
 	background: rgba(0,0,0,0);
 }
@@ -1100,7 +1116,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:64px;
+	line-height:32px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -1311,6 +1327,14 @@ input{
 	border-radius: 50px;
 	cursor: pointer;
 }
+	.rember .wite .dot input{
+		background:none;
+		outline:none;
+		border:0;
+		opacity:0;
+		width:16px;
+		height:16px;
+	}
 button{
 	background: rgba(0,0,0,0);
 }
@@ -1608,7 +1632,7 @@ button{
 
 	.xnav_ul li{
 		font-size: 0.475rem;
-		line-height: 1rem;
+		line-height: 0.5rem;
 		height:1rem;
 		width:2.3rem;
 		float: left;
@@ -1831,6 +1855,14 @@ input{
     background: #76c4fb;
     border-radius: 1.25rem;
 }
+	.rember .wite .dot input{
+		background:none;
+		outline:none;
+		border:0;
+		opacity:0;
+		width:0.4rem;
+		height:0.4rem;
+	}
 button{
     background: rgba(0,0,0,0);
 }

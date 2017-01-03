@@ -281,11 +281,11 @@ var clic = true;
 rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
-        remInp.value=2;
+        remInp.value=1;
         clic = false;
     } else {
         dot.style.float = 'left';
-        remInp.value=1;
+        remInp.value=0;
         clic = true;
     }
 }
