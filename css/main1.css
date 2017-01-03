@@ -108,7 +108,7 @@ body{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:64px;
+	line-height:32px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -307,6 +307,12 @@ input{
 	margin-top: 3px;
 	cursor:pointer;
 }
+	 .rember .wite input{
+		 background:#76c4fb;
+		 border:none;
+		 outline:none;
+		 float:left;
+	 }
 .rember .wite .dot{
 	display: block;
 	width:16px;
@@ -315,6 +321,14 @@ input{
 	border-radius: 50px;
 	cursor: pointer;
 }
+	 .rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:16px;
+		 height:16px;
+	 }
 button{
 	background: rgba(0,0,0,0);
 }
@@ -470,17 +484,36 @@ button{
 	height:80px;
 	margin:auto;
 }
+ .centop img{
+		 display:block;
+	 }
  .centop .cen_title{
 	width:100%;
 	height:35px;
 	padding-top: 30px;
 }
- .centop .cen_title .title_no{
-	margin-left: 0;
-}
  .centop .cen_title li{
-	float: left;
-	margin-left: 87px;
+		 position:relative;
+	 }
+ .centop .centop_right img{
+		 float: right;
+		 position:relative;
+		 right:0;
+	 }
+ .centop .cen_title .title_no img{
+
+	 float: left;
+	 position: relative;
+	 left:0;
+}
+ .centop .cen_title li p{
+	position:absolute;
+	 top:0;
+	 right:0;
+	 bottom:0;
+	 left:0;
+	 margin:auto;
+	 width:30%;
 	font-size: 23px;
 	color:#797979;
 }
@@ -809,7 +842,7 @@ button{
 .xnav_ul li{
 	float: left;
 	margin-left: 10%;
-   line-height:64px;
+   line-height:32px;
 	height:100%;
 }
 .xnav_ul li a,
@@ -1014,6 +1047,14 @@ input{
 	border-radius: 50px;
 	cursor: pointer;
 }
+	 .rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:16px;
+		 height:16px;
+	 }
 button{
 	background: rgba(0,0,0,0);
 }
@@ -1169,17 +1210,36 @@ button{
 		 height:80px;
 		 margin:auto;
 	 }
+	 .centop img{
+		 display:block;
+	 }
 	 .centop .cen_title{
 		 width:100%;
 		 height:35px;
 		 padding-top: 30px;
 	 }
-	 .centop .cen_title .title_no{
-		 margin-left: 0;
-	 }
 	 .centop .cen_title li{
+		 position:relative;
+	 }
+	 .centop .centop_right img{
+		 float: right;
+		 position:relative;
+		 right:0;
+	 }
+	 .centop .cen_title .title_no img{
+
 		 float: left;
-		 margin-left: 87px;
+		 position: relative;
+		 left:0;
+	 }
+	 .centop .cen_title li p{
+		 position:absolute;
+		 top:0;
+		 right:0;
+		 bottom:0;
+		 left:0;
+		 margin:auto;
+		 width:40%;
 		 font-size: 23px;
 		 color:#797979;
 	 }
@@ -1513,7 +1573,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:64px;
+	line-height:32px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -1717,6 +1777,14 @@ input{
 	margin-top: 3px;
 	cursor:pointer;
 }
+	 .rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:16px;
+		 height:16px;
+	 }
 .rember .wite .dot{
 	display: block;
 	width:16px;
@@ -1880,17 +1948,36 @@ button{
 		 height:80px;
 		 margin:auto;
 	 }
+	 .centop img{
+		 display:block;
+	 }
 	 .centop .cen_title{
 		 width:100%;
 		 height:35px;
 		 padding-top: 30px;
 	 }
-	 .centop .cen_title .title_no{
-		 margin-left: 0;
-	 }
 	 .centop .cen_title li{
+		 position:relative;
+	 }
+	 .centop .centop_right img{
+		 float: right;
+		 position:relative;
+		 right:0;
+	 }
+	 .centop .cen_title .title_no img{
+
 		 float: left;
-		 margin-left: 87px;
+		 position: relative;
+		 left:0;
+	 }
+	 .centop .cen_title li p{
+		 position:absolute;
+		 top:0;
+		 right:0;
+		 bottom:0;
+		 left:0;
+		 margin:auto;
+		 width:40%;
 		 font-size: 23px;
 		 color:#797979;
 	 }
@@ -2213,7 +2300,7 @@ button{
 
 .xnav_ul li{
 	font-size: 0.475rem;
-	line-height: 1rem;
+	line-height: 0.5rem;
 	height:1rem;
 	width:2.3rem;
 	float: left;
@@ -2442,6 +2529,14 @@ input{
 	background: #76c4fb;
 	border-radius: 1.25rem;
 }
+	 .rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:0.4rem;
+		 height:0.4rem;
+	 }
 button{
 	background: rgba(0,0,0,0);
 }
@@ -2596,37 +2691,56 @@ button{
 	margin:auto;
 	clear: both;
 }
-.centop{
-	width:81%;
-	height:2rem;
-	margin:auto;
-}
- .centop .cen_title{
-	width:100%;
-	height:0.875rem;
-	padding-top: 0.75rem;
-}
- .centop .cen_title .title_no{
-	margin-left: 0;
-}
- .centop .cen_title li{
-	float: left;
-	margin-left:2.175rem;
-	font-size: 0.575rem;
-	color:#797979;
-}
- .centop .cen_title li img{
- 	width:1.6rem;
- 	height:0.3rem;
- }
- .centop p{
-	clear: both;
-	width:100%;
-	height:0.5rem;
-	font-size:0.3rem ;
-	color:#797979;
-	text-align: center;
-}
+	 .centop{
+		 width:81%;
+		 height:2rem;
+		 margin:auto;
+	 }
+	 .centop img{
+		 display:block;
+	 }
+	 .centop .cen_title{
+		 width:100%;
+		 height:0.875rem;
+		 padding-top: 0.75rem;
+	 }
+	 .centop .cen_title li{
+		 position:relative;
+	 }
+	 .centop .cen_title li img{
+	 width:1.6rem;
+	 height:0.3rem;
+	 }
+	 .centop .centop_right img{
+		 float: right;
+		 position:relative;
+		 right:0;
+	 }
+	 .centop .cen_title .title_no img{
+
+		 float: left;
+		 position: relative;
+		 left:0;
+	 }
+	 .centop .cen_title li p{
+		 position:absolute;
+		 top:0;
+		 right:0;
+		 bottom:0;
+		 left:0;
+		 margin:auto;
+		 width:40%;
+		 font-size: 0.575rem;
+		 color:#797979;
+	 }
+	 .centop p{
+	 clear: both;
+	 width:100%;
+	 height:0.5rem;
+	 font-size:0.3rem ;
+	 color:#797979;
+	 text-align: center;
+	 }
 .cen_ban_left{
 	width:50%;
 	float: left;
