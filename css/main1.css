@@ -307,12 +307,6 @@ input{
 	margin-top: 3px;
 	cursor:pointer;
 }
-	 .rember .wite input{
-		 background:#76c4fb;
-		 border:none;
-		 outline:none;
-		 float:left;
-	 }
 .rember .wite .dot{
 	display: block;
 	width:16px;

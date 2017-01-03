@@ -275,13 +275,17 @@ $(".onright").click(function () {
 //rember me
 
 var rem = document.getElementById('rember');
+var remInp = rem.getElementsByTagName('input')[0];
+
 var clic = true;
 rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
+        remInp.value=2;
         clic = false;
     } else {
         dot.style.float = 'left';
+        remInp.value=1;
         clic = true;
     }
 }
