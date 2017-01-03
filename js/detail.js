@@ -82,7 +82,7 @@ phone_open.onclick = function(){
     
     chanSrc.onmouseover = function(){
 
-    	chanImg(chanSrc,'images/lo.png');
+    	chanImg(chanSrc,'images/lo.gif');
     };
     chanSrc.onmouseout = function(){
     	chanImg(chanSrc,'images/logo.png');
