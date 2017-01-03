@@ -41,7 +41,7 @@ function iniLogin() {
         } else {
             $(this).ajaxSubmit({
                 success: function (data) {
-                    var result = jwt_decode(data);
+                    var result = jwt_decode(data.response);
                     if (result.success == true) {
                         loadPage();
                         myClo(log, wlog);
@@ -129,6 +129,16 @@ function iniService() {
         el: "#forth",
         data: {
             isLogged: false
+        },
+        methods:{
+            openUrl:function (url) {
+                var _self = this;
+                if(_self.isLogged){
+                    window.open(url,"_blank");
+                }else{
+                    clLig(log,wlog,signbj,sig);
+                }
+            }
         }
     });
 }
