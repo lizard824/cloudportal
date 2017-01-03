@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://cas.xpaas.lenovo.com';
+var _CTX_ = 'http://test.lenovo.com:8180';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
@@ -47,9 +47,9 @@ function iniLogin() {
                         myClo(log, wlog);
                     } else {
                         if (result.msg === "")
-                            v_sign.$set("error", "Login in failed!");
+                            v_login.$set("error", "Login in failed!");
                         else
-                            v_sign.$set("error", result.msg);
+                            v_login.$set("error", result.msg);
                     }
                 }
             });
@@ -106,7 +106,7 @@ function loadPage() {
     $.ajax({
         type: "GET",
         url: _CTX_ + "/sso/validate",
-        data:{service:'http://cas.xpaas.lenovo.com/index.html'},
+        data:{service:'http://test.lenovo.com:8180/ssoindex/index.html'},
         dataType: "json",
         success: function (data) {
             var load_result = jwt_decode(data.response);
@@ -118,8 +118,8 @@ function loadPage() {
                 v_head.$set("isLogged", true);
                 v_head.$set("login", "Hello, " + load_result.realname);
                 v_service.$set("isLogged", true);
+                anClose(anMite);
             }
-            anClose(anMite);
         }
     });
 }
