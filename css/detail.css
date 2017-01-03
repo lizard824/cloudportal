@@ -76,6 +76,7 @@ body{
 	float: left;
 	margin-left: 10%;
 	height:100%;
+	line-height:64px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -147,6 +148,7 @@ body{
 }
 .nav_log li{
 	float: left;
+	line-height:64px;
 }
 .top_cli{
 	width:40px;
@@ -581,6 +583,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
+	line-height:64px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -655,6 +658,7 @@ button{
 }
 .nav_log li{
 	float: left;
+	line-height:64px;
 }
 .top_cli{
 	width:40px;
@@ -1099,6 +1103,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
+	line-height:64px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -1174,6 +1179,7 @@ button{
 
 .nav_log li{
 	float: left;
+	line-heigh:64px;
 }
 .top_cli{
 	width:40px;
@@ -1706,7 +1712,7 @@ button{
 .nav_log{
 	font-size: 0.475rem;
 	float: right;
-	line-height: 2.2rem;
+	line-height: 2rem;
 	padding-left: 0.25rem;
 	padding-right: 0.25rem;
 }
@@ -1735,7 +1741,6 @@ display: none;
     
     width:12.5rem;
     height:20rem;
-    position: relative;
     background: rgba(0,0,0,0.3);
     overflow: hidden;
     position: fixed;
