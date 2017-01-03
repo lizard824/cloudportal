@@ -106,11 +106,9 @@ body{
 	margin-left:0;
 }
 .xnav_ul li{
-	width:64px;
-}
-.xnav_ul li{
 	float: left;
 	margin-left: 10%;
+	height:100%;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -129,23 +127,26 @@ body{
 		 font-size:20px;
 		 color:#fff;
 	 }
-#poll_down{
+#poll_down,#devser{
 		 width:100%;
-		 height:0px;
+		 height:64px;
 		top:64px;
 	    left:0px;
 	     position:absolute;
 	     clear:both;
-	     /*display:none;*/
 	    transition:1s all ease;
 	    -moz-transition:1s all ease;
        background:rgba(0,0,0,0);
 	   overflow:hidden;
+	   display:none;
 	 }
-	 #poll_down .pull_first{
+#poll_down .pull_first{
 		 margin-left:24%;
 	 }
- #poll_down li{
+	 #devser .devser_first{
+		 margin-left:17%;
+	 }
+ #poll_down li,#devser li{
 	width:95px;
 	height:64px;
 	line-height:60px;
@@ -154,12 +155,9 @@ body{
 	 float: left;
 	 margin-left:20px;
 }
-	 #poll_down li a:hover{
+#poll_down li a:hover,#devser li a:hover{
 		 font-size: 22px;
 		 color:#005aff;
-	 }
- #poll_down .down_last{
-	border-bottom:0;
 	 }
 /*下拉列表结束*/
 .texttab{
@@ -807,12 +805,12 @@ button{
 {
 	margin-left:0;
 }
-.xnav_ul li{
-	width:64px;
-}
+
 .xnav_ul li{
 	float: left;
 	margin-left: 10%;
+
+	height:100%;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -825,13 +823,17 @@ button{
      color:#005aff;
 }
 	 /*下拉列表*/
+	 .xnav_ul .nohover{
+		 width:140px;
+	 }
+
 	 .xnav_ul .nohover a:hover{
 		 font-size:20px;
 		 color:#fff;
 	 }
-	 #poll_down{
+	 #poll_down,#devser{
 		 width:100%;
-		 height:0px;
+		 height:64px;
 		 top:64px;
 		 left:0px;
 		 position:absolute;
@@ -840,11 +842,15 @@ button{
 		 -moz-transition:1s all ease;
 		 background:rgba(0,0,0,0);
 		 overflow:hidden;
+		 display:none;
 	 }
 	 #poll_down .pull_first{
 		 margin-left:24%;
 	 }
-	 #poll_down li{
+	 #devser .devser_first{
+		 margin-left:17%;
+	 }
+	 #poll_down li,#devser li{
 		 width:95px;
 		 height:64px;
 		 line-height:60px;
@@ -853,12 +859,9 @@ button{
 		 float: left;
 		 margin-left:20px;
 	 }
-	 #poll_down li a:hover{
+	 #poll_down li a:hover,#devser li a:hover{
 		 font-size: 22px;
 		 color:#005aff;
-	 }
-	 #poll_down .down_last{
-		 border-bottom:0;
 	 }
 	 /*下拉列表结束*/
 
@@ -1525,27 +1528,34 @@ button{
 
 
 	 /*下拉列表*/
+	 .xnav_ul .nohover{
+		 width:140px;
+	 }
+
 	 .xnav_ul .nohover a:hover{
 		 font-size:20px;
 		 color:#fff;
 	 }
-	 #poll_down{
+	 #poll_down,#devser{
 		 width:100%;
-		 height:0px;
+		 height:64px;
 		 top:64px;
 		 left:0px;
 		 position:absolute;
 		 clear:both;
-		 /*display:none;*/
 		 transition:1s all ease;
 		 -moz-transition:1s all ease;
 		 background:rgba(0,0,0,0);
 		 overflow:hidden;
+		 display:none;
 	 }
 	 #poll_down .pull_first{
 		 margin-left:24%;
 	 }
-	 #poll_down li{
+	 #devser .devser_first{
+		 margin-left:13%;
+	 }
+	 #poll_down li,#devser li{
 		 width:95px;
 		 height:64px;
 		 line-height:60px;
@@ -1554,12 +1564,9 @@ button{
 		 float: left;
 		 margin-left:20px;
 	 }
-	 #poll_down li a:hover{
+	 #poll_down li a:hover,#devser li a:hover{
 		 font-size: 22px;
 		 color:#005aff;
-	 }
-	 #poll_down .down_last{
-		 border-bottom:0;
 	 }
 	 /*下拉列表结束*/
 
@@ -2230,13 +2237,16 @@ button{
 	margin-top: 0.55rem;
 }
 	 /*下拉列表*/
+	 .xnav_ul	 .nohover{
+		 width:4rem;
+	 }
 	 .xnav_ul	 .nohover a:hover{
 		 font-size:0.475rem;
 		 color:#fff;
 	 }
-	 #clic_down{
+	 #clic_down,.device{
 		 width:100%;
-		 height:0rem;
+		 height:1rem;
 		 top:1rem;
 		 left:0;
 		 position:absolute;
@@ -2246,8 +2256,9 @@ button{
 		 z-index:10;
 		 background:rgba(0,0,0,0);
 		 overflow:hidden;
+		 display:none;
 	 }
-	 #clic_down p{
+	 #clic_down p,.device p{
 		 width:2rem;
 		 height:1rem;
 		 line-height:1rem;
@@ -2256,13 +2267,16 @@ button{
 		 float: left;
          margin-left:0.5rem;
 	 }
-	 #clic_down p a:hover{
+	 #clic_down p a:hover,#device p a:hover{
 		 font-size: 0.49rem;
 		 color:#0089ff;
 	 }
 .clic_first{
 	margin-left:10%;
 }
+ .device .device_first{
+		margin-left:0%;
+	 }
 
 	 /*下拉列表结束*/
 
