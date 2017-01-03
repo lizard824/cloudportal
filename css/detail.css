@@ -56,7 +56,6 @@ body{
 .xnav_ul{
 	width:60%;
 	height:100%;
-	line-height: 11px;
 	float: left;
 }
 .xnav_ul .no_margin a {
@@ -563,7 +562,6 @@ button{
 .xnav_ul{
 	width:60%;
 	height:100%;
-	line-height: 25px;
 	float: left;
 }
 .xnav_ul .no_margin a {
@@ -1082,7 +1080,6 @@ button{
 .xnav_ul{
 	width:60%;
 	height:100%;
-	line-height: 35px;
 	float: left;
 }
 .xnav_ul .no_margin a {
