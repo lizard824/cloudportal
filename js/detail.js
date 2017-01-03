@@ -8,23 +8,34 @@
 var aUl = document.getElementById('xhead');
 var twoDiv = document.getElementById('second');
 
+var pullDown = document.getElementById("poll_down");
+var devSer = document.getElementById('devser');
 
-onscroll=function(ev){
+var clicDown = document.getElementById('clic_down');
+var devDown = document.getElementById('device');
+
+onscroll = function (ev) {
     var ev = ev || event;
     var top = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if(top>twoDiv.offsetTop-65){
+    if (top > twoDiv.offsetTop - 65) {
         aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        pullDown.style.backgroundColor='rgba(0,0,0,0.3)';
-        pullDown.style.Top='64px';
-        nav_ul.style.backgroundColor='rgba(0,0,0,0.3)';
-        clicDown.style.backgroundColor='rgba(0,0,0,0.3)';
-    }else{
-        aUl.style.backgroundColor='rgba(0,0,0,0)';
-        pullDown.style.backgroundColor='rgba(0,0,0,0)';
-        pullDown.style.Top='64px';
-        nav_ul.style.backgroundColor='rgba(0,0,0,0)';
-        clicDown.style.backgroundColor='rgba(0,0,0,0)';
+        pullDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        pullDown.style.Top = '64px';
+        devSer.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        devSer.style.Top = '64px';
+        nav_ul.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        clicDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        devDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
+    } else {
+        aUl.style.backgroundColor = 'rgba(0,0,0,0)';
+        pullDown.style.backgroundColor = 'rgba(0,0,0,0)';
+        pullDown.style.Top = '64px';
+        devSer.style.backgroundColor = 'rgba(0,0,0,0)';
+        devSer.style.Top = '64px';
+        nav_ul.style.backgroundColor = 'rgba(0,0,0,0)';
+        clicDown.style.backgroundColor = 'rgba(0,0,0,0)';
+        devDown.style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
 };
@@ -59,37 +70,7 @@ phone_open.onclick = function(){
     phOpen(nav_ul)
 }
 
-var clicDown = document.getElementById("clic_down");
-var clicP = clicDown.getElementsByTagName('p');
-var clHeight = clicP[0].offsetHeight;
-var clicA= navLi[2].getElementsByTagName('a')[0];
-var tim;
-navLi[2].onmouseover = function(){
-    clearTimeout(tim);
-    clicDown.style.height = clHeight + 'px';
-    clicA.style.borderBottom = '1px solid #fff';
-};
 
-clicDown.onmouseover = function(){
-    clearTimeout(tim);
-    clicDown.style.height = clHeight+ 'px';
-    clicA.style.borderBottom = '1px solid #fff';
-};
-clicDown.onmouseout = function(){
-    clearTimeout(tim);
-
-    clicDown.style.height = 0;
-    clicDown.style.overFlow= 'hidden';
-    clicA.style.borderBottom = '0px solid #fff';
-};
-navLi[2].onmouseout = function(){
-    tim = setTimeout(function(){
-
-        clicDown.style.height = 0;
-        clicDown.style.overFlow= 'hidden';
-        clicA.style.borderBottom = '0px solid #fff';
-    },700)
-};
 //更换图片-----------------------------------------
       var chanSrc = document.getElementById('change_src');
   
@@ -109,42 +90,14 @@ navLi[2].onmouseout = function(){
 
 
 //延时导航---------------------------------------------
-var noUL = document.getElementById("no_ul");
-var downLi = noUL.getElementsByTagName('li')[3];
-var downA = downLi.getElementsByTagName('a')[0];
-
-var pullDown = document.getElementById("poll_down");
-var pullLi = pullDown.getElementsByTagName('li');
-var pullAcol = pullDown.getElementsByTagName('a');
-var pullHeight = pullLi[0].offsetHeight;
-var tim;
-downLi.onmouseover = function(){
-    clearTimeout(tim);
-    downA.style.borderBottom = '1px solid #fff'
-    pullDown.style.height = pullHeight + "px";
-};
-
-pullDown.onmouseover = function(){
-    clearTimeout(tim);
-    pullDown.style.display = "block";
-    pullDown.style.height = pullHeight + "px";
-    downA.style.borderBottom = '1px solid #fff'
-};
-pullDown.onmouseout = function(){
-    clearTimeout(tim);
-
-    pullDown.style.height = 0;
-    pullDown.style.overFlow = 'hidden';
-    downA.style.borderBottom = '0px solid #fff'
-};
-downLi.onmouseout = function(){
-    tim = setTimeout(function(){
-
-        pullDown.style.height = 0;
-        pullDown.style.overFlow = 'hidden';
-        downA.style.borderBottom = '0px solid #fff'
-    },700)
-};
+$('.xnav_ul .nohover').hover(function(){
+    $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"1px solid #fff"});
+},function(){
+    $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"0px solid #fff"});
+}).trigger("mouseout");
+$('.xnav_ul .nohover').hover(function(){
+    $(this).find("a").siblings().stop().slideToggle(50);
+})
 
 // 登录-----------------------------------------------
     var login  = document.getElementById('login');
