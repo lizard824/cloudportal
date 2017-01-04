@@ -476,62 +476,56 @@ button{
 	 /*底部*/
 
 	 .footer{
+		 clear:both;
 		 width:100%;
 		 height:300px;
-		 clear: both;
-		 background:#787878;
+		 background: #787878;
 	 }
 	 .footer_center{
 		 width:57%;
-		 height:300px;
+		 height:100%;
 		 margin:0 auto;
 	 }
-	 .footer_ul_first{
+	 .footer_center ul{
 		 height:180px;
-		 float: left;
-		 margin-top: 40px;
+		 margin-top: 10px;
 	 }
-	 .footer_ul_first li{
-		 line-height: 12px;
-		 width:100%;
+	 .footer_center ul .footerfirst a{
+		 font-size:18px;
 	 }
-	 .footer_ul_first .footerfirst{
-		 font-size: 18px;
+	 .footer_center ul li{
+		 line-height: 50px;
 	 }
-	 .footer_ul_first li a{
+	 .footer_center ul li a{
 		 font-size: 14px;
 		 color:#fff;
 	 }
+	 .footer_ul_first{
+		 float: left;
+	 }
 	 .footer_ul_cen{
 		 float: left;
-		 margin-left: 30%;
+		 margin-left:32%;
 	 }
 	 .footer_ul_rig{
 		 float: right;
 	 }
-
 	 .footer_bottom{
-		 width:100%;
+		 width:50%;
 		 height:30px;
 		 clear:both;
-		 padding-top:35px;
+		 margin:0 auto;
 	 }
-	 .footer_center .last{
-		 width:50%;
-		 height:25px;
-		 text-align: center;
-		 font-size: 14px;
+	 .footer_bottom p{
+		 font-size: 14px ;
 		 color:#fff;
-		 clear:both;
-		 float:left;
+		 margin-top: 70px;
 	 }
-	 .footer_center .forth_last{
-		 width:50%;
-		 height:25px;
-		 text-align: center;
-		 font-size: 14px;
-		 color:#fff;
-		 float:right;
+	 .footer_bottom .last{
+		 float: left;
+	 }
+	 .footer_bottom .forth_last{
+		 float: right;
 	 }
 	 /*footer end*/
 
@@ -1002,62 +996,56 @@ button{
 	/*底部*/
 
 	.footer{
+		clear:both;
 		width:100%;
-		height:240px;
-		clear: both;
+		height:260px;
 		background: #787878;
 	}
 	.footer_center{
-		width:57%;
-		height:70px;
+		width:60%;
+		height:100%;
 		margin:0 auto;
 	}
-	.footer_ul_first{
-		height:100px;
-		float: left;
-		margin-top: 40px;
+	.footer_center ul{
+		height:180px;
+		margin-top: 10px;
 	}
-	.footer_ul_first li{
-		line-height: 12px;
-		width:100%;
+	.footer_center ul .footerfirst a{
+		font-size:18px;
 	}
-	.footer_ul_first .footerfirst{
-		font-size: 18px;
+	.footer_center ul li{
+		line-height: 50px;
 	}
-	.footer_ul_first li a{
+	.footer_center ul li a{
 		font-size: 14px;
 		color:#fff;
 	}
+	.footer_ul_first{
+		float: left;
+	}
 	.footer_ul_cen{
 		float: left;
-		margin-left:29%;
+		margin-left:32%;
 	}
 	.footer_ul_rig{
 		float: right;
 	}
-
 	.footer_bottom{
-		width:100%;
+		width:50%;
 		height:30px;
 		clear:both;
-		padding-top:50px;
+		margin:0 auto;
 	}
-	.footer_center .last{
-		width:50%;
-		height:25px;
-		text-align: center;
-		font-size: 14px;
+	.footer_bottom p{
+		font-size: 14px ;
 		color:#fff;
-		clear:both;
-		float:left;
+		margin-top: 40px;
 	}
-	.footer_center .forth_last{
-		width:50%;
-		height:25px;
-		text-align: center;
-		font-size: 14px;
-		color:#fff;
-		float:right;
+	.footer_bottom .last{
+		float: left;
+	}
+	.footer_bottom .forth_last{
+		float: right;
 	}
 
 	/*footer end*/
@@ -1522,62 +1510,56 @@ button{
 	/*footer start*/
 	/*底部*/
 	.footer{
+		clear:both;
 		width:100%;
-		height:220px;
-		clear: both;
-		background:#787878;
+		height:260px;
+		background: #787878;
 	}
 	.footer_center{
-		width:80%;
-		height:70px;
+		width:60%;
+		height:100%;
 		margin:0 auto;
-
 	}
-	.footer_ul_first{
-		height:100px;
-		float: left;
-		margin-top: 20px;
+	.footer_center ul{
+		height:180px;
+		margin-top: 10px;
 	}
-	.footer_ul_first li{
-		line-height: 12px;
-		width:100%;
+	.footer_center ul .footerfirst a{
+		font-size:18px;
 	}
-	.footer_ul_first .footerfirst{
-		font-size: 18px;
+	.footer_center ul li{
+		line-height: 50px;
 	}
-	.footer_ul_first li a{
+	.footer_center ul li a{
 		font-size: 14px;
 		color:#fff;
 	}
+	.footer_ul_first{
+		float: left;
+	}
 	.footer_ul_cen{
 		float: left;
-		margin-left:30%;
+		margin-left:20%;
 	}
 	.footer_ul_rig{
 		float: right;
 	}
 	.footer_bottom{
-		width:100%;
+		width:50%;
 		height:30px;
 		clear:both;
-		padding-top:50px;
+		margin:0 auto;
 	}
-	.footer_center .last{
-		width:50%;
-		height:25px;
-		text-align: center;
-		font-size: 14px;
+	.footer_bottom p{
+		font-size: 14px ;
 		color:#fff;
-		clear:both;
-		float:left;
+		margin-top: 40px;
 	}
-	.footer_center .forth_last{
-		width:50%;
-		height:25px;
-		text-align: center;
-		font-size: 14px;
-		color:#fff;
-		float:right;
+	.footer_bottom .last{
+		float: left;
+	}
+	.footer_bottom .forth_last{
+		float: right;
 	}
 	/*footer end*/
   
