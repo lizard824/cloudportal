@@ -282,10 +282,12 @@ rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
         remInp.value=1;
+        v_login.$set("remember",1);
         clic = false;
     } else {
         dot.style.float = 'left';
         remInp.value=0;
+        v_login.$set("remember",0);
         clic = true;
     }
 }

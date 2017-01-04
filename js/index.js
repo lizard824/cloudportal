@@ -19,7 +19,8 @@ function iniLogin() {
             password: '',
             passValid: true,
             userValid: true,
-            error: ''
+            error: '',
+            remember:0
         },
         methods: {
         }
