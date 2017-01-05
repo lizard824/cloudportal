@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://test.lenovo.com:8180';
+var _CTX_ = 'http://cas.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
     iniLogin();
@@ -42,15 +42,15 @@ function iniLogin() {
         } else {
             $(this).ajaxSubmit({
                 success: function (data) {
-                    var result = jwt_decode(data.response);
-                    if (result.success == true) {
+                    console.log(data);
+                    if (data.success == true) {
                         loadPage();
                         myClo(log, wlog);
                     } else {
-                        if (result.msg === "")
+                        if (data.msg === "")
                             v_login.$set("error", "Login in failed!");
                         else
-                            v_login.$set("error", result.msg);
+                            v_login.$set("error", data.msg);
                     }
                 }
             });
@@ -110,12 +110,12 @@ function loadPage() {
         data:{service:'http://test.lenovo.com:8180/ssoindex/index.html'},
         dataType: "json",
         success: function (data) {
-            var load_result = jwt_decode(data.response);
-            if (load_result.success == false) {
+            if (data.success == false) {
                 v_head.$set("isLogged",false);
                 v_head.$set("login","Login");
                 v_service.$set("isLogged",false);
             } else {
+                var load_result = jwt_decode(data.response);
                 v_head.$set("isLogged", true);
                 v_head.$set("login", "Hello, " + load_result.realname);
                 v_service.$set("isLogged", true);
