@@ -162,17 +162,18 @@ rem.onclick=function(){
 // 中部切换------------------------------
 var tbUl = document.getElementById('cen_ul');
 var tbLi = tbUl.getElementsByTagName('li');
+var tbA = tbUl.getElementsByTagName('a'); 
 var tbDiv = document.getElementById('cen_right');
 var subDiv = tbDiv.getElementsByTagName('div');
 var tbspan = tbUl.getElementsByTagName('span');
 
 
 var allIndex = 0;
- for(var i = 0;i < tbLi.length;i++){
- 	  tbLi[i].index = i;
- 	  tbLi[i].onclick = function(){
- 	  	 for(var i = 0;i < tbLi.length;i++){
- 	  	 	tbLi[i].className = '';
+ for(var i = 0;i < tbA.length;i++){
+ 	  tbA[i].index = i;
+ 	  tbA[i].onclick = function(){
+ 	  	 for(var i = 0;i < tbA.length;i++){
+ 	  	 	tbA[i].className = '';
  	  	 	subDiv[i].style.display = 'none';
  	  	 }
  	  	 allIndex = this.index;
