@@ -2,8 +2,9 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://cas.xpaas.lenovo.com';
+var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+var exp = 7200000;
 $(document).ready(function () {
     iniLogin();
     iniHead();
@@ -44,8 +45,11 @@ function iniLogin() {
                 success: function (data) {
                     console.log(data);
                     if (data.success == true) {
-                        loadPage();
-                        myClo(log, wlog);
+                        setCookie();
+                        v_head.$nextTick(function () {
+                            loadPage();
+                            myClo(log, wlog);
+                        });
                     } else {
                         if (data.msg === "")
                             v_login.$set("error", "Login in failed!");
@@ -121,6 +125,29 @@ function loadPage() {
                 v_service.$set("isLogged", true);
                 anClose(anMite);
             }
+        }
+    });
+}
+
+function setCookie(){
+    $.ajax({
+        type:'GET',
+        url:_CTX_+"/sso/getDomain",
+        dateType:"json",
+        success:function (data) {
+            if(data.success==true){
+                var response = jwt_decode(data.response);
+                //set domain of all domain
+                var domains = response.domain;
+                for(var i in domains){
+                 var domainObj = domains[i];
+                 var domainName = domainObj.domain;
+                    $.cookie(domainName, 'value', { expires: exp, path: '/' });
+                 }
+            }else{
+                return;
+            }
+
         }
     });
 }
