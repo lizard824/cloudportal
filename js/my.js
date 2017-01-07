@@ -9,11 +9,13 @@ onresize = function () {
  var anMite = document.getElementById('animat');
  var anClos = document.getElementById('anclose');
  var naImg = document.getElementById('animite');
+
+ 
 setTimeout(function(){
     anMite.style.opacity=0;
     anMite.style.zIndex=0;
     naImg.style.opacity=0;
-},6650);
+},5650);
 
 var anClose = function(e){
      e.style.display = 'none';

@@ -356,7 +356,7 @@ button{
 .ban_left{
 	margin-top:125px;
 	float: left;
-	width:60%;
+	width:50%;
 }
 .paas{
 	font-size:36px ;
@@ -403,7 +403,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:147px;
+	width:200px;
 	height:200px;
 	float: left;
 	margin-top:52px;
@@ -418,12 +418,15 @@ button{
 .center_ul li{
 	width:100%;
 	height:40px;
-	line-height: 45px;
+	line-height: 40px;
 	font-size:18px;
 	padding-bottom: 7px;
-	cursor: pointer;
+	cursor: pointer;	
 	color:#4b4b4b;
 	border-bottom: 1px solid #797979;
+}
+.center_ul li a{
+	color:#4b4b4b;
 }
 .center_ul li span{
 	display: block;
@@ -437,7 +440,7 @@ button{
 .center_right{
 	margin-top: 50px;
 	float: right;
-	width:80%;
+	width:70%;
 	height:100%;
 }
 .center_right .cen_p{
@@ -452,7 +455,7 @@ button{
 	clear: both;
 	display: block;
 }
-.center_right p{
+.center_right p,.center_right .cen_dea{
 	font-size: 18px;
 	color:#000;
 }
@@ -460,6 +463,8 @@ button{
 	margin-top: 25px;
 }
 .cen_img{
+	width:100%;
+	height:560px;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -916,7 +921,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:150px;
+	width:200px;
 	height:200px;
 	float: left;
 	margin-top: 52px;
@@ -948,11 +953,13 @@ button{
 	cursor: pointer;
 	font-size:18px;
 }
-
+.center_ul li a{
+	color :#4b4b4b;
+}
 .center_right{
 	margin-top: 50px;
 	float: right;
-	width:75%;
+	width:65%;
 	height:100%;
 }
 .center_right .cen_p{
@@ -967,7 +974,7 @@ button{
 	clear: both;
 	display: block;
 }
-.center_right p{
+.center_right p,.center_right .cen_dea{
 	font-size: 18px;
 	color:#000;
 }
@@ -975,6 +982,8 @@ button{
 	margin-top: 25px;
 }
 .cen_img{
+	width:520px;
+	height:530;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -1441,7 +1450,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:120px;
+	width:170px;
 	height:200px;
 	float: left;
 	margin-top: 57px;
@@ -1463,11 +1472,13 @@ button{
 	border-bottom: 1px solid #797979;
 	cursor: pointer;
 }
-
+.center_ul li a{
+	color:#4b4b4b;
+}
 .center_right{
 	margin-top: 50px;
 	float: right;
-	width:75%;
+	width:65%;
 	height:100%;
 }
 .center_right .cen_p{
@@ -1482,7 +1493,7 @@ button{
 	clear: both;
 	display: block;
 }
-.center_right p{
+.center_right p,.center_right .cen_dea{
 	font-size: 16px;
 	color:#000;
 }
@@ -1490,6 +1501,8 @@ button{
 	margin-top: 25px;
 }
 .cen_img{
+	width:100%;
+	height:530;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -1959,7 +1972,8 @@ button{
 .decenter{
     width:100%;  
     height:auto;
-    overflow: auto;   
+    overflow-y: auto;   
+    overflow-x: hidden; 
     display: block;
     background: #fff;
 	min-height: 11rem;
@@ -1992,11 +2006,13 @@ button{
    border-bottom: 1px solid #797979;
     cursor: pointer;
 }
-
+.center_ul li a{
+	color:#4b4b4b;
+}
 .center_right{
     margin-top: 1rem;
     float: right;
-    width:67%;
+    width:60%;
     height:auto;
 }
 .center_right .cen_p{
@@ -2015,7 +2031,7 @@ button{
     clear: both;
     display: block;
 }
-.center_right p{
+.center_right p,.center_right .cen_dea{
     font-size: 0.3rem;
     color:#000;
 }
@@ -2025,8 +2041,8 @@ button{
     margin-top: 0.625rem;
 }
 .cen_img{
-	width:5rem;
-	height:3.5rem;
+	width:100%;
+	height:6rem;
     margin-top: 0.75rem;
     box-shadow: 0 0.125rem 0.225rem #ccc;
 }

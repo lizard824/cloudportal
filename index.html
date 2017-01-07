@@ -13,10 +13,10 @@
 
 <body>
     <div id="china">
-         <div id="animat">
-            <img src="images/anclose.png" alt="close" class="anclose" id="anclose">
-            <img src="images/animite.gif" alt="animite" id="animite" class="animite">
-         </div>
+        <div id="animat">
+            <img src="images/anclose.png" alt="close" class="anclose" id="anclose" />
+            <img src="images/animite.gif" alt="animite" id="animite" class="animite" />
+        </div>
         <!--导航-->
         <div class="xhead" id="xhead">
             <div class="xnav">
@@ -37,7 +37,7 @@
                         <a href="javascript:;">
                             Cloud Service
                         </a>
-                        <ol id="devser"  class="ol">
+                        <ol id="devser" class="ol">
                             <li class="devser_first">
 
                                 <a href="http://iaas.lenovo.com/" target="_blank">
@@ -56,7 +56,7 @@
                         <a href="javascript:;">
                          DevOps  Service
                         </a>
-                        <ol id="poll_down"  class="ol">
+                        <ol id="poll_down" class="ol">
                             <li class="pull_first">
                                 <a href="javascript:;">
                                      CMDB
@@ -106,7 +106,7 @@
                         <a href="javascript:;">
                             Cloud  Service
                         </a>
-                        <div id="clic_down"  class="ol">
+                        <div id="clic_down" class="ol">
                             <p class="clic_first">
                                 <a href="javascript:;">
                                     CMDB
@@ -148,8 +148,8 @@
                     <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
                     <!--<li id="sign" v-show="!isLogged">-->
-                        <!--<a href="javascript:;">-->
-                        <!--Sign in-->
+                    <!--<a href="javascript:;">-->
+                    <!--Sign in-->
                     <!--</a>-->
                     <!--</li>-->
                 </ul>
@@ -158,27 +158,27 @@
         </div>
 
 
-    <!-- 登录 -->
-    <div class="login" id="wlog">
-        <div class="xlog logopt" id="log">
-            <img src="images/close.png" alt="" class="close" id="close">
-            <div class="form">
-                <form id="loginForm" class="" method="post" action="http://sso.earth.xpaas.lenovo.com/sso/login">
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/name.png" alt="">
-                            <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
+        <!-- 登录 -->
+        <div class="login" id="wlog">
+            <div class="xlog logopt" id="log">
+                <img src="images/close.png" alt="" class="close" id="close">
+                <div class="form">
+                    <form id="loginForm" class="" method="post" action="http://sso.earth.xpaas.lenovo.com/sso/login">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
+                            </div>
+                            <p v-show="!userValid">*Please input username</p>
                         </div>
-                        <p v-show="!userValid">*Please input username</p>
-                    </div>
-                    <div class="input">
-                        <div class="inpu">
-                            <img src="images/password.png" alt="">
-                            <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
-                        <p v-show="!passValid">*Please input password</p>
-                        <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
-                    </div>
 
 
                         <div class="rember">
@@ -232,7 +232,7 @@
                                 <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
                             </div>
                             <p v-show="!passValid">*Please input password</p>
-                            <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <button class="buton sbuton" type="submit">
                         Sign in
@@ -293,7 +293,9 @@
                 <div class="centop">
                     <ul class="cen_title">
                         <li class="title_no"><img src="images/topleft.png" alt=""></li>
-                        <li class="centop_title"><p>Cloud Service</p></li>
+                        <li class="centop_title">
+                            <p>Cloud Service</p>
+                        </li>
                         <li class="centop_right"><img src="images/topright.png" alt=""></li>
                     </ul>
                     <!--<p>The next moment How strong we are</p>-->
@@ -305,7 +307,7 @@
                             <a href="http://earth.xpaas.lenovo.com/" target="_blank">PaaS</a>
                         </p>
                         <p>
-                            Increase developer productivity and utilization rate while also decrease an applications' time to market.
+                            An open platform for automating deployment, scaling, and management of containerized enterprise applications.
                         </p>
                         <p class="cen_more">
 
@@ -352,7 +354,9 @@
                 <div class="centop">
                     <ul class="cen_title">
                         <li class="title_no"><img src="images/topleft.png" alt=""></li>
-                        <li class="centop_title"><p>DevOps Service</p></li>
+                        <li class="centop_title">
+                            <p>DevOps Service</p>
+                        </li>
                         <li class="centop_right"><img src="images/topright.png" alt=""></li>
                     </ul>
                     <!--<p>The next moment How strong we are</p>-->
@@ -384,7 +388,7 @@
                         <li class="oone" id="two">
 
                             <img src="images/piao.png" alt="">
-                            <p class="ul_first"><a  href="http://test.lenovo.com:8080/xframe/dash/home" target="_blank">Ticket</a>
+                            <p class="ul_first"><a href="http://test.lenovo.com:8080/xframe/dash/home" target="_blank">Ticket</a>
                             </p>
                             <p class="ul_second">Collect tickets'<br> information for tracking and management.</p>
                         </li>

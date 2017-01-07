@@ -33,7 +33,7 @@
                     <a href="javascript:;">
                         Devops Service
                     </a>
-                    <ol id="devser"  class="ol">
+                    <ol id="devser" class="ol">
                         <li class="devser_first">
 
                             <a href="http://iaas.lenovo.com/" target="_blank">
@@ -169,16 +169,16 @@
                             <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
                         </div>
                         <p v-show="!passValid">*Please input password</p>
-                        <p style="font-size:16px"　v-show="error!==''">{{error}}</p>
+                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                     </div>
 
 
                     <div class="rember">
-                            <span class="wite" id="rember">
+                        <span class="wite" id="rember">
 		    		<span class="dot" id="dot">
                         <input type="radio" v-model="remember" name="remember">
                     </span>
-                            </span>
+                        </span>
                         <p>Remember me</p>
                     </div>
                     <button class="buton" type="submit">
@@ -259,36 +259,35 @@
         <div class="dea_cen">
 
             <ul class="center_ul" id="cen_ul">
-                <li class="cen_ul_first active">
-                    Overview
+                <li class="cen_ul_first ">
+                    <a href="javascript:;" class="active">
+                       Overview 
+                    </a>
+                    
                 </li>
                 <li>
 
-                    Strengths
+                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/tree/master/guide" target="_blank">  User Guide </a>
                 </li>
                 <li>
-
-                    PaaS Scene
+                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/issues/new" target="_blank">
+                    Bug&issues
+                    </a>
                 </li>
                 <li>
-
-                    PaaS Instance
+                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/tree/master/changelog/" target="_blank">
+                    Changelog
+                    </a>
                 </li>
                 <li>
-
-                    Getting Started
+                    <a href="mailto:-Paas-Platform@lenovo.com">
+                    Contact Us
+                    </a>
                 </li>
                 <li>
-
-                    Resources
-                </li>
-                <li>
-
-                    ICP Overview
-                </li>
-                <li>
-
+                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/blob/master/guide/faq.md" target="_blank">
                     FAQ
+                    </a>
                 </li>
 
             </ul>
@@ -299,123 +298,45 @@
                         <img src="images/paasleft.png" alt=""> PaaS
                     </p>
                     <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
+                
+                        <ul class="cen_dea">
+                            <li>
+                                Fast,simple. provide one-key publish,delopy,rollback and extend.
+                            </li>
+                            <li>
+                                Multiple language and Platform support,inculding Java/PHP/node.js/Tomcat.
+                            </li>
+                            <li>
+                                Auto-dynamic control and adjust resources for quick responding.
+                            </li>
+                            <li>
+                                Prvoide real-time application's status and log by data visualization.
+                            </li>
+                            <li>
+                                Devops support. For whole project lifecycle.Implement continuously integration/delivery,decrease time to market.
+                            </li>
+                            <li>
+                                Multiple cluster support. user can select app running position, immigrate different application between cluster.
+                            </li>
+                            <li>
+                                Mircoservices friendly. support cloud native applications' integral solution.
+                            </li>                      
+                         </ul>                    
+                   
                 </div>
 
                 <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS23
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
                 </div>
 
                 <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS24
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
                 </div>
                 <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS25
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
                 </div>
-                <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS26
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
+                <div class="cen_one">                
                 </div>
-                <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS27
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
+                <div class="cen_one">                
                 </div>
-                <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS28
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
 
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
-                </div>
-                <div class="cen_one">
-                    <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS29
-                    </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                    <p class="cen_dea">
-                        Platform as a service (PaaS) is a complete development and deployment environment in the cloud, with resources that enable you to deliver everything from simple cloud-based apps to sophisticated, cloud-enabled enterprise applications. You purchase the
-                        resources you need from a cloud service provider on a pay-as-you-go basis and access them over a secure Internet connection. <br><br> Like IaaS, PaaS includes infrastructure—servers, storage, and networking—but
-                        also middleware, development tools, business intelligence (BI) services, database management systems, and more. PaaS is designed to support the complete web application lifecycle: building, testing, deploying, managing, and updating.
-                        <br><br> PaaS allows you to avoid the expense and complexity of buying and managing software licenses, the underlying application infrastructure and middleware or the development tools and other resources. You manage the applications
-                        and services you develop, and the cloud service provider typically manages everything else.
-
-                    </p>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
-                </div>
             </div>
 
 
@@ -480,14 +401,14 @@
                     <a href="javascript:;">
 							Phone
 						</a>
-    </li>
-    </ul>
-    <div class="footer_bottom">
-        <p class="last">privacy | site Terms</p>
-        <p class="forth_last"> Lenovo©2016</p>
-    </div>
+                </li>
+            </ul>
+            <div class="footer_bottom">
+                <p class="last">privacy | site Terms</p>
+                <p class="forth_last"> Lenovo©2016</p>
+            </div>
 
-    </div>
+        </div>
     </div>
     <!-- 底部结束 -->
     </div>
