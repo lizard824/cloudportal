@@ -403,7 +403,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:200px;
+	width:220px;
 	height:200px;
 	float: left;
 	margin-top:52px;
@@ -462,9 +462,15 @@ button{
 .cen_dea{
 	margin-top: 25px;
 }
+.cen_dea li{
+	list-style-image: url(../images/list.png) ;
+	list-style-position: inside;
+	margin-top: 10px;
+	line-height: 20px;
+}
 .cen_img{
 	width:100%;
-	height:560px;
+	height:520px;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
