@@ -26,6 +26,7 @@ img{
 }
 body{
 	width:100%;
+	min-width: 320px;
 	height:auto;
 	background: #fff;
 	font-family: '微软雅黑','黑体';
@@ -2198,7 +2199,7 @@ button{
 /*-----------------------------------*/
 /*-----------------------------------*/
 /*---------------------------------------*/
- @media (min-width:320px) and (max-width:759px){
+ @media  (max-width:759px){
 /*移动端 rem*/
  	body{
  		width:100%;
