@@ -2060,10 +2060,10 @@ button{
     margin-top: 0.625rem;
 }
 .cen_dea li{
-	list-style-image: url(../images/list.png) ;
+	list-style-image: url(../images/list_phon.png) ;
 	list-style-position: inside;
-	margin-top: 10px;
-	line-height: 20px;
+	margin-top: 0.4rem;
+	line-height: 0.8rem;
 }
 .cen_img{
 	width:100%;
