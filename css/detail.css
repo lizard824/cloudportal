@@ -26,6 +26,7 @@ img{
 }
 body{
 	width:100%;
+	min-width: 320px;
 	height:auto;
 	background: #fff;
 	font-family: 微软雅黑;
@@ -403,7 +404,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:200px;
+	width:220px;
 	height:200px;
 	float: left;
 	margin-top:52px;
@@ -462,9 +463,15 @@ button{
 .cen_dea{
 	margin-top: 25px;
 }
+.cen_dea li{
+	list-style-image: url(../images/list.png) ;
+	list-style-position: inside;
+	margin-top: 10px;
+	line-height: 20px;
+}
 .cen_img{
 	width:100%;
-	height:560px;
+	height:520px;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -602,7 +609,7 @@ button{
 
 	/*下拉列表*/
 	.xnav_ul .nohover{
-		width:140px;
+		width:150px;
 	}
 
 	.xnav_ul .nohover a:hover{
@@ -921,7 +928,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:200px;
+	width:220px;
 	height:200px;
 	float: left;
 	margin-top: 52px;
@@ -981,9 +988,15 @@ button{
 .cen_dea{
 	margin-top: 25px;
 }
+.cen_dea li{
+	list-style-image: url(../images/list.png) ;
+	list-style-position: inside;
+	margin-top: 10px;
+	line-height: 20px;
+}
 .cen_img{
-	width:520px;
-	height:530;
+	width:100%;
+	height:500;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -1034,7 +1047,7 @@ button{
 	}
 	.footer_ul_cen{
 		float: left;
-		margin-left:32%;
+		margin-left:23%;
 	}
 	.footer_ul_rig{
 		float: right;
@@ -1126,7 +1139,7 @@ button{
 
 	/*下拉列表*/
 	.xnav_ul .nohover{
-		width:140px;
+		width:150px;
 	}
 
 	.xnav_ul .nohover a:hover{
@@ -1450,7 +1463,7 @@ button{
 	clear: both;
 }
 .center_ul{
-	width:170px;
+	width:200px;
 	height:200px;
 	float: left;
 	margin-top: 57px;
@@ -1500,9 +1513,15 @@ button{
 .cen_dea{
 	margin-top: 25px;
 }
+.cen_dea li{
+	list-style-image: url(../images/list.png) ;
+	list-style-position: inside;
+	margin-top: 10px;
+	line-height: 20px;
+}
 .cen_img{
 	width:100%;
-	height:530;
+	height:500;
 	margin-top: 30px;
 	box-shadow: 0 5px 9px #ccc;
 }
@@ -1552,7 +1571,7 @@ button{
 	}
 	.footer_ul_cen{
 		float: left;
-		margin-left:20%;
+		margin-left:15%;
 	}
 	.footer_ul_rig{
 		float: right;
@@ -1583,7 +1602,7 @@ button{
 
 
 
-@media (min-width: 320px) and (max-width: 759px){
+@media (max-width: 759px){
 
  body{
         width:100%;
@@ -1979,13 +1998,13 @@ button{
 	min-height: 11rem;
 }
 .dea_cen{
-    width:90%;
+    width:95%;
     height:auto;
     margin:auto;
     clear: both;
 }
 .center_ul{
-    width:4.5rem;
+    width:6.5rem;
     height:5rem;
     float: left;
     margin-top: 1rem;
@@ -2010,10 +2029,10 @@ button{
 	color:#4b4b4b;
 }
 .center_right{
-    margin-top: 1rem;
-    float: right;
-    width:60%;
+	width:53%;
     height:auto;
+    margin-top: 1rem;
+    float: right;   
 }
 .center_right .cen_p{
     font-size:0.5rem;
@@ -2036,9 +2055,15 @@ button{
     color:#000;
 }
 .cen_dea{
-	width:11rem;
+	width:100%;
 	height:auto;
     margin-top: 0.625rem;
+}
+.cen_dea li{
+	list-style-image: url(../images/list.png) ;
+	list-style-position: inside;
+	margin-top: 10px;
+	line-height: 20px;
 }
 .cen_img{
 	width:100%;
