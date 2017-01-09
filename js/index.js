@@ -1,8 +1,8 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_login, v_head, v_sign,v_service;
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var v_login, v_head, v_sign, v_service;
+var _CTX_ = 'http://test.lenovo.com:8180/sso';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var exp = 7200000;
 $(document).ready(function () {
@@ -21,10 +21,9 @@ function iniLogin() {
             passValid: true,
             userValid: true,
             error: '',
-            remember:0
+            remember: 0
         },
-        methods: {
-        }
+        methods: {}
     });
     $('#loginForm').on('submit', function (e) {
         e.preventDefault(); // prevent native submit
@@ -45,11 +44,7 @@ function iniLogin() {
                 success: function (data) {
                     console.log(data);
                     if (data.success == true) {
-                        setCookie();
-                        v_head.$nextTick(function () {
-                            loadPage();
-                            myClo(log, wlog);
-                        });
+                        setCookie(data.cookie);
                     } else {
                         if (data.msg === "")
                             v_login.$set("error", "Login in failed!");
@@ -87,16 +82,16 @@ function iniHead() {
             loadPage();
         },
         methods: {
-            logout:function(){
+            logout: function () {
                 $.ajax({
-                    type:'GET',
-                    url:_CTX_+"/sso/ssoLogout",
-                    dateType:"json",
-                    success:function (data) {
+                    type: 'GET',
+                    url: _CTX_ + "/sso/ssoLogout",
+                    dateType: "json",
+                    success: function (data) {
                         var logout_result = jwt_decode(data.response);
-                        if(logout_result.success==true){
+                        if (logout_result.success == true) {
                             loadPage();
-                        }else{
+                        } else {
                             return;
                         }
 
@@ -110,14 +105,14 @@ function iniHead() {
 function loadPage() {
     $.ajax({
         type: "GET",
-        url: _CTX_ + "/sso/validate",
-        data:{service:'http://test.lenovo.com:8180/ssoindex/index.html'},
+        url: _CTX_ + "/validate",
+        data: {service: 'http://test.lenovo.com:8180/ssoindex/index.html'},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
-                v_head.$set("isLogged",false);
-                v_head.$set("login","Login");
-                v_service.$set("isLogged",false);
+                v_head.$set("isLogged", false);
+                v_head.$set("login", "Login");
+                v_service.$set("isLogged", false);
             } else {
                 var load_result = jwt_decode(data.response);
                 v_head.$set("isLogged", true);
@@ -129,24 +124,27 @@ function loadPage() {
     });
 }
 
-function setCookie(){
+function setCookie(cookie) {
+    var cookieObj = jwt_decode(cookie);
     $.ajax({
-        type:'GET',
-        url:_CTX_+"/sso/getDomain",
-        dateType:"json",
-        success:function (data) {
-            if(data.success==true){
+        type: 'GET',
+        url: _CTX_ + "/getDomain",
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
                 var response = jwt_decode(data.response);
                 //set domain of all domain
                 var domains = response.domain;
-                for(var i in domains){
-                 var domainObj = domains[i];
-                 var domainName = domainObj.domain;
-                    $.cookie(domainName, 'value', { expires: exp, path: '/' });
-                 }
-            }else{
+                for (var i in domains) {
+                    var domainObj = domains[i];
+                    var domainName = domainObj.domain;
+                    Cookies.set('LENOVOITS_TGC', cookie, {path: '/', domain: domainName});
+                }
+            } else {
                 return;
             }
+            loadPage();
+            myClo(log, wlog);
 
         }
     });
@@ -158,13 +156,13 @@ function iniService() {
         data: {
             isLogged: false
         },
-        methods:{
-            openUrl:function (url) {
+        methods: {
+            openUrl: function (url) {
                 var _self = this;
-                if(_self.isLogged){
-                    window.open(url,"_blank");
-                }else{
-                    clLig(log,wlog,signbj,sig);
+                if (_self.isLogged) {
+                    window.open(url, "_blank");
+                } else {
+                    clLig(log, wlog, signbj, sig);
                 }
             }
         }
@@ -247,7 +245,7 @@ function iniSign() {
             $(this).ajaxSubmit({
                 success: function (data) {
                     if (data.result == true) {
-                        myClo(signbj,sig);
+                        myClo(signbj, sig);
                     } else {
                         if (data.msg === "")
                             v_sign.$set("error", "Sign in failed!");
