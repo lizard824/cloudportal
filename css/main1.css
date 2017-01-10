@@ -180,7 +180,7 @@ body{
 }
 .xnav .nav_log li{
 	float: left;
-	line-height:32px;
+	line-height:18px;
 }
 .top_cli{
 	width:40px;
@@ -916,7 +916,7 @@ button{
 }
 .nav_log li{
 	float: left;
-	line-height:32px;
+	line-height:18px;
 }
 #xnav_ul{
 	display: none;
@@ -1641,7 +1641,7 @@ button{
 }
 .nav_log li{
 	float: left;
-	line-height:32px;
+	line-height:18px;
 }
 #xnav_ul{
 	display: none;
