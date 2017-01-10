@@ -11,19 +11,19 @@ onresize = function () {
  var naImg = document.getElementById('animite');
 
  
-setTimeout(function(){
+/*setTimeout(function(){
     anMite.style.opacity=0;
     anMite.style.zIndex=0;
     naImg.style.opacity=0;
-},5650);
+},5650);*/
 
-var anClose = function(e){
+/*var anClose = function(e){
      e.style.display = 'none';
-};
+};*/
 
-anClos.onclick = function(){
+/*anClos.onclick = function(){
      anClose(anMite);
-};
+};*/
 
 
 

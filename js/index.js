@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_login, v_head, v_sign, v_service;
-var _CTX_ = 'http://test.lenovo.com:8180/sso';
+var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var exp = 7200000;
 $(document).ready(function () {
@@ -85,11 +85,11 @@ function iniHead() {
             logout: function () {
                 $.ajax({
                     type: 'GET',
-                    url: _CTX_ + "/sso/ssoLogout",
+                    url: _CTX_ + "/ssoLogout",
+                    data: {ck: Cookies.get("LENOVOITS_TGC")},
                     dateType: "json",
                     success: function (data) {
-                        var logout_result = jwt_decode(data.response);
-                        if (logout_result.success == true) {
+                        if (data.success == true) {
                             loadPage();
                         } else {
                             return;
@@ -106,7 +106,7 @@ function loadPage() {
     $.ajax({
         type: "GET",
         url: _CTX_ + "/validate",
-        data: {service: 'http://test.lenovo.com:8180/ssoindex/index.html'},
+        data: {service: 'http://test.lenovo.com:8180/ssoindex/index.html', ck: Cookies.get("LENOVOITS_TGC")},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
@@ -125,7 +125,7 @@ function loadPage() {
 }
 
 function setCookie(cookie) {
-    var cookieObj = jwt_decode(cookie);
+    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: cookie.exp});
     $.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
@@ -138,7 +138,7 @@ function setCookie(cookie) {
                 for (var i in domains) {
                     var domainObj = domains[i];
                     var domainName = domainObj.domain;
-                    Cookies.set('LENOVOITS_TGC', cookie, {path: '/', domain: domainName});
+                    callSign(domainName, cookie.val, cookie.exp);
                 }
             } else {
                 return;
@@ -270,3 +270,18 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function callSign(domain, cookieVal, cookieExp) {
+    $.ajax({
+        type: 'GET',
+        url: domain + "/sign",
+        data: {ck: cookieVal, exp: cookieExp},
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
+                console.log(data.msg);
+            } else {
+                return;
+            }
+        }
+    });
+}
