@@ -6,24 +6,24 @@ onresize = function () {
 
 
 //动画-------------------------------------------
- var anMite = document.getElementById('animat');
- var anClos = document.getElementById('anclose');
- var naImg = document.getElementById('animite');
+//  var anMite = document.getElementById('animat');
+//  var anClos = document.getElementById('anclose');
+//  var naImg = document.getElementById('animite');
 
  
-/*setTimeout(function(){
-    anMite.style.opacity=0;
-    anMite.style.zIndex=0;
-    naImg.style.opacity=0;
-},5650);*/
+// setTimeout(function(){
+//     anMite.style.opacity=0;
+//     anMite.style.zIndex=0;
+//     naImg.style.opacity=0;
+// },5650);
 
-/*var anClose = function(e){
-     e.style.display = 'none';
-};*/
+// var anClose = function(e){
+//      e.style.display = 'none';
+// };
 
-/*anClos.onclick = function(){
-     anClose(anMite);
-};*/
+// anClos.onclick = function(){
+//      anClose(anMite);
+// };
 
 
 
@@ -80,6 +80,35 @@ clos.onclick = function () {
 closig.onclick = function () {
     myClo(signbj, sig);
 };
+
+
+var agent = navigator.userAgent;
+if (/.*Firefox.*/.test(agent)) {
+    document.addEventListener("DOMMouseScroll", function(e) {
+        e = e || window.event;
+        var detail = e.detail;
+        if (detail > 0) {
+            // console.log("鼠标向下滚动");
+            aUl.style.display = 'none';
+        } else {
+            // console.warn("鼠标向上滚动");
+            aUl.style.display = 'block';
+        }
+    });
+} else {
+    document.onmousewheel = function(e) {
+        e = e || window.event;
+        var wheelDelta = e.wheelDelta;
+        if (wheelDelta > 0) {
+            // console.log("鼠标向上滚动");
+            aUl.style.display = 'block';
+        } else {
+            // console.warn("鼠标向下滚动");
+            aUl.style.display = 'none';
+        }
+    }
+}
+
 
 
 // 导航背景------------------------------------------

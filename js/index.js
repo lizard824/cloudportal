@@ -4,7 +4,6 @@
 var v_login, v_head, v_sign, v_service;
 var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-var exp = 7200000;
 $(document).ready(function () {
     iniLogin();
     iniHead();
@@ -42,7 +41,6 @@ function iniLogin() {
         } else {
             $(this).ajaxSubmit({
                 success: function (data) {
-                    console.log(data);
                     if (data.success == true) {
                         setCookie(data.cookie);
                     } else {
@@ -118,7 +116,7 @@ function loadPage() {
                 v_head.$set("isLogged", true);
                 v_head.$set("login", "Hello, " + load_result.realname);
                 v_service.$set("isLogged", true);
-                anClose(anMite);
+                //anClose(anMite);
             }
         }
     });
