@@ -109,7 +109,7 @@ body{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:18px;
+	line-height:10px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -180,7 +180,7 @@ body{
 }
 .xnav .nav_log li{
 	float: left;
-	line-height:18px;
+	line-height:10px;
 }
 .top_cli{
 	width:40px;
@@ -381,14 +381,16 @@ button{
 .banner_first span p{
 	font-size:24px ;
 	color:#fff;
+	opacity: 1;
 }
-	 .banner_first img{
+.banner_first img{
 		 position: absolute;
 		 top:-80px;
 		 left:0;
 		 right:0;
 		 bottom:0;
 		 margin:auto;
+		 opacity: 1;
 	 }
 .banner_first_one{
 	width:500px;
@@ -830,7 +832,7 @@ button{
 .xnav_ul li{
 	float: left;
 	margin-left: 10%;
-   line-height:18px;
+   line-height:10px;
 	height:100%;
 }
 .xnav_ul li a,
@@ -916,7 +918,7 @@ button{
 }
 .nav_log li{
 	float: left;
-	line-height:18px;
+	line-height:10px;
 }
 #xnav_ul{
 	display: none;
@@ -1554,7 +1556,7 @@ button{
 	float: left;
 	margin-left: 10%;
 	height:100%;
-	line-height:18px;
+	line-height:10px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -1641,7 +1643,7 @@ button{
 }
 .nav_log li{
 	float: left;
-	line-height:18px;
+	line-height:10px;
 }
 #xnav_ul{
 	display: none;

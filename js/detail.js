@@ -4,6 +4,45 @@
 	     onresize = function(){
 		document.documentElement.style.fontSize = innerWidth / 16+'px';
 	          };
+
+//鼠标滚动
+var agent = navigator.userAgent;
+if (/.*Firefox.*/.test(agent)) {
+    document.addEventListener("DOMMouseScroll", function(e) {
+        e = e || window.event;
+        var detail = e.detail;
+        if (detail > 0) {
+            // console.log("鼠标向下滚动");
+            aUl.style.display = 'none';
+        } else {
+            // console.warn("鼠标向上滚动");
+            aUl.style.display = 'block';
+        }
+    });
+} else {
+    document.onmousewheel = function(e) {
+        e = e || window.event;
+        var wheelDelta = e.wheelDelta;
+        if (wheelDelta > 0) {
+            // console.log("鼠标向上滚动");
+            aUl.style.display = 'block';
+        } else {
+            // console.warn("鼠标向下滚动");
+            aUl.style.display = 'none';
+        }
+    }
+}
+
+
+
+$(window).bind("scroll", function(){ 
+        var top = $(this).scrollTop(); // 当前窗口的滚动距离
+        if(top > 100){
+           $('.banner div').css({'opacity':'0','transition':'0.5s all ease'});
+        }else{
+            $('.banner div').css({'opacity':'1','transition':'0.5s all ease'});
+        }
+  });
 // 导航背景------------------------------------------
 var aUl = document.getElementById('xhead');
 var twoDiv = document.getElementById('second');

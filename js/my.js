@@ -82,6 +82,8 @@ closig.onclick = function () {
 };
 
 
+
+//鼠标滚动
 var agent = navigator.userAgent;
 if (/.*Firefox.*/.test(agent)) {
     document.addEventListener("DOMMouseScroll", function(e) {
@@ -102,6 +104,7 @@ if (/.*Firefox.*/.test(agent)) {
         if (wheelDelta > 0) {
             // console.log("鼠标向上滚动");
             aUl.style.display = 'block';
+
         } else {
             // console.warn("鼠标向下滚动");
             aUl.style.display = 'none';
@@ -109,6 +112,17 @@ if (/.*Firefox.*/.test(agent)) {
     }
 }
 
+
+$(window).bind("scroll", function(){
+        var top = $(this).scrollTop(); // 当前窗口的滚动距离
+        if(top > 100){
+           $('.banner_first img').css({'opacity':'0','transition':'0.5s all ease'});
+        $('.banner_first span').css({'opacity':'0','transition':'0.5s all ease'});
+        }else{
+            $('.banner_first img').css({'opacity':'1','transition':'0.5s all ease'});
+            $('.banner_first span').css({'opacity':'1','transition':'0.5s all ease'});
+        }
+  });
 
 
 // 导航背景------------------------------------------
@@ -124,6 +138,7 @@ var devDown = document.getElementById('device');
 onscroll = function (ev) {
     var ev = ev || event;
     var top = document.documentElement.scrollTop || document.body.scrollTop;
+
 
     if (top > twoDiv.offsetTop - 65) {
         aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
