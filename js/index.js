@@ -104,7 +104,7 @@ function loadPage() {
     $.ajax({
         type: "GET",
         url: _CTX_ + "/validate",
-        data: {service: 'http://test.lenovo.com:8180/ssoindex/index.html', ck: Cookies.get("LENOVOITS_TGC")},
+        data: {service: 'http://itscloud.xpaas.lenovo.com', ck: Cookies.get("LENOVOITS_TGC")},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
