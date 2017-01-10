@@ -116,11 +116,11 @@ if (/.*Firefox.*/.test(agent)) {
 $(window).bind("scroll", function(){
         var top = $(this).scrollTop(); // 当前窗口的滚动距离
         if(top > 100){
-           $('.banner_first img').css({'opacity':'0','transition':'0.5s all ease'});
-        $('.banner_first span').css({'opacity':'0','transition':'0.5s all ease'});
+           $('.banner_first img').css({'opacity':'0','transition':'1.5s all ease'});
+        $('.banner_first span').css({'opacity':'0','transition':'1.5s all ease'});
         }else{
-            $('.banner_first img').css({'opacity':'1','transition':'0.5s all ease'});
-            $('.banner_first span').css({'opacity':'1','transition':'0.5s all ease'});
+            $('.banner_first img').css({'opacity':'1','transition':'1.5s all ease'});
+            $('.banner_first span').css({'opacity':'1','transition':'1.5s all ease'});
         }
   });
 
