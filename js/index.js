@@ -81,7 +81,7 @@ function iniHead() {
         },
         methods: {
             logout: function () {
-                Cookies.remove("LENOVOITS_TGC");
+                Cookies.remove("LENOVOITS_TGC",{ path: '' });
                 $.ajax({
                     type: 'GET',
                     url: _CTX_ + "/ssoLogout",
