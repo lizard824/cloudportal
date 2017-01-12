@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	 <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Login</title>
+	 <link rel="shortcut icon" href="images/function.ico">
+	 <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	
+        <!-- 登录 -->
+        <div class="login" id="wlog">
+            <div class="xlog logopt" id="log">
+                <img src="images/loglo.png" alt="" class="close" id="close">
+                <div class="form">
+                    <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/sso/login">
+                        <div class="input ">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
+                            </div>
+                            <p v-show="!userValid">*Please input username</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        </div>
+
+
+                        <div class="rember">
+
+                            <span class="wite" id="rember">
+		    		         <span class="dot" id="dot">
+                                 <input type="radio" v-model="remember" name="remember">
+                             </span>
+                            </span>
+                            <p>Remember me</p>
+                        </div>
+                        <button class="buton" type="submit">
+                        Login
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- 登录结束 -->
+        <script>       
+
+</script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jwt-decode.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.transform.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
