@@ -57,7 +57,7 @@ function loadPage() {
             } else {
                 var load_result = jwt_decode(data.response);
                 v_head.$set("isLogged", true);
-                v_head.$set("login", "Hello, " + load_result.realname);
+                v_head.$set("login", "Hello, " + load_result.username);
                 v_service.$set("isLogged", true);
                 //anClose(anMite);
             }
