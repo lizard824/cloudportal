@@ -46,7 +46,7 @@ onresize = function () {
 
 // 登录跳转
  function logHref(e){  
-    window.open(e);
+    window.open(e,"_self");
  }
 
 var logCli = document.getElementById('login');

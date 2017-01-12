@@ -18,16 +18,16 @@
                 </a>
 
                 <div class="form">
-                    <form id="loginForm" class="" method="post" action="http://cas.xpaas.lenovo.com/sso/login">
+                    <form id="loginForm" class="" method="post" action="http://sso.earth.xpaas.lenovo.com/login">
                         <div class="input ">
-                            <div class="inpu">
+                            <div class="inpu {{!userValid==true?'error-border':''}}">
                                 <img src="images/name.png" alt="">
                                 <input type="text" name="username" v-model="username" id="luname" placeholder="Please input username">
                             </div>
                             <p v-show="!userValid">*Please input username</p>
                         </div>
                         <div class="input">
-                            <div class="inpu">
+                            <div class="inpu {{!passValid==true?'error-border':''}}">
                                 <img src="images/password.png" alt="">
                                 <input type="password" name="password" id="lpword" v-model="password" placeholder="Please input password">
                             </div>
@@ -62,7 +62,6 @@
     <script src="js/jquery.transform.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/vue.min.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/login.js"></script>
 </body>
 </html>

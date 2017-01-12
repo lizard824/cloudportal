@@ -12,7 +12,7 @@
 
 var logCli = document.getElementById('login');
 logCli.onclick = function(){
-    logHref('login.html');
+    logHref('login.html',"_self");
 };
 
 

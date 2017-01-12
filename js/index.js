@@ -1,73 +1,15 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_login, v_head, v_sign, v_service;
+var v_head, v_sign, v_service;
 var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 $(document).ready(function () {
-    iniLogin();
     iniHead();
     iniSign();
     iniService();
 });
 
-function iniLogin() {
-    v_login = new Vue({
-        el: "#loginForm",
-        data: {
-            username: '',
-            password: '',
-            passValid: true,
-            userValid: true,
-            error: '',
-            remember: 0
-        },
-        methods: {}
-    });
-    $('#loginForm').on('submit', function (e) {
-        e.preventDefault(); // prevent native submit
-        if (v_login.username === "") {
-            v_login.userValid = false;
-        } else {
-            v_login.userValid = true;
-        }
-        if (v_login.password === "") {
-            v_login.passValid = false;
-        } else {
-            v_login.passValid = true;
-        }
-        if (!(v_login.passValid && v_login.userValid)) {
-            return;
-        } else {
-            $(this).ajaxSubmit({
-                success: function (data) {
-                    if (data.success == true) {
-                        setCookie(data.cookie);
-                    } else {
-                        if (data.msg === "")
-                            v_login.$set("error", "Login in failed!");
-                        else
-                            v_login.$set("error", data.msg);
-                    }
-                }
-            });
-        }
-    });
-    v_login.$watch("username", function (val) {
-        v_login.$set("error", "");
-        if (val === "")
-            v_login.$set("userValid", false);
-        else
-            v_login.$set("userValid", true);
-    });
-    v_login.$watch("password", function (val) {
-        v_login.$set("error", "");
-        if (val === "")
-            v_login.$set("passValid", false);
-        else
-            v_login.$set("passValid", true);
-    });
-}
 
 function iniHead() {
     v_head = new Vue({
@@ -81,7 +23,6 @@ function iniHead() {
         },
         methods: {
             logout: function () {
-                Cookies.remove("LENOVOITS_TGC",{ path: '' });
                 $.ajax({
                     type: 'GET',
                     url: _CTX_ + "/ssoLogout",
@@ -89,6 +30,7 @@ function iniHead() {
                     dateType: "json",
                     success: function (data) {
                         if (data.success == true) {
+                            deleteCookie();
                             loadPage();
                         } else {
                             return;
@@ -123,31 +65,7 @@ function loadPage() {
     });
 }
 
-function setCookie(cookie) {
-    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: cookie.exp});
-    $.ajax({
-        type: 'GET',
-        url: _CTX_ + "/getDomain",
-        dateType: "json",
-        success: function (data) {
-            if (data.success == true) {
-                var response = jwt_decode(data.response);
-                //set domain of all domain
-                var domains = response.domain;
-                for (var i in domains) {
-                    var domainObj = domains[i];
-                    var domainName = domainObj.domain;
-                    callSign(domainName, cookie.val, cookie.exp);
-                }
-            } else {
-                return;
-            }
-            loadPage();
-            myClo(log, wlog);
 
-        }
-    });
-}
 
 function iniService() {
     v_service = new Vue({
@@ -160,8 +78,8 @@ function iniService() {
                 var _self = this;
                 if (_self.isLogged) {
                     window.open(url, "_blank");
-                } else {
-                    clLig(log, wlog, signbj, sig);
+                }else{
+                    window.location='login.html?refer='+url;
                 }
             }
         }
@@ -257,27 +175,37 @@ function iniSign() {
     });
 }
 
-function getParameterByName(name, url) {
-    if (!url) {
-        url = window.location.href;
-    }
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-function callSign(domain, cookieVal, cookieExp) {
+function callDestroy(domain) {
     $.ajax({
         type: 'GET',
-        url: domain + "/sign",
-        data: {ck: cookieVal, exp: cookieExp},
+        url: domain + "/destroy",
         dateType: "json",
         success: function (data) {
             if (data.success == true) {
                 console.log(data.msg);
+            } else {
+                return;
+            }
+        }
+    });
+}
+
+function deleteCookie() {
+    Cookies.remove("LENOVOITS_TGC",{ path: '' });
+    $.ajax({
+        type: 'GET',
+        url: _CTX_ + "/getDomain",
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
+                var response = jwt_decode(data.response);
+                //set domain of all domain
+                var domains = response.domain;
+                for (var i in domains) {
+                    var domainObj = domains[i];
+                    var domainName = domainObj.domain;
+                    callDestroy(domainName);
+                }
             } else {
                 return;
             }

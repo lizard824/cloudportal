@@ -1,30 +1,30 @@
 // rem布局----------------------------------------
-   document.documentElement.style.fontSize = innerWidth / 16+'px';
-    onresize = function(){
-       document.documentElement.style.fontSize = innerWidth / 16+'px';
-      };
+document.documentElement.style.fontSize = innerWidth / 16 + 'px';
+onresize = function () {
+    document.documentElement.style.fontSize = innerWidth / 16 + 'px';
+};
 
 // 登录注册切换中英文---------------------------------
 // 登录 窗口打开
-    // var login  = document.getElementById('login');
-    // var log    = document.getElementById('log');
-    // var wlog   = document.getElementById('wlog');
-    // //var sign   = document.getElementById('sign');
-    // var signbj = document.getElementById('signbj');
-    // var sig    = document.getElementById('sig');
+// var login  = document.getElementById('login');
+// var log    = document.getElementById('log');
+// var wlog   = document.getElementById('wlog');
+// //var sign   = document.getElementById('sign');
+// var signbj = document.getElementById('signbj');
+// var sig    = document.getElementById('sig');
 
-    // var clLig = function bl(a,b,c,d){
-    //          a.style.display = "block";
-    //          b.style.display = "block";          
-    //          c.style.display = "none";
-    //          d.style.display = "none"; 
-    //     };
-    // login.onclick = function(){
-    //       clLig(log,wlog,signbj,sig);
-    //     };
-    //sign.onclick = function(){
-    //      clLig(signbj,sig,log,wlog);
-    //};
+// var clLig = function bl(a,b,c,d){
+//          a.style.display = "block";
+//          b.style.display = "block";
+//          c.style.display = "none";
+//          d.style.display = "none";
+//     };
+// login.onclick = function(){
+//       clLig(log,wlog,signbj,sig);
+//     };
+//sign.onclick = function(){
+//      clLig(signbj,sig,log,wlog);
+//};
 
 
 // 关闭-------------------------------------------------
@@ -53,23 +53,136 @@ var clic = true;
 rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
-        remInp.value=1;
-        v_login.$set("remember",1);
+        remInp.value = 1;
+        v_login.$set("remember", 1);
         clic = false;
     } else {
         dot.style.float = 'left';
-        remInp.value=0;
-        v_login.$set("remember",0);
+        remInp.value = 0;
+        v_login.$set("remember", 0);
         clic = true;
     }
+};
+var _CTX_ = 'http://test.lenovo.com:8180/sso';
+var v_login;
+var refer = getParameterByName("refer", window.location);
+$(document).ready(function () {
+    iniLogin();
+});
+
+
+function iniLogin() {
+    v_login = new Vue({
+        el: "#loginForm",
+        data: {
+            username: '',
+            password: '',
+            passValid: true,
+            userValid: true,
+            error: '',
+            remember: 0
+        },
+        methods: {}
+    });
+    $('#loginForm').on('submit', function (e) {
+        e.preventDefault(); // prevent native submit
+        if (v_login.username === "") {
+            v_login.userValid = false;
+        } else {
+            v_login.userValid = true;
+        }
+        if (v_login.password === "") {
+            v_login.passValid = false;
+        } else {
+            v_login.passValid = true;
+        }
+        if (!(v_login.passValid && v_login.userValid)) {
+            return;
+        } else {
+            $(this).ajaxSubmit({
+                success: function (data) {
+                    if (data.success == true) {
+                        setCookie(data.cookie);
+                    } else {
+                        if (data.msg === "")
+                            v_login.$set("error", "Login in failed!");
+                        else
+                            v_login.$set("error", data.msg);
+                    }
+                }
+            });
+        }
+    });
+    v_login.$watch("username", function (val) {
+        v_login.$set("error", "");
+        if (val === "")
+            v_login.$set("userValid", false);
+        else
+            v_login.$set("userValid", true);
+    });
+    v_login.$watch("password", function (val) {
+        v_login.$set("error", "");
+        if (val === "")
+            v_login.$set("passValid", false);
+        else
+            v_login.$set("passValid", true);
+    });
 }
 
+function setCookie(cookie) {
+    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: cookie.exp});
+    $.ajax({
+        type: 'GET',
+        url: _CTX_ + "/getDomain",
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
+                var response = jwt_decode(data.response);
+                //set domain of all domain
+                var domains = response.domain;
+                for (var i in domains) {
+                    var domainObj = domains[i];
+                    var domainName = domainObj.domain;
+                    callSign(domainName, cookie.val, cookie.exp);
+                }
+            } else {
+                return;
+            }
+            if (null !== refer) {
+                window.location = refer;
+            }else{
+                window.location = "index.html";
+            }
+        }
+    });
+}
 
+function callSign(domain, cookieVal, cookieExp) {
+    $.ajax({
+        type: 'GET',
+        url: domain + "/sign",
+        data: {ck: cookieVal, exp: cookieExp},
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
+                console.log(data.msg);
+            } else {
+                return;
+            }
+        }
+    });
+}
 
-
-
-
-
-
+function getParameterByName(name, url) {
+    if (!url) {
+        url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 
