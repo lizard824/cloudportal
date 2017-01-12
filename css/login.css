@@ -1,0 +1,240 @@
+	body,p,div,ul,ol,
+	h1,h2,h3,h4,h5,h6,
+	table,tr,td,dt,dd,
+	dl,video,input,img
+{
+	margin:0;
+	padding:0;
+	border:none;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+p,h4,h5{
+	cursor:pointer
+}
+li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+img{
+	border:0;
+}
+body{
+	width:100%;
+	min-width: 320px;
+	height:auto;
+	background: #fff;
+	font-family: '微软雅黑','黑体';
+}
+
+	/*登录*/
+.login{
+	width:100%;
+	height:100%;
+	background: #fff;
+}
+.xlog{	
+	width:40%;
+	height:auto;
+	margin:0 auto;
+    background: #fff;	
+}
+.close{
+	display: block;
+	margin:auto;
+	margin-top: 50px;
+}
+
+.form{
+	width:40%;
+	height:400px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 9px rgba(0,0,0,0.2);
+	display: block;
+	margin:auto;
+	position: absolute;
+    left:0;
+    top:120px;
+    right:0;
+    bottom:0;
+}
+input{
+	background: none;
+	border:0;
+	outline: none;
+}
+.input{
+	width:70%;
+	margin:auto;
+	margin-top: 20px;
+	height:70px;
+}
+.input p{
+	font-size: 14px;
+	color:red;
+}
+.inpu{
+	width:100%;
+	height:65px;
+	margin:auto;
+	overflow: hidden;	
+	border-bottom:1px solid #3899eb;
+}
+.error-border{
+	border-bottom:1px solid #f2564d;
+}
+.inpu input{
+	width:88%;
+    font-size: 15px;
+    color:#3e3e3e;
+    padding-top:30px ;
+    padding-bottom: 30px;
+    float: right;
+    background: none;
+    border:0;
+    outline: none;
+}
+.inpu img{
+	float: left;
+	width:26px;
+	height:28px;
+	margin-top: 24px;
+}
+.rember{
+	width:70%;
+	height:40px;
+	margin:0 auto;
+	margin-top: 65px;
+}
+.rember p{
+	float: left;
+	margin-left: 10px;
+	margin-top: 4px;
+	color:#3e3e3e;
+	font-size: 18px;
+}
+.rember .wite{
+	float: left;
+	display: block;
+	width:29px;
+	height:16px;
+	background: #fff;
+	border:1px solid #3899eb;
+	border-radius: 8px;
+	margin-top: 3px;
+	cursor:pointer;
+}
+.rember .wite .dot{
+	display: block;
+	width:16px;
+	height:16px;
+	background: #76c4fb;
+	border-radius: 50px;
+	cursor: pointer;
+}
+.rember .wite .dot input{
+		 background:none;
+		 outline:none;
+		 border:0;
+		 opacity:0;
+		 width:16px;
+		 height:16px;
+	 }
+button{
+	background: rgba(0,0,0,0);
+}
+.buton{
+	width:174px;
+	height:40px;
+	background: #3899eb;
+	outline: none;
+	border:0;
+	font-size: 24px;
+	text-align: center;
+	margin:auto;
+	display: block;
+	margin-top: 40px;
+	color:#fff;
+	cursor: pointer;
+}
+
+/*注册*/
+/*.sign{
+	display: none;
+}
+.sign .input{
+	margin-top: 15px;
+}
+.sbuton{
+	float: none;
+	margin-left: 80px;
+}
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}*/
+
+
+
+@media  (max-width:989px){
+	/*登录*/
+
+.form{
+	width:50%;
+
+}
+
+
+}
+
+@media (max-width: 759px){
+	/*登录*/
+
+.close{
+	width:3.35rem;
+	height:2.175rem;
+	display: block;
+	margin:auto;
+	margin-top:3.5rem;
+}
+
+.form{
+	width:70%;
+	height:300px;
+}
+
+.input{
+	width:75%;
+	height:50px;
+}
+.inpu{
+	height:44px;
+	margin-top: 7px;
+}
+.inpu input{
+	width:78%;
+    padding-top:15px ;
+    padding-bottom: 15px;
+
+}
+.inpu img{
+	margin-top: 6px;
+}
+.rember{
+	margin-top: 37px;
+}
+.buton{
+	width:125px;
+	height:40px;
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+
+}
