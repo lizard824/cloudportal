@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	 <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Login</title>
+	 <link rel="shortcut icon" href="images/function.ico">
+	 <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	   <!-- 注册 -->
+        <div class="login sign" id="signbj">
+            <div class="xlog logopt" id="sig">
+                <a href="index.html">
+                    <img src="images/loglo.png" alt="" class="close" id="close">
+                </a>
+                <div class="form">
+                    <form class="" id="signForm" action="http://cas.xpaas.lenovo.com/sso/userAdd/">
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username">
+                            </div>
+                            <p v-show="!userValid">*Please input username</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/email.png" alt="">
+                                <input type="text" name="email" v-model="email" id="email" placeholder="Please input email">
+                            </div>
+                            <p v-show="!emailValid">*Please input valid email</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/password.png" alt="">
+                                <input type="password" name="password" v-model="password" id="conpword" placeholder="Please input password">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/name.png" alt="">
+                                <input type="text" name="realname" v-model="realname" id="rname" placeholder="Please input name">
+                            </div>
+                            <p v-show="!nameValid">*Please input name</p>
+                        </div>
+                        <div class="input">
+                            <div class="inpu">
+                                <img src="images/phone.png" alt="">
+                                <input type="text" name="number" v-model="password" id="number" placeholder="Please input number">
+                            </div>
+                            <p v-show="!passValid">*Please input password</p>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        </div>
+                        <button class="buton sbuton" type="submit">
+                        Sign in
+                    </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- 注册结束 -->
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jwt-decode.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.transform.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -282,9 +282,6 @@ $(".onleft").click(function () {
 })
 
 $(".onright").click(function () {
-    // $('.forth_ul').stop().animate({left:'+='+ulWidth},1000,function(){
-    //  //console.log( $("#forth_ul")[0].offsetLeft)
-    // $('.forth_ul').css("left","-="+ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul");
     $('.forth_ul').css('left', '-=' + ulWidth).stop().find(".oone:last-child").prependTo(".forth_ul").parent().stop().animate({left: '+=' + ulWidth}, 1000, function () {
     })
 
