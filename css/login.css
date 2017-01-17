@@ -165,20 +165,16 @@ button{
 }
 
 /*注册*/
-/*.sign{
-	display: none;
-}
+
 .sign .input{
-	margin-top: 15px;
+	height:44px;
+	margin-top: 20px;
 }
-.sbuton{
-	float: none;
-	margin-left: 80px;
+.sign .form{
+	height:500px;
+	top:180px;
 }
-#sign a{
-  padding: 2px 3px 5px 3px;
-  border:1px solid #fff;
-}*/
+
 
 
 

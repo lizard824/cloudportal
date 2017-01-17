@@ -197,6 +197,11 @@ body{
 #xnav_ul{
 	display: none;
 }
+
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}
 /*head end*/
 
 /*first screen*/
@@ -764,6 +769,11 @@ body{
 }
 #xnav_ul{
 	display: none;
+}
+
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
 }
 /*head end*/
 
@@ -1337,6 +1347,11 @@ body{
 }
 #xnav_ul{
 	display: none;
+}
+
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
 }
 /*head end*/
 
@@ -1919,6 +1934,11 @@ body{
 }
 .nav_log li a{
 	color:#fff;
+}
+
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
 }
 /*head end*/
 
