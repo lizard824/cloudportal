@@ -22,7 +22,7 @@
 
                 <img src="images/topcli.png" id="ph_open" alt="logo">
             </div>
-            <ul class="xnav_ul" id="no_ul">
+            <ul class="xnav_ul nav-select" id="no_ul">
                 <li class="no_margin">
                     <a href="index.html" name="first">
                         <img src="images/logo.png" alt="logo" id="change_src">
@@ -78,7 +78,7 @@
 
 
             <!-- 点击出现的导航 -->
-            <ul class="xnav_ul" id="xnav_ul">
+            <ul class="xnav_ul nav-select" id="xnav_ul">
                 <li class="nohover">
                     <a href="javascript:;">
                         Devops Service
@@ -132,11 +132,18 @@
             </p>
         </div> -->
 
-            <ul class="nav_log">
-                <li class="no_margin">
+            <ul class="nav_log nav-select">
+                <li class="no_margin nohover">
                     <a href="javascript:;" id="login">
                         {{login}}
                     </a>
+                     <div class="change-word" id="change-word">
+                            <p>
+                                <a href="javascript:;">
+                                    change password
+                                </a>
+                            </p>
+                      </div>
                 </li>
                 <li>&nbsp;</li>
                 <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
