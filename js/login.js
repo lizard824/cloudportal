@@ -63,7 +63,7 @@ rem.onclick = function () {
         clic = true;
     }
 };
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var _CTX_ = 'http://test.lenovo.com:8180/sso/';
 var v_login;
 var refer = getParameterByName("refer", window.location);
 $(document).ready(function () {
@@ -135,6 +135,7 @@ function setCookie(cookie) {
         type: 'GET',
         url: _CTX_ + "/getDomain",
         dateType: "json",
+        data:{ck:cookie.val},
         success: function (data) {
             if (data.success == true) {
                 var response = jwt_decode(data.response);
@@ -142,8 +143,7 @@ function setCookie(cookie) {
                 var domains = response.domain;
                 for (var i in domains) {
                     var domainObj = domains[i];
-                    var domainName = domainObj.domain;
-                    callSign(domainName, cookie.val, cookie.exp);
+                    callSign(domainObj.sign, domainObj.st, domainObj.domain, cookie.exp);
                 }
             } else {
                 return;
@@ -157,11 +157,11 @@ function setCookie(cookie) {
     });
 }
 
-function callSign(domain, cookieVal, cookieExp) {
+function callSign(signUrl, cookieVal, cookieDomain, cookieExp) {
     $.ajax({
         type: 'GET',
-        url: domain + "/sign",
-        data: {ck: cookieVal, exp: cookieExp},
+        url: signUrl,
+        data: {ck: cookieVal, exp: cookieExp, domain:cookieDomain},
         dateType: "json",
         success: function (data) {
             if (data.success == true) {
@@ -173,16 +173,5 @@ function callSign(domain, cookieVal, cookieExp) {
     });
 }
 
-function getParameterByName(name, url) {
-    if (!url) {
-        url = window.location.href;
-    }
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
 
 

@@ -4,10 +4,16 @@
 var v_head, v_sign, v_service;
 var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+var SERVICE="http://test.lenovo.com:8180/ssoindex/index.html";
 $(document).ready(function () {
     iniHead();
     iniSign();
     iniService();
+    var logout = getParameterByName("logout");
+    if(null!==logout){
+        v_head.logout();
+    }
+
 });
 
 
@@ -47,7 +53,7 @@ function loadPage() {
     $.ajax({
         type: "GET",
         url: _CTX_ + "/validate",
-        data: {service: 'http://itscloud.xpaas.lenovo.com', ck: Cookies.get("LENOVOITS_TGC")},
+        data: {service: SERVICE, ck: Cookies.get("LENOVOITS_TGC")},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
@@ -175,10 +181,10 @@ function iniSign() {
     });
 }
 
-function callDestroy(domain) {
+function callDestroy(logoutUrl) {
     $.ajax({
-        type: 'GET',
-        url: domain + "/destroy",
+        type: 'POST',
+        url: logoutUrl,
         dateType: "json",
         success: function (data) {
             if (data.success == true) {
@@ -191,10 +197,10 @@ function callDestroy(domain) {
 }
 
 function deleteCookie() {
-    Cookies.remove("LENOVOITS_TGC",{ path: '' });
     $.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
+        data:{ck:Cookies.get("LENOVOITS_TGC")},
         dateType: "json",
         success: function (data) {
             if (data.success == true) {
@@ -203,9 +209,9 @@ function deleteCookie() {
                 var domains = response.domain;
                 for (var i in domains) {
                     var domainObj = domains[i];
-                    var domainName = domainObj.domain;
-                    callDestroy(domainName);
+                    callDestroy(domainObj.logout);
                 }
+                Cookies.remove("LENOVOITS_TGC",{ path: '' });
             } else {
                 return;
             }

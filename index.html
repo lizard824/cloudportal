@@ -147,11 +147,11 @@
                     <li>&nbsp;</li>
                     <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
-                    <!-- <li id="sign" v-show="!isLogged"> -->
-                    <!-- <a href="signin.html"> -->
-                    <!-- Sign in -->
-                    <!-- </a> -->
-                    <!-- </li> -->
+                     <li id="sign" v-show="!isLogged">
+                     <a href="signin.html">
+                     Sign in
+                     </a>
+                     </li>
                 </ul>
 
             </div>
@@ -301,7 +301,7 @@
                             <p class="ul_second">Provide API to <br>send,manage and monitor message.</p>
                         </li>
                         <li class="oone" id="two">
-                            <a href="#" @click="openUrl('http://test.lenovo.com:8080/xframe/dash/home')">
+                            <a href="#" @click="openUrl('http://xframe.lenovo.com:8080/xframe/dash/home')">
                             <img src="images/piao.png" alt="">
                             <p class="ul_first">Ticket
                             </p>
@@ -387,6 +387,7 @@
     <script src="js/js.cookie.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/my.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/index.js"></script>
 </body>
 
