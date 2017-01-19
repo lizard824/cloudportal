@@ -37,7 +37,6 @@ function iniHead() {
                     success: function (data) {
                         if (data.success == true) {
                             deleteCookie();
-                            loadPage();
                         } else {
                             return;
                         }
@@ -215,6 +214,7 @@ function deleteCookie() {
             } else {
                 return;
             }
+            loadPage();
         }
     });
 }
