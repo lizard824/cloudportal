@@ -64,6 +64,7 @@ var devSer = document.getElementById('devser');
 var clicDown = document.getElementById('clic_down');
 var devDown = document.getElementById('device');
 
+var changeWord = document.getElementById('change-word');
 onscroll = function (ev) {
     var ev = ev || event;
     var top = document.documentElement.scrollTop || document.body.scrollTop;
@@ -77,6 +78,7 @@ onscroll = function (ev) {
         nav_ul.style.backgroundColor = 'rgba(0,0,0,0.3)';
         clicDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
         devDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
+         changeWord.style.backgroundColor = 'rgba(0,0,0,0.3)';
     } else {
         aUl.style.backgroundColor = 'rgba(0,0,0,0)';
         pullDown.style.backgroundColor = 'rgba(0,0,0,0)';
@@ -86,6 +88,7 @@ onscroll = function (ev) {
         nav_ul.style.backgroundColor = 'rgba(0,0,0,0)';
         clicDown.style.backgroundColor = 'rgba(0,0,0,0)';
         devDown.style.backgroundColor = 'rgba(0,0,0,0)';
+        changeWord.style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
 };
@@ -140,12 +143,12 @@ phone_open.onclick = function(){
 
 
 //延时导航---------------------------------------------
-$('.xnav_ul .nohover').hover(function(){
+$('.nav-select .nohover').hover(function(){
     $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"1px solid #fff"});
 },function(){
     $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"0px solid #fff"});
 }).trigger("mouseout");
-$('.xnav_ul .nohover').hover(function(){
+$('.nav-select .nohover').hover(function(){
     $(this).find("a").siblings().stop().slideToggle(50);
 })
 

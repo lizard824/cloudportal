@@ -55,6 +55,58 @@ logCli.onclick = function(){
 };
 
 
+//修改密码关闭
+function chanBlock(e){
+    e.style.display = 'block';
+}
+function chanClose(e){
+    e.style.display = 'none';
+}
+
+var moDify = document.getElementById('modify');
+var canCel = document.getElementById('cancel');
+var changeWord = document.getElementById('change-word');
+
+changeWord.onclick = function(){
+    chanBlock(moDify);
+};
+canCel.onclick = function(){
+    chanClose(moDify);
+};
+
+//修改密码input动画
+var moP = document.getElementById('mo-p');
+var movP = document.getElementById('mov-p');
+var newWord = document.getElementById('new-word');
+var conWord = document.getElementById('con-word');
+
+function moveP(e,a,c){
+    e.style.top = a;
+    e.style.fontSize = c;
+}
+
+newWord.onfocus = function(){
+    moveP(moP,'-5px','14px');
+    }
+    
+newWord.onblur = function(){
+    if(newWord.value == ''){
+       moveP(moP,'20px','16px');            
+        }
+    }
+
+conWord.onfocus = function(){
+    moveP(movP,'-5px','14px');
+    }
+    
+conWord.onblur = function(){
+    if(newWord.value == ''){
+       moveP(movP,'20px','16px');            
+        }
+    }
+
+
+
 //鼠标滚动
 var agent = navigator.userAgent;
 if (/.*Firefox.*/.test(agent)) {
@@ -107,6 +159,8 @@ var devSer = document.getElementById('devser');
 var clicDown = document.getElementById('clic_down');
 var devDown = document.getElementById('device');
 
+
+
 onscroll = function (ev) {
     var ev = ev || event;
     var top = document.documentElement.scrollTop || document.body.scrollTop;
@@ -121,6 +175,7 @@ onscroll = function (ev) {
          nav_ul.style.backgroundColor = 'rgba(0,0,0,0.3)';
         clicDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
         devDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        changeWord.style.backgroundColor = 'rgba(0,0,0,0.3)';
     } else {
         aUl.style.backgroundColor = 'rgba(0,0,0,0)';
         pullDown.style.backgroundColor = 'rgba(0,0,0,0)';
@@ -130,6 +185,7 @@ onscroll = function (ev) {
         nav_ul.style.backgroundColor = 'rgba(0,0,0,0)';
         clicDown.style.backgroundColor = 'rgba(0,0,0,0)';
         devDown.style.backgroundColor = 'rgba(0,0,0,0)';
+        changeWord.style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
 };
@@ -238,12 +294,12 @@ function time() {
 
 //延时导航---------------------------------------------
 
-$('.xnav_ul .nohover').hover(function(){
+$('.nav-select .nohover').hover(function(){
     $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"1px solid #fff"});
 },function(){
     $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"0px solid #fff"});
 }).trigger("mouseout");
-$('.xnav_ul .nohover').hover(function(){
+$('.nav-select .nohover').hover(function(){
     $(this).find("a").siblings().stop().slideToggle(50);
 })
 

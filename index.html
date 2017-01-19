@@ -7,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>lenovo</title>
     <link rel="shortcut icon" href="images/function.ico">
+    <link rel="stylesheet" href="css/modify.css">
     <link rel="stylesheet" href="css/main1.css">
 
 </head>
@@ -26,7 +27,7 @@
                     </a>
                     <img src="images/topcli.png" id="ph_open" alt="logo">
                 </div>
-                <ul class="xnav_ul" id="no_ul">
+                <ul class="xnav_ul nav-select" id="no_ul">
                     <li class="no_margin">
                         <a href="#first" name="first">
                             <img src="images/logo.png" alt="logo" id="change_src">
@@ -83,7 +84,7 @@
 
 
                 <!-- 点击出现的导航 -->
-                <ul class="xnav_ul" id="xnav_ul">
+                <ul class="xnav_ul nav-select" id="xnav_ul">
                     <li class="nohover">
                         <a href="javascript:;">
                             Devops Service
@@ -138,11 +139,18 @@
                 </p>
             </div> -->
 
-                <ul class="nav_log">
-                    <li class="no_margin">
+                <ul class="nav_log nav-select">
+                    <li class="no_margin nohover">
                         <a href="javascript:;" id="login">
                         {{login}}
-                    </a>
+                        </a>
+                        <div class="change-word" id="change-word">
+                            <p>
+                                <a href="javascript:;">
+                                    change password
+                                </a>
+                            </p>
+                        </div>
                     </li>
                     <li>&nbsp;</li>
                     <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
@@ -156,8 +164,44 @@
 
             </div>
         </div>
+<!-- change password start -->
+<div class="modify" id="modify">
+    <div class="mo-cen">                    
+            <div class="mo-left mo-right">
+                <div class="mo-top">
+                    <p class="p-left">Change Password</p>
+                </div>
+                <form class="mo-form">
+                    
+                    <div class="mo-input">
+                      <p class="mo-p" id="mo-p">New password</p>
+                        <div>
+                            <input type="text" value="" id='new-word'>
+                        </div>
+                        <p class="error-p">error message</p>
+                    </div>
+                    <div class="mo-input">
+                        <p class="mo-p" id="mov-p">Confirm password</p>
+                        <div>
+                            <input type="text" value="" id="con-word">
+                        </div>
+                        <p  class="error-p">error message</p>
+                    </div>
+                    <div class="mo-button">
+                        <button type="submit">
+                        submit
+                    </button>
+                    <button type="button" id="cancel">
+                        cancel
+                    </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+</div>
+<!-- change passwor end -->
 
-        <!-- 注册 -->
         <!--导航结束-->
         <!--第一屏-->
 
