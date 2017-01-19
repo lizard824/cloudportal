@@ -147,7 +147,7 @@
                         <div class="change-word" id="change-word">
                             <p>
                                 <a href="javascript:;">
-                                    change password
+                                    Reset
                                 </a>
                             </p>
                         </div>
@@ -155,11 +155,19 @@
                     <li>&nbsp;</li>
                     <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
+<<<<<<< Updated upstream
                      <li id="sign" v-show="!isLogged">
                      <a href="signin.html">
                      Sign in
                      </a>
                      </li>
+=======
+                    <li id="sign" v-show="!isLogged">
+                    <a href="signin.html">
+                    Sign in
+                    </a>
+                    </li>
+>>>>>>> Stashed changes
                 </ul>
 
             </div>
@@ -178,17 +186,17 @@
                         <div>
                             <input type="text" value="" id='new-word'>
                         </div>
-                        <p class="error-p">error message</p>
+                       
                     </div>
                     <div class="mo-input">
                         <p class="mo-p" id="mov-p">Confirm password</p>
-                        <div>
+                        <div class="">
                             <input type="text" value="" id="con-word">
                         </div>
-                        <p  class="error-p">error message</p>
+                       
                     </div>
                     <div class="mo-button">
-                        <button type="submit">
+                        <button type="submit" id="mo-sub" >
                         submit
                     </button>
                     <button type="button" id="cancel">
