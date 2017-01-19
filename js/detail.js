@@ -53,10 +53,12 @@ function chanBj(){
        moSub.style.backgroundColor = '#bee0f3';
        moSub.style.color = '#fff'; 
        moSub.style.border = 'none'; 
+       moSub.disabled = '';
     }else{
        moSub.style.backgroundColor = '#fff';
        moSub.style.color = '#6a6a6a'; 
-       moSub.style.border = '1px solid #b4d5e3';  
+       moSub.style.border = '1px solid #b4d5e3';
+       moSub.disabled = 'disabled';    
     }
 };
 
