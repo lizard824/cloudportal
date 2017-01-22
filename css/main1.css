@@ -212,7 +212,7 @@ body{
 }
 .change-word p{
 	height:64px;
-	margin-right: 115px;
+	margin-right: 230px;
 	text-align: right;
 
 }
@@ -808,7 +808,7 @@ body{
 }
 .change-word p{
 	height:64px;
-	margin-right: 90px;
+	margin-right: 200px;
 	text-align: right;
 
 }
@@ -1409,7 +1409,7 @@ body{
 }
 .change-word p{
 	height:64px;
-	margin-right: 30px;
+	margin-right:130px;
 	text-align: right;
 
 }
@@ -1998,7 +1998,7 @@ body{
 
 }
 .nav_log li{
-	height:1rem;
+	height:1.625rem;
 	float: left;
 	line-height:1.5rem;
 }
@@ -2019,7 +2019,7 @@ body{
 .change-word p{
 	height:1rem;
 	line-height: 0.9rem;
-	margin-right: 0.5rem;
+	margin-right:2rem;
 	text-align: right;
 
 }

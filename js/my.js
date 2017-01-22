@@ -79,31 +79,48 @@ var moP = document.getElementById('mo-p');
 var movP = document.getElementById('mov-p');
 var newWord = document.getElementById('new-word');
 var conWord = document.getElementById('con-word');
+var moSub = document.getElementById('mo-sub');
 
 function moveP(e,a,c){
     e.style.top = a;
     e.style.fontSize = c;
 }
 
+function chanBj(){
+    if(newWord.value != '' && conWord.value != ''){
+       moSub.style.backgroundColor = '#bee0f3';
+       moSub.style.color = '#fff'; 
+       moSub.style.border = 'none'; 
+       moSub.disabled = '';
+    }else{
+       moSub.style.backgroundColor = '#fff';
+       moSub.style.color = '#6a6a6a'; 
+       moSub.style.border = '1px solid #b4d5e3';
+       moSub.disabled = 'disabled';  
+    }
+};
+
 newWord.onfocus = function(){
     moveP(moP,'-5px','14px');
-    }
+    };
     
 newWord.onblur = function(){
     if(newWord.value == ''){
        moveP(moP,'20px','16px');            
-        }
-    }
+        };
+      chanBj();  
+    };
 
 conWord.onfocus = function(){
     moveP(movP,'-5px','14px');
-    }
+    };
     
 conWord.onblur = function(){
-    if(newWord.value == ''){
+    if(conWord.value == ''){
        moveP(movP,'20px','16px');            
-        }
-    }
+        };
+    chanBj();
+    };
 
 
 
