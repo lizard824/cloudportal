@@ -139,11 +139,12 @@
                 </p>
             </div> -->
 
-                <ul class="nav_log nav-select">
+                <ul class="nav_log {{isLogged==true && isLDAP==false?'nav-select':''}}">
                     <li class="no_margin nohover">
-                        <a href="javascript:;" id="login">
+                        <a v-if="isLogged==false || (isLogged==true&&isLDAP==false)" href="login.html" id="login">
                         {{login}}
                         </a>
+                        <span v-else>{{login}}</span>
                         <div class="change-word" id="change-word">
                             <p>
                                 <a href="javascript:;">

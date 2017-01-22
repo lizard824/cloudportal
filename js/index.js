@@ -4,13 +4,13 @@
 var v_head, v_sign, v_service;
 var _CTX_ = 'http://test.lenovo.com:8180/sso';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-var SERVICE="http://test.lenovo.com:8180/ssoindex/index.html";
+var SERVICE = "http://test.lenovo.com:8180/ssoindex/index.html";
 $(document).ready(function () {
     iniHead();
     iniSign();
     iniService();
     var logout = getParameterByName("logout");
-    if(null!==logout){
+    if (null !== logout) {
         v_head.logout();
     }
 
@@ -22,7 +22,8 @@ function iniHead() {
         el: "#xhead",
         data: {
             login: 'Login',
-            isLogged: false
+            isLogged: false,
+            isLDAP: true
         },
         created: function () {
             loadPage();
@@ -63,13 +64,15 @@ function loadPage() {
                 var load_result = jwt_decode(data.response);
                 v_head.$set("isLogged", true);
                 v_head.$set("login", "Hello, " + load_result.username);
+                if (parseInt(load_result.authtype) != 2) {
+                    v_head.$set("isLDAP", false);
+                }
                 v_service.$set("isLogged", true);
                 //anClose(anMite);
             }
         }
     });
 }
-
 
 
 function iniService() {
@@ -83,8 +86,8 @@ function iniService() {
                 var _self = this;
                 if (_self.isLogged) {
                     window.open(url, "_blank");
-                }else{
-                    window.location='login.html?refer='+url;
+                } else {
+                    window.location = 'login.html?refer=' + url;
                 }
             }
         }
@@ -181,26 +184,26 @@ function iniSign() {
 }
 
 function callDestroy(logoutUrl) {
-    $("#destroy").attr("src",logoutUrl);
-   /* $.ajax({
-        type: 'GET',
-        url: logoutUrl,
-        dateType: "json",
-        success: function (data) {
-            if (data.success == true) {
-                console.log(data.msg);
-            } else {
-                return;
-            }
-        }
-    });*/
+    $("#destroy").attr("src", logoutUrl);
+    /* $.ajax({
+     type: 'GET',
+     url: logoutUrl,
+     dateType: "json",
+     success: function (data) {
+     if (data.success == true) {
+     console.log(data.msg);
+     } else {
+     return;
+     }
+     }
+     });*/
 }
 
 function deleteCookie() {
     $.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
-        data:{ck:Cookies.get("LENOVOITS_TGC")},
+        data: {ck: Cookies.get("LENOVOITS_TGC")},
         dateType: "json",
         success: function (data) {
             if (data.success == true) {
@@ -211,7 +214,7 @@ function deleteCookie() {
                     var domainObj = domains[i];
                     callDestroy(domainObj.logout);
                 }
-                Cookies.remove("LENOVOITS_TGC",{ path: '' });
+                Cookies.remove("LENOVOITS_TGC", {path: ''});
             } else {
                 return;
             }

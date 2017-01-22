@@ -49,10 +49,10 @@ onresize = function () {
     window.open(e,"_self");
  }
 
-var logCli = document.getElementById('login');
+/*var logCli = document.getElementById('login');
 logCli.onclick = function(){
     logHref('login.html');
-};
+};*/
 
 
 //修改密码关闭
