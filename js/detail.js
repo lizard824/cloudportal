@@ -116,7 +116,6 @@ if (/.*Firefox.*/.test(agent)) {
 }
 
 
-
 $(window).bind("scroll", function(){ 
         var top = $(this).scrollTop(); // 当前窗口的滚动距离
         if(top > 100){
@@ -130,6 +129,7 @@ var aUl = document.getElementById('xhead');
 var twoDiv = document.getElementById('second');
 
 var pullDown = document.getElementById("poll_down");
+
 var devSer = document.getElementById('devser');
 
 var clicDown = document.getElementById('clic_down');
