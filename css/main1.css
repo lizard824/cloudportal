@@ -111,6 +111,10 @@ body{
 	height:100%;
 	line-height:10px;
 }
+.nav_log .no_margin span{
+	color:#fff;
+	font-size:20px;
+}
 .xnav_ul li a,
 .nav_log li a
 {
@@ -705,6 +709,10 @@ body{
 	margin-left: 10%;
    line-height:10px;
 	height:100%;
+}
+.nav_log .no_margin span{
+	color:#fff;
+	font-size:20px;
 }
 .xnav_ul li a,
 .nav_log li a
@@ -1305,6 +1313,10 @@ body{
 	height:100%;
 	line-height:10px;
 }
+.nav_log .no_margin span{
+	color:#fff;
+	font-size:20px;
+}
 .xnav_ul li a,
 .nav_log li a
 {
@@ -1900,6 +1912,9 @@ body{
 .nav_log .no_margin
 {
 	margin-left: 0;
+}
+.nav_log .no_margin span{
+	color:#fff;
 }
 .xnav_ul li a{
    color:#fff;
