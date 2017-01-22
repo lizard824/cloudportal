@@ -2,7 +2,7 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_head, v_sign, v_service;
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var _CTX_ = 'http://test.lenovo.com:8180/sso';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var SERVICE="http://test.lenovo.com:8180/ssoindex/index.html";
 $(document).ready(function () {
@@ -181,8 +181,9 @@ function iniSign() {
 }
 
 function callDestroy(logoutUrl) {
-    $.ajax({
-        type: 'POST',
+    $("#destroy").attr("src",logoutUrl);
+   /* $.ajax({
+        type: 'GET',
         url: logoutUrl,
         dateType: "json",
         success: function (data) {
@@ -192,7 +193,7 @@ function callDestroy(logoutUrl) {
                 return;
             }
         }
-    });
+    });*/
 }
 
 function deleteCookie() {

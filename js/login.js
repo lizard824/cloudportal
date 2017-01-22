@@ -63,7 +63,7 @@ rem.onclick = function () {
         clic = true;
     }
 };
-var _CTX_ = 'http://test.lenovo.com:8180/sso/';
+var _CTX_ = 'http://test.lenovo.com:8180/sso';
 var v_login;
 var refer = getParameterByName("refer", window.location);
 $(document).ready(function () {
@@ -103,12 +103,18 @@ function iniLogin() {
                 success: function (data) {
                     if (data.success == true) {
                         setCookie(data.cookie);
+                       /* if (null !== refer) {
+                            window.location = refer;
+                        }else{
+                            window.location = "index.html";
+                        }*/
                     } else {
                         if (data.msg === "")
                             v_login.$set("error", "Login in failed!");
                         else
                             v_login.$set("error", data.msg);
                     }
+
                 }
             });
         }
@@ -148,29 +154,12 @@ function setCookie(cookie) {
             } else {
                 return;
             }
-            if (null !== refer) {
-                window.location = refer;
-            }else{
-                window.location = "index.html";
-            }
         }
     });
 }
 
 function callSign(signUrl, cookieVal, cookieDomain, cookieExp) {
-    $.ajax({
-        type: 'GET',
-        url: signUrl,
-        data: {ck: cookieVal, exp: cookieExp, domain:cookieDomain},
-        dateType: "json",
-        success: function (data) {
-            if (data.success == true) {
-                console.log(data.msg);
-            } else {
-                return;
-            }
-        }
-    });
+    $("#setCookie").attr("src",signUrl+"?st="+cookieVal+"&exp="+cookieExp+"&domain="+cookieDomain);
 }
 
 
