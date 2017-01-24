@@ -12,3 +12,15 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+//显示遮罩层    
+        function showMask(){     
+            $("#loading").css("height",$(document).height());     
+            $("#loading").css("width",$(document).width());     
+            $("#loading").show();     
+        }  
+//隐藏遮罩层  
+        function hideMask(){     
+              
+            $("#loading").hide();     
+        } 
