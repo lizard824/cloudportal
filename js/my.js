@@ -314,7 +314,7 @@ function time() {
 $('.nav-select .nohover').hover(function(){
     $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"1px solid #fff"});
 },function(){
-    $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"0px solid #fff"});
+    $(this).find("a:first").css({"transition":"0s all ease","border-bottom":"0px solid #fff"});
 }).trigger("mouseout");
 $('.nav-select .nohover').hover(function(){
     $(this).find("a").siblings().stop().slideToggle(50);

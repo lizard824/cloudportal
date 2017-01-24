@@ -44,6 +44,17 @@ function iniHead() {
 
                     }
                 });
+            },
+            hover: function (id) {
+                var self = this;
+                if (self.isLogged && !self.isLDAP) {
+                    $("#" + id).css({"transition": "1s all ease", "border-bottom": "1px solid #fff"});
+                    $("#change-word").stop().slideDown(50);
+                }
+            },
+            leave: function (id) {
+                $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
+                $("#change-word").stop().slideUp(50);
             }
         }
     });
@@ -57,17 +68,17 @@ function loadPage() {
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
-                v_head.$set("isLogged", false);
-                v_head.$set("login", "Login");
-                v_service.$set("isLogged", false);
+                v_head.isLogged = false;
+                v_head.login = "Login";
+                v_service.isLogged = false;
             } else {
                 var load_result = jwt_decode(data.response);
-                v_head.$set("isLogged", true);
-                v_head.$set("login", "Hello, " + load_result.username);
+                v_head.isLogged = true;
+                v_head.login = "Hello, " + load_result.username;
                 if (parseInt(load_result.authtype) != 2) {
-                    v_head.$set("isLDAP", false);
+                    v_head.isLDAP = false;
                 }
-                v_service.$set("isLogged", true);
+                v_service.isLogged = true;
                 //anClose(anMite);
             }
         }
@@ -131,32 +142,32 @@ function iniSign() {
         }
     });
     v_sign.$watch("username", function (val) {
-        v_sign.$set("error", "");
+        v_sign.error = "";
         if (val === "")
-            v_sign.$set("userValid", false);
+            v_sign.userValid = false;
         else
-            v_sign.$set("userValid", true);
+            v_sign.userValid = true;
     });
     v_sign.$watch("password", function (val) {
-        v_sign.$set("error", "");
+        v_sign.error = "";
         if (val === "")
-            v_sign.$set("passValid", false);
+            v_sign.passValid = false;
         else
-            v_sign.$set("passValid", true);
+            v_sign.passValid = true;
     });
     v_sign.$watch("email", function (val) {
-        v_sign.$set("error", "");
+        v_sign.error = "";
         if (val === "" || !val.match(email))
-            v_sign.$set("emailValid", false);
+            v_sign.emailValid = false;
         else
-            v_sign.$set("emailValid", true);
+            v_sign.emailValid = true;
     });
     v_sign.$watch("realname", function (val) {
-        v_sign.$set("error", "");
+        v_sign.error = "";
         if (val === "")
-            v_sign.$set("nameValid", false);
+            v_sign.nameValid = false;
         else
-            v_sign.$set("nameValid", true);
+            v_sign.nameValid = true;
     });
     $('#signForm').on('submit', function (e) {
         e.preventDefault(); // prevent native submit
@@ -170,12 +181,12 @@ function iniSign() {
             $(this).ajaxSubmit({
                 success: function (data) {
                     if (data.result == true) {
-                        myClo(signbj, sig);
+                        //myClo(signbj, sig);
                     } else {
                         if (data.msg === "")
-                            v_sign.$set("error", "Sign in failed!");
+                            v_sign.error = "Sign in failed!";
                         else
-                            v_sign.$set("error", data.msg);
+                            v_sign.error = data.msg;
                     }
                 }
             });
