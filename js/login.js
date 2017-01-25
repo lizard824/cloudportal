@@ -93,7 +93,9 @@ function iniLogin() {
 }
 
 function setCookie(cookie) {
-    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: cookie.exp});
+    var now = new Date().getTime();
+    var expDay = (cookie.exp - now)/1000/60/60/24;
+    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: expDay});
     $.ajax({
         type: 'GET',
         async: false,
@@ -111,7 +113,7 @@ function setCookie(cookie) {
                 }
                 var wait = function () {
                     var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 5000);
+                    setTimeout(dtd.resolve, 1000);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
