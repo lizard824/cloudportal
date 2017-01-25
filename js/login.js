@@ -14,11 +14,15 @@ var clic = true;
 rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
+        rem.style.backgroundColor = '#3899eb';
+        rem.style.borderColor = '#3899eb';
         remInp.value = 1;
         v_login.remember=1;
         clic = false;
     } else {
         dot.style.float = 'left';
+        rem.style.backgroundColor = '#eeeeee';
+        rem.style.borderColor = '#dcdcdc';
         remInp.value = 0;
         v_login.remember=0;
         clic = true;
