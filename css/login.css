@@ -130,7 +130,7 @@ input{
 	width:29px;
 	height:16px;
 	background: #eeeeee;
-	border:1px solid #3899eb;
+	border:1px solid #dcdcdc;
 	border-radius: 8px;
 	margin-top: 3px;
 	cursor:pointer;
@@ -139,7 +139,7 @@ input{
 	display: block;
 	width:16px;
 	height:16px;
-	background: #3899eb;
+	background: #fff;
 	border-radius: 50px;
 	cursor: pointer;
 }
