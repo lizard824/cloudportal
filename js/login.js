@@ -28,11 +28,15 @@ rem.onclick = function () {
         clic = true;
     }
 };
-var _CTX_ = 'http://test.lenovo.com:8180/sso';
+var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var v_login;
 var refer = getParameterByName("refer", window.location);
 $(document).ready(function () {
     iniLogin();
+    var logout = getParameterByName("logout");
+    if (null !== logout) {
+        v_head.logout(logout);
+    }
 });
 
 
@@ -70,6 +74,7 @@ function iniLogin() {
                     if (data.success == true) {
                         setCookie(data.cookie);
                     } else {
+                        hideMask();
                         if (data.msg === "")
                             v_login.error="Login in failed!";
                         else
