@@ -99,6 +99,7 @@ function iniLogin() {
         if (!(v_login.passValid && v_login.userValid)) {
             return;
         } else {
+            showMask();
             $(this).ajaxSubmit({
                 success: function (data) {
                     if (data.success == true) {
@@ -167,7 +168,8 @@ function setCookie(cookie) {
 }
 
 function callSign(signUrl, cookieVal, cookieExp) {
-    $("#setCookie").attr("src", signUrl + "?st=" + cookieVal + "&exp=" + cookieExp );
+    var iframe = "<iframe style='display:none' src="+signUrl + "?st=" + cookieVal + "&exp=" + cookieExp+"></iframe>";
+    $("body").append(iframe);
 }
 
 
