@@ -5,17 +5,6 @@
 		document.documentElement.style.fontSize = innerWidth / 16+'px';
 	          };
 
-// 登录跳转
- function logHref(e){
-    window.open(e);
- }
-
-var logCli = document.getElementById('login');
-logCli.onclick = function(){
-    logHref('login.html',"_self");
-};
-
-
 
 //修改密码关闭
 function chanBlock(e){

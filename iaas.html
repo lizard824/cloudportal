@@ -9,10 +9,22 @@
     <link rel="shortcut icon" href="images/function.ico">
       <link rel="stylesheet" href="css/modify.css">
     <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/mask.css">
 
 </head>
 
 <body>
+<!-- loding start -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
+        </div>
+    </div>
+</div>
+<!-- loding end -->
     <!--导航-->
     <div class="xhead" id="xhead">
         <div class="xnav">
@@ -127,15 +139,9 @@
             </ul>
 
 
-            <!-- <div class="texttab">
-            <p>
-                <span>中文</span>/<span id="eng">English</span>
-            </p>
-        </div> -->
-
             <ul class="nav_log nav-select">
                 <li class="no_margin nohover">
-                    <a href="javascript:;" id="login">
+                    <a href="login.html" id="login">
                         {{login}}
                     </a>
                      <div class="change-word" id="change-word">
@@ -265,7 +271,7 @@
                             IaaS is capable of fast delivery and quick response to business, 7*24 supports on server maintenance, highly secured storage and backup approach, and customized services.
                         </li>
                     </ul>
-                    <!--<img src="images/deiaas.png" alt="" class="cen_img">-->
+
                 </div>
 
                 <div class="cen_one">
@@ -301,7 +307,7 @@
                             by customer backup request to implement backup for file.
                         </li>
                     </ul>
-                    <!--<img src="images/depaas.png" alt="" class="cen_img">-->
+                 
                 </div>
                 <div class="cen_one">
                     <p class="cen_p">
@@ -314,7 +320,7 @@
                         infrastructure facilities with specific characteristics, such as Big Data and DTC.
 
                     </p>
-                    <!--<img src="images/deiaas.png" alt="" class="cen_img">-->
+                 
                 </div>
                 <div class="cen_one">
 

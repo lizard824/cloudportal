@@ -30,31 +30,6 @@ onresize = function () {
 
 
 
-/*sign.onclick = function () {
- $('#signForm').trigger("reset");
- v_sign.$set("email", "");
- v_sign.$set("username", "");
- v_sign.$set("password", "");
- v_sign.$set("realname", "");
- v_sign.$set("error", "");
- v_sign.$set("emailValid", true);
- v_sign.$set("userValid", true);
- v_sign.$set("passValid", true);
- v_sign.$set("nameValid", true);
- clLig(signbj, sig, log, wlog);
- };*/
-
-// 登录跳转
- function logHref(e){  
-    window.open(e,"_self");
- }
-
-/*var logCli = document.getElementById('login');
-logCli.onclick = function(){
-    logHref('login.html');
-};*/
-
-
 //修改密码关闭
 function chanBlock(e){
     e.style.display = 'block';
@@ -131,10 +106,10 @@ if (/.*Firefox.*/.test(agent)) {
         e = e || window.event;
         var detail = e.detail;
         if (detail > 0) {
-            // console.log("鼠标向下滚动");
+          
             aUl.style.display = 'none';
         } else {
-            // console.warn("鼠标向上滚动");
+           
             aUl.style.display = 'block';
         }
     });
@@ -143,11 +118,11 @@ if (/.*Firefox.*/.test(agent)) {
         e = e || window.event;
         var wheelDelta = e.wheelDelta;
         if (wheelDelta > 0) {
-            // console.log("鼠标向上滚动");
+           
             aUl.style.display = 'block';
 
         } else {
-            // console.warn("鼠标向下滚动");
+           
             aUl.style.display = 'none';
         }
     }

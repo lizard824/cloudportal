@@ -30,6 +30,7 @@ function iniHead() {
         },
         methods: {
             logout: function () {
+                showMask();
                 $.ajax({
                     type: 'GET',
                     url: _CTX_ + "/ssoLogout",
@@ -107,7 +108,8 @@ function iniService() {
 
 
 function callDestroy(logoutUrl) {
-    $("#destroy").attr("src", logoutUrl);
+    var iframe = "<iframe style='display:none' src="+logoutUrl+"></iframe>";
+    $("body").append(iframe);
     /* $.ajax({
      type: 'GET',
      url: logoutUrl,
@@ -138,10 +140,18 @@ function deleteCookie() {
                     callDestroy(domainObj.logout);
                 }
                 Cookies.remove("LENOVOITS_TGC", {path: ''});
+                var wait = function () {
+                    var dtd = $.Deferred();
+                    setTimeout(dtd.resolve, 5000);
+                    return dtd;
+                };
+                $.when(wait()).done(function () {
+                    hideMask();
+                    loadPage();
+                });
             } else {
                 return;
             }
-            loadPage();
         }
     });
 }
