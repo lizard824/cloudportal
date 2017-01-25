@@ -101,6 +101,10 @@ input{
     border:0;
     outline: none;
 }
+.inpu input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    border: 0px solid #CCC!important;
+    }
 .inpu img{
 	float: left;
 	width:26px;
@@ -125,7 +129,7 @@ input{
 	display: block;
 	width:29px;
 	height:16px;
-	background: #fff;
+	background: #eeeeee;
 	border:1px solid #3899eb;
 	border-radius: 8px;
 	margin-top: 3px;
@@ -135,7 +139,7 @@ input{
 	display: block;
 	width:16px;
 	height:16px;
-	background: #76c4fb;
+	background: #3899eb;
 	border-radius: 50px;
 	cursor: pointer;
 }
