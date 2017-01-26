@@ -160,6 +160,14 @@ function iniHead() {
             leave: function (id) {
                 $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
                 $("#change-word").stop().slideUp(50);
+            },
+            openUrl: function (url) {
+                var _self = this;
+                if (_self.isLogged) {
+                    window.open(url, "_blank");
+                } else {
+                    window.location = 'login.html?refer=' + url;
+                }
             }
         }
     });
