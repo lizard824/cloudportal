@@ -1,6 +1,11 @@
 /**
  * Created by shenkai2 on 1/25/2017.
  */
+
+$(document).ready(function () {
+    iniSign();
+});
+
 function iniSign() {
     v_sign = new Vue({
         el: "#signForm",
@@ -8,33 +13,17 @@ function iniSign() {
             email: '',
             username: '',
             password: '',
+            conpword:'',
             realname: '',
+            number:'',
             passValid: true,
+            conValid: true,
             userValid: true,
             emailValid: true,
             nameValid: true,
             error: ''
         },
         methods: {
-            sign: function () {
-                var _self = this;
-                if (_self.username === "") {
-                    _self.userValid = false;
-                } else {
-                    _self.userValid = true;
-                }
-                if (_self.password === "") {
-                    _self.passValid = false;
-                } else {
-                    _self.passValid = true;
-                }
-                if (!(_self.passValid && _self.userValid)) {
-                    return;
-                } else {
-                    $("#loginForm").submit();
-                }
-
-            }
         }
     });
     v_sign.$watch("username", function (val) {
@@ -65,19 +54,46 @@ function iniSign() {
         else
             v_sign.nameValid = true;
     });
+    v_sign.$watch("conpword",function (val) {
+        v_sign.error = "";
+        if(val === "" || !val.match (v_sign.password))
+            v_sign.conValid = false;
+        else
+            v_sign.conValid = true;
+    });
+
     $('#signForm').on('submit', function (e) {
         e.preventDefault(); // prevent native submit
         var username = v_sign.username;
         var email = v_sign.email;
         var name = v_sign.realname;
         var password = v_sign.password;
-        if (username == '' || email == '' || name == '' || password == '') {
+        var conword = v_sign.conpword;
+
+        if (v_sign.username === "") {
+            v_sign.userValid = false;
+        } else {
+            v_sign.userValid = true;
+        }
+        if (v_sign.password === "") {
+            v_sign.passValid = false;
+        } else {
+            v_sign.passValid = true;
+        }
+        if(!(v_sign.password === v_sign.conpword)){
+            v_sign.conValid = false;
+        }else{
+            v_sign.conValid = true;
+        }
+        if (!(v_sign.passValid && v_sign.userValid && v_sign.conValid)) {
             return;
         } else {
+            showMask();
             $(this).ajaxSubmit({
                 success: function (data) {
+                    var _CTX_ = '';
                     if (data.result == true) {
-                        //myClo(signbj, sig);
+                        window.location.href = "./login.html";
                     } else {
                         if (data.msg === "")
                             v_sign.error = "Sign in failed!";

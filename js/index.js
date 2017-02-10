@@ -2,12 +2,11 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_head, v_sign, v_service;
-var _CTX_ = 'http://localhost:8080/ssoindex';
+var _CTX_ = 'http://localhost:8081/';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var SERVICE = "http://localhost:8080/ssoindex/index.html";
 $(document).ready(function () {
     iniHead();
-    iniSign();
     iniService();
     var logout = getParameterByName("logout");
     if (null !== logout) {

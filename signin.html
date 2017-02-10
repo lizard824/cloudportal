@@ -28,7 +28,7 @@
                     <img src="images/loglo.png" alt="" class="close" id="close">
                 </a>
                 <div class="form">
-                    <form class="" id="signForm" action="http://cas.xpaas.lenovo.com/sso/userAdd/">
+                    <form class="" id="signForm" action="http://localhost:8081/user/signIn" method="post">
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/name.png" alt="">
@@ -54,10 +54,10 @@
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/password.png" alt="">
-                                <input type="password" name="password" v-model="password" id="conpword" placeholder="Please input password">
-                            </div>
-                            <p v-show="!passValid">*Please input password</p>
-                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                            <input type="password" name="password" v-model="conpword" id="conpword" placeholder="Please input password">
+                        </div>
+                        <p v-show="!conValid">*Please confirm password</p>
+                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <div class="input">
                             <div class="inpu">
@@ -69,9 +69,9 @@
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/phone.png" alt="">
-                                <input type="text" name="number" v-model="password" id="number" placeholder="Please input number">
+                                <input type="text" name="number" v-model="number" id="number" placeholder="Please input number">
                             </div>
-                            <p v-show="!passValid">*Please input password</p>
+                            <p v-show="!passValid">*Please input number</p>
                             <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <button class="buton sbuton" type="submit">
@@ -90,6 +90,7 @@
     <script src="js/jquery.transform.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/vue.min.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/signin.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@ rem.onclick = function () {
         clic = true;
     }
 };
-var _CTX_ = 'http://localhost:8080/ssoindex';
+var _CTX_ = 'http://localhost:8081/';
 var v_login;
 var refer = getParameterByName("refer", window.location);
 $(document).ready(function () {
