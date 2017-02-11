@@ -15,12 +15,12 @@ function getParameterByName(name, url) {
 
 //显示遮罩层    
         function showMask(){     
-            $("#loading").css("height",$(document).height());     
-            $("#loading").css("width",$(document).width());     
+            $("#loading").css("height",$(window).height());
+            $("#loading").css("width",$(window).width());
             $("#loading").show();     
         }  
 //隐藏遮罩层  
         function hideMask(){     
               
             $("#loading").hide();     
-        } 
+        }

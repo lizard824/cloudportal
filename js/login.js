@@ -14,23 +14,31 @@ var clic = true;
 rem.onclick = function () {
     if (clic == true) {
         dot.style.float = 'right';
-        rem.style.backgroundColor = '#fff';
+        rem.style.backgroundColor = '#3899eb';
+        rem.style.borderColor = '#3899eb';
         remInp.value = 1;
         v_login.remember=1;
         clic = false;
     } else {
         dot.style.float = 'left';
         rem.style.backgroundColor = '#eeeeee';
+        rem.style.borderColor = '#dcdcdc';
         remInp.value = 0;
         v_login.remember=0;
         clic = true;
     }
 };
+
 var _CTX_ = 'http://localhost:8081/';
+
 var v_login;
 var refer = getParameterByName("refer", window.location);
 $(document).ready(function () {
     iniLogin();
+    var logout = getParameterByName("logout");
+    if (null !== logout) {
+        v_head.logout(logout);
+    }
 });
 
 
@@ -68,6 +76,7 @@ function iniLogin() {
                     if (data.success == true) {
                         setCookie(data.cookie);
                     } else {
+                        hideMask();
                         if (data.msg === "")
                             v_login.error="Login in failed!";
                         else
@@ -95,7 +104,9 @@ function iniLogin() {
 }
 
 function setCookie(cookie) {
-    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: cookie.exp});
+    var now = new Date().getTime();
+    var expDay = (cookie.exp - now)/1000/60/60/24;
+    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: expDay});
     $.ajax({
         type: 'GET',
         async: false,
@@ -113,7 +124,7 @@ function setCookie(cookie) {
                 }
                 var wait = function () {
                     var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 5000);
+                    setTimeout(dtd.resolve, 1000);
                     return dtd;
                 };
                 $.when(wait()).done(function () {

@@ -6,14 +6,29 @@ var _CTX_ = 'http://localhost:8081/';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var SERVICE = "http://localhost:8080/ssoindex/index.html";
 $(document).ready(function () {
-    iniHead();
+    iniSign();
     iniService();
-    var logout = getParameterByName("logout");
-    if (null !== logout) {
-        v_head.logout();
-    }
-
+    iniHead();
 });
+
+function iniService() {
+    v_service = new Vue({
+        el: "#forth",
+        data: {
+            isLogged: false
+        },
+        methods: {
+            openUrl: function (url) {
+                var _self = this;
+                if (_self.isLogged) {
+                    window.open(url, "_blank");
+                } else {
+                    window.location = 'login.html?refer=' + url;
+                }
+            }
+        }
+    });
+}
 
 
 function iniHead() {
@@ -28,8 +43,10 @@ function iniHead() {
             loadPage();
         },
         methods: {
-            logout: function () {
-                showMask();
+            logout: function (tag) {
+                if(tag===undefined) {
+                    showMask();
+                }
                 $.ajax({
                     type: 'GET',
                     url: _CTX_ + "/ssoLogout",
@@ -37,9 +54,9 @@ function iniHead() {
                     dateType: "json",
                     success: function (data) {
                         if (data.success == true) {
-                            deleteCookie();
+                            deleteCookie(tag);
                         } else {
-                            return;
+                            hideMask();
                         }
 
                     }
@@ -55,10 +72,19 @@ function iniHead() {
             leave: function (id) {
                 $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
                 $("#change-word").stop().slideUp(50);
+            },
+            openUrl: function (url) {
+                var _self = this;
+                if (_self.isLogged) {
+                    window.open(url, "_blank");
+                } else {
+                    window.location = 'login.html?refer=' + url;
+                }
             }
         }
     });
 }
+
 
 function loadPage() {
     $.ajax({
@@ -85,29 +111,8 @@ function loadPage() {
     });
 }
 
-
-function iniService() {
-    v_service = new Vue({
-        el: "#forth",
-        data: {
-            isLogged: false
-        },
-        methods: {
-            openUrl: function (url) {
-                var _self = this;
-                if (_self.isLogged) {
-                    window.open(url, "_blank");
-                } else {
-                    window.location = 'login.html?refer=' + url;
-                }
-            }
-        }
-    });
-}
-
-
 function callDestroy(logoutUrl) {
-    var iframe = "<iframe style='display:none' src="+logoutUrl+"></iframe>";
+    var iframe = "<iframe style='display:none' src=" + logoutUrl + "></iframe>";
     $("body").append(iframe);
     /* $.ajax({
      type: 'GET',
@@ -123,7 +128,7 @@ function callDestroy(logoutUrl) {
      });*/
 }
 
-function deleteCookie() {
+function deleteCookie(tag) {
     $.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
@@ -138,15 +143,17 @@ function deleteCookie() {
                     var domainObj = domains[i];
                     callDestroy(domainObj.logout);
                 }
-                Cookies.remove("LENOVOITS_TGC", {path: ''});
+                Cookies.remove("LENOVOITS_TGC", {path: '/'});
                 var wait = function () {
                     var dtd = $.Deferred();
                     setTimeout(dtd.resolve, 5000);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
-                    hideMask();
-                    loadPage();
+                    if(tag==undefined){
+                        hideMask();
+                        loadPage();
+                    }
                 });
             } else {
                 return;
