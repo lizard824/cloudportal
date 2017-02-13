@@ -179,16 +179,16 @@
                         <div>
                             <input type="password" value="" id='new-word' v-model = "newpass" name="newPassword">
                         </div>
-                        <p  v-show="!passValid">*Please input password</p>
-                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        <p  v-show="!passValid" class="error-p">*Please input password</p>
+                        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
                     </div>
                     <div class="mo-input">
                         <p class="mo-p" id="mov-p">Confirm password</p>
                         <div class="">
                             <input type="password" value="" id="con-word" v-model = "conpass" >
                         </div>
-                        <p v-show="!conValid">*Please confirm password</p>
-                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                        <p v-show="!conValid" class="error-p">*Please confirm password</p>
+                        <p style="font-size:16px"  class="error-p" v-show="error!==''">{{error}}</p>
                        
                     </div>
                     <div class="mo-button">
