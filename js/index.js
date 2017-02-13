@@ -1,12 +1,12 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_head, v_sign, v_service;
+var v_head, v_sign, v_service, v_reset;
 var _CTX_ = 'http://localhost:8081/';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var SERVICE = "http://localhost:8080/ssoindex/index.html";
 $(document).ready(function () {
-    iniSign();
+
     iniService();
     iniHead();
 });
@@ -101,6 +101,7 @@ function loadPage() {
                 var load_result = jwt_decode(data.response);
                 v_head.isLogged = true;
                 v_head.login = "Hello, " + load_result.username;
+                v_reset.username = load_result.username;
                 if (parseInt(load_result.authtype) != 2) {
                     v_head.isLDAP = false;
                 }

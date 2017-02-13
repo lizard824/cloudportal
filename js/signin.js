@@ -95,6 +95,7 @@ function iniSign() {
                     if (data.result == true) {
                         window.location.href = "./login.html";
                     } else {
+                        hideMask();
                         if (data.msg === "")
                             v_sign.error = "Sign in failed!";
                         else
