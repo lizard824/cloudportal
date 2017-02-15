@@ -61,19 +61,19 @@ function moveP(e,a,c){
     e.style.fontSize = c;
 }
 
-function chanBj(){
-    if(newWord.value != '' && conWord.value != ''){
-       moSub.style.backgroundColor = '#bee0f3';
-       moSub.style.color = '#fff'; 
-       moSub.style.border = 'none'; 
-       moSub.disabled = '';
-    }else{
-       moSub.style.backgroundColor = '#fff';
-       moSub.style.color = '#6a6a6a'; 
-       moSub.style.border = '1px solid #b4d5e3';
-       moSub.disabled = 'disabled';  
-    }
-};
+// function chanBj(){
+//     if(newWord.value != '' && conWord.value != ''){
+//        moSub.style.backgroundColor = '#bee0f3';
+//        moSub.style.color = '#fff'; 
+//        moSub.style.border = 'none'; 
+//        moSub.disabled = '';
+//     }else{
+//        moSub.style.backgroundColor = '#fff';
+//        moSub.style.color = '#6a6a6a'; 
+//        moSub.style.border = '1px solid #b4d5e3';
+//        moSub.disabled = 'disabled';  
+//     }
+// };
 
 newWord.onfocus = function(){
     moveP(moP,'-5px','14px');
@@ -83,7 +83,7 @@ newWord.onblur = function(){
     if(newWord.value == ''){
        moveP(moP,'20px','16px');            
         };
-      chanBj();  
+      
     };
 
 conWord.onfocus = function(){
@@ -94,7 +94,6 @@ conWord.onblur = function(){
     if(conWord.value == ''){
        moveP(movP,'20px','16px');            
         };
-    chanBj();
     };
 
 
