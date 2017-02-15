@@ -92,8 +92,8 @@ function iniSign() {
             $(this).ajaxSubmit({
                 success: function (data) {
                     var _CTX_ = '';
-                    if (data.result == true) {
-                        window.location.href = "./login.html";
+                    if (data.success == true) {
+                        window.location.href = "login.html";
                     } else {
                         hideMask();
                         if (data.msg === "")

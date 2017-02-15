@@ -53,7 +53,7 @@ function iniReset() {
                     } else {
                         hideMask();
                         if (data.msg === "")
-                            v_reset.error = "Sign in failed!";
+                            v_reset.error = "Reset password failed!";
                         else
                             v_reset.error = data.msg;
                     }
