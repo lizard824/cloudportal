@@ -1,12 +1,11 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_head, v_sign, v_service, v_reset;
-var _CTX_ = 'http://localhost:8081/';
+var v_head, v_sign, v_service,v_reset;
+var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-var SERVICE = "http://localhost:8080/ssoindex/index.html";
+var SERVICE = "http://itscloud.xpaas.lenovo.com";
 $(document).ready(function () {
-
     iniService();
     iniHead();
 });
@@ -37,14 +36,15 @@ function iniHead() {
         data: {
             login: 'Login',
             isLogged: false,
-            isLDAP: true
+            isLDAP: true,
+            username:''
         },
         created: function () {
             loadPage();
         },
         methods: {
-            logout: function (tag) {
-                if(tag===undefined) {
+            logout: function (logoutUser) {
+                if(logoutUser===undefined) {
                     showMask();
                 }
                 $.ajax({
@@ -54,7 +54,7 @@ function iniHead() {
                     dateType: "json",
                     success: function (data) {
                         if (data.success == true) {
-                            deleteCookie(tag);
+                            deleteCookie(logoutUser);
                         } else {
                             hideMask();
                         }
@@ -101,6 +101,7 @@ function loadPage() {
                 var load_result = jwt_decode(data.response);
                 v_head.isLogged = true;
                 v_head.login = "Hello, " + load_result.username;
+                v_head.username = load_result.username;
                 v_reset.username = load_result.username;
                 if (parseInt(load_result.authtype) != 2) {
                     v_head.isLDAP = false;
@@ -112,8 +113,8 @@ function loadPage() {
     });
 }
 
-function callDestroy(logoutUrl) {
-    var iframe = "<iframe style='display:none' src=" + logoutUrl + "></iframe>";
+function callDestroy(logoutUrl,logoutUser) {
+    var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user="+logoutUser+"></iframe>";
     $("body").append(iframe);
     /* $.ajax({
      type: 'GET',
@@ -129,7 +130,7 @@ function callDestroy(logoutUrl) {
      });*/
 }
 
-function deleteCookie(tag) {
+function deleteCookie(logoutUser) {
     $.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
@@ -142,7 +143,11 @@ function deleteCookie(tag) {
                 var domains = response.domain;
                 for (var i in domains) {
                     var domainObj = domains[i];
-                    callDestroy(domainObj.logout);
+                    if(logoutUser!==undefined) {
+                        callDestroy(domainObj.logout, logoutUser);
+                    }else{
+                        callDestroy(domainObj.logout,v_head.username)
+                    }
                 }
                 Cookies.remove("LENOVOITS_TGC", {path: '/'});
                 var wait = function () {
@@ -151,7 +156,7 @@ function deleteCookie(tag) {
                     return dtd;
                 };
                 $.when(wait()).done(function () {
-                    if(tag==undefined){
+                    if(logoutUser==undefined){
                         hideMask();
                         loadPage();
                     }

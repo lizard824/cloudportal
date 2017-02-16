@@ -142,8 +142,8 @@
                         <a v-if="isLogged==false" href="login.html" id="login">
                         {{login}}
                         </a>
-                        <a id="local" v-if="isLogged==true&&isLDAP==true" href="javascript:;">{{login}}</a>
-                        <span v-if="isLogged==true&&isLDAP==false">{{login}}</span>
+                        <a id="local" v-if="isLogged==true&&isLDAP==false" href="javascript:;">{{login}}</a>
+                        <span v-if="isLogged==true&&isLDAP==true">{{login}}</span>
                         <div class="change-word" id="change-word">
                             <p>
                                 <a>
@@ -179,7 +179,7 @@
                         <div>
                             <input type="password" value="" id='old-word' v-model = "oldpass" name="oldPassword">
                         </div>
-                        <p  v-show="!oldpassValid" class="error-p">*Please input old password</p>
+                        <p  v-show="!oldValid" class="error-p">*Please input old password</p>
                         <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
                     </div>
                     <div class="mo-input ">
