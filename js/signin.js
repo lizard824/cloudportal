@@ -70,6 +70,7 @@ function iniSign() {
         var password = v_sign.password;
         var conword = v_sign.conpword;
 
+
         if (v_sign.username === "") {
             v_sign.userValid = false;
         } else {
@@ -80,19 +81,24 @@ function iniSign() {
         } else {
             v_sign.passValid = true;
         }
+        if (v_sign.realname === ""){
+            v_sign.nameValid = false;
+        } else {
+            v_sign.nameValid = true;
+        }
         if(!(v_sign.password === v_sign.conpword)){
             v_sign.conValid = false;
         }else{
             v_sign.conValid = true;
         }
-        if (!(v_sign.passValid && v_sign.userValid && v_sign.conValid)) {
+        if (!(v_sign.passValid && v_sign.userValid && v_sign.conValid && v_sign.nameValid)) {
             return;
         } else {
             showMask();
             $(this).ajaxSubmit({
                 success: function (data) {
                     var _CTX_ = '';
-                    if (data.result == true) {
+                    if (data.success == true) {
                         window.location.href = "./login.html";
                     } else {
                         hideMask();

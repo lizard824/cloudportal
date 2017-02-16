@@ -172,8 +172,16 @@
                 <div class="mo-top">
                     <p class="p-left">Reset Password</p>
                 </div>
-                <form class="mo-form" id="resetForm" action="http://localhost:8081/user/updatePassword" method="get">
+                <form class="mo-form" id="resetForm" action="http://localhost:8081/user/changePassword" method="post">
                     <input type="hidden" name="username" v-model="username">
+                    <div class="mo-input ">
+                        <p class="mo-p" id="moa-p">Old password</p>
+                        <div>
+                            <input type="password" value="" id='old-word' v-model = "oldpass" name="oldPassword">
+                        </div>
+                        <p  v-show="!oldpassValid" class="error-p">*Please input old password</p>
+                        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
+                    </div>
                     <div class="mo-input ">
                       <p class="mo-p" id="mo-p">New password</p>
                         <div>
@@ -432,13 +440,14 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jwt-decode.min.js"></script>
     <script src="js/jquery.transform.js"></script>
+    <script src="js/jquery.form.js"></script>
     <script src="js/js.cookie.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/my.js"></script>
     <script src="js/util.js"></script>
     <script src="js/index.js"></script>
     <script src="js/reset.js"></script>
-    <script src="js/jquery.form.js"></script>
+
 </body>
 
 </html>

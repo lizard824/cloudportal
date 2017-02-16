@@ -52,8 +52,10 @@ canCel.onclick = function(){
 //修改密码input动画
 var moP = document.getElementById('mo-p');
 var movP = document.getElementById('mov-p');
+var moap = document.getElementById('moa-p')
 var newWord = document.getElementById('new-word');
 var conWord = document.getElementById('con-word');
+var oldWord = document.getElementById('old-word');
 var moSub = document.getElementById('mo-sub');
 
 function moveP(e,a,c){
@@ -62,16 +64,16 @@ function moveP(e,a,c){
 }
 
 // function chanBj(){
-//     if(newWord.value != '' && conWord.value != ''){
+//     if(newWord.value == conWord.value && newWord.value != ''){
 //        moSub.style.backgroundColor = '#bee0f3';
-//        moSub.style.color = '#fff'; 
-//        moSub.style.border = 'none'; 
+//        moSub.style.color = '#fff';
+//        moSub.style.border = 'none';
 //        moSub.disabled = '';
 //     }else{
 //        moSub.style.backgroundColor = '#fff';
-//        moSub.style.color = '#6a6a6a'; 
+//        moSub.style.color = '#6a6a6a';
 //        moSub.style.border = '1px solid #b4d5e3';
-//        moSub.disabled = 'disabled';  
+//        moSub.disabled = 'disabled';
 //     }
 // };
 
@@ -95,6 +97,15 @@ conWord.onblur = function(){
        moveP(movP,'20px','16px');            
         };
     };
+oldWord.onfocus = function(){
+    moveP(moap,'-5px','14px');
+};
+
+oldWord.onblur = function(){
+    if(conWord.value == ''){
+        moveP(moap,'20px','16px');
+    };
+};
 
 
 

@@ -11,9 +11,12 @@ function iniReset() {
         data: {
             newpass: '',
             conpass: '',
+            oldpass: '',
             username: '',
-            passValid: true,
+            passValid:true,
             conValid: true,
+            bonValid: true,
+            oldValid: true,
             error:''
         },
         method: {}
@@ -28,20 +31,60 @@ function iniReset() {
     });
     v_reset.$watch("conpass",function (val) {
         v_reset.error = " ";
-            if (val === "" || !val.match(v_reset.newpass))
+
+            if (val === "" || !val.match(v_reset.newpass)){
                 v_reset.conValid = false;
-            else
+                v_reset.bonValid = false;
+            }
+
+            else{
                 v_reset.conValid = true;
+                v_reset.bonValid = true;
+            }
+
+    });
+    v_reset.$watch("bonValid",function (val) {
+        var moSub = document.getElementById('mo-sub');
+        if(val) {
+            moSub.style.backgroundColor = '#bee0f3';
+            moSub.style.color = '#fff';
+            moSub.style.border = 'none';
+            moSub.disabled = '';
+        }else {
+            moSub.style.backgroundColor = '#fff';
+            moSub.style.color = '#6a6a6a';
+            moSub.style.border = '1px solid #b4d5e3';
+            moSub.disabled = 'disabled';
+        }
+
     });
 
     $("#resetForm").on('submit', function (e){
         e.preventDefault();
+        if(v_reset.newpass === ""){
+            v_reset.passValid = false;
+        }
+        else{
+            v_reset.passValid =  true;
+        }
+        if(v_reset.conpass === ""){
+            v_reset.conValid = false;
+        }
+        else{
+            v_reset.conValid =  true;
+        }
+        if(v_reset.oldpass === ""){
+            v_reset.oldValid = false;
+        }
+        else{
+            v_reset.oldValid =  true;
+        }
         if(!(v_reset.newpass === v_reset.conpass)){
             v_reset.conValid = false;
         }else{
             v_reset.conValid = true;
         }
-        if(!(v_reset.passValid && v_reset.conValid)) {
+        if(!(v_reset.passValid && v_reset.conValid && v_reset.oldValid)) {
             return;
         } else {
             showMask();
