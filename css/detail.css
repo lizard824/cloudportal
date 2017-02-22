@@ -167,12 +167,15 @@ body{
 }
 .change-word p{
 	height:64px;
-	margin-right: 18.5%;
+	margin-right: 14%;
 	text-align: right;
 
 }
+.change-word p a{
+	font-size: 18px;
+}
 .change-word p a:hover{
-	font-size: 22px;
+	font-size: 19px;
 	color:#005aff;
 }
 /*change password end*/
