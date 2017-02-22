@@ -29,13 +29,17 @@
                 </a>
                 <div class="form">
                     <form class="" id="signForm" action="http://sso.earth.xpaas.lenovo.com/user/signIn" method="post">
+                        <p class="sign-mast">*</p>
                         <div class="input">
+
                             <div class="inpu">
+
                                 <img src="images/name.png" alt="">
                                 <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username">
                             </div>
                             <p v-show="!userValid">*Please input username</p>
                         </div>
+                        <p class="sign-mast">*</p>
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/email.png" alt="">
@@ -43,6 +47,7 @@
                             </div>
                             <p v-show="!emailValid">*Please input valid email</p>
                         </div>
+                        <p class="sign-mast">*</p>
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/password.png" alt="">
@@ -51,6 +56,12 @@
                             <p v-show="!passValid">*Please input password</p>
                             <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
+                        <div class="strength">
+                            <span class="strength-bj"></span>
+                            <span class="sign-left"></span>
+                            <span class="sign-left"></span>
+                        </div>
+                        <p class="sign-mast">*</p>
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/password.png" alt="">
@@ -59,6 +70,7 @@
                         <p v-show="!conValid">*Please confirm password</p>
                         <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
+                        <p class="sign-mast">*</p>
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/name.png" alt="">

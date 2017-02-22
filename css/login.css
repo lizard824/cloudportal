@@ -172,14 +172,43 @@ button{
 /*注册*/
 
 .sign .input{
-	height:44px;
-	margin-top: 20px;
+	height:60px;
+	margin-top: 5px;
+}
+.sign .inpu{
+	height:60px;
 }
 .sign .form{
-	height:500px;
+	height:530px;
 	top:180px;
 }
-
+.strength{
+	width:70%;
+	height:12px;
+	margin:auto;
+	margin-top:16px;
+}
+.strength .strength-bj{
+	background:#3899eb ;
+	border:1px solid #3899eb;
+}
+.strength span{
+	width:38px;
+	height:8px;
+	display: block;
+	float: left;
+	border:1px solid #949494;
+}
+.strength .sign-left{
+	margin-left: 10px;
+}
+.sign .sign-mast{
+	height: 60px;
+	color:red;
+    line-height: 80px;
+    float: left;
+    margin-left: 11%;
+}
 
 
 
@@ -236,6 +265,27 @@ button{
 	font-size: 20px;
 	margin-top: 15px;
 }
+/*sign in*/
+.sign .form form{
+	margin-top: 20px;
+}
+.sign .inpu{
+	height:44px;
+}
+.sign .sign-mast {
+    height: 60px;
+    color: red;
+    line-height: 55px;
+    float: left;
+    margin-left: 8%;
+
+}
+.strength{
+	width:75%;
+	margin-top: 3px;
+}
+
+
 
 
 }
