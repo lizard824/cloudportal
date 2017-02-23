@@ -122,7 +122,7 @@ input{
 	margin-left: 10px;
 	margin-top: 4px;
 	color:#3e3e3e;
-	font-size: 18px;
+	font-size: 16px;
 }
 .rember .wite{
 	float: left;
@@ -151,6 +151,12 @@ input{
 		 width:16px;
 		 height:16px;
 	 }
+.rember .forgot{
+	float: right;
+}
+.rember .forgot a {
+	color:#3e3e3e;
+}
 button{
 	background: rgba(0,0,0,0);
 }
@@ -259,6 +265,9 @@ button{
 .rember{
 	margin-top: 37px;
 }
+.rember .forgot{
+	float: left;
+}
 .buton{
 	width:125px;
 	height:40px;
@@ -284,6 +293,7 @@ button{
 	width:75%;
 	margin-top: 3px;
 }
+
 
 
 
