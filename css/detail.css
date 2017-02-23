@@ -388,15 +388,16 @@ body{
 		 height:180px;
 		 margin-top: 10px;
 	 }
-	 .footer_center ul .footerfirst a{
-		 font-size:18px;
+	 .footer_center ul .footerfirst {
+		 font-size:16px;
+		 color:#fff;
 	 }
 	 .footer_center ul li{
 		 line-height: 50px;
 	 }
 	 .footer_center ul li a{
-		 font-size: 14px;
-		 color:#fff;
+		 font-size: 16px;
+		 color:#D1D1D1;
 	 }
 	 .footer_ul_first{
 		 float: left;
@@ -416,7 +417,7 @@ body{
 	 }
 	 .footer_bottom p{
 		 font-size: 14px ;
-		 color:#fff;
+		 color:#D1D1D1;
 		 margin-top: 70px;
 	 }
 	 .footer_bottom .last{
@@ -803,15 +804,16 @@ body{
 		height:180px;
 		margin-top: 10px;
 	}
-	.footer_center ul .footerfirst a{
-		font-size:18px;
+	.footer_center ul .footerfirst {
+		font-size:16px;
+		color:#fff;
 	}
 	.footer_center ul li{
 		line-height: 50px;
 	}
 	.footer_center ul li a{
-		font-size: 14px;
-		color:#fff;
+		font-size: 16px;
+		color:#D1D1D1;
 	}
 	.footer_ul_first{
 		float: left;
@@ -831,7 +833,7 @@ body{
 	}
 	.footer_bottom p{
 		font-size: 14px ;
-		color:#fff;
+		color:#D1D1D1;
 		margin-top: 40px;
 	}
 	.footer_bottom .last{
@@ -1204,15 +1206,16 @@ body{
 		height:180px;
 		margin-top: 10px;
 	}
-	.footer_center ul .footerfirst a{
-		font-size:18px;
+	.footer_center ul .footerfirst {
+		font-size:16px;
+		color:#fff;
 	}
 	.footer_center ul li{
 		line-height: 50px;
 	}
 	.footer_center ul li a{
-		font-size: 14px;
-		color:#fff;
+		font-size: 16px;
+		color:#D1D1D1;
 	}
 	.footer_ul_first{
 		float: left;
@@ -1232,7 +1235,7 @@ body{
 	}
 	.footer_bottom p{
 		font-size: 14px ;
-		color:#fff;
+		color:#D1D1D1;
 		margin-top: 40px;
 	}
 	.footer_bottom .last{
@@ -1635,7 +1638,8 @@ body{
 		float: left;
 	}
 	.footer_ul_first .footerfirst{
-		font-size: 0.45rem;
+		font-size: 0.3rem;
+		color:#fff;
 	}
 	.footer_ul_first li{
 		width:100%;
@@ -1645,7 +1649,7 @@ body{
 		font-size: 0.3rem;
 	}
 	.footer_ul_first li a{
-		color:#fff;
+		color:#D1D1D1;
 	}
 	.footer_ul_cen{
 		float: left;
@@ -1665,7 +1669,7 @@ body{
 		height:0.625rem;
 		text-align: center;
 		font-size: 0.3rem;
-		color:#fff;
+		color:#D1D1D1;
 		clear:both;
 		float:left;
 	}
@@ -1674,7 +1678,7 @@ body{
 		height:0.625rem;
 		text-align: center;
 		font-size:0.3rem;
-		color:#fff;
+		color:#D1D1D1;
 		float:right;
 	}
 	/*footer end*/
