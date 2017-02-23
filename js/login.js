@@ -29,7 +29,7 @@ rem.onclick = function () {
     }
 };
 
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
