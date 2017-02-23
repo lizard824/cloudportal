@@ -2,59 +2,104 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>account</title>
 	<link rel="stylesheet" href="css/account.css">
 </head>
 <body>
 	<div class="account">
+			<a href="index.html">
+                <img src="images/loglo.png" alt="" class="close" id="close">
+            </a>
 		<div class="acc-cen">
+
 			<!-- head start -->
-			<div class="acc-top">
-				<div class="poss posssucce">
-					<span class="pos-num">1</span>
-					Enter login account 
-					<div class="acc-bugle">
-					  <span class="acc-out"></span>
-					  <span class="acc-in"></span>
-				    </div>
-				</div>
-				<div class="poss">
-					<span class="pos-num">2</span>
-					Select a password security question 
-					<div class="acc-bugle">
-					  <span class="acc-out"></span>
-					  <span class="acc-in"></span>
-				    </div>
-				</div>
-				<div class="poss">
-					<span class="pos-num">3</span>
-					Retrieve password 
-				</div>
-			</div>
+		 <div class="acc-top">
+			 <ul class="poss posssucce">                    
+				<li class="pos-num">1</li>
+				<li>
+					Authentication
+				</li>
+			 </ul>
+			 <ul class="poss">                    
+				<li class="pos-num">2</li>
+				<li>
+					Reset Password
+				</li>
+			 </ul>
+			 <ul class="poss">                    
+				<li class="pos-num">3</li>
+				<li>
+					Complete
+				</li>
+			 </ul>
+				
+				
+		 </div>
 			<!-- head end -->
+		<div class="acc-info" id="info-first">
 			<form class="acc-form">
 				<div class="input ">
+					<label>
+						User Name
+					</label>
                     <div class="inpu">
-                        <img src="images/name.png" alt="">
-                        <input type="text" >
+                    	<input type="text" >
                     </div>
-                    <p>*Please input username</p>
+                    <p>Please input username</p>
                 </div>
                 <div class="input ">
+					<label>
+						E-mail
+					</label>
                     <div class="inpu">
-                        <img src="images/email.png" alt="">
-                        <input type="text" >
-
+                    	<input type="text" >
                     </div>
-                   <!--   <a href="javascript:;" class="change-cole">
-                        	<img class="cole-img" src="images/name.png" alt="" title="Change">
-                        </a> -->
-                    <p>*Please input username</p>
+                    <p>Please input username</p>
                 </div>
                 <button class="buton" type="submit">
                     Next
                 </button>
 			</form>
+		</div>
+
+		<div class="acc-info" id="info-second" style="display:none;">
+			<form class="acc-form">				
+				<div class="input ">
+					<label>
+						New Password
+					</label>
+                    <div class="inpu">
+                    	<input type="text" >
+                    </div>
+                    <p>Please input username</p>
+                </div>
+                <div class="input ">
+					<label>
+						Confirm Password
+					</label>
+                    <div class="inpu">
+                    	<input type="text" >
+                    </div>
+                    <p>Please input username</p>
+                </div>
+                <button class="buton" type="submit">
+                    Next
+                </button>
+			</form>
+		</div>
+		   <div class="acc-info" id="info-third" style="display:none;">
+			<form class="acc-form">
+				<img src="images/account.png" alt="" class="acc-img">
+				<p class="acc-right">Password settings success！</p>
+								
+                 <button class="buton" type="button" onclick="window.location='login.html'">
+                    Login
+                  </button>
+                
+			</form>
+		   </div>
 		</div>
 	</div>
 </body>
