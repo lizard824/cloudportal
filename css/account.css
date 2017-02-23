@@ -13,9 +13,7 @@ a{
 a:hover{
 	text-decoration: none;
 }
-p,h4,h5{
-	cursor:pointer
-}
+
 li{
 	list-style:none;
 	margin:0;
@@ -28,7 +26,7 @@ body{
 	width:100%;
 	min-width: 320px;
 	height:auto;
-	background: #f8f8f8;
+	background: #fff;
 	font-family: '微软雅黑','黑体';
 }
 
@@ -37,8 +35,15 @@ body{
 	height:100%;
 	
 }
+.close{
+	display: block;
+	margin:auto;
+	margin-top: 50px;
+}
 .acc-cen{
-	margin:0 10%;	
+	border-radius: 20px;
+	box-shadow:0 0 9px rgba(0,0,0,0.2);
+	margin:30px 20%;	
 	padding:40px 0 0;
 	height:100%;	
 	background: #fff;
@@ -48,70 +53,45 @@ body{
 .acc-top{
 	height:40px;
 	margin:0 30px;
-	overflow: hidden;
 }
 
 /*成功状态*/
 .acc-cen .acc-top .posssucce{
-	background: #3899eb;
-	color:#fff;
-}
-.acc-cen .acc-top .posssucce .acc-in{
-    border-color: transparent transparent transparent #3899eb;
+	color:#3899eb;
+	border-color:#3899eb;
 }
 .acc-cen .acc-top .posssucce .pos-num{
-	background: #fff;
-	color:#3899eb;
+	background: #3899eb;
+	color:#fff;
 }
 /*成功状态结束*/
 
 
 .acc-top .poss{
 	width:33.2%;
-	height:100%;
+	height:50%;
 	float: left;
-	position: relative;
-	background: #ddd;
 	font-size: 14px;
 	line-height: 40px;
-	color:#f9f9f9;
+	color:#9bccf5;
+	text-align: center;
+	border-bottom: 1px solid #9bccf5;
 }
 .acc-top .poss .pos-num{
 	width:18px;
 	height:18px;
-	display: inline-block;
 	line-height: 18px;
-	background: #999;
+	background: #9bccf5;
 	border-radius: 18px;
 	-moz-border-radius: 18px;
 	-webkit-border-radius: 18px;
 	font-size: 14px;
 	text-align: center;
 	color:#fff;
-	margin:12px;
+	margin:auto;
+	margin-top:12px;
 }
-.acc-top .acc-bugle{
-	background: #ddd;
-    position: absolute;
-    top: -15px;
-    right: -19px;
-}
-.acc-top .acc-bugle .acc-out{
-	border-color:transparent transparent transparent #f8f8f8;
-}
-.acc-top .acc-bugle .acc-out,
-.acc-top .acc-bugle .acc-in
-{
-	display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 35px 19px;
-}
-.acc-top .acc-bugle .acc-in{
-    border-color: transparent transparent transparent #ddd;
-    margin-left: -47px;
-}
+
 
 /*head end*/
 
@@ -119,8 +99,9 @@ body{
 .acc-form{
 	width:50%;
 	height:300px;
-	margin:30px auto;
-	float: none;
+	margin:auto;
+	margin-top: 50px;
+	clear: both;
 }
 input{
 	background: none;
@@ -128,31 +109,42 @@ input{
 	outline: none;
 }
 .input{
-	width:70%;
+	width:80%;
 	margin:auto;
-	margin-top: 20px;
-	height:70px;
+	margin-top:30px;
+	height:40px;
+	float: none;
+}
+.input label{
+	width:28%;
+	height:100%;
+	line-height: 40px;
+    float: left;
+    text-align: right;
 }
 .input p{
+	width:70%;
+	float: right;
 	font-size: 14px;
 	color:red;
+	margin-top: 10px;
 }
 .inpu{
-	width:100%;
-	height:62px;
-	margin:auto;
+	width:70%;
+	height:100%;
+	float: right;
 	overflow: hidden;	
-	border-bottom:1px solid #3899eb;
+	border-bottom:1px solid #313131;
 }
 .error-border{
 	border-bottom:1px solid #f2564d;
 }
 .inpu input{
-	width:88%;
+	width:100%;
     font-size: 15px;
     color:#3e3e3e;
-    padding-top:30px ;
-    padding-bottom: 30px;
+    padding-top:15px ;
+    padding-bottom: 10px;
     float: right;
     background: none;
     border:0;
@@ -162,26 +154,7 @@ input{
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     border: 0px solid #CCC!important;
     }
-.inpu img{
-	float: left;
-	width:26px;
-	height:28px;
-	margin-top: 24px;
-}
-.change-cole{
-	float: none;
-	width:133px;
-	height:43px;
-	display: inline-block;
-	margin-top: 10px;
-}
-.cole-img{
-	width:133px;
-	height:100%;
-	display: inline-block;
-	margin-left: 5px;
-	margin-top: 0px;
-}
+
 button{
 	background: rgba(0,0,0,0);
 }
@@ -195,7 +168,7 @@ button{
 	text-align: center;
 	margin:auto;
 	display: block;
-	margin-top: 90px;
+	margin-top: 70px;
 	color:#fff;
 	cursor: pointer;
 }
