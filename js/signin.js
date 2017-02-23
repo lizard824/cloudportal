@@ -21,7 +21,8 @@ function iniSign() {
             userValid: true,
             emailValid: true,
             nameValid: true,
-            error: ''
+            error: '',
+            strength:''
         },
         methods: {
         }
@@ -60,6 +61,9 @@ function iniSign() {
             v_sign.conValid = false;
         else
             v_sign.conValid = true;
+    });
+    v_sign.$watch("strength",function(val){
+
     });
 
     $('#signForm').on('submit', function (e) {

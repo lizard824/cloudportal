@@ -139,27 +139,30 @@
             </ul>
 
 
-            <ul class="nav_log nav-select">
-                <li class="no_margin nohover">
-                    <a href="login.html" id="login">
+            <ul class="nav_log {{isLogged==true && isLDAP==false?'navlogin':''}}">
+                <li class="no_margin nohover" v-on:mouseenter="hover('local')" v-on:mouseleave="leave('local')" >
+                    <a v-if="isLogged==false" href="login.html" id="login">
                         {{login}}
                     </a>
-                     <div class="change-word" id="change-word">
-                            <p>
-                                <a href="javascript:;">
-                                    Reset
-                                </a>
-                            </p>
-                      </div>
+                    <a id="local" v-if="isLogged==true&&isLDAP==false" href="javascript:;">{{login}}</a>
+                    <span v-if="isLogged==true&&isLDAP==true">{{login}}</span>
+                    <div class="change-word" id="change-word">
+                        <p>
+                            <a>
+                                Reset Pass
+                            </a>
+                        </p>
+                    </div>
                 </li>
                 <li>&nbsp;</li>
                 <li><a v-show="isLogged" href="#" @click="logout()" style="border:1px solid #fff;
 	padding:2px 3px 5px 3px;">Logout</a></li>
                 <li id="sign" v-show="!isLogged">
-                <a href="javascript:;">
-                Sign in
-                </a>
+                    <a href="signin.html">
+                        Sign in
+                    </a>
                 </li>
+
             </ul>
 
         </div>
