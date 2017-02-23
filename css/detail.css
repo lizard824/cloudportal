@@ -183,6 +183,11 @@ body{
 	color:#005aff;
 }
 /*change password end*/
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}
+
 .top_cli{
 	width:40px;
 	height:25px;
@@ -581,6 +586,11 @@ body{
 	color:#005aff;
 }
 /*change password end*/
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}
+
 .top_cli{
 	width:40px;
 	height:25px;
@@ -993,6 +1003,11 @@ body{
 	color:#005aff;
 }
 /*change password end*/
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}
+
 .top_cli{
 	width:40px;
 	height:25px;
@@ -1417,6 +1432,10 @@ body{
 	color:#005aff;
 }
 /*change password end*/
+#sign a{
+  padding: 2px 3px 5px 3px;
+  border:1px solid #fff;
+}
 
 /*head end*/
 
