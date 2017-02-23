@@ -28,7 +28,7 @@
                     <img src="images/loglo.png" alt="" class="close" id="close">
                 </a>
                 <div class="form">
-                    <form class="" id="signForm" action="http://sso.earth.xpaas.lenovo.com/user/signIn" method="post">
+                    <form class="" id="signForm" action="http://localhost:8081/user/signIn" method="post">
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/name.png" alt="">
@@ -54,7 +54,7 @@
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/password.png" alt="">
-                            <input type="password" name="password" v-model="conpword" id="conpword" placeholder="Please confirm password">
+                            <input type="password" name="conword" v-model="conpword" id="conpword" placeholder="Please confirm password">
                         </div>
                         <p v-show="!conValid">*Please confirm password</p>
                         <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
