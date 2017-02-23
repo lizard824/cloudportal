@@ -112,43 +112,31 @@ input{
 	outline: none;
 }
 .input{
-	width:80%;
+	width:70%;
 	margin:auto;
-	margin-top:30px;
-	height:40px;
-	float: none;
-}
-.input label{
-	width:120px;
-	height:100%;
-	font-size: 14px;
-	line-height: 40px;
-    float: left;
-    text-align: right;
+	margin-top: 20px;
+	height:70px;
 }
 .input p{
-	width:60%;
-	float: right;
 	font-size: 14px;
 	color:red;
-	margin-top: 10px;
 }
 .inpu{
-	width:60%;
-	height:100%;
-	float: right;
+	width:100%;
+	height:62px;
+	margin:auto;
 	overflow: hidden;	
-	border-bottom:1px solid #313131;
+	border-bottom:1px solid #3899eb;
 }
 .error-border{
 	border-bottom:1px solid #f2564d;
 }
 .inpu input{
-	width:100%;
+	width:88%;
     font-size: 15px;
     color:#3e3e3e;
-    padding-top:15px ;
-    padding-bottom: 10px;
+    padding-top:30px ;
+    padding-bottom: 30px;
     float: right;
     background: none;
     border:0;
@@ -158,7 +146,12 @@ input{
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     border: 0px solid #CCC!important;
     }
-
+.inpu img{
+	float: left;
+	width:26px;
+	height:28px;
+	margin-top: 24px;
+}
 button{
 	background: rgba(0,0,0,0);
 }
@@ -172,7 +165,7 @@ button{
 	text-align: center;
 	margin:auto;
 	display: block;
-	margin-top: 70px;
+	margin-top: 55px;
 	color:#fff;
 	cursor: pointer;
 }

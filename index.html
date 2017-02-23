@@ -31,7 +31,7 @@
             <img src="images/animite.gif" alt="animite" id="animite" class="animite" />
         </div>-->
         <!--导航-->
-        <div class="xhead" id="xhead">
+        <div class="xhead" id="xhead" v-cloak>
             <div class="xnav">
                 <div class="top_cli">
                     <a href="index.html">
@@ -53,12 +53,12 @@
                         <ol id="devser" class="ol">
                             <li class="devser_first">
 
-                                <a href="http://iaas.lenovo.com/" target="_blank">
+                                <a href="http://iaas.lenovo.com" target="_blank">
                                     IaaS
                                 </a>
                             </li>
                             <li>
-                                <a href="http://earth.xpaas.lenovo.com/" target="_blank">
+                                <a href="http://earth.xpaas.lenovo.com" target="_blank">
                                     PaaS
                                 </a>
                             </li>
@@ -70,20 +70,20 @@
                          DevOps  Service
                         </a>
                         <ol id="poll_down" class="ol">
-                            <li class="pull_first">
+                            <!--<li class="pull_first">
                                 <a href="javascript:;">
                                      CMDB
                                  </a>
+                            </li>-->
+                            <li>
+                                <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com/xops-dashboard/dash/home')">XOPS</a>
                             </li>
                             <li>
-                                <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com/xops-dashboard/dash/home')">XOPS</a>
+                                <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com/xmsg-dashboard/dash/home')">XMSG</a>
                             </li>
-                            <li>
-                                <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com/xmsg-dashboard/dash/home')">XMSG</a>
-                            </li>
-                            <li>
-                                <a href="#" @click="openUrl('http://xframe.xpaas.lenovo.com/xframe/dash/home')">Ticket</a>
-                            </li>
+                           <!-- <li>
+                                <a href="#" @click="openUrl('http://hiticket-t.xpaas.lenovo.com')">Ticket</a>
+                            </li>-->
                         </ol>
                     </li>
                 </ul>
@@ -97,12 +97,12 @@
                         </a>
                         <div class="ol device" id="device">
                             <p class="device_first">
-                                <a href="http://iaas.lenovo.com/" target="_blank">
+                                <a href="http://iaas.lenovo.com" target="_blank">
                                     IaaS
                                 </a>
                             </p>
                             <p>
-                                <a href="http://earth.xpaas.lenovo.com/" target="_blank">
+                                <a href="http://earth.xpaas.lenovo.com" target="_blank">
                                     PaaS
                                 </a>
                             </p>
@@ -114,20 +114,20 @@
                             DevOps  Service
                         </a>
                         <div id="clic_down" class="ol">
-                            <p class="clic_first">
+                            <!--<p class="clic_first">
                                 <a href="javascript:;">
                                     CMDB
                                 </a>
-                            </p>
+                            </p>-->
                             <p>
                                 <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com/xops-dashboard/dash/home')">XOPS</a>
                             </p>
                             <p>
                                 <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com/xmsg-dashboard/dash/home')">XMSG</a>
                             </p>
-                            <p class="down_last">
-                                <a href="#" @click="openUrl('http://xframe.xpaas.lenovo.com/xframe/dash/home')">Ticket</a>
-                            </p>
+                            <!--<p class="down_last">
+                                <a href="#" @click="openUrl('http://hiticket-t.xpaas.lenovo.com')">Ticket</a>
+                            </p>-->
                         </div>
                     </li>
                 </ul>
@@ -143,7 +143,7 @@
                         <div class="change-word" id="change-word">
                             <p>
                                 <a>
-                                    Reset Pass
+                                    Reset Password
                                 </a>
                             </p>
                         </div>
@@ -162,13 +162,13 @@
             </div>
         </div>
 <!-- change password start -->
-<div class="modify" id="modify">
+<div class="modify" id="modify" >
     <div class="mo-cen">
             <div class="mo-left mo-right">
                 <div class="mo-top">
                     <p class="p-left">Reset Password</p>
                 </div>
-                <form class="mo-form" id="resetForm" action="http://sso.earth.xpaas.lenovo.com/user/changePassword" method="post">
+                <form class="mo-form" id="resetForm" action="http://sso.earth.xpaas.lenovo.com/user/changePassword" method="post" v-cloak>
                     <input type="hidden" name="username" v-model="username">
                     <div class="mo-input ">
                         <p class="mo-p" id="moa-p">Old password</p>
@@ -334,12 +334,12 @@
                 </div>
                 <div class="forth_out" id="forth_out">
                     <ul class="forth_ul" id="forth_ul">
-                        <li class="oone" id="one">
+                        <!--<li class="oone" id="one">
 
                             <img src="images/asset.png" alt="">
                             <p class="ul_first">CMDB</p>
                             <p class="ul_second">Holds asset data and<br> descriptive relationships between assets.</p>
-                        </li>
+                        </li>-->
                         <li class="oone" id="factive">
                             <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com/xops-dashboard/dash/home')">
                             <img src="images/clise.png" alt="">
@@ -352,13 +352,13 @@
                             <p class="ul_first">XMSG</p>
                             <p class="ul_second">Provide API to <br>send,manage and monitor message.</p></a>
                         </li>
-                        <li class="oone" id="two">
-                            <a href="#" @click="openUrl('http://xframe.xpaas.lenovo.com/xframe/dash/home')">
+                       <!-- <li class="oone" id="two">
+                            <a href="#" @click="openUrl('http://hiticket-t.xpaas.lenovo.com')">
                             <img src="images/piao.png" alt="">
                             <p class="ul_first">Ticket
                             </p>
                             <p class="ul_second">Collect tickets'<br> information for tracking and management.</p></a>
-                        </li>
+                        </li>-->
 
                     </ul>
                 </div>

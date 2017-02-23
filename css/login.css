@@ -30,6 +30,9 @@ body{
 	font-family: '微软雅黑','黑体';
 }
 
+	[v-cloak] {
+		display: none;
+	}
 
 	/*登录*/
 .login{
