@@ -13,9 +13,7 @@ a{
 a:hover{
 	text-decoration: none;
 }
-p,h4,h5{
-	cursor:pointer
-}
+
 li{
 	list-style:none;
 	margin:0;
@@ -158,7 +156,7 @@ input{
 	float: right;
 }
 .rember .forgot a {
-	color:#3e3e3e;
+	color:#3899eb;
 }
 button{
 	background: rgba(0,0,0,0);

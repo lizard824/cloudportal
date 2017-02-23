@@ -13,9 +13,7 @@ a{
 a:hover{
 	text-decoration: none;
 }
-h4,h5{
-	cursor:pointer
-}
+
 li{
 	list-style:none;
 	margin:0;
