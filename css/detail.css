@@ -31,6 +31,10 @@ body{
 	background: #fff;
 	font-family: 微软雅黑;
 }
+
+	[v-cloak] {
+		display: none;
+	}
  @media (min-width:1200px){
 	 body{
 		 width:100%;

@@ -26,7 +26,7 @@
 </div>
 <!-- loding end -->
     <!--导航-->
-    <div class="xhead" id="xhead">
+    <div class="xhead" id="xhead" v-cloak>
         <div class="xnav">
             <div class="top_cli">
                 <a href="index.html">
@@ -167,37 +167,48 @@
         </div>
     </div>
 <!-- change password start -->
-<div class="modify" id="modify">
+<div class="modify" id="modify" v-cloak>
     <div class="mo-cen">                    
             <div class="mo-left mo-right">
                 <div class="mo-top">
                     <p class="p-left">Reset Password</p>
                 </div>
-                <form class="mo-form">
-                    
-                    <div class="mo-input">
-                      <p class="mo-p" id="mo-p">New password</p>
+                <form class="mo-form" id="resetForm" action="http://sso.earth.xpaas.lenovo.com/user/changePassword" method="post" v-cloak>
+                    <input type="hidden" name="username" v-model="username">
+                    <div class="mo-input ">
+                        <p class="mo-p" id="moa-p">Old password</p>
                         <div>
-                            <input type="text" value="" id='new-word'>
+                            <input type="password" value="" id='old-word' v-model = "oldpass" name="oldPassword">
                         </div>
-                       
+                        <p  v-show="!oldValid" class="error-p">*Please input old password</p>
+                        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
+                    </div>
+                    <div class="mo-input ">
+                        <p class="mo-p" id="mo-p">New password</p>
+                        <div>
+                            <input type="password" value="" id='new-word' v-model = "newpass" name="newPassword">
+                        </div>
+                        <p  v-show="!passValid" class="error-p">*Please input password</p>
+                        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
                     </div>
                     <div class="mo-input">
                         <p class="mo-p" id="mov-p">Confirm password</p>
                         <div class="">
-                            <input type="text" value="" id="con-word">
+                            <input type="password" value="" id="con-word" v-model = "conpass" >
                         </div>
-                       
+                        <p v-show="!conValid" class="error-p">*Please confirm password</p>
+                        <p style="font-size:16px"  class="error-p" v-show="error!==''">{{error}}</p>
+
                     </div>
                     <div class="mo-button">
-                        <button type="submit" id="mo-sub" disabled="disabled" >
-                        submit
-                    </button>
-                    <button type="button" id="cancel">
-                        cancel
-                    </button>
+                        <button type="submit" id="mo-sub"  >
+                            Submit
+                        </button>
+                        <button type="button" id="cancel">
+                            Cancel
+                        </button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -386,6 +397,7 @@
     <script src="js/vue.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/reset.js"></script>
 </body>
 
 </html>
