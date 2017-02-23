@@ -97,7 +97,7 @@ body{
 
 /*Enter login account  start*/
 .acc-form{
-	width:50%;
+	width:55%;
 	height:300px;
 	margin:auto;
 	margin-top: 50px;
@@ -116,21 +116,22 @@ input{
 	float: none;
 }
 .input label{
-	width:28%;
+	width:120px;
 	height:100%;
+	font-size: 14px;
 	line-height: 40px;
     float: left;
     text-align: right;
 }
 .input p{
-	width:70%;
+	width:60%;
 	float: right;
 	font-size: 14px;
 	color:red;
 	margin-top: 10px;
 }
 .inpu{
-	width:70%;
+	width:60%;
 	height:100%;
 	float: right;
 	overflow: hidden;	
@@ -172,4 +173,47 @@ button{
 	color:#fff;
 	cursor: pointer;
 }
+
+.acc-img{
+	display: block;
+	margin:auto;
+}
+.acc-right{
+	text-align: center;
+	font-size: 14px;
+	margin-top: 20px;
+}
 /*Enter login account end*/
+
+@media (min-width:990px) and (max-width:1199px){
+
+.acc-form{
+	width:60%;
+}
+
+}
+
+@media (min-width:760px) and (max-width:989px){
+.acc-cen{
+
+	margin:30px 12%;	
+	
+}
+.acc-form{
+	width:72%;
+}
+
+}
+
+ @media  (max-width:759px){
+
+.acc-cen{
+
+	margin:30px 10%;	
+	
+}
+.acc-form{
+	width:95%;
+}
+
+ }
