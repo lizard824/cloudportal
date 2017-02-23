@@ -57,9 +57,12 @@
                             <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <div class="strength">
-                            <span class="strength-bj"></span>
-                            <span class="sign-left"></span>
-                            <span class="sign-left"></span>
+                            <span v-show="strength==''" class="sign-left"></span>
+                            <span v-show="strength!==''" class="sign-left strength-bj"></span>
+                            <span v-show="strength=='low'||strength==''" class="sign-left"></span>
+                            <span v-show="strength=='medium'||strength=='high'" class="sign-left strength-bj"></span>
+                            <span v-show="strength!=='high' " class="sign-left"></span>
+                            <span v-show="strength=='high'" class="sign-left strength-bj"></span>
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
@@ -78,14 +81,13 @@
                             </div>
                             <p v-show="!nameValid">*Please input name</p>
                         </div>
-                        <p class="sign-mast">*</p>
+
                         <div class="input">
                             <div class="inpu">
                                 <img src="images/phone.png" alt="">
-                                <input type="text" name="number" v-model="number" id="number" placeholder="Please input number">
+                                <input type="text" name="number" v-model="number" id="number" placeholder="Please input phone number">
                             </div>
-                            <p v-show="!passValid">*Please input number</p>
-                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+
                         </div>
                         <button class="buton sbuton" type="submit">
                         Sign in

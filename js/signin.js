@@ -21,7 +21,8 @@ function iniSign() {
             userValid: true,
             emailValid: true,
             nameValid: true,
-            error: ''
+            error: '',
+            strength:''
         },
         methods: {
         }
@@ -39,6 +40,12 @@ function iniSign() {
             v_sign.passValid = false;
         else
             v_sign.passValid = true;
+        if(val.length<3 || val =="")
+            v_sign.strength = "low";
+        if(val.length>=3 && val.length<=6)
+            v_sign.strength = "medium";
+        if(val.length>6)
+            v_sign.strength = "high";
     });
     v_sign.$watch("email", function (val) {
         v_sign.error = "";
@@ -61,6 +68,7 @@ function iniSign() {
         else
             v_sign.conValid = true;
     });
+
 
     $('#signForm').on('submit', function (e) {
         e.preventDefault(); // prevent native submit
