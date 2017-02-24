@@ -39,26 +39,18 @@
 		 </div>
 			<!-- head end -->
 		<div class="acc-info" id="info-first">
-			<form class="acc-form">
+			<form class="acc-form" id="forgotForm">
 				<div class="input ">
 					
                     <div class="inpu">
                     	<img src="images/name.png" alt="">
-                    	<input type="text" value="user name">
+                    	<input type="text" placeholder="user name" v-model="username" >
                     </div>
-                    <p>Please input username</p>
-                </div>
-                <div class="input ">
-					
-                    <div class="inpu">
-                    	<img src="images/email.png" alt="">
-                    	<input type="text" value="Email">
-                    </div>
-                    <p>Please input username</p>
-
+                    <p v-show="!userValid" class="error-p">*Please input username!</p>
                 </div>
 
-                <button class="buton" type="submit">
+
+                <button class="buton" type="submit" id="next">
                     Next
                 </button>
 			</form>
@@ -101,5 +93,16 @@
 		   </div>
 		</div>
 	</div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jwt-decode.min.js"></script>
+    <script src="js/jquery.transform.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/js.cookie.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/my.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/reset.js"></script>
+    <script src="js/account.js"></script>
 </body>
 </html>
