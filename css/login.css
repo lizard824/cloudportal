@@ -206,6 +206,9 @@ button{
 	float: left;
 	border:1px solid #949494;
 }
+.form .strength .no-left{
+	margin-left: 0;
+}
 .strength .sign-left{
 	margin-left: 10px;
 }
