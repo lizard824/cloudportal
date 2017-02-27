@@ -17,14 +17,14 @@ rem.onclick = function () {
         rem.style.backgroundColor = '#3899eb';
         rem.style.borderColor = '#3899eb';
         remInp.value = 1;
-        v_login.remember=1;
+        v_login.remember = 1;
         clic = false;
     } else {
         dot.style.float = 'left';
         rem.style.backgroundColor = '#eeeeee';
         rem.style.borderColor = '#dcdcdc';
         remInp.value = 0;
-        v_login.remember=0;
+        v_login.remember = 0;
         clic = true;
     }
 };
@@ -78,9 +78,9 @@ function iniLogin() {
                     } else {
                         hideMask();
                         if (data.msg === "")
-                            v_login.error="Login in failed!";
+                            v_login.error = "Login in failed!";
                         else
-                            v_login.error=data.msg;
+                            v_login.error = data.msg;
                     }
 
                 }
@@ -88,24 +88,24 @@ function iniLogin() {
         }
     });
     v_login.$watch("username", function (val) {
-        v_login.error= "";
+        v_login.error = "";
         if (val === "")
-            v_login.userValid= false;
+            v_login.userValid = false;
         else
-            v_login.userValid= true;
+            v_login.userValid = true;
     });
     v_login.$watch("password", function (val) {
-        v_login.error= "";
+        v_login.error = "";
         if (val === "")
-            v_login.passValid= false;
+            v_login.passValid = false;
         else
-            v_login.passValid= true;
+            v_login.passValid = true;
     });
 }
 
 function setCookie(cookie) {
     var now = new Date().getTime();
-    var expDay = (cookie.exp - now)/1000/60/60/24;
+    var expDay = (cookie.exp - now) / 1000 / 60 / 60 / 24;
     Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: expDay});
     $.ajax({
         type: 'GET',
@@ -135,14 +135,18 @@ function setCookie(cookie) {
                     }
                 });
             } else {
-                return;
+                if (null !== refer) {
+                    window.location = refer;
+                } else {
+                    window.location = "index.html";
+                }
             }
         }
     });
 }
 
 function callSign(signUrl, cookieVal, cookieExp) {
-    var iframe = "<iframe style='display:none' src="+signUrl + "?st=" + cookieVal + "&exp=" + cookieExp+"></iframe>";
+    var iframe = "<iframe style='display:none' src=" + signUrl + "?st=" + cookieVal + "&exp=" + cookieExp + "></iframe>";
     $("body").append(iframe);
 }
 

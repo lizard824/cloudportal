@@ -22,7 +22,7 @@
 					Authentication
 				</li>
 			 </ul>
-			 <ul class="poss">                    
+			 <ul class="poss ">
 				<li class="pos-num">2</li>
 				<li>
 					Reset Password
@@ -39,18 +39,18 @@
 		 </div>
 			<!-- head end -->
 		<div class="acc-info" id="info-first">
-			<form class="acc-form" id="forgotForm">
+			<form class="acc-form" id="forgotForm" action="http://localhost:8081/user/forgot" method="post">
 				<div class="input ">
 					
                     <div class="inpu">
                     	<img src="images/name.png" alt="">
-                    	<input type="text" placeholder="user name" v-model="username" >
+                    	<input type="text" placeholder="user name" v-model="username" name="username">
                     </div>
                     <p v-show="!userValid" class="error-p">*Please input username!</p>
                 </div>
 
 
-                <button class="buton" type="submit" id="next">
+                <button class="buton click-no" type="submit" id="next" disabled>
                     Next
                 </button>
 			</form>
@@ -75,7 +75,7 @@
                     <p>Please input username</p>
                 </div>
 
-                <button class="buton" type="submit">
+                <button class="buton click-no" type="submit"  disabled="disabled">
                     Next
                 </button>
 			</form>
