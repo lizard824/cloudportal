@@ -104,6 +104,7 @@ body{
 	height:300px;
 	margin:auto;
 	margin-top: 50px;
+	margin-bottom: 20px;
 	clear: both;
 }
 input{
@@ -168,6 +169,12 @@ button{
 	margin-top: 55px;
 	color:#fff;
 	cursor: pointer;
+}
+.acc-alert{
+	font-size:16px ;
+	color:#3899eb;
+	text-align: center;
+	margin-top: 10px;
 }
 
 /*禁止点击*/
