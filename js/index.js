@@ -2,9 +2,9 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_head, v_sign, v_service,v_reset;
-var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
+var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-var SERVICE = "http://itscloud-t.xpaas.lenovo.com";
+var SERVICE = "http://itscloud.xpaas.lenovo.com";
 $(document).ready(function () {
     iniService();
     iniHead();
