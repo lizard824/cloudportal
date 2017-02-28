@@ -17,19 +17,19 @@ rem.onclick = function () {
         rem.style.backgroundColor = '#3899eb';
         rem.style.borderColor = '#3899eb';
         remInp.value = 1;
-        v_login.remember = 1;
+        v_login.rememberMe = 1;
         clic = false;
     } else {
         dot.style.float = 'left';
         rem.style.backgroundColor = '#eeeeee';
         rem.style.borderColor = '#dcdcdc';
         remInp.value = 0;
-        v_login.remember = 0;
+        v_login.rememberMe = 0;
         clic = true;
     }
 };
 
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
@@ -51,7 +51,7 @@ function iniLogin() {
             passValid: true,
             userValid: true,
             error: '',
-            remember: 0
+            rememberMe: 0
         },
         methods: {}
     });
