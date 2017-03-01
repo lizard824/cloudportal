@@ -156,9 +156,9 @@ onscroll = function (ev) {
 
 //移动端导航事件-------------------------------------
 var nav_ul = document.getElementById('xnav_ul');
-var navLi = nav_ul.getElementsByTagName('li');
+// var navLi = nav_ul.getElementsByTagName('li');
 var phone_open = document.getElementById('ph_open');
-var heig = navLi[0].offsetHeight;
+// var heig = navLi[0].offsetHeight;
 
 var ntrn = true;
 nav_ul.style.transition = '0.5s all ease';
@@ -166,12 +166,12 @@ nav_ul.style.transition = '0.5s all ease';
 var phOpen = function phshow(e){
 
     if(ntrn == true){
-        e.style.height = heig + 'px';
+        // e.style.height = heig + 'px';
         e.style.opacity = 1;
         e.style.overFlow = '';
         ntrn = false
     }else{
-        e.style.height = 0;
+        // e.style.height = 0;
         e.style.opacity = 0;
         e.style.overFlow = 'hidden';
         ntrn = true
