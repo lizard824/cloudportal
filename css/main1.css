@@ -729,9 +729,7 @@ body{
      color:#005aff;
 }
 	 /*下拉列表*/
-	 .xnav_ul .nohover{
-		 width:140px;
-	 }
+	
 
 	 .xnav_ul .nohover a:hover{
 		 font-size:20px;
@@ -1332,9 +1330,7 @@ body{
 
 
 	 /*下拉列表*/
-	 .xnav_ul .nohover{
-		 width:140px;
-	 }
+
 
 	 .xnav_ul .nohover a:hover{
 		 font-size:20px;

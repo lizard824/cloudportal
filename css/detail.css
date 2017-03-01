@@ -495,10 +495,6 @@ body{
 }
 
 	/*下拉列表*/
-	.xnav_ul .nohover{
-		width:150px;
-	}
-
 	.xnav_ul .nohover a:hover{
 		font-size:20px;
 		color:#fff;
@@ -912,10 +908,6 @@ body{
 }
 
 	/*下拉列表*/
-	.xnav_ul .nohover{
-		width:150px;
-	}
-
 	.xnav_ul .nohover a:hover{
 		font-size:20px;
 		color:#fff;
