@@ -191,7 +191,7 @@ button{
 }
 .sign .form{
 	height:530px;
-	top:180px;
+	top:200px;
 }
 .strength{
 	width:70%;
@@ -245,11 +245,11 @@ button{
 	height:2.175rem;
 	display: block;
 	margin:auto;
-	margin-top:3.5rem;
+	margin-top:30px;
 }
 
 .form{
-	width:70%;
+	width:85%;
 	height:310px;
 }
 
