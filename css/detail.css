@@ -112,10 +112,10 @@ body{
 		 display:none;
 	 }
 	 #poll_down{
-		 margin-left:24%;
+		 padding-left:24%;
 	 }
 	 #devser{
-		 margin-left:15%;
+		 padding-left:15%;
 	 }
 	 #poll_down li,#devser li{
 		 width:95px;
@@ -513,10 +513,10 @@ body{
 		display:none;
 	}
 	#poll_down{
-		margin-left:24%;
+		padding-left:24%;
 	}
 	#devser{
-		margin-left:15%;
+		padding-left:15%;
 	}
 	#poll_down li,#devser li{
 		width:95px;
@@ -926,10 +926,10 @@ body{
 		display:none;
 	}
 	#poll_down{
-		margin-left:24%;
+		padding-left:24%;
 	}
 	#devser{
-		margin-left:11%;
+		padding-left:11%;
 	}
 	#poll_down li,#devser li{
 		width:95px;
@@ -1364,10 +1364,10 @@ body{
 		color:#0089ff;
 	}
 	#clic_down{
-		margin-left:12%;
+		padding-left:12%;
 	}
 	.device .device_first{
-		margin-left:0%;
+		padding-left:0%;
 	}
 
 	/*下拉列表结束*/
