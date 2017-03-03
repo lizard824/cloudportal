@@ -247,12 +247,13 @@
                       Containers
                     </a>
                 </li>
-               <!--  <li>
+                <li>
                     <a href="javascript:;">
-                    Bug&issues
+                    <!-- Bug&issues -->
+                    Product details
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javascript:;">
                     Changelog
                     </a>
@@ -342,48 +343,67 @@
                        </p> 
                 </div>
 
-                <!-- <div class="cen_one">
+                <div class="cen_one">
                      <p class="cen_p"> 
                         <span>                    
-                          Bug&issues    
+                          Product details   
                         </span>                  
                     </p>
                     <p class="cen-elplain">
-                        Infrastructure as a Service (PaaS) is a platform that provides variety kinds of virtualized and physical infrastructure resources and solution above, according to different application features and requirements.
-                        <br>
-                        PaaS is capable of fast delivery and quick response to business, 7*24 supports on server maintenance, highly secured storage and backup approach, and customized services.
+                       PaaS Service allows you to easily run and manage Docker-enabled applications across a cluster of PaaS instances. Applications packaged as containers locally will deploy and run in the same way as containers managed by PaaS Service. PaaS Service eliminates the need to install, operate, and scale your own cluster management infrastructure, and allows you to schedule Docker-enabled applications across your cluster based on your resource needs and availability requirements. PaaS Service enables you to grow from a single container to thousands of containers across hundreds of instances without any additional complexity in how you run your application. You can run anything: applications, batch jobs, or microservices. PaaS Service abstracts away all the complexity of the infrastructure so you can focus on designing, building, and running containerized applications.With PaaS Service, you have complete visibility and control of your cluster from creating and terminating Docker containers to viewing detailed cluster state information. You can integrate and use your own container scheduler or connect PaaS Container Service into your existing software delivery process (e.g., continuous integration and delivery systems).
                     </p>
                         <h3 class="cen-title">
-                           Rich image, free installation of rapid deployment of operating systems and software 
+                           Features
+                        </h3>
+                        <h3 class="cen-title">                            
+                           Docker Compatibility
                         </h3>
                         <p class="cen-title-sec">
-                            The mirror (Image) is an instance of ECS running environment of the template, including operating system and installed software. Users use the system disk image to create the instance of ECS and replace the ECS instance, for free installation of rapid deployment. We provide 3 ways of image: 
-
+                            PaaS Container Service supports Docker and enables you to run and manage Docker containers across a cluster of PaaS instances. Each PaaS instance in a cluster managed by PaaS Service runs a Docker daemon, so whatever application you package as a container locally will deploy and run on PaaS Service without the need for any configuration changes.
                         </p>    
-                        <ul class="cen_dea">
-                            <li>
-                                Fast,simple. provide one-key publish,delopy,rollback and extend.
-                            </li>
-                            <li>
-                                Multiple language and Platform support,inculding Java/PHP/node.js/Tomcat.
-                            </li>
-                            <li>
-                                Auto-dynamic control and adjust resources for quick responding.
-                            </li>
-                            <li>
-                                Prvoide real-time application's status and log by data visualization.a  <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/issues/new"  target="_blank">Know details ></a>
-                            </li>
-                            <li>
-                                Devops support. For whole project lifecycle.Implement continuously integration/delivery,decrease time to market.
-                            </li>
-                            <li>
-                                Multiple cluster support. user can select app running position, immigrate different application between cluster.
-                            </li>
-                            <li>
-                                Mircoservices friendly. support cloud native applications' integral solution.
-                            </li>                      
-                         </ul>    
-                </div> -->
+                        <h3 class="cen-title">
+                           Managed Clusters 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           Managing your own container management infrastructure usually involves installing, operating, and scaling your own cluster management software, configuration management systems, and monitoring solutions. Architecting and managing the availability and scalability of these systems is difficult. PaaS Container Service removes the complexity of container management. With PaaS Service, all you need to do is launch a cluster of Container Instances and specify the tasks you want to run; PaaS Service handles all the cluster management for you. 
+                        </p> 
+                        <h3 class="cen-title">
+                           Load Balancing 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Service allowing you to distribute traffic across your containers. The PaaS Service will automatically add and remove containers from the PaaS. You can specify a dynamic port in the Task Definition, which gives your container an unused port when it is scheduled on an PaaS instance. You can also use path-based routing to share with multiple services. 
+                        </p>  
+                        <h3 class="cen-title">
+                           Local Development 
+                        </h3> 
+                        <p class="cen-title-sec">
+                            The PaaS Container Service allows you to simplify your local development experience as well as easily set up an PaaS cluster and its associated resources (e.g., PaaS instance). The PaaS Service supports defining and running multi-container applications. You can apply the same Compose definition used to define a multi-container application on your development machine as well as in production. 
+                        </p>  
+                        <h3 class="cen-title">
+                           Monitoring
+                        </h3> 
+                        <p class="cen-title-sec">
+                            PaaS Service provides monitoring capabilities for your containers and clusters. You can monitor average and aggregate CPU and memory utilization of running tasks as grouped by Task Definition, Service, or Cluster through PaaS Service. You can also set alarms to alert you when your containers or clusters need to scale up or down.
+                        </p>  
+                        <h3 class="cen-title">
+                           Logging 
+                        </h3> 
+                        <p class="cen-title-sec">
+                            You can send each container instance's PaaS agent logs and Docker container logs to PaaS Service Logs to simplify issue diagnosis. You can also record all your PaaS Service API calls and have the log files delivered to you through PaaS Service. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by PaaS Service. PaaS Service log provides you a history of API calls  and enables security analysis, resource change tracking, and compliance auditing.
+                        </p> 
+                        <h3 class="cen-title">
+                           Repository Support 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Container Service can be used with any third party or accessible private Docker registry, or Docker Hub, a hosted Docker image repository. All you need to do is specify the repository in your Task Definition and PaaS Service will retrieve the appropriate images for your applications. 
+                        </p>
+                        <h3 class="cen-title">
+                           Security 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Container Service allows you to specify an IAM role for each task. This allows the PaaS container instances to have a minimal role, respecting the ‘Least Privilege’ access policy and allowing you to manage the instance role and the task role separately. You will also gain visibility as to which task is using which role, tracked in the PaaS logs. 
+                        </p>  
+                </div>
                 <!-- <div class="cen_one">
                     <p class="cen_p">
                         <span>
