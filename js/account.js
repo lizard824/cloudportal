@@ -11,7 +11,7 @@ $(document).ready(function () {
         $("#slidTwo").addClass("posssucce");
         $.ajax({
             type:"GET",
-            url:"http://localhost:8081/user/activeCode",
+            url:_CTX_+"/user/activeCode",
             data:{activeCode:active},
             dataType:"json",
             success:function (data) {
@@ -35,6 +35,7 @@ function iniAccount() {
         data: {
             username: '',
             userValid: true,
+            tipValid:false,
             error: ''
         }
 
@@ -57,20 +58,17 @@ function iniAccount() {
         }
     });
 
-    $('#forgotForm').on('submit',function (e) {
-       e.preventDefault();
-        if(v_acc.userValid===true){
+    $('#forgotForm').on('submit', function (e) {
+        e.preventDefault();
+        if (v_acc.userValid === true) {
             showMask();
             $(this).ajaxSubmit({
-                success:function (data) {
-                    if(data.success== true){
-                        window.location.href = "./login.html";
-                    }else {
+                success: function (data) {
+                    if (data.success == true) {
+                        v_acc.tipValid = true;
+                    } else {
                         hideMask();
-                        if (data.msg === "")
-                            v_reset.error = "Reset password failed!";
-                        else
-                            v_reset.error = data.msg;
+                        v_acc.error = "Can not find this User!";
                     }
                 }
             })
