@@ -7,27 +7,27 @@ onresize = function () {
 
 //rember me
 
-var rem = document.getElementById('rember');
-var remInp = rem.getElementsByTagName('input')[0];
-
-var clic = true;
-rem.onclick = function () {
-    if (clic == true) {
-        dot.style.float = 'right';
-        rem.style.backgroundColor = '#3899eb';
-        rem.style.borderColor = '#3899eb';
-        remInp.value = 1;
-        v_login.rememberMe = 1;
-        clic = false;
-    } else {
-        dot.style.float = 'left';
-        rem.style.backgroundColor = '#eeeeee';
-        rem.style.borderColor = '#dcdcdc';
-        remInp.value = 0;
-        v_login.rememberMe = 0;
-        clic = true;
-    }
-};
+// var rem = document.getElementById('rember');
+// var remInp = rem.getElementsByTagName('input')[0];
+//
+// var clic = true;
+// rem.onclick = function () {
+//     if (clic == true) {
+//         dot.style.float = 'right';
+//         rem.style.backgroundColor = '#3899eb';
+//         rem.style.borderColor = '#3899eb';
+//         remInp.value = 1;
+//         v_login.rememberMe = 1;
+//         clic = false;
+//     } else {
+//         dot.style.float = 'left';
+//         rem.style.backgroundColor = '#eeeeee';
+//         rem.style.borderColor = '#dcdcdc';
+//         remInp.value = 0;
+//         v_login.rememberMe = 0;
+//         clic = true;
+//     }
+// };
 
 var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
 
