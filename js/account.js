@@ -11,7 +11,7 @@ $(document).ready(function () {
         $("#slidTwo").addClass("posssucce");
         $.ajax({
             type:"GET",
-            url:_CTX_+"/user/activeCode",
+            url:"http://sso-t.earth.xpaas.lenovo.com/user/activeCode",
             data:{activeCode:active},
             dataType:"json",
             success:function (data) {
