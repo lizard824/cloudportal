@@ -124,7 +124,7 @@ function setCookie(cookie) {
                 }
                 var wait = function () {
                     var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 1000);
+                    setTimeout(dtd.resolve, 500);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
