@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>lenovo</title>
+    <title>ITS Cloud</title>
     <link rel="shortcut icon" href="images/function.ico">
     <link rel="stylesheet" href="css/modify.css">
     <link rel="stylesheet" href="css/main1.css">
@@ -142,7 +142,7 @@
                         <span v-if="isLogged==true&&isLDAP==true">{{login}}</span>
                         <div class="change-word" id="change-word">
                             <p>
-                                <a>
+                                <a href="javascript:;">
                                     Reset Password
                                 </a>
                             </p>
@@ -165,10 +165,12 @@
 <div class="modify" id="modify" >
     <div class="mo-cen">
             <div class="mo-left mo-right">
+
                 <div class="mo-top">
                     <p class="p-left">Reset Password</p>
                 </div>
                 <form class="mo-form" id="resetForm" action="http://sso.earth.xpaas.lenovo.com/user/changePassword" method="post" v-cloak>
+
                     <input type="hidden" name="username" v-model="username">
                     <div class="mo-input ">
                         <p class="mo-p" id="moa-p">Old password</p>
@@ -373,7 +375,7 @@
         <!-- 底部 -->
         <div class="footer">
             <div class="footer_center" id="footer_center">
-                <ul class="footer_ul_first">
+                <!-- <ul class="footer_ul_first">
                     <li class="footerfirst">
                     
                         Lenovo Cloud&Serivce
@@ -423,7 +425,7 @@
                         Phone
                     </a>
                     </li>
-                </ul>
+                </ul> -->
                 <div class="footer_bottom">
                     <p class="last">privacy | site terms</p>
                     <p class="forth_last"> Lenovo©2016-2017</p>
@@ -437,12 +439,13 @@
     <script src="js/jwt-decode.min.js"></script>
     <script src="js/jquery.transform.js"></script>
     <script src="js/jquery.form.js"></script>
-    <script src="js/js.cookie.js"></script>
+    <script src="js/cookies.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/my.js"></script>
     <script src="js/util.js"></script>
     <script src="js/index.js"></script>
     <script src="js/reset.js"></script>
+    <script src="js/account.js"></script>
 
 </body>
 

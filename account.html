@@ -22,13 +22,13 @@
 					Authentication
 				</li>
 			 </ul>
-			 <ul class="poss">                    
+			 <ul class="poss" id="slidTwo">
 				<li class="pos-num">2</li>
 				<li>
 					Reset Password
 				</li>
 			 </ul>
-			 <ul class="poss">                    
+			 <ul class="poss" id="slidThree">
 				<li class="pos-num">3</li>
 				<li>
 					Complete
@@ -38,53 +38,49 @@
 				
 		 </div>
 			<!-- head end -->
-		<div class="acc-info" id="info-first">
-			<form class="acc-form">
+		<div class="acc-info" id="info-first" >
+			<form class="acc-form" id="forgotForm" action="http://sso.earth.xpaas.lenovo.com/user/forgot" method="post" >
 				<div class="input ">
 					
                     <div class="inpu">
                     	<img src="images/name.png" alt="">
-                    	<input type="text" value="user name">
+                    	<input type="text" placeholder="user name" v-model="username" name="username">
                     </div>
-                    <p>Please input username</p>
-                </div>
-                <div class="input ">
-					
-                    <div class="inpu">
-                    	<img src="images/email.png" alt="">
-                    	<input type="text" value="Email">
-                    </div>
-                    <p>Please input username</p>
-
+                    <p v-show="!userValid" class="error-p">*Please input username!</p>
                 </div>
 
-                <button class="buton click-no" type="submit"  disabled="disabled">
+
+                <button class="buton click-no" type="submit" id="next" disabled>
                     Next
                 </button>
-                <p class="acc-alert">email</p>
+                <p v-show="tipValid"  class="acc-alert">An email is sent to your email address.</p>
+                <p v-show="!error==''" class="acc-alert">{{error}}</p>
 			</form>
 
 		</div>
 
 		<div class="acc-info" id="info-second" style="display:none;">
-			<form class="acc-form">				
+			<form class="acc-form" id="resetForm" action="http://sso.earth.xpaas.lenovo.com/user/changePassword" method="post">
 				<div class="input ">					
                     <div class="inpu">
                     	<img src="images/password.png" alt="">
-                    	<input type="text" value="New Password">
+                    	<input type="password" placeholder="New Password" v-model="newPasswd" name="newPassword">
                     </div>
-                    <p>Please input username</p>
+
                 </div>
+				<input type="hidden" name="activeCode" v-model="activeCode">
+				<input type="hidden" name="username" v-model="userName">
+				<!--<input type="hidden" name="oldPassword" value=" " >-->
                 <div class="input ">
 				    
                     <div class="inpu">
                     	<img src="images/password.png" alt="">
-                    	<input type="text" value="Confirm Password">
+                    	<input type="password" placeholder="Confirm Password" v-model="conPasswd" >
                     </div>
-                    <p>Please input username</p>
+					<p v-show="!conValid" class="error-p">*Please confirm password!</p>
                 </div>
 
-                <button class="buton click-no" type="submit"  disabled="disabled">
+                <button class="buton click-no" type="submit" id="nextTwo"  disabled="disabled">
                     Next
                 </button>
 			</form>
@@ -102,5 +98,16 @@
 		   </div>
 		</div>
 	</div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/jwt-decode.min.js"></script>-->
+    <script src="js/jquery.transform.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <!--<script src="js/js.cookie.js"></script>-->
+    <script src="js/vue.min.js"></script>
+    <!--<script src="js/my.js"></script>-->
+    <script src="js/util.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <!--<script src="js/reset.js"></script>-->
+    <script src="js/account.js"></script>
 </body>
 </html>

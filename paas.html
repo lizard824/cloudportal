@@ -65,22 +65,22 @@
                         Cloud  Service
                     </a>
                     <ol id="poll_down">
-                        <!--<li class="pull_first">-->
+                        <li class="pull_first">
                             <!--<a href="javascript:;">-->
                                 <!--CMDB-->
                             <!--</a>-->
-                        <!--</li>-->
+                        </li>
                         <li>
                             <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com')">XOPS</a>
                         </li>
                         <li>
                             <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com')">XMSG</a>
                         </li>
-                        <!--<li class="down_last">-->
+                        <li class="down_last">
                             <!--<a href="javascript:;">-->
                                 <!--Ticket-->
                             <!--</a>-->
-                        <!--</li>-->
+                        </li>
                     </ol>
                 </li>
             </ul>
@@ -110,22 +110,22 @@
                         Cloud  Service
                     </a>
                     <div id="clic_down">
-                        <!--<p class="clic_first">-->
+                        <p class="clic_first">
                             <!--<a href="javascript:;">-->
                                 <!--CMDB-->
                             <!--</a>-->
-                        <!--</p>-->
+                        </p>
                         <p>
                             <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com')">XOPS</a>
                         </p>
                         <p>
                             <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com')">XMSG</a>
                         </p>
-                        <!--<p class="down_last">-->
+                        <p class="down_last">
                             <!--<a href="javascript:;">-->
                                 <!--Ticket-->
                             <!--</a>-->
-                        <!--</p>-->
+                        </p>
                     </div>
                 </li>
             </ul>
@@ -234,26 +234,29 @@
                     
                 </li>
                 <li>
-
-                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/tree/master/guide" target="_blank">  User Guide </a>
-                </li>
-                <li>
-                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/issues/new" target="_blank">
-                    Bug&issues
+                    <a href="javascript:;">
+                      <!-- User Guide  -->
+                      Containers
                     </a>
                 </li>
                 <li>
-                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/tree/master/changelog/" target="_blank">
+                    <a href="javascript:;">
+                    <!-- Bug&issues -->
+                    Product details
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:;">
                     Changelog
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="mailto:-Paas-Platform@lenovo.com">
+                    <a href="javascript:;">
                     Contact Us
                     </a>
                 </li>
                 <li>
-                    <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/blob/master/guide/faq.md" target="_blank">
+                    <a href="javascript:;">
                     FAQ
                     </a>
                 </li>
@@ -263,10 +266,154 @@
             <div class="center_right" id="cen_right">
                 <div class="cen_first" id="cen_first">
                     <p class="cen_p">
-                        <img src="images/paasleft.png" alt=""> PaaS
+                        <span>
+                         Overview    
+                        </span>
+                        
                     </p>
-                    <img src="images/hr.png" alt="" class="hr">
-                
+                    <p class="cen-elplain">
+                        The Container Service (PaaS service) is a highly scalable, high performance container management service that supports Docker containers and allows you to easily run applications on a managed cluster. The PaaS service eliminates the need for you to install, operate, and scale your own cluster management infrastructure. With simple actions, you can launch and stop Docker-enabled applications, query the complete state of your cluster, and access many familiar features like  Load Balancing, Storage volumes, and roles. You can use PaaS service to schedule the placement of containers across your cluster based on your resource needs and availability requirements. You can also integrate your own application or third-party application to meet business or application specific requirements.
+                    </p>
+                        <h3 class="cen-title">
+                           Easily Manage Clusters for Any Scale
+                        </h3>
+                        <p class="cen-title-sec">
+                            Container Service eliminates the need to operate cluster management software or design fault-tolerant cluster architectures. There is no software to install, manage, or scale allowing you to focus on building Dockerized applications.
+
+                        </p>    
+                        <h3 class="cen-title">
+                           Flexible Container Placement
+                        </h3>
+                        <p class="cen-title-sec">
+                           You can use Container Service to schedule long-running applications and batch jobs. You can also use the APIs to get up-to-date cluster state information to integrate your own custom as well as third party schedulers. The PaaS service is a shared state, optimistic concurrency system that supports multiple schedulers on the same cluster for each business or application-specific requirement.
+                        </p>    
+                        <h3 class="cen-title">
+                           Performance at Scale
+                        </h3>
+                        <p class="cen-title-sec">
+                            The Container Service is built on technology developed from many years of experience running highly scalable services. You can launch tens or hundreds of Docker containers in seconds  with no additional complexity.
+                        </p>    
+                                           
+                   
+                </div>
+
+                <div class="cen_one">
+                     <p class="cen_p">
+                        <span>
+                          What are Containers?  
+                        </span>                       
+                    </p>
+                    <p class="cen-elplain">
+                        Containers are a method of operating system virtualization that allow you to run an application and its dependencies in resource-isolated processes. Containers allow you to easily package an application's code, configurations, and dependencies into easy to use building blocks that deliver environmental consistency, operational efficiency, developer productivity, and version control. Containers can help ensure that applications deploy quickly, reliably, and consistently regardless of deployment environment. Containers also give you more granular control over resources giving your infrastructure improved efficiency. Running containers in the PaaS allows you to build robust, scalable applications and services by leveraging the benefits of the PaaS such as elasticity, availability, security, and economies of scale. 
+                    </p>
+                        <h3 class="cen-title">
+                          Environment Consistency
+                        </h3>
+                        <p class="cen-title-sec">
+                            Containers enable portability and help reduce the organizational and technical frictions of moving an application through the development, testing, and production lifecycle. Containers encapsulate all the necessary application files and software dependencies and serve as a building block that can be deployed on any compute resource regardless of software, operating system, or hardware configurations (e.g., you can run the same container on your Ubuntu laptop and on your Red Hat Enterprise Linux production servers). Whatever you package as a container locally will deploy and run the same way whether in testing or production. This is beneficial for you and your organization because you can deploy an application reliably and consistently regardless of environment. This helps you avoid manually configuring each server and allows you to release new features faster.
+                        </p>    
+                       <h3 class="cen-title">
+                           Operational Efficiency
+                       </h3> 
+                       <p class="cen-title-sec">
+                           Containers can help you get more from your computing resources by allowing to you easily run multiple applications on the same instance. With containers, you can specify the exact amount of memory, disk space, and CPU to be used by a container on an instance. Containers have fast boot times because each container is only a process on the operating system running an application and its dependencies. This reduced footprint enables you to quickly create and terminate applications or tasks encapsulated in a container allowing you to rapidly scale applications up and down. You can use blue-green deployment patterns to rollout new application versions (e.g., using PaaS Container Service) because the entire application and all its dependencies are contained in an image. Containers also provide process isolation, which allows you to put each application and its dependencies into a separate container and run them on the same instance. There are no shared dependencies or incompatibilities because each container is isolated from the other (e.g., you can run two containers that use different library versions on the same PaaS instance).
+                       </p> 
+                       <p class="cen-title-sec">
+                           You can also create container images that serve as the base for other images. Operations teams can create a base image composed of the operating system, configurations, and the various utilities they want. Development teams can then build their application on top of the base image. This allows you to avoid the complexities 
+                       </p> 
+                       <h3 class="cen-title">
+                           Developer Productivity
+                       </h3> 
+                       <p class="cen-title-sec">
+                           Containers increase developer productivity by removing cross-service dependencies and conflicts. Each application component can be broken into different containers running a different microservice. Containers are isolated from one another, so you don't have to worry about libraries or dependencies being in sync for each service. Developers can independently upgrade each service because there are no library conflicts.
+                       </p>
+                       <h3 class="cen-title">
+                           Version Control
+                       </h3> 
+                       <p class="cen-title-sec">
+                           Containers allow you to track versions of your application code and their dependencies. Docker container images have a manifest file (Dockerfile) that allows you to easily maintain and track versions of a container, inspect differences between versions, and roll-back to previous versions.
+                       </p> 
+                </div>
+
+                <div class="cen_one">
+                     <p class="cen_p"> 
+                        <span>                    
+                          Product details   
+                        </span>                  
+                    </p>
+                    <p class="cen-elplain">
+                       PaaS Service allows you to easily run and manage Docker-enabled applications across a cluster of PaaS instances. Applications packaged as containers locally will deploy and run in the same way as containers managed by PaaS Service. PaaS Service eliminates the need to install, operate, and scale your own cluster management infrastructure, and allows you to schedule Docker-enabled applications across your cluster based on your resource needs and availability requirements. PaaS Service enables you to grow from a single container to thousands of containers across hundreds of instances without any additional complexity in how you run your application. You can run anything: applications, batch jobs, or microservices. PaaS Service abstracts away all the complexity of the infrastructure so you can focus on designing, building, and running containerized applications.With PaaS Service, you have complete visibility and control of your cluster from creating and terminating Docker containers to viewing detailed cluster state information. You can integrate and use your own container scheduler or connect PaaS Container Service into your existing software delivery process (e.g., continuous integration and delivery systems).
+                    </p>
+                        <h3 class="cen-title">
+                           Features
+                        </h3>
+                        <h3 class="cen-title">                            
+                           Docker Compatibility
+                        </h3>
+                        <p class="cen-title-sec">
+                            PaaS Container Service supports Docker and enables you to run and manage Docker containers across a cluster of PaaS instances. Each PaaS instance in a cluster managed by PaaS Service runs a Docker daemon, so whatever application you package as a container locally will deploy and run on PaaS Service without the need for any configuration changes.
+                        </p>    
+                        <h3 class="cen-title">
+                           Managed Clusters 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           Managing your own container management infrastructure usually involves installing, operating, and scaling your own cluster management software, configuration management systems, and monitoring solutions. Architecting and managing the availability and scalability of these systems is difficult. PaaS Container Service removes the complexity of container management. With PaaS Service, all you need to do is launch a cluster of Container Instances and specify the tasks you want to run; PaaS Service handles all the cluster management for you. 
+                        </p> 
+                        <h3 class="cen-title">
+                           Load Balancing 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Service allowing you to distribute traffic across your containers. The PaaS Service will automatically add and remove containers from the PaaS. You can specify a dynamic port in the Task Definition, which gives your container an unused port when it is scheduled on an PaaS instance. You can also use path-based routing to share with multiple services. 
+                        </p>  
+                        <h3 class="cen-title">
+                           Local Development 
+                        </h3> 
+                        <p class="cen-title-sec">
+                            The PaaS Container Service allows you to simplify your local development experience as well as easily set up an PaaS cluster and its associated resources (e.g., PaaS instance). The PaaS Service supports defining and running multi-container applications. You can apply the same Compose definition used to define a multi-container application on your development machine as well as in production. 
+                        </p>  
+                        <h3 class="cen-title">
+                           Monitoring
+                        </h3> 
+                        <p class="cen-title-sec">
+                            PaaS Service provides monitoring capabilities for your containers and clusters. You can monitor average and aggregate CPU and memory utilization of running tasks as grouped by Task Definition, Service, or Cluster through PaaS Service. You can also set alarms to alert you when your containers or clusters need to scale up or down.
+                        </p>  
+                        <h3 class="cen-title">
+                           Logging 
+                        </h3> 
+                        <p class="cen-title-sec">
+                            You can send each container instance's PaaS agent logs and Docker container logs to PaaS Service Logs to simplify issue diagnosis. You can also record all your PaaS Service API calls and have the log files delivered to you through PaaS Service. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, the request parameters, and the response elements returned by PaaS Service. PaaS Service log provides you a history of API calls  and enables security analysis, resource change tracking, and compliance auditing.
+                        </p> 
+                        <h3 class="cen-title">
+                           Repository Support 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Container Service can be used with any third party or accessible private Docker registry, or Docker Hub, a hosted Docker image repository. All you need to do is specify the repository in your Task Definition and PaaS Service will retrieve the appropriate images for your applications. 
+                        </p>
+                        <h3 class="cen-title">
+                           Security 
+                        </h3> 
+                        <p class="cen-title-sec">
+                           PaaS Container Service allows you to specify an IAM role for each task. This allows the PaaS container instances to have a minimal role, respecting the ‘Least Privilege’ access policy and allowing you to manage the instance role and the task role separately. You will also gain visibility as to which task is using which role, tracked in the PaaS logs. 
+                        </p>  
+                </div>
+                <!-- <div class="cen_one">
+                    <p class="cen_p">
+                        <span>
+                          Changelog  
+                        </span>
+                    </p>
+                    <p class="cen-elplain">
+                        Infrastructure as a Service (PaaS) is a platform that provides variety kinds of virtualized and physical infrastructure resources and solution above, according to different application features and requirements.
+                        <br>
+                        PaaS is capable of fast delivery and quick response to business, 7*24 supports on server maintenance, highly secured storage and backup approach, and customized services.
+                    </p>
+                        <h3 class="cen-title">
+                           Rich image, free installation of rapid deployment of operating systems and software 
+                        </h3>
+                        <p class="cen-title-sec">
+                            The mirror (Image) is an instance of ECS running environment of the template, including operating system and installed software. Users use the system disk image to create the instance of ECS and replace the ECS instance, for free installation of rapid deployment. We provide 3 ways of image: 
+
+                        </p>    
                         <ul class="cen_dea">
                             <li>
                                 Fast,simple. provide one-key publish,delopy,rollback and extend.
@@ -278,7 +425,7 @@
                                 Auto-dynamic control and adjust resources for quick responding.
                             </li>
                             <li>
-                                Prvoide real-time application's status and log by data visualization.
+                                Prvoide real-time application's status and log by data visualization.a  <a href="http://gitlab.xpaas.lenovo.com/earth/public-doc/tree/master/changelog/"  target="_blank">Know details ></a>
                             </li>
                             <li>
                                 Devops support. For whole project lifecycle.Implement continuously integration/delivery,decrease time to market.
@@ -289,20 +436,57 @@
                             <li>
                                 Mircoservices friendly. support cloud native applications' integral solution.
                             </li>                      
-                         </ul>                    
-                   
-                </div>
+                         </ul>    
+                </div> -->
+                <div class="cen_one">    
+                  <p class="cen_p"> 
+                  <span>
+                      Contact Us
+                  </span>        
+                    </p>
+                    <p class="cen-elplain">
+                        For technical issue, please post your question to <a href="mailto:-Paas-Platform@lenovo.com"> Team Earth </a>
+                    </p>
 
-                <div class="cen_one">
                 </div>
+                <div class="cen_one"> 
+                <p class="cen_p"> 
+                <span>
+                    FAQ 
+                </span>       
+                    </p>
+                    <p class="cen-elplain">
+                        EARTH is a self-developed open platform. Please refer to the link below for FAQ.
+                    </p>
+                        <!--<h3 class="cen-title">-->
+                           <!--Q:-->
+                        <!--</h3>-->
+                        <!--<p class="cen-title-sec">-->
+                            <!--A: <a href="">know more details </a>-->
 
-                <div class="cen_one">
-                </div>
-                <div class="cen_one">
-                </div>
-                <div class="cen_one">                
-                </div>
-                <div class="cen_one">                
+                        <!--</p>-->
+                        <!--<h3 class="cen-title">-->
+                            <!--Q:-->
+                        <!--</h3>-->
+                        <!--<p class="cen-title-sec">-->
+                            <!--A: <a href="">know more details </a>-->
+
+                        <!--</p>-->
+                        <!--<h3 class="cen-title">-->
+                        <!--Q:-->
+                        <!--</h3>-->
+                    <!--<p class="cen-title-sec">-->
+                        <!--A: <a href="">know more details </a>-->
+
+                    <!--</p>-->
+                    <!--<h3 class="cen-title">-->
+                        <!--Q:-->
+                    <!--</h3>-->
+                    <!--<p class="cen-title-sec">-->
+                        <!--A: <a href="">know more details </a>-->
+
+                    <!--</p>-->
+
                 </div>
 
             </div>
@@ -320,7 +504,7 @@
     <!-- 底部 -->
     <div class="footer">
         <div class="footer_center" id="footer_center">
-            <ul class="footer_ul_first">
+          <!--   <ul class="footer_ul_first">
                 <li class="footerfirst">
                     
 							Lenovo Cloud&Serivce
@@ -370,7 +554,7 @@
 							Phone
 						</a>
                 </li>
-            </ul>
+            </ul> -->
             <div class="footer_bottom">
                 <p class="last">privacy | site Terms</p>
                 <p class="forth_last"> Lenovo©2016-2017</p>
@@ -383,7 +567,7 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jwt-decode.min.js"></script>
     <script src="js/jquery.form.js"></script>
-    <script src="js/js.cookie.js"></script>
+    <script src="js/cookies.js"></script>
     <script src='js/detail.js'></script>
     <script src="js/jquery.transform.js"></script>
     <script src="js/vue.min.js"></script>

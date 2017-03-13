@@ -6,30 +6,31 @@ onresize = function () {
 
 
 //rember me
-//
-// var rem = document.getElementById('rember');
-// var remInp = rem.getElementsByTagName('input')[0];
-//
-// var clic = true;
-// rem.onclick = function () {
-//     if (clic == true) {
-//         dot.style.float = 'right';
-//         rem.style.backgroundColor = '#3899eb';
-//         rem.style.borderColor = '#3899eb';
-//         remInp.value = 1;
-//         v_login.rememberMe = 1;
-//         clic = false;
-//     } else {
-//         dot.style.float = 'left';
-//         rem.style.backgroundColor = '#eeeeee';
-//         rem.style.borderColor = '#dcdcdc';
-//         remInp.value = 0;
-//         v_login.rememberMe = 0;
-//         clic = true;
-//     }
-// };
+
+var rem = document.getElementById('rember');
+var remInp = rem.getElementsByTagName('input')[0];
+
+var clic = true;
+rem.onclick = function () {
+    if (clic == true) {
+        dot.style.float = 'right';
+        rem.style.backgroundColor = '#3899eb';
+        rem.style.borderColor = '#3899eb';
+        remInp.value = 1;
+        v_login.rememberMe = 1;
+        clic = false;
+    } else {
+        dot.style.float = 'left';
+        rem.style.backgroundColor = '#eeeeee';
+        rem.style.borderColor = '#dcdcdc';
+        remInp.value = 0;
+        v_login.rememberMe = 0;
+        clic = true;
+    }
+};
 
 var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
+var DOMAIN = 'itscloud.xpaas.lenovo.com';
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
@@ -105,14 +106,14 @@ function iniLogin() {
 
 function setCookie(cookie) {
     var now = new Date().getTime();
-    var expDay = (cookie.exp - now) / 1000 / 60 / 60 / 24;
-    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: expDay});
+    var exp = (cookie.exp - now) / 1000;
+    Cookies.set('LENOVOITS_TGC', cookie.val, {expires: exp, domain: DOMAIN});
     $.ajax({
         type: 'GET',
         async: false,
         url: _CTX_ + "/getDomain",
         dateType: "json",
-        data: {ck: cookie.val},
+        data: {ck: cookie.val, isRememberMe: v_login.rememberMe},
         success: function (data) {
             if (data.success == true) {
                 var response = jwt_decode(data.response);

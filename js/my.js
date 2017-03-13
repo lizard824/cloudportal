@@ -197,6 +197,7 @@ onscroll = function (ev) {
 var nav_ul = document.getElementById('xnav_ul');
 var phone_open = document.getElementById('ph_open');
 
+
 var ntrn = true;
 nav_ul.style.transition = '0.5s all ease';
 
