@@ -30,6 +30,7 @@ rem.onclick = function () {
 };
 
 var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
+var DOMAIN = 'itscloud-t.xpaas.lenovo.com';
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
@@ -105,14 +106,14 @@ function iniLogin() {
 
 function setCookie(cookie) {
     var now = new Date().getTime();
-    var expDay = (cookie.exp - now) / 1000 / 60 / 60 / 24;
-    Cookies.set('LENOVOITS_TGC', cookie.val, {path: '/', expire: expDay});
+    var exp = (cookie.exp - now) / 1000;
+    Cookies.set('LENOVOITS_TGC', cookie.val, {expires: exp, domain: DOMAIN});
     $.ajax({
         type: 'GET',
         async: false,
         url: _CTX_ + "/getDomain",
         dateType: "json",
-        data: {ck: cookie.val},
+        data: {ck: cookie.val, isRememberMe: v_login.rememberMe},
         success: function (data) {
             if (data.success == true) {
                 var response = jwt_decode(data.response);
@@ -124,7 +125,7 @@ function setCookie(cookie) {
                 }
                 var wait = function () {
                     var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 1000);
+                    setTimeout(dtd.resolve, 500);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
