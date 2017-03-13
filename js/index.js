@@ -3,8 +3,8 @@
  */
 var v_head, v_sign, v_service,v_reset,v_acc,v_new;
 var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
-var email = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
 var SERVICE = "http://itscloud-t.xpaas.lenovo.com";
+var DOMAIN = '.itscloud-t.xpaas.lenovo.com';
 $(document).ready(function () {
     iniService();
     iniHead();
@@ -98,14 +98,23 @@ function loadPage() {
                 v_head.login = "Login";
                 v_service.isLogged = false;
             } else {
-                var load_result = jwt_decode(data.response);
-                v_head.isLogged = true;
-                v_head.login = "Hello, " + load_result.username;
-                v_head.username = load_result.username;
-                v_reset.username = load_result.username;
-                if (parseInt(load_result.authtype) != 2) {
-                    v_head.isLDAP = false;
+                if(data.response!==""){
+                    var load_result = jwt_decode(data.response);
+                    v_head.login = "Hello, " + load_result.username;
+                    v_head.username = load_result.username;
+                    v_reset.username = load_result.username;
+                    if (parseInt(load_result.authtype) != 2) {
+                        v_head.isLDAP = false;
+                    }
+                }else{
+                    v_head.login = "Hello, " + data.user.username;
+                    v_head.username = data.user.username;
+                    v_reset.username = data.user.username;
+                    if (parseInt(data.user.authtype) != 2) {
+                        v_head.isLDAP = false;
+                    }
                 }
+                v_head.isLogged = true;
                 v_service.isLogged = true;
                 //anClose(anMite);
             }
@@ -149,10 +158,10 @@ function deleteCookie(logoutUser) {
                         callDestroy(domainObj.logout,v_head.username)
                     }
                 }
-                Cookies.remove("LENOVOITS_TGC", {path: '/'});
+                Cookies.expire('LENOVOITS_TGC',{expires: 0, domain: DOMAIN});
                 var wait = function () {
                     var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 5000);
+                    setTimeout(dtd.resolve, 500);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
