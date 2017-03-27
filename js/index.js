@@ -37,14 +37,14 @@ function iniHead() {
             login: 'Login',
             isLogged: false,
             isLDAP: true,
-            username:''
+            username: ''
         },
         created: function () {
             loadPage();
         },
         methods: {
             logout: function (logoutUser) {
-                if(logoutUser===undefined) {
+                if (logoutUser === undefined) {
                     showMask();
                 }
                 $.ajax({
@@ -76,8 +76,18 @@ function iniHead() {
             openUrl: function (url) {
                 var _self = this;
                 if (_self.isLogged) {
-                    window.open(url, "_blank");
-                } else {
+                    if (url.indexOf("gitlab") === -1) {
+                        window.open(url, "_blank");
+                    }
+                    else {
+                        var gitlab = url + "/users/auth/cas3/callback?url=" + url + "/users/sign_in";
+                        window.open(_CTX_ + "/gitlabSso?service=" + gitlab + "&ck=" + Cookies.get("LENOVOITS_TGC"), "_blank");
+                    }
+                }
+                else if (url.indexOf("gitlab") !== -1) {
+                    window.location = 'login.html';
+                }
+                else {
                     window.location = 'login.html?refer=' + url;
                 }
             }
@@ -98,7 +108,7 @@ function loadPage() {
                 v_head.login = "Login";
                 v_service.isLogged = false;
             } else {
-                if(data.response!==""){
+                if (data.response !== "") {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
@@ -106,7 +116,7 @@ function loadPage() {
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
-                }else{
+                } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
                     v_reset.username = data.user.username;
@@ -122,8 +132,8 @@ function loadPage() {
     });
 }
 
-function callDestroy(logoutUrl,logoutUser) {
-    var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user="+logoutUser+"></iframe>";
+function callDestroy(logoutUrl, logoutUser) {
+    var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user=" + logoutUser + "></iframe>";
     $("body").append(iframe);
     /* $.ajax({
      type: 'GET',
@@ -152,20 +162,20 @@ function deleteCookie(logoutUser) {
                 var domains = response.domain;
                 for (var i in domains) {
                     var domainObj = domains[i];
-                    if(logoutUser!==undefined) {
+                    if (logoutUser !== undefined) {
                         callDestroy(domainObj.logout, logoutUser);
-                    }else{
-                        callDestroy(domainObj.logout,v_head.username)
+                    } else {
+                        callDestroy(domainObj.logout, v_head.username)
                     }
                 }
-                Cookies.expire('LENOVOITS_TGC',{expires: 0, domain: DOMAIN});
+                Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
                 var wait = function () {
                     var dtd = $.Deferred();
                     setTimeout(dtd.resolve, 500);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
-                    if(logoutUser==undefined){
+                    if (logoutUser == undefined) {
                         hideMask();
                         loadPage();
                     }
