@@ -333,7 +333,7 @@ body {
 }
 .centop {
  width: 330px;
- height: 80px;
+ height: 40px;
  margin: auto;
 }
 .centop img {
@@ -531,7 +531,7 @@ body {
 .onleft {
  float: left;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  display: block;
  position: relative;
  z-index: 50;
@@ -540,7 +540,7 @@ body {
  display: block;
  float: right;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  position: relative;
  z-index: 50;
 }
@@ -548,32 +548,40 @@ body {
 /*serve start*/
 .serve{
 	width:100%;
-	height:auto;
-	background: #ccc;
+	height:300px;
+	background: #fff;
 	clear: both;
 }
 .serve .serve-cen{
 	width:80%;
-	height:240px;
+	height:100%;
 	margin:auto;
 }
 .serve .serve-cen .serve-ul{
 	width:100%;
-	height:100%;
+	height:240px;
+	clear: both;
 }
 .serve .serve-cen .serli{
 	width:20%;
 	height:90px;
 	float: left;
 	text-align: center;
+	margin-top: 30px;
 }
 .serve .serve-cen .serli img{
 	width:50px;
 	height:50px;
 }
 .serve .serve-cen .serli a{
+	width:100%;
+	height:100%;
+	display: block;
 	font-size: 14px;
-	color:#fff;
+	color:#000;
+}
+.serve .serve-cen .serli a p{
+	margin-top: 10px;
 }
 /*serve end*/
 .map {
@@ -943,7 +951,7 @@ body {
 }
 .centop {
  width: 330px;
- height: 80px;
+ height: 40px;
  margin: auto;
 }
 .centop img {
@@ -1141,7 +1149,7 @@ body {
 .onleft {
  float: left;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  display: block;
  position: relative;
  z-index: 50;
@@ -1150,7 +1158,7 @@ body {
  display: block;
  float: right;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  position: relative;
  z-index: 50;
 }
@@ -1158,32 +1166,40 @@ body {
 /*serve start*/
 .serve{
 	width:100%;
-	height:auto;
-	background: #ccc;
+	height:300px;
+	background: #fff;
 	clear: both;
 }
 .serve .serve-cen{
 	width:80%;
-	height:240px;
+	height:100%;
 	margin:auto;
 }
 .serve .serve-cen .serve-ul{
 	width:100%;
-	height:100%;
+	height:240px;
+	clear: both;
 }
 .serve .serve-cen .serli{
 	width:20%;
 	height:90px;
 	float: left;
 	text-align: center;
+	margin-top: 30px;
 }
 .serve .serve-cen .serli img{
 	width:50px;
 	height:50px;
 }
 .serve .serve-cen .serli a{
+	width:100%;
+	height:100%;
+	display: block;
 	font-size: 14px;
-	color:#fff;
+	color:#000;
+}
+.serve .serve-cen .serli a p{
+	margin-top: 10px;
 }
 /*serve end*/
 .map {
@@ -1553,7 +1569,7 @@ padding: 0 20px;
 }
 .centop {
  width: 330px;
- height: 80px;
+ height: 40px;
  margin: auto;
 }
 .centop img {
@@ -1751,7 +1767,7 @@ text-align: center;
 .onleft {
  float: left;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  display: block;
  position: relative;
  z-index: 50;
@@ -1760,7 +1776,7 @@ text-align: center;
  display: block;
  float: right;
  cursor: pointer;
- margin-top: 5px;
+ margin-top: 45px;
  position: relative;
  z-index: 50;
 }
@@ -1768,32 +1784,40 @@ text-align: center;
 /*serve start*/
 .serve{
 	width:100%;
-	height:auto;
-	background: #ccc;
+	height:300px;
+	background: #fff;
 	clear: both;
 }
 .serve .serve-cen{
 	width:80%;
-	height:240px;
+	height:100%;
 	margin:auto;
 }
 .serve .serve-cen .serve-ul{
 	width:100%;
-	height:100%;
+	height:240px;
+	clear: both;
 }
 .serve .serve-cen .serli{
 	width:20%;
 	height:90px;
 	float: left;
 	text-align: center;
+	margin-top: 30px;
 }
 .serve .serve-cen .serli img{
 	width:50px;
 	height:50px;
 }
 .serve .serve-cen .serli a{
+	width:100%;
+	height:100%;
+	display: block;
 	font-size: 14px;
-	color:#fff;
+	color:#000;
+}
+.serve .serve-cen .serli a p{
+	margin-top: 10px;
 }
 /*serve end*/
 .map {
@@ -2376,32 +2400,40 @@ margin-top: 0.4rem;
 /*serve start*/
 .serve{
 	width:100%;
-	height:auto;
-	background: #ccc;
+	height:300px;
+	background: #fff;
 	clear: both;
 }
 .serve .serve-cen{
 	width:80%;
-	height:240px;
+	height:100%;
 	margin:auto;
 }
 .serve .serve-cen .serve-ul{
 	width:100%;
-	height:100%;
+	height:240px;
+	clear: both;
 }
 .serve .serve-cen .serli{
 	width:20%;
 	height:90px;
 	float: left;
 	text-align: center;
+	margin-top: 30px;
 }
 .serve .serve-cen .serli img{
 	width:50px;
 	height:50px;
 }
 .serve .serve-cen .serli a{
+	width:100%;
+	height:100%;
+	display: block;
 	font-size: 14px;
-	color:#fff;
+	color:#000;
+}
+.serve .serve-cen .serli a p{
+	margin-top: 10px;
 }
 /*serve end*/
 .map {
