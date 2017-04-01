@@ -36,21 +36,6 @@ function moveP(e,a,c){
     e.style.top = a;
     e.style.fontSize = c;
 }
-
-function chanBj(){
-    if(newWord.value != '' && conWord.value != ''){
-       moSub.style.backgroundColor = '#bee0f3';
-       moSub.style.color = '#fff'; 
-       moSub.style.border = 'none'; 
-       moSub.disabled = '';
-    }else{
-       moSub.style.backgroundColor = '#fff';
-       moSub.style.color = '#6a6a6a'; 
-       moSub.style.border = '1px solid #b4d5e3';
-       moSub.disabled = 'disabled';    
-    }
-};
-
 newWord.onfocus = function(){
     moveP(moP,'-5px','14px');
     };
@@ -72,9 +57,6 @@ conWord.onblur = function(){
         };
     chanBj();
     };
-
-
-
 
 //鼠标滚动
 var agent = navigator.userAgent;
@@ -117,42 +99,19 @@ $(window).bind("scroll", function(){
 var aUl = document.getElementById('xhead');
 var twoDiv = document.getElementById('second');
 
-var pullDown = document.getElementById("poll_down");
-
-var devSer = document.getElementById('devser');
-
-var clicDown = document.getElementById('clic_down');
-var devDown = document.getElementById('device');
-
-var changeWord = document.getElementById('change-word');
 onscroll = function (ev) {
     var ev = ev || event;
     var top = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (top > twoDiv.offsetTop - 65) {
         aUl.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        pullDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        pullDown.style.Top = '64px';
-        devSer.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        devSer.style.Top = '64px';
-        nav_ul.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        clicDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        devDown.style.backgroundColor = 'rgba(0,0,0,0.3)';
-         changeWord.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        changeWord.style.backgroundColor = 'rgba(0,0,0,0.3)';
     } else {
         aUl.style.backgroundColor = 'rgba(0,0,0,0)';
-        pullDown.style.backgroundColor = 'rgba(0,0,0,0)';
-        pullDown.style.Top = '64px';
-        devSer.style.backgroundColor = 'rgba(0,0,0,0)';
-        devSer.style.Top = '64px';
-        nav_ul.style.backgroundColor = 'rgba(0,0,0,0)';
-        clicDown.style.backgroundColor = 'rgba(0,0,0,0)';
-        devDown.style.backgroundColor = 'rgba(0,0,0,0)';
         changeWord.style.backgroundColor = 'rgba(0,0,0,0)';
     }
 
 };
-
 
 //移动端导航事件-------------------------------------
 var nav_ul = document.getElementById('xnav_ul');
@@ -160,25 +119,76 @@ var phone_open = document.getElementById('ph_open');
 
 var ntrn = true;
 nav_ul.style.transition = '0.5s all ease';
+var h = document.body.clientHeight ;
+var w = document.body.clientWidth ;
 
-var phOpen = function phshow(e){
-
-    if(ntrn == true){
-        e.style.opacity = 1;
-        e.style.overFlow = '';
+var phOpen = function phshow(e,a) {
+    if (ntrn == true) {
+        e.style.height = 'auto';
+        a.style.display='block';
+        a.style.height= h+'px';
         ntrn = false
-    }else{
-        e.style.opacity = 0;
-        e.style.overFlow = 'hidden';
+    } else {
+        e.style.height = 0;
+        a.style.display='none';
         ntrn = true
+         a.style.height='100%';
     }
-
 };
-
-phone_open.onclick = function(){
-    phOpen(nav_ul)
+phone_open.onclick = function () {
+    phOpen(nav_ul,phonbj)
+    
 }
+//移动端下拉菜单-----------------------------------
+var allUl    =  xnav_ul.getElementsByTagName('div');
+var allH2    =  xnav_ul.getElementsByTagName('li');
+var allSpan  =  xnav_ul.getElementsByTagName('span');
+var allImg   =  xnav_ul.getElementsByTagName('img');
+    //让所有的显示 
+    for(var i = 0; i < allUl.length; i++){
+        allUl[i].style.display = 'block';
+    };
+    //取到 一个ui的height
+    allUl[0].style.height = 'auto';
+    
+    // var needHeight = allSpan[0].offsetHeight;
+    // console.log(needHeight)
+    allUl[0].style.height = '0';
 
+    for(var i = 0;i < allH2.length;i ++){
+
+        allUl[i].stq = 1;
+        allUl[i].style.transition = '1s all ease';
+        allH2[i].index = i;
+        allH2[i].onclick = function(){
+           
+            //没点击 的时候
+            for(var i = 0;i < allH2.length;i++){
+                if(i == this.index)continue;
+                allUl[i].stq = 1;
+                allUl[i].style.height = 0;
+                allH2[i].style.backgroundColor ='#333';
+                allImg[i].src = 'images/up.png';
+            }
+
+            //点击的
+            if(allUl[this.index].stq == 1){
+                allUl[this.index].stq = 2;
+                allUl[this.index].style.height ='auto';
+                allH2[this.index].style.height ='auto';
+                allImg[this.index].src = 'images/down.png';
+                allH2[this.index].style.backgroundColor ='#464646';
+            }
+            else{
+                allUl[this.index].stq = 1;
+                allUl[this.index].style.height = 0 + 'px';
+                allH2[this.index].style.height ='1.5rem';
+                allImg[this.index].src = 'images/up.png';
+                allH2[this.index].style.backgroundColor ='#333';
+            }
+            
+        }
+    };
 
 //更换图片-----------------------------------------
       var chanSrc = document.getElementById('change_src');
@@ -199,12 +209,12 @@ phone_open.onclick = function(){
 
 
 //延时导航---------------------------------------------
-$('.nav-select .nohover').hover(function(){
-    $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"1px solid #fff"});
+$('.nav-select .nav_down').hover(function(){
+    $(this).find("a:first").css({"transition":"1s all ease"});
 },function(){
-    $(this).find("a:first").css({"transition":"1s all ease","border-bottom":"0px solid #fff"});
+    $(this).find("a:first").css({"transition":"1s all ease"});
 }).trigger("mouseout");
-$('.nav-select .nohover').hover(function(){
+$('.nav-select .nav_down').hover(function(){
     $(this).find("a").siblings().stop().slideToggle(50);
 })
 

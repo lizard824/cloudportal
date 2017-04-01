@@ -25,7 +25,7 @@
     </div>
 </div>
 <!-- loding end -->
-    <!--导航-->
+<!--导航-->
     <div class="xhead" id="xhead" v-cloak>
         <div class="xnav">
             <div class="top_cli">
@@ -35,87 +35,95 @@
 
                 <img src="images/topcli.png" id="ph_open" alt="logo">
             </div>
-            <ul class="xnav_ul nav-select" id="no_ul">
-                <li class="no_margin">
-                    <a href="index.html" name="first">
-                        <img src="images/logo.png" alt="logo" id="change_src">
-
-                    </a>
-                </li>
-                <li class="nohover">
-                    <a href="javascript:;">
-                        Cloud  Service
-                    </a>
-                    <ol id="devser" class="ol">
-                        <li class="devser_first">
-
-                            <a href="http://iaas.lenovo.com/" target="_blank">
-                                IaaS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://earth-t.xpaas.lenovo.com/" target="_blank">
-                                PaaS
-                            </a>
-                        </li>
-                    </ol>
-                </li>
-                <li class="nohover">
-                    <a href="javascript:;">
-                        Devops Service
-                    </a>
-                    <ol id="poll_down">
-                        <li>
-                            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
-                        </li>
-                        <li>
-                            <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
-                        </li>
-                        <li>
-                            <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
-                        </li>
-                    </ol>
-                </li>
-            </ul>
-
-
-            <!-- 点击出现的导航 -->
-            <ul class="xnav_ul nav-select" id="xnav_ul">
-                <li class="nohover">
-                    <a href="javascript:;">
-                        Cloud  Service
-                    </a>
-                    <div class="ol device" id="device">
-                        <p class="device_first">
-                            <a href="http://iaas.lenovo.com/" target="_blank">
-                                IaaS
-                            </a>
-                        </p>
-                        <p>
-                            <a href="http://earth-t.xpaas.lenovo.com/" target="_blank">
-                                PaaS
-                            </a>
-                        </p>
-                    </div>
-                </li>
-                <li class="nohover">
-                    <a href="javascript:;">
-                        Devops Service
-                    </a>
-                    <div id="clic_down">
-                        <p>
-                            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
-                        </p>
-                        <p>
-                            <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
-                        </p>
-                        <p>
-                            <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-
+         <!-- pc端导航 -->
+  <ul class="xnav_ul nav-select" id="no_ul">
+   <li class="no_margin nav_li">
+     <a href="index.html" name="first">
+      <img src="images/logo.png" alt="logo" id="change_src">
+     </a>
+   </li>
+   <li class="nohover nav_li nav_down">
+     <a href="javascript:;">
+        Cloud Service
+     </a>
+     <div id="devser">
+       <div  class="ol_dot"></div>
+      <ol class="ol">
+        <li class="devser_first">
+         <a href="http://iaas.lenovo.com" target="_blank">
+           IaaS
+         </a>
+        </li>
+        <li>
+         <a href="http://earth-t.xpaas.lenovo.com" target="_blank">
+           PaaS
+         </a>
+        </li>
+       </ol> 
+     </div>
+   </li>
+   <li class="nohover nav_li nav_down">
+     <a href="javascript:;">
+       DevOps  Service
+     </a>
+       <div id="poll_down">
+         <div  class="ol_dot"></div>
+         <ol class="ol">
+           <li>
+            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
+           </li>
+           <li>
+            <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
+           </li>
+           <li>
+            <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
+           </li>
+         </ol>
+       </div>
+   </li>
+  </ul>
+<!-- pc端导航结束 -->
+<!-- 移动端点击出现的导航 -->
+<div class="phonbj" id="phonbj">
+  <ul class="xnav_ul nav-select" id="xnav_ul">
+    <li class="nohover">
+      <a href="javascript:;">
+        <span class="d">Cloud Service</span>
+      </a>
+       <img src="images/up.png" alt="up" class="xnav_img">
+        <div class="ol device" id="device">
+          <p class="device_first">
+            <a href="http://iaas.lenovo.com" target="_blank">
+             IaaS
+            </a>
+          </p>
+          <p>
+            <a href="http://earth-t.xpaas.lenovo.com" target="_blank">
+            PaaS
+            </a>
+           </p>
+        </div>
+    </li>
+    <li class="nohover">
+      <a href="javascript:;">
+        <span class="d">DevOps  Service</span>
+      </a>
+      <img src="images/up.png" alt="up" class="xnav_img">
+      <div id="clic_down" class="ol">
+        <p>
+          <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
+        </p>
+        <p>
+          <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
+        </p>
+        <p>
+          <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- 移动端点击出现的导航结束 --> 
             <ul class="nav_log {{isLogged==true && isLDAP==false?'navlogin':''}}">
                 <li class="no_margin nohover" v-on:mouseenter="hover('local')" v-on:mouseleave="leave('local')" >
                     <a v-if="isLogged==false" href="login.html" id="login">
