@@ -169,17 +169,16 @@ function deleteCookie(logoutUser) {
                         success: function (data) {
                             if (data.success == true) {
                                 Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
-
+                                if (logoutUser == undefined) {
+                                    hideMask();
+                                    loadPage();
+                                }
                             } else {
                                 hideMask();
                             }
 
                         }
                     });
-                    if (logoutUser == undefined) {
-                        hideMask();
-                        loadPage();
-                    }
                 });
             } else {
                 return;
