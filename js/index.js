@@ -53,10 +53,10 @@ function iniHead() {
                     data: {ck: Cookies.get("LENOVOITS_TGC")},
                     dateType: "json",
                     success: function (data) {
+                        hideMask();
                         if (data.success == true) {
                             deleteCookie(logoutUser);
                         } else {
-                            hideMask();
                         }
 
                     }
@@ -176,7 +176,6 @@ function deleteCookie(logoutUser) {
                 };
                 $.when(wait()).done(function () {
                     if (logoutUser == undefined) {
-                        hideMask();
                         loadPage();
                     }
                 });
