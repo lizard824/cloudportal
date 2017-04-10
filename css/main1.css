@@ -668,10 +668,10 @@ body {
 }
 .map img {
  width: 100%;
- height: 415px;
+ height: 500px;
 }
 .map .map-cen{
- width:80%;
+ width:100%;
  height:100%;
  margin:auto;
  background: #e8f9ff;

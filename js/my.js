@@ -289,22 +289,22 @@ var allP    = document.querySelectorAll('.seve-title');
 var allNav  = document.querySelectorAll('.serve-ul');
 var openImg = document.querySelectorAll('.ser-up');
 //让所有的显示 
-for(var i = 0; i < openLi.length; i ++){
+for(var j = 0; j < openLi.length; j ++){
     openDiv[i].style.display = 'block';
     };
-for(var i = 0;i < openLi.length;i ++){
-    openLi[i].stq   = 1;
-    openDiv[i].style.transition = '0.5s all ease';
-    openLi[i].index = i;
-  openLi[i].onclick = function(){        
+for(var j = 0;j < openLi.length;j ++){
+    openLi[j].stq   = 1;
+    openDiv[j].style.transition = '0.5s all ease';
+    openLi[j].index = j;
+  openLi[j].onclick = function(){        
 //没点击时
-for(var i = 0;i < openLi.length;i++){
-    if(i == this.index)continue;
-        openLi[i].stq = 1;
-        openDiv[i].style.height = 0;
-        openDiv[i].style.opacity = 0;
-        openImg[i].src = 'images/up.png';
-        allDot[i].style.left = openLi[this.index].offsetWidth/2 +openLi[this.index].offsetLeft -allDot[this.index].offsetWidth/2 + 'px';
+for(var j = 0;j < openLi.length;j++){
+    if(j == this.index)continue;
+        openLi[j].stq = 1;
+        openDiv[j].style.height = 0;
+        openDiv[j].style.opacity = 0;
+        openImg[j].src = 'images/up.png';
+        allDot[j].style.left = openLi[this.index].offsetWidth/2 +openLi[this.index].offsetLeft -allDot[this.index].offsetWidth/2 + 'px';
       }
 //点击的
 if(openLi[this.index].stq == 1){
@@ -315,8 +315,8 @@ if(openLi[this.index].stq == 1){
     allDot[this.index].style.left = openLi[this.index].offsetWidth/2 +openLi[this.index].offsetLeft -allDot[this.index].offsetWidth/2 + 'px';
     openImg[this.index].src = 'images/down.png';
         if( document.body.clientWidth > 759 ) {
-            for(var i=0;i<allNav.length;i++){
-                allNav[i].style.transition = '0.5s all ease';
+            for(var j=0;j<allNav.length;j++){
+                allNav[j].style.transition = '0.5s all ease';
             if(this.index<=4){
                 allNav[0].style.height = allP[this.index].offsetHeight + openLi[this.index].offsetHeight +allDot[0].offsetHeight+ 'px';
                 }else{
@@ -339,8 +339,8 @@ if(openLi[this.index].stq == 1){
     allDot[this.index].style.left =openLi[this.index].offsetWidth/2 +openLi[this.index].offsetLeft -allDot[this.index].offsetWidth/2 + 'px';
     openImg[this.index].src = 'images/up.png';
     if( document.body.clientWidth > 759){
-        for(var i=0;i<allNav.length;i++){
-            allNav[i].style.height = openLi[this.index].offsetHeight + 'px';
+        for(var j=0;j<allNav.length;j++){
+            allNav[j].style.height = openLi[this.index].offsetHeight + 'px';
             } 
         }else{
             return;
@@ -401,7 +401,7 @@ option = {
         name: 'World Population (2010)',
         type: 'map',
         map: 'world',
-        roam: true,
+        roam: false,
         label: {
             emphasis: {
                 show: false
