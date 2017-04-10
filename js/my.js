@@ -334,6 +334,7 @@ function por() {
 };
 
 //点击事件
+if($('.oone').length > 3){
 $(".onleft").click(function () {
     por()
 })
@@ -343,7 +344,7 @@ $(".onright").click(function () {
     })
 
 });
-
+}else{};
 
 
 
