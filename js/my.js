@@ -378,6 +378,7 @@ mapData.forEach(function (itemOpt) {
     }
 });
 option = {
+    baseOption:{
     backgroundColor: '#e8f9ff',
     title : {},
     tooltip : {
@@ -444,7 +445,73 @@ option = {
             })
         }
     ]
-};
+ },
+ media:[
+        {
+            query:{
+                minWidth:1200
+            },
+            option:{
+                legend:{
+                    right:'center',
+                    bottom: 0
+                },
+               grid:{
+                left:'center',
+                top:'center',
+               }
+            }
+        },
+          {
+            query:{
+               maxWidth:1199,
+               minWidth:990
+            },
+            option:{
+                legend:{
+                    right:'center',
+                    bottom: 0
+                },
+                grid:{
+                left:'center',
+                top:'center'
+               }
+            }
+        },
+        {
+            query:{
+                maxWidth:989,
+                minWidth:760
+            },
+            option:{
+                legend:{
+                    right:'center',
+                    bottom: 0
+                },
+                grid:{
+                left:'center',
+                top:'center'
+               }
+            }
+        },
+         {
+            query:{
+                maxWidth:759
+            },
+            option:{
+                legend:{
+                    right:'center',
+                    bottom: 0
+                },
+                grid:{
+                left:'center',
+                top:'center'
+               }
+            }
+        }
+    ]
+}
+window.onresize = myChart.resize;   
 myChart.setOption(option);
 // 是否在当前屏---------------------------------
 $(document).ready(function () {
