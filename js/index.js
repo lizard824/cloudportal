@@ -1,7 +1,7 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_head, v_sign, v_service,v_reset,v_acc,v_new;
+var v_head, v_sign, v_service, v_reset, v_acc, v_new;
 var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
 var SERVICE = "http://itscloud.xpaas.lenovo.com";
 var DOMAIN = '.itscloud.xpaas.lenovo.com';
@@ -37,30 +37,17 @@ function iniHead() {
             login: 'Login',
             isLogged: false,
             isLDAP: true,
-            username:''
+            username: ''
         },
         created: function () {
             loadPage();
         },
         methods: {
             logout: function (logoutUser) {
-                if(logoutUser===undefined) {
+                if (logoutUser === undefined) {
                     showMask();
                 }
-                $.ajax({
-                    type: 'GET',
-                    url: _CTX_ + "/ssoLogout",
-                    data: {ck: Cookies.get("LENOVOITS_TGC")},
-                    dateType: "json",
-                    success: function (data) {
-                        hideMask();
-                        if (data.success == true) {
-                            deleteCookie(logoutUser);
-                        } else {
-                        }
-
-                    }
-                });
+                deleteCookie(logoutUser);
             },
             hover: function (id) {
                 var self = this;
@@ -98,7 +85,7 @@ function loadPage() {
                 v_head.login = "Login";
                 v_service.isLogged = false;
             } else {
-                if(data.response!==""){
+                if (data.response !== "") {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
@@ -106,7 +93,7 @@ function loadPage() {
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
-                }else{
+                } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
                     v_reset.username = data.user.username;
@@ -122,8 +109,8 @@ function loadPage() {
     });
 }
 
-function callDestroy(logoutUrl,logoutUser) {
-    var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user="+logoutUser+"></iframe>";
+function callDestroy(logoutUrl, logoutUser) {
+    var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user=" + logoutUser + "></iframe>";
     $("body").append(iframe);
     /* $.ajax({
      type: 'GET',
@@ -152,22 +139,36 @@ function deleteCookie(logoutUser) {
                 var domains = response.domain;
                 for (var i in domains) {
                     var domainObj = domains[i];
-                    if(logoutUser!==undefined) {
+                    if (logoutUser !== undefined) {
                         callDestroy(domainObj.logout, logoutUser);
-                    }else{
-                        callDestroy(domainObj.logout,v_head.username)
+                    } else {
+                        callDestroy(domainObj.logout, v_head.username)
                     }
                 }
-                Cookies.expire('LENOVOITS_TGC',{expires: 0, domain: DOMAIN});
                 var wait = function () {
                     var dtd = $.Deferred();
                     setTimeout(dtd.resolve, 500);
                     return dtd;
                 };
                 $.when(wait()).done(function () {
-                    if(logoutUser==undefined){
-                        loadPage();
-                    }
+                    $.ajax({
+                        type: 'GET',
+                        url: _CTX_ + "/ssoLogout",
+                        data: {ck: Cookies.get("LENOVOITS_TGC")},
+                        dateType: "json",
+                        success: function (data) {
+                            if (data.success == true) {
+                                Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
+                                if (logoutUser == undefined) {
+                                    hideMask();
+                                    loadPage();
+                                }
+                            } else {
+                                hideMask();
+                            }
+
+                        }
+                    });
                 });
             } else {
                 return;
