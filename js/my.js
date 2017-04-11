@@ -351,20 +351,36 @@ if(openLi[this.index].stq == 1){
 //地图------------------------------------------
 var myChart = echarts.init(document.getElementById('map-cen'));
 var latlong = {};
-latlong.AD = {'latitude':42.5, 'longitude':1.5};
-latlong.AE = {'latitude':24, 'longitude':54};
-latlong.AF = {'latitude':33, 'longitude':65};
-latlong.AI = {'latitude':18.25, 'longitude':-63.1667};
-latlong.AL = {'latitude':41, 'longitude':20};
-latlong.AM = {'latitude':40, 'longitude':45};
+latlong.AD = {'latitude':38, 'longitude':-121};
+latlong.AE = {'latitude':41, 'longitude':-87};
+latlong.AF = {'latitude':36.31, 'longitude':-75.13};
+latlong.AI = {'latitude':39.52, 'longitude':-74.81};
+latlong.AL = {'latitude':33.2, 'longitude':-87.5};
+latlong.AM = {'latitude':30.24, 'longitude':-91.06};
+latlong.FR = {'latitude':50.02, 'longitude':8.34};
+latlong.MU = {'latitude':18.56, 'longitude':72.51};
+latlong.SI = {'latitude':1.22, 'longitude':103.45};
+latlong.HO = {'latitude':22.17, 'longitude':114.08};
+latlong.BJ = {'latitude':39.9, 'longitude':116.3};
+latlong.SY = {'latitude':41.48, 'longitude':123.25};
+latlong.TJ = {'latitude':39.1, 'longitude':117.1};
+latlong.WH = {'latitude':29.58, 'longitude':113.53};
 
 var mapData = [
-{'code':'AD' , 'name':'Afghanistan', 'value':958260, 'color':'#eea638'},
-{'code':'AE' , 'name':'Albania', 'value':915988, 'color':'#d8854f'},
-{'code':'AF' , 'name':'Algeria', 'value':1980193, 'color':'#de4c4f'},
-{'code':'AI' , 'name':'Argentina', 'value':1164561, 'color':'#86a965'},
-{'code':'AL' , 'name':'Armenia', 'value':900236, 'color':'#d8854f'},
-{'code':'AM' , 'name':'Australia', 'value':1905732, 'color':'#8aabb0'}
+{'code':'AD' , 'name':'N.California', 'value':658260, 'color':'#eea638'},
+{'code':'AE' , 'name':'Chicago', 'value':615988, 'color':'#d8854f'},
+{'code':'AF' , 'name':'Reston', 'value':680193, 'color':'#de4c4f'},
+{'code':'AI' , 'name':'N.Virginia', 'value':564561, 'color':'#86a965'},
+{'code':'AL' , 'name':'Raleigh', 'value':600236, 'color':'#d8854f'},
+{'code':'AM' , 'name':'Essen', 'value':605732, 'color':'#8aabb0'},
+{'code':'FR' , 'name':'Frankfurt', 'value':1905732, 'color':'#8aabb0'},
+{'code':'MU' , 'name':'Mumbai', 'value':605732, 'color':'#8aabb0'},
+{'code':'SI' , 'name':'Singapore', 'value':605732, 'color':'#eea638'},
+{'code':'HO' , 'name':'Hongkong', 'value':605732, 'color':'#8aabb0'},
+{'code':'BJ' , 'name':'Beijing', 'value':105732, 'color':'#d8854f'},
+{'code':'SY' , 'name':'Shenyang', 'value':105732, 'color':'#8aabb0'},
+{'code':'TJ' , 'name':'Tianjin', 'value':105732, 'color':'#86a965'},
+{'code':'WH' , 'name':'Wuhan', 'value':105732, 'color':'#86a965'}
 ];
 
 var max = -Infinity;
@@ -387,7 +403,7 @@ option = {
             var value = (params.value + '').split('.');
             value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,')
                     + '.' + value[1];
-            return params.seriesName + '<br/>' + params.name + ' : ' + value;
+            return params.seriesName + '<br/>' + params.name ;
         }
     },
     visualMap: {
@@ -532,7 +548,7 @@ $(window).scroll(function () {
         } else {
             $('.cen_left').removeClass('ancen')
             $('.th_right').removeClass('ancen')
-            $('#cen_left').removeClass('ancen')
+            $('#cen_left').removeClass('ancen')    
         }
     });
 $(window).scroll(function () {
