@@ -108,7 +108,7 @@ function setCookie(cookie) {
     var now = new Date().getTime();
     var exp = (cookie.exp - now) / 1000;
     Cookies.set('LENOVOITS_TGC', cookie.val, {expires: exp, domain: DOMAIN});
-    $.ajax({
+    $.when($.ajax({
         type: 'GET',
         async: false,
         url: _CTX_ + "/getDomain",
@@ -123,18 +123,6 @@ function setCookie(cookie) {
                     var domainObj = domains[i];
                     callSign(domainObj.sign, domainObj.st, cookie.exp);
                 }
-                var wait = function () {
-                    var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 500);
-                    return dtd;
-                };
-                $.when(wait()).done(function () {
-                    if (null !== refer) {
-                        window.location = refer;
-                    } else {
-                        window.location = "index.html";
-                    }
-                });
             } else {
                 if (null !== refer) {
                     window.location = refer;
@@ -142,6 +130,12 @@ function setCookie(cookie) {
                     window.location = "index.html";
                 }
             }
+        }
+    })).done(function () {
+        if (null !== refer) {
+            window.location = refer;
+        } else {
+            window.location = "index.html";
         }
     });
 }
