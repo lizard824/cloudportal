@@ -137,7 +137,7 @@ function callDestroy(logoutUrl, logoutUser) {
 }
 
 function deleteCookie(logoutUser) {
-    $.ajax({
+    $.when($.ajax({
         type: 'GET',
         url: _CTX_ + "/getDomain",
         data: {ck: Cookies.get("LENOVOITS_TGC")},
@@ -155,34 +155,28 @@ function deleteCookie(logoutUser) {
                         callDestroy(domainObj.logout, v_head.username)
                     }
                 }
-                var wait = function () {
-                    var dtd = $.Deferred();
-                    setTimeout(dtd.resolve, 500);
-                    return dtd;
-                };
-                $.when(wait()).done(function () {
-                    $.ajax({
-                        type: 'GET',
-                        url: _CTX_ + "/ssoLogout",
-                        data: {ck: Cookies.get("LENOVOITS_TGC")},
-                        dateType: "json",
-                        success: function (data) {
-                            if (data.success == true) {
-                                Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
-                                if (logoutUser == undefined) {
-                                    hideMask();
-                                    loadPage();
-                                }
-                            } else {
-                                hideMask();
-                            }
-
-                        }
-                    });
-                });
             } else {
                 return;
             }
         }
+    })).done(function () {
+        $.ajax({
+            type: 'GET',
+            url: _CTX_ + "/ssoLogout",
+            data: {ck: Cookies.get("LENOVOITS_TGC")},
+            dateType: "json",
+            success: function (data) {
+                if (data.success == true) {
+                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
+                    if (logoutUser == undefined) {
+                        hideMask();
+                        loadPage();
+                    }
+                } else {
+                    hideMask();
+                }
+
+            }
+        });
     });
 }
