@@ -106,8 +106,8 @@ function iniLogin() {
 function setCookie(cookie) {
     var now = new Date().getTime();
     var exp = (cookie.exp - now) / 1000;
-    Cookies.set('LENOVOITS_TGC', cookie.val, {expires: exp, domain: DOMAIN});
-    $.when( $.ajax({
+    Cookies.set('LENOVOITS_TGC', cookie.val, {domain: DOMAIN});
+    $.when($.ajax({
         type: 'GET',
         async: false,
         url: _CTX_ + "/getDomain",
@@ -124,19 +124,20 @@ function setCookie(cookie) {
                 }
             } else {
                 if (null !== refer) {
-                    window.location = refer;
+                    window.open(refer,"_self");
                 } else {
-                    window.location = "index.html";
+                    window.open("index.html","_self");
                 }
+                return false;
             }
         }
-    })).done(function () {
+    })).done(setTimeout(function () {
         if (null !== refer) {
-            window.location = refer;
+            window.open(refer,"_self");
         } else {
-            window.location = "index.html";
+            window.open("index.html","_self");
         }
-    });
+    }),1000);
 }
 
 function callSign(signUrl, cookieVal, cookieExp) {
