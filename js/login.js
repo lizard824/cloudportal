@@ -137,7 +137,7 @@ function setCookie(cookie) {
         } else {
             window.open("index.html","_self");
         }
-    }),1000);
+    },3000));
 }
 
 function callSign(signUrl, cookieVal, cookieExp) {
