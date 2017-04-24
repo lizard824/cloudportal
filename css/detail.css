@@ -795,11 +795,11 @@ body {
  clear: both;
 }
 .footer_center .footer_ul{
- width:6rem;
+ width:220px;
  height:1rem;
  clear:both;
  margin:auto;
- padding-top:20px;
+ padding-top:0.8rem;
 }
 .footer_center .footer_ul li{
  height:100%;
