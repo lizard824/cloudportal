@@ -130,8 +130,8 @@ input{
 	display: block;
 	width:29px;
 	height:16px;
-	background: #3899eb;
-	border:1px solid #3899eb;
+	background: #eeeeee;
+	border:1px solid #dcdcdc;
 	border-radius: 8px;
 	margin-top: 3px;
 	cursor:pointer;
@@ -143,7 +143,7 @@ input{
 	background: #fff;
 	border-radius: 50px;
 	cursor: pointer;
-	float:right;
+	float:left;
 }
 .rember .wite .dot input{
 		 background:none;

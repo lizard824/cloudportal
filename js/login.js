@@ -11,20 +11,20 @@ var rem = document.getElementById('rember');
 var remInp = rem.getElementsByTagName('input')[0];
 var clic = true;
  rem.onclick = function () {
-     if (clic == true) {
+     if (clic == false) {
          dot.style.float = 'left';
          rem.style.backgroundColor = '#eeeeee';
          rem.style.borderColor = '#dcdcdc';
-         remInp.value = 0;
-         v_login.rememberMe = 0;
-         clic = false;
+         remInp.value = 1;
+         v_login.rememberMe = 1;
+         clic = true;
      } else {
          dot.style.float = 'right';
          rem.style.backgroundColor = '#3899eb';
          rem.style.borderColor = '#3899eb';
-         remInp.value = 1;
-         v_login.rememberMe = 1;
-         clic = true;
+         remInp.value = 0;
+         v_login.rememberMe = 0;
+         clic = false;
      }
  };
 

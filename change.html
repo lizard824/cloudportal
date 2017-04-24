@@ -8,14 +8,21 @@
     <meta http-equiv="Expires" content="0">
 	<title>change password</title>
 	<link rel="shortcut icon" href="images/function.ico">
+	<link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/modify.css">
 </head>
 <body>
+	<div class="lodnav"></div>
 	<!-- change password start -->
 <div class="modify" id="modify" >
   <div class="mo-cen">
-    <a href="index.html"><img class="mo-log" src="images/loglo.png" alt=""></a>
+  	
     <div class="mo-left mo-right">
+    <div class="mo-top">
+  		<p>
+  		 Change password
+  		</p>
+  	</div>
     <form class="mo-form" id="resetForm" action="http://sso-t.earth.xpaas.lenovo.com/user/changePassword" method="post" v-cloak>
       <input type="hidden" name="username" v-model="username">
       <div class="mo-input ">
@@ -55,5 +62,25 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/vue.min.js"></script>
 <script src="js/change.js"></script>
+<script src="js/jwt-decode.min.js"></script>
+<script src="js/jquery.transform.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/cookies.js"></script>
+<script src="js/index.js"></script>
+<script src="js/reset.js"></script>
+<script>
+	
+	$(function(){
+		$(".lodnav").load("head.html",function(){
+ 	var $scr  = $("<script src='js/head.js'><\/script>");
+ 	var $scr1 = $("<script src='js/index.js'><\/script>");
+ 	var $scr2 = $("<script src='js/util.js'><\/script>");
+ 	var $parent = $(".lodnav"); 
+     $parent.append($scr,$scr1,$scr2); 
+ });
+	})
+	
+</script>
+
 </body>
 </html>

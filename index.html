@@ -29,136 +29,8 @@
 <!--<div id="animat">
     <img src="images/anclose.png" alt="close" class="anclose" id="anclose" />
     <img src="images/animite.gif" alt="animite" id="animite" class="animite" />
-  </div>-->
- <!--导航-->
-<div class="xhead" id="xhead" v-cloak>
- <div class="xnav" id="xnav">
-<!-- 移动端导航logo -->
-  <div class="top_cli">
-    <a href="index.html">
-     <img src="images/logo.png" alt="">
-    </a>
-      <img src="images/topcli.png" id="ph_open" alt="logo">
-  </div>
-<!-- 移动端导航logo结束 -->
-<!-- pc端导航 -->
-  <ul class="xnav_ul nav-select" id="no_ul">
-   <li class="no_margin nav_li">
-     <a href="index.html" name="first">
-      <img src="images/logo.png" alt="logo" id="change_src">
-     </a>
-   </li>
-   <li class="nohover nav_li nav_down">
-     <a href="javascript:;">
-        Cloud Service
-     </a>
-     <div id="devser">
-       <div  class="ol_dot"></div>
-      <ol class="ol">
-        <li class="devser_first">
-         <a href="http://iaas.lenovo.com" target="_blank">
-           IaaS
-         </a>
-        </li>
-        <li>
-         <a href="http://earth-t.xpaas.lenovo.com" target="_blank">
-           PaaS
-         </a>
-        </li>
-       </ol> 
-     </div>
-   </li>
-   <li class="nohover nav_li nav_down">
-     <a href="javascript:;">
-       DevOps  Service
-     </a>
-       <div id="poll_down">
-         <div  class="ol_dot"></div>
-         <ol class="ol">
-           <li>
-            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
-           </li>
-           <li>
-            <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
-           </li>
-           <li>
-            <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
-           </li>
-         </ol>
-       </div>
-   </li>
-  </ul>
-<!-- pc端导航结束 -->
-<!-- 移动端点击出现的导航 -->
-<div class="phonbj" id="phonbj">
-  <ul class="xnav_ul nav-select" id="xnav_ul">
-    <li class="nohover">
-      <a href="javascript:;">
-        <span class="d">Cloud Service</span>
-      </a>
-       <img src="images/up.png" alt="up" class="xnav_img">
-        <div class="ol device" id="device">
-          <p class="device_first">
-            <a href="http://iaas.lenovo.com" target="_blank">
-             IaaS
-            </a>
-          </p>
-          <p>
-            <a href="http://earth-t.xpaas.lenovo.com" target="_blank">
-            PaaS
-            </a>
-           </p>
-        </div>
-    </li>
-    <li class="nohover">
-      <a href="javascript:;">
-        <span class="d">DevOps  Service</span>
-      </a>
-      <img src="images/up.png" alt="up" class="xnav_img">
-      <div id="clic_down" class="ol">
-        <p>
-          <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">XOPS</a>
-        </p>
-        <p>
-          <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">XMSG</a>
-        </p>
-        <p>
-          <a href="#" @click="openUrl('http://gitlab-t.xpaas.lenovo.com')">Gitlab</a>
-        </p>
-      </div>
-    </li>
-  </ul>
-</div>
-<!-- 移动端点击出现的导航结束 -->  
-<!-- 登录入口 -->
-  <ul class="nav_log {{isLogged==true && isLDAP==false?'navlogin':''}}">
-    <li class="no_margin nohover nav_li nav_down" v-on:mouseenter="hover('local')" v-on:mouseleave="leave('local')" >
-      <a v-if="isLogged==false" href="login.html" id="login">
-        {{login}}
-      </a>
-      <a id="local" v-if="isLogged==true&&isLDAP==false" href="javascript:;">{{login}}</a>
-      <span v-if="isLogged==true&&isLDAP==true">{{login}}</span>
-
-        <div class="change-word" id="change-word">
-         <p>
-         <a href="change.html">
-          Reset Password
-         </a>
-         </p>
-        </div>
-    </li>
-    <li>&nbsp;</li>
-    <li><a v-show="isLogged" href="#" @click="logout()" style="padding:2px 3px 5px 3px;">Logout</a></li>
-    <li id="sign" v-show="!isLogged">
-      <a href="signin.html">
-        Sign in
-      </a>
-    </li>
-   </ul>
-<!-- 登录入口结束 -->
- </div>
-</div>
-<!--导航结束-->
+ </div>-->
+<div class="lodnav"></div>
 <!--第一屏-->
 <div class="top_banner" id="first">
   <div class="banner_first banner_second" id="banner_second" style="display:block;">
@@ -201,22 +73,14 @@
 <div class="cen_banner" id="second">
     <div class="cen_center">
         <div class="centop">
-           <ul class="cen_title">
-            <li class="title_no">
-                <img src="images/topleft.png" alt="">
-            </li>
-            <li class="centop_title">
                 <p>Cloud Service</p>
-            </li>
-            <li class="centop_right">
-                <img src="images/topright.png" alt="">
-            </li>
-           </ul>
-<!--<p>The next moment How strong we are</p>-->
         </div>
   <div class="cen_ban_left">
     <a href="http://earth-t.xpaas.lenovo.com/" target="_blank">
-    <img src="images/iasle.png" alt="iaas" id="cen_right" class="cen_right" />
+    <div class="cen_out">
+     <img src="images/iasle.png" alt="iaas" id="cen_right" class="cen_right" />
+    </div>
+    
     <div class="cen_left" id="cen_left">
        <p class="h3">
          PaaS
@@ -224,17 +88,14 @@
        <p>
         An open platform for automating deployment, scaling, and management of containerized enterprise applications.
        </p>
-      <!--  <p class="cen_more">
-         <a href="paas.html">
-            To view more > >
-         </a>
-       </p> -->
      </a>
     </div>
    </div>
-   <div class="cen_ban_left">
+   <div class="cen_ban_left cen_ban_man">
     <a href="http://earth-t.xpaas.lenovo.com/" target="_blank">
-    <img src="images/dbss.png" alt="iaas" class="cen_right" /> 
+    <div class="cen_out">
+     <img src="images/dbss.png" alt="iaas" class="cen_right" /> 
+    </div>
     <div class="cen_left">
        <p class="h3">
          DBSS
@@ -242,17 +103,14 @@
        <p>
         This is the module
        </p>
-       <!-- <p class="cen_more">
-         <a href="paas.html">
-            To view more > >
-         </a>
-       </p> -->
       </a>
     </div>
    </div>
    <div class="cen_ban_right"> 
     <a href="http://iaas.lenovo.com/" target="_blank">
-    <img src="images/pasri.png" class="cen_right" alt="">
+    <div class="cen_out">
+     <img src="images/iaas.png" class="cen_right" alt="">
+    </div>
    <div class="th_right">
       <p class=" h3">
       IaaS
@@ -260,11 +118,6 @@
       <p class="">
         Use high-compatibility and reliable infrastuctrues by lowest consumption.
       </p>
-      <!-- <p class="cen_more">
-       <a href="iaas.html">
-        To view more > >
-       </a>
-      </p> -->
        </a>
      </div>
     </div>
@@ -275,50 +128,45 @@
 <div class="forth" style="display:block;" id="forth">
   <div class="for_cen">
     <div class="centop">
-      <ul class="cen_title">
-        <li class="title_no">
-          <img src="images/topleft.png" alt="">
-        </li>
-        <li class="centop_title">
           <p>DevOps Service</p>
-        </li>
-        <li class="centop_right">
-          <img src="images/topright.png" alt="">
-        </li>
-      </ul>
-<!--<p>The next moment How strong we are</p>-->
     </div>
-    <div class="onclick">
-      <img src="images/left.png" alt="" class="onleft" id="onleft">
-      <img src="images/right.png" alt="" class="onright" id="onright">
-    </div>
-    <div class="forth_out" id="forth_out">
       <ul class="forth_ul" id="forth_ul">
-        <!--<li class="oone" id="one">
-             <img src="images/asset.png" alt="">
-              <p class="ul_first">CMDB</p>
-              <p class="ul_second">Holds asset data and<br> descriptive relationships between assets.</p>
-            </li>-->
+        
           <li class="oone" id="factive">
-            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')">
-             <img src="images/clise.png" alt="">
-            <p class="ul_first"><a href="" target="_blank">XOPS</a></p>
-            <p class="ul_second">Integrate deployment,<br>installation and log searching in one place.</p></a>
+            <a href="#" @click="openUrl('http://xops-t.xpaas.lenovo.com')" target="_blank">           
+            <div class="ul_first">            
+                <img src="images/xops.png" alt="">
+            	<p>XOPS</p>           
+            </div>
+            <p class="ul_second"> Integrate deployment</p>
+            </a>
           </li>
+          <li class="oone" id="one">          
+              <div class="ul_first">  
+              	<img src="images/xmsg.png" alt="">
+              	<p>XMSG</p>
+              </div>
+              <p class="ul_second">Provide API to send</p>
+            </li>
           <li class="oone">
             <a href="#" @click="openUrl('http://xmsg-t.xpaas.lenovo.com')">
-             <img src="images/massge.png" alt="">
-             <p class="ul_first">XMSG</p>
-             <p class="ul_second">Provide API to <br>send,manage and monitor message.</p></a>
+             <div class="ul_first">
+             	<img src="images/gitlab.png" alt="">
+             	<p>Gitlab</p>
+             </div>
+             <p class="ul_second">Hosting platform</p>
+            </a>
           </li>
-   <!--     <li class="oone" id="two">
+<li class="oone" id="two">
             <a href="#" @click="openUrl('http://hiticket-t.xpaas.lenovo.com')">
-              <img src="images/piao.png" alt="">
-              <p class="ul_first">Ticket</p>
-              <p class="ul_second">Collect tickets'<br> information for tracking and management.</p></a>
-           </li> -->
-      </ul>
-    </div>
+              <div class="ul_first"> 
+              	<img src="images/maven.png" alt="">
+              	<p>Nexus</p>             	
+              </div>
+              <p class="ul_second">Project Object Model</p>
+            </a>
+           </li>
+     </ul>
   </div>
 </div>
 <!-- 第四屏结束 -->
@@ -326,190 +174,93 @@
 <div class="serve">
    <div class="serve-cen">
      <div class="centop">
-      <ul class="cen_title">
-        <li class="title_no">
-          <img src="images/topleft.png" alt="">
-        </li>
-        <li class="centop_title">
-          <p>Product</p>
-        </li>
-        <li class="centop_right">
-          <img src="images/topright.png" alt="">
-        </li>
-      </ul>
+          <p>Product Introduction</p>
     </div>
 <!-- 图标开始 -->
 <div class="serve-ul">
        <div class="serli">
-        <a href="javascript:;">
          <img src="images/cook.png" alt="" class="ser-img">
-         <p>asdfasd</p>
+         <p>Cloud Service</p>
          <img src="images/up.png" alt="up" class="ser-up">
-        </a>
+       
        </div>
        <div class="open-div">
         <div  class="ol-dot">
           <div class="dot-in"></div>
         </div>
         <div class="seve-title">
-         <p>cccccccccc</p> 
+         <ul class="seve-ul">
+         	<li>
+         	 <a href="paas.html" target="_blank">
+         	  Paas
+         	  <p>Container based platform</p>
+         	 </a>
+         	</li>
+         	<li>
+         	 <a href="javascript:;" target="_blank">
+         	  DBSS
+         	  <p>Database Security System</p>
+         	 </a>
+         	</li>
+         	<li>
+         	 <a href="iaas.html" target="_blank">
+         	  Iaas
+         	  <p> Apply for VM</p>
+         	 </a>
+         	</li>
+         </ul> 
         </div>
       </div>
        <div class="serli">
-        <a href="javascript:;">
          <img src="images/gong.png" alt="" class="ser-img">
-         <p>asdfasd</p>
+         <p>DevOps Service</p>
          <img src="images/up.png" alt="up" class="ser-up">
-        </a>
+       
        </div>
        <div class="open-div">
         <div  class="ol-dot">
           <div class="dot-in"></div>
         </div>
         <div class="seve-title">
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p>
+         <ul class="seve-ul">         	
+         	<li>
+         	 <a href="javascript:;" target="_blank">
+         	  XOPS
+         	  <p> Integrate deployment</p>
+         	 </a>
+         	</li>
+         	<li>
+         	 <a href="javascript:;" target="_blank">
+         	  XMSG
+         	  <p>Provide API to send</p>
+         	 </a>
+         	</li>
+         	<li>
+         	 <a href="iass.html" target="_blank">
+         	  Gitlab
+         	  <p>Hosting platform</p>
+         	 </a>
+         	</li>
+         	<li>
+         	 <a href="iass.html" target="_blank">
+         	  Nexus
+         	  <p>Project Object Model</p>
+         	 </a>
+         	</li>
+         </ul> 
         </div>
       </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/num.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-        <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>eeeeeeeeee</p></div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/head.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-         <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>ffffffffffff</p></div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/serve.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-        <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>ffffffffffff</p></div>
-      </div>
-</div>
-<div class="serve-ul">
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/cook.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-       <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title">
-         <p>cccccccccc</p> 
-        </div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/gong.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-       <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title">
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p> 
-          <p>cccccccccc</p>
-        </div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/num.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-        <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>eeeeeeeeee</p></div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/head.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-         <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>ffffffffffff</p></div>
-      </div>
-       <div class="serli">
-        <a href="javascript:;">
-         <img src="images/serve.png" alt="" class="ser-img">
-         <p>asdfasd</p>
-         <img src="images/up.png" alt="up" class="ser-up">
-        </a>
-       </div>
-        <div class="open-div">
-        <div  class="ol-dot">
-          <div class="dot-in"></div>
-        </div>
-        <div class="seve-title"><p>ffffffffffff</p></div>
-      </div>
+      
 </div>
 <!-- 图标结束 -->
 </div>
 </div>
 <!-- 服务结束 -->
-<div class="map">
-  <!-- <img src="images/map.png" alt=""> -->
-  <div class="map-cen" id="map-cen">
-    
-  </div>
-</div>
 <!-- 底部 -->
-<div class="footer">
-  <div class="footer_center" id="footer_center">               
-    <div class="footer_bottom">
-      <p class="last">privacy | site terms</p>
-      <p class="forth_last"> Lenovo©2016-2017</p>
-    </div>
-  </div>
-</div>
+<div class="lodfooter"></div>
+
 <!-- 底部结束 -->
 </div>
-<script src="js/echarts.js"></script>
-<script src="js/world.js"></script>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jwt-decode.min.js"></script>
 <script src="js/jquery.transform.js"></script>
@@ -521,5 +272,24 @@
 <script src="js/index.js"></script>
 <script src="js/reset.js"></script>
 <script src="js/account.js"></script>
+<script>
+$(function(){
+ $(".lodnav").load("head.html",function(){
+ 	var $scr  = $("<script src='js/head.js'><\/script>");
+ 	var $scr1 = $("<script src='js/index.js'><\/script>");
+ 	var $scr2 = $("<script src='js/util.js'><\/script>");
+ 	var $scr3 = $("<script src='js/head_list.js'><\/script>");
+ 	var $parent = $(".lodnav"); 
+     $parent.append($scr,$scr1,$scr2,$scr3); 
+ });
+ 
+ $(".lodfooter").load("footer.html",function(){
+ 	var $foot = $("<script src='js/footer.js'><\/script>");
+ 	var $parent = $(".lodfooter"); 
+     $parent.append($foot);  
+ })
+  
+})
+</script>
 </body>
 </html>
