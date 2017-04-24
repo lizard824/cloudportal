@@ -15,21 +15,18 @@ var clic = true;
          dot.style.float = 'left';
          rem.style.backgroundColor = '#eeeeee';
          rem.style.borderColor = '#dcdcdc';
-         remInp.value = 1;
-         v_login.rememberMe = 1;
+         remInp.value = 0;
+         v_login.rememberMe = 0;
          clic = true;
      } else {
          dot.style.float = 'right';
          rem.style.backgroundColor = '#3899eb';
          rem.style.borderColor = '#3899eb';
-         remInp.value = 0;
-         v_login.rememberMe = 0;
+         remInp.value = 1;
+         v_login.rememberMe = 1;
          clic = false;
      }
  };
-
-var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
-var DOMAIN = 'itscloud-t.xpaas.lenovo.com';
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
@@ -51,7 +48,7 @@ function iniLogin() {
             passValid: true,
             userValid: true,
             error: '',
-            rememberMe: 1
+            rememberMe: 0
         },
         methods: {}
     });
@@ -72,6 +69,8 @@ function iniLogin() {
         } else {
             showMask();
             $(this).ajaxSubmit({
+                url:CONFIG._CTX_+"/login",
+                method:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         setCookie(data.cookie);
@@ -106,11 +105,11 @@ function iniLogin() {
 function setCookie(cookie) {
     var now = new Date().getTime();
     var exp = (cookie.exp - now) / 1000;
-    Cookies.set('LENOVOITS_TGC', cookie.val, {domain: DOMAIN});
+    Cookies.set('LENOVOITS_TGC', cookie.val, {domain: CONFIG.DOMAIN});
     $.when($.ajax({
         type: 'GET',
         async: false,
-        url: _CTX_ + "/getDomain",
+        url: CONFIG._CTX_ + "/getDomain",
         dateType: "json",
         data: {ck: cookie.val, isRememberMe: v_login.rememberMe},
         success: function (data) {

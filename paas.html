@@ -223,15 +223,12 @@
 <script src='js/detail.js'></script>
 <script src="js/jquery.transform.js"></script>
 <script src="js/vue.min.js"></script>
-<script src="js/util.js"></script>
-<script src="js/index.js"></script>
-<script src="js/reset.js"></script>
 <script>
 $(function(){
  $(".lodnav").load("head.html",function(){
  	var $scr  = $("<script src='js/head.js'><\/script>");
- 	var $scr1 = $("<script src='js/index.js'><\/script>");
- 	var $scr2 = $("<script src='js/util.js'><\/script>");
+ 	var $scr1 = $("<script src='js/util.js'><\/script>");
+ 	var $scr2 = $("<script src='js/index.js'><\/script>");
  	var $parent = $(".lodnav"); 
      $parent.append($scr,$scr1,$scr2); 
  });

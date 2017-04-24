@@ -1,6 +1,12 @@
 /**
  * Created by duanxc1 on 1/18/2017.
  */
+var CONFIG = {
+    _CTX_:"http://test.lenovo.com:8080",
+    SERVICE:"http://test.lenovo.com:8180",
+    DOMAIN:"test.lenovo.com"
+};
+
 function getParameterByName(name, url) {
     if (!url) {
         url = window.location.href;

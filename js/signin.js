@@ -104,8 +104,9 @@ function iniSign() {
         } else {
             showMask();
             $(this).ajaxSubmit({
+                url:CONFIG._CTX_+"user/signIn",
+                method:'POST',
                 success: function (data) {
-                    var _CTX_ = '';
                     if (data.success == true) {
                         window.location.href = "./login.html";
                     } else {

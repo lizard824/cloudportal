@@ -12,7 +12,7 @@ function iniReset() {
             newpass: '',
             conpass: '',
             oldpass: '',
-            username: '',
+            username:'',
             passValid:true,
             conValid: true,
             bonValid: true,
@@ -87,11 +87,13 @@ function iniReset() {
         if(!(v_reset.passValid && v_reset.conValid && v_reset.oldValid)) {
             return;
         } else {
+            v_reset.username = v_head.username;
             showMask();
             $(this).ajaxSubmit({
+                url:CONFIG._CTX_+"/user/changePassword",
+                method:'POST',
                 success: function (data) {
                     if (data.success == true) {
-                        chanClose(moDify);
                         hideMask();
                     } else {
                         hideMask();

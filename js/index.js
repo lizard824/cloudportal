@@ -2,9 +2,6 @@
  * Created by duanxc1 on 12/15/2016.
  */
 var v_head, v_sign, v_service,v_reset,v_acc,v_new;
-var _CTX_ = 'http://sso-t.earth.xpaas.lenovo.com';
-var SERVICE = "http://itscloud-t.xpaas.lenovo.com";
-var DOMAIN = '.itscloud-t.xpaas.lenovo.com';
 $(document).ready(function () {
     iniService();
     iniHead();
@@ -68,7 +65,7 @@ function iniHead() {
                     }
                     else {
                         var gitlab = url + "/users/auth/cas3/callback?url=" + url + "/users/sign_in";
-                        window.open(_CTX_ + "/gitlabSso?service=" + gitlab + "&ck=" + Cookies.get("LENOVOITS_TGC"), "_blank");
+                        window.open(CONFIG._CTX_ + "/gitlabSso?service=" + gitlab + "&ck=" + Cookies.get("LENOVOITS_TGC"), "_blank");
                     }
                 }
                 else if (url.indexOf("gitlab") !== -1) {
@@ -86,8 +83,8 @@ function iniHead() {
 function loadPage() {
     $.ajax({
         type: "GET",
-        url: _CTX_ + "/validate",
-        data: {service: SERVICE, ck: Cookies.get("LENOVOITS_TGC")},
+        url: CONFIG._CTX_ + "/validate",
+        data: {service: CONFIG.SERVICE, ck: Cookies.get("LENOVOITS_TGC")},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
@@ -99,14 +96,12 @@ function loadPage() {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
-                    v_reset.username = load_result.username;
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
                 } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
-                    v_reset.username = data.user.username;
                     if (parseInt(data.user.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
@@ -139,7 +134,7 @@ function callDestroy(logoutUrl, logoutUser) {
 function deleteCookie(logoutUser) {
     $.when($.ajax({
         type: 'GET',
-        url: _CTX_ + "/getDomain",
+        url: CONFIG._CTX_ + "/getDomain",
         data: {ck: Cookies.get("LENOVOITS_TGC")},
         dateType: "json",
         success: function (data) {
@@ -162,12 +157,12 @@ function deleteCookie(logoutUser) {
     })).done(function () {
         $.ajax({
             type: 'GET',
-            url: _CTX_ + "/ssoLogout",
+            url: CONFIG._CTX_ + "/ssoLogout",
             data: {ck: Cookies.get("LENOVOITS_TGC")},
             dateType: "json",
             success: function (data) {
                 if (data.success == true) {
-                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
+                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
                     if (logoutUser == undefined) {
                         hideMask();
                         loadPage();
