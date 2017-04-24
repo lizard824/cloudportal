@@ -10,6 +10,8 @@
 	<link rel="shortcut icon" href="images/function.ico">
 	<link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/modify.css">
+    <link rel="stylesheet" href="css/detail_head.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 	<div class="lodnav"></div>
@@ -26,25 +28,25 @@
     <form class="mo-form" id="resetForm" v-cloak>
       <input type="hidden" name="username" v-model="username">
       <div class="mo-input ">
-        <p class="mo-p" id="moa-p">Old password</p>
         <div>
-          <input type="password" value="" id='old-word' v-model = "oldpass" name="oldPassword">
+          <img src="images/password.png" alt="" />
+          <input type="text" value="Old password" id='old-word' v-model = "oldpass" name="oldPassword">
         </div>
         <p  v-show="!oldValid" class="error-p">*Please input old password</p>
         <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
       </div>
       <div class="mo-input ">
-        <p class="mo-p" id="mo-p">New password</p>
           <div>
-            <input type="password" value="" id='new-word' v-model = "newpass" name="newPassword">
+          	<img src="images/password.png" alt="" />
+            <input type="text" value="New password" id='new-word' v-model = "newpass" name="newPassword">
           </div>
         <p  v-show="!passValid" class="error-p">*Please input password</p>
         <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
       </div>
       <div class="mo-input">
-        <p class="mo-p" id="mov-p">Confirm password</p>
           <div class="">
-            <input type="password" value="" id="con-word" v-model = "conpass" >
+          	<img src="images/password.png" alt="" />
+            <input type="text" value="Confirm password" id="con-word" v-model = "conpass" >
           </div>
         <p v-show="!conValid" class="error-p">*Please confirm password</p>
         <p style="font-size:16px"  class="error-p" v-show="error!==''">{{error}}</p>
@@ -59,6 +61,7 @@
   </div>
 </div>
 <!-- change passwor end -->
+<div class="lodfooter"></div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/vue.min.js"></script>
 <script src="js/change.js"></script>
@@ -68,7 +71,7 @@
 <script src="js/cookies.js"></script>
 <script src="js/reset.js"></script>
 <script>	
-	$(function(){
+$(function(){
 		$(".lodnav").load("head.html",function(){
  	var $scr  = $("<script src='js/head.js'><\/script>");
  	var $scr1 = $("<script src='js/util.js'><\/script>");
@@ -76,7 +79,13 @@
  	var $parent = $(".lodnav");
      $parent.append($scr,$scr1,$scr2); 
  });
-	})	
+ 
+  $(".lodfooter").load("footer.html",function(){
+ 	var $foot = $("<script src='js/footer.js'><\/script>");
+ 	var $parent = $(".lodfooter"); 
+     $parent.append($foot);  
+ })
+})	
 </script>
 
 </body>
