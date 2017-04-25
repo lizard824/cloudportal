@@ -1,4 +1,5 @@
-headList = {	
+//@ sourceURL=head_list.js
+headList = {
  navBack:function(){
  	// 导航背景
    var aUl = document.getElementById('xhead');
