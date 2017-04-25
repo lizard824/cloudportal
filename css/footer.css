@@ -49,6 +49,9 @@
 .footer_bottom .forth_last {
  float: right;
 }
+.footer_bottom .footer_middle{
+ margin: auto;
+}
 /*footer end*/
 @media (max-width: 759px){
 	
@@ -113,6 +116,10 @@
  float: right;
  margin:0;
 }
+
+ .footer_bottom .footer_middle{
+  margin: auto;
+ }
 /*footer end*/	
 	
 }

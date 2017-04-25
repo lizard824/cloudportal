@@ -3,9 +3,9 @@
  */
 //@ sourceURL=until.js
 var CONFIG = {
-    _CTX_:"http://test.lenovo.com:8080",
-    SERVICE:"http://test.lenovo.com:8180",
-    DOMAIN:"test.lenovo.com"
+    _CTX_:"http://sso-t.earth.xpaas.lenovo.com",
+    SERVICE:"http://itscloud-t.xpaas.lenovo.com",
+    DOMAIN:"itscloud-t.xpaas.lenovo.com"
 };
 
 function getParameterByName(name, url) {
