@@ -1,6 +1,7 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
+//@ sourceURL=index.js
 var v_head, v_sign, v_service,v_reset,v_acc,v_new;
 $(document).ready(function () {
     iniService();
