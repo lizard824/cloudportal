@@ -52,8 +52,14 @@
  color: #fff;
  font-size: 18px;
 }
+.nav_log li span{
+ height:100%;
+ display:block;
+ color: #fff;
+ font-size: 18px;
+}
 .xnav_ul .nav_li:hover .xnav_ul .nav_li a,
-.nav_log li:hover a{
+.nav_log li .lo-hove:hover{
 	color:#005aff;
 } 
 /*donw list start*/

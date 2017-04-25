@@ -50,7 +50,7 @@
  float: right;
 }
 .footer_bottom .footer_middle{
- margin: auto;
+ text-align: center;
 }
 /*footer end*/
 @media (max-width: 759px){
@@ -71,7 +71,7 @@
  clear: both;
 }
 .footer_center .footer_ul{
- width:8rem;
+ width:9rem;
  height:1rem;
  clear:both;
  margin:auto;
@@ -116,9 +116,10 @@
  float: right;
  margin:0;
 }
-
- .footer_bottom .footer_middle{
-  margin: auto;
+.footer_bottom .footer_middle{
+ text-align: center;
+ font-size: 0.4rem;
+ line-height:1rem;
  }
 /*footer end*/	
 	
