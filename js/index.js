@@ -50,12 +50,12 @@ function iniHead() {
             hover: function (id) {
                 var self = this;
                 if (self.isLogged && !self.isLDAP) {
-                    $("#" + id).css({"transition": "1s all ease", "border-bottom": "1px solid #fff"});
+                    $("#" + id).css({"color":"#005aff","height":"64px"});
                     $("#change-word").stop().slideDown(50);
                 }
             },
             leave: function (id) {
-                $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
+                $("#" + id).css({"color":"#fff","height":"64px"});
                 $("#change-word").stop().slideUp(50);
             },
             openUrl: function (url) {

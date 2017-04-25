@@ -61,7 +61,7 @@
 }
 .xnav_ul .nav_li:hover .xnav_ul .nav_li a,
 .nav_log li:hover a{
-	color:#005aff;
+	/*color:#005aff;*/
 } 
 /*下拉列表*/
 .xnav_ul .nohover a:hover {
@@ -152,9 +152,9 @@
 .change-word {
  position: absolute;
  width: 170px;
- height: 64px;
- left: -60px;
- top: 64px;
+ height: auto;
+ left: 0;
+ top: 54px;
  display:none;
 }
 .change-word p {
@@ -162,6 +162,7 @@
  text-align: center;
  background: rgba(0,0,0,0.2);
  border-radius: 4px;
+ display:block;
 }
 .change-word p a {
  font-size: 18px;
