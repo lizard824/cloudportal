@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>IaaS</title>
     <link rel="shortcut icon" href="images/function.ico">
     <link rel="stylesheet" href="css/modify.css">
@@ -14,8 +11,8 @@
     <link rel="stylesheet" href="css/mask.css">
     <link rel="stylesheet" href="css/detail_head.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modify.css" />
 </head>
-
 <body>
 <!-- loding start -->
 <div id="loading">
@@ -30,6 +27,7 @@
 <!-- loding end -->
 <!--nav start-->
  <div class="lodnav"></div>
+ <div class="lodword"></div>
 <!--nav end-->
 <!-- detail start -->
 <div class="decenter" id="second">
@@ -738,6 +736,23 @@ Our Cloudsupport are staffed around the clock to ensure you have access to suppo
  	var $scr2 = $("<script src='js/index.js'><\/script>");
  	var $parent = $(".lodnav");
      $parent.append($scr,$scr1,$scr2); 
+     
+ //change password    
+    $('#change-word').click(function(){
+    	$('.lodword').load('change.html',function(){
+        function moClo(e,a){
+        	$(e).click(function(){
+    	    $(a).remove();   	      
+          });
+        };
+       moClo('#anclose','#modify');    		
+    var $mod = $("<script src='js/reset.js'><\/script>");
+    var $parent = $('.lodword');
+    	$parent.append($mod);
+    	});
+    });
+   
+     
    });
   $(".lodfooter").load("footer.html",function(){
  	var $foot = $("<script src='js/footer.js'><\/script>");

@@ -1,6 +1,7 @@
 /**
  * Created by shenkai2 on 2/13/2017.
  */
+//@ sourceURL=reset.js
 $(document).ready(function () {
     iniReset();
 });
