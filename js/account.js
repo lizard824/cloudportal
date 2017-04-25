@@ -62,7 +62,7 @@ function iniAccount() {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/user/forgot",
-                method:'POST',
+                type:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         v_acc.tipValid = true;
@@ -119,7 +119,7 @@ function iniNew() {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/user/changePassword",
-                method:'POST',
+                type:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         document.getElementById("info-second").style.display = "none";
