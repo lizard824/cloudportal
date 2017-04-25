@@ -120,18 +120,29 @@ function loadPage() {
 function callDestroy(logoutUrl, logoutUser) {
     var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user=" + logoutUser + "></iframe>";
     $("body").append(iframe);
-    /* $.ajax({
-     type: 'GET',
-     url: logoutUrl,
-     dateType: "json",
-     success: function (data) {
-     if (data.success == true) {
-     console.log(data.msg);
-     } else {
-     return;
-     }
-     }
-     });*/
+
+}
+
+function logOut(logoutUser) {
+    $.ajax({
+        type: 'GET',
+        url: CONFIG._CTX_ + "/ssoLogout",
+        data: {ck: Cookies.get("LENOVOITS_TGC")},
+        dateType: "json",
+        success: function (data) {
+            if (data.success == true) {
+                Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
+                if (logoutUser == undefined) {
+                    hideMask();
+                    loadPage();
+                }
+            } else {
+                hideMask();
+            }
+
+        }
+    });
+
 }
 
 function deleteCookie(logoutUser) {
@@ -157,24 +168,5 @@ function deleteCookie(logoutUser) {
                 return;
             }
         }
-    })).done(function () {
-        $.ajax({
-            type: 'GET',
-            url: CONFIG._CTX_ + "/ssoLogout",
-            data: {ck: Cookies.get("LENOVOITS_TGC")},
-            dateType: "json",
-            success: function (data) {
-                if (data.success == true) {
-                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
-                    if (logoutUser == undefined) {
-                        hideMask();
-                        loadPage();
-                    }
-                } else {
-                    hideMask();
-                }
-
-            }
-        });
-    });
+    })).then(logOut(logoutUser),logOut(logoutUser));
 }

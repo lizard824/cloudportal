@@ -102,11 +102,11 @@
 <!-- 登录入口 -->
   <ul class="nav_log {{isLogged==true && isLDAP==false?'navlogin':''}}">
     <li class="no_margin nohover nav_li " v-on:mouseenter="hover('local')" v-on:mouseleave="leave('local')" >
-      <a v-if="isLogged==false" href="login.html" id="login">
+      <a class="lo-hove" v-if="isLogged==false" href="login.html" id="login">
         {{login}}
       </a>
       <a id="local" v-if="isLogged==true&&isLDAP==false" href="javascript:;">{{login}}</a>
-      <span v-if="isLogged==true&&isLDAP==true">{{login}}</span>
+      <span class="lo-hove" v-if="isLogged==true&&isLDAP==true">{{login}}</span>
         <div class="change-word" id="change-word">
         	<div  class="ol_dot"></div>
          <p>
@@ -117,9 +117,9 @@
         </div>
     </li>
     <li>&nbsp;</li>
-    <li><a v-show="isLogged" href="#" @click="logout()" style="padding:2px 3px 5px 3px;">Logout</a></li>
+    <li><a class="lo-hove" v-show="isLogged" href="#" @click="logout()" style="padding:2px 3px 5px 3px;">Logout</a></li>
     <li id="sign" v-show="!isLogged">
-      <a href="signin.html">
+      <a class="lo-hove" href="signin.html">
         Sign in
       </a>
     </li>

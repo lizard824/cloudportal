@@ -6,6 +6,15 @@ $(document).ready(function () {
     iniReset();
 });
 
+function moClo(e,a){
+    $(e).click(function(){
+        $(a).remove();
+    });
+};
+moClo('#anclose','#modify');
+
+
+
 function iniReset() {
     v_reset = new Vue({
         el: "#resetForm",
@@ -92,9 +101,10 @@ function iniReset() {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/user/changePassword",
-                method:'POST',
+                type:'POST',
                 success: function (data) {
                     if (data.success == true) {
+                        moClo('#anclose','#modify');
                         hideMask();
                     } else {
                         hideMask();

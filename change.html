@@ -10,7 +10,7 @@
       <div class="mo-input ">
         <div>
           <img src="images/password.png" alt="" />
-          <input type="text" value="Old password" id='old-word' v-model = "oldpass" name="oldPassword">
+          <input type="password" placeholder="Old password" id='old-word' v-model = "oldpass" name="oldPassword">
         </div>
         <p  v-show="!oldValid" class="error-p">*Please input old password</p>
         <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
@@ -18,18 +18,16 @@
       <div class="mo-input ">
           <div>
           	<img src="images/password.png" alt="" />
-            <input type="text" value="New password" id='new-word' v-model = "newpass" name="newPassword">
+            <input type="password" placeholder="New password" id='new-word' v-model = "newpass" name="newPassword">
           </div>
         <p  v-show="!passValid" class="error-p">*Please input password</p>
-        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
       </div>
       <div class="mo-input">
           <div class="">
           	<img src="images/password.png" alt="" />
-            <input type="text" value="Confirm password" id="con-word" v-model = "conpass" >
+            <input type="password" placeholder="Confirm password" id="con-word" v-model = "conpass" >
           </div>
         <p v-show="!conValid" class="error-p">*Please confirm password</p>
-        <p style="font-size:16px"  class="error-p" v-show="error!==''">{{error}}</p>
       </div>
       <div class="mo-button">
         <button type="submit" id="mo-sub"  >

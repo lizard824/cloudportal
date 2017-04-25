@@ -60,8 +60,8 @@
  font-size: 18px;
 }
 .xnav_ul .nav_li:hover .xnav_ul .nav_li a,
-.nav_log li:hover a{
-	/*color:#005aff;*/
+.nav_log li .lo-hove:hover{
+	color:#005aff;
 } 
 /*下拉列表*/
 .xnav_ul .nohover a:hover {

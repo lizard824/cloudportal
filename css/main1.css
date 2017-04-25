@@ -306,6 +306,9 @@ body {
  color: #000;
  text-align: left;
  margin-top:30px;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
 }
 
 /*forth screen end*/
@@ -435,7 +438,19 @@ body {
 }
 /*serve end*/
 
-
+@media (min-width:991px) and (max-width:1366px){
+.forth_ul .ul_second {
+ width: 225px;
+ height: 45px;
+ font-size: 14px;
+ color: #000;
+ text-align: left;
+ margin-top:30px;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}	
+}
 /*--------------------------------- */
  @media (min-width:990px) and (max-width:1199px){
 /*笔记本*/
@@ -448,6 +463,17 @@ body {
 .cen_ban_left .cen_out, 
 .cen_ban_right .cen_out {
  height:200px;	
+}
+.forth_ul .ul_second {
+ width: 210px;
+ height: 45px;
+ font-size: 14px;
+ color: #000;
+ text-align: left;
+ margin-top:30px;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
 }
  }
 /*-----------------------------------*/
@@ -465,6 +491,17 @@ body {
 .cen_ban_left .cen_out, 
 .cen_ban_right .cen_out {
  height:170px;	
+}
+.forth_ul .ul_second {
+ width: 200px;
+ height: 45px;
+ font-size: 14px;
+ color: #000;
+ text-align: left;
+ margin-top:30px;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
 }
  }
 /*-----------------------------------*/
@@ -682,11 +719,15 @@ margin-top: 0.4rem;
  height: 1.225rem;
 }
 .forth_ul  .ul_second {
+ width:100%;
  font-size: 0.3rem;
  color: #000;
  margin: auto;
  text-align: left;
  margin-top:0.3rem;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
 }
 /*forth screen end*/
 /*serve start*/

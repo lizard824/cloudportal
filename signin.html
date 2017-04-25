@@ -56,7 +56,7 @@
                                 <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
                             </div>
                             <p v-show="!passValid">*Please input password</p>
-                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                            <!--<p style="font-size:16px" 　v-show="error!==''">{{error}}</p>-->
                         </div>
                         <div class="strength">
                             <span v-show="strength==''" class="sign-left"></span>
@@ -73,7 +73,6 @@
                             <input type="password" name="conpword" v-model="conpword" id="conpword" placeholder="Please confirm password">
                         </div>
                         <p v-show="!conValid">*Please confirm password</p>
-                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
@@ -89,6 +88,7 @@
                                 <img src="images/phone.png" alt="">
                                 <input type="text" name="number" v-model="number" id="number" placeholder="Please input phone number">
                             </div>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
 
                         </div>
                         <button class="buton sbuton" type="submit">
