@@ -62,7 +62,6 @@ function iniAccount() {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/user/forgot",
-                method:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         v_acc.tipValid = true;
