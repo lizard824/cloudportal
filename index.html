@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>ITS Cloud</title>
     <link rel="shortcut icon" href="images/function.ico">
     <link rel="stylesheet" href="css/modify.css">
     <link rel="stylesheet" href="css/main1.css">
     <link rel="stylesheet" href="css/mask.css">
+     <link rel="stylesheet" href="css/modify.css">
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -33,6 +31,7 @@
     <img src="images/animite.gif" alt="animite" id="animite" class="animite" />
  </div>-->
 <div class="lodnav"></div>
+<div class="lodword"></div>
 <!--第一屏-->
 <div class="top_banner" id="first">
   <div class="banner_first banner_second" id="banner_second" style="display:block;">
@@ -278,7 +277,17 @@ $(function(){
  	var $scr2 = $("<script src='js/index.js'><\/script>");
  	var $scr3 = $("<script src='js/head_list.js'><\/script>");
  	var $parent = $(".lodnav"); 
-     $parent.append($scr,$scr1,$scr2,$scr3); 
+     $parent.append($scr,$scr1,$scr2,$scr3);    
+ //change password    
+    $('#change-word').click(function(){
+    	$('.lodword').load('change.html',function(){
+
+    var $mod = $("<script src='js/reset.js'><\/script>");
+    var $parent = $('.lodword');
+    	$parent.append($mod);
+    	});
+    });
+    
  });
  
  $(".lodfooter").load("footer.html",function(){
