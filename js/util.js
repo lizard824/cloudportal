@@ -2,8 +2,9 @@
  * Created by duanxc1 on 1/18/2017.
  */
 var CONFIG = {
-    _CTX_:"http://test.lenovo.com:8080",
-    SERVICE:"http://test.lenovo.com:8180",
+    //server
+    _CTX_:"http://test.lenovo.com:8180",
+    SERVICE:"http://test.lenovo.com:8080",
     DOMAIN:"test.lenovo.com"
 };
 
