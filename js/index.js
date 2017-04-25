@@ -50,12 +50,12 @@ function iniHead() {
             hover: function (id) {
                 var self = this;
                 if (self.isLogged && !self.isLDAP) {
-                    $("#" + id).css({"transition": "1s all ease", "border-bottom": "1px solid #fff"});
+                    $("#" + id).css({"color":"#005aff","height":"64px"});
                     $("#change-word").stop().slideDown(50);
                 }
             },
             leave: function (id) {
-                $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
+                $("#" + id).css({"color":"#fff","height":"64px"});
                 $("#change-word").stop().slideUp(50);
             },
             openUrl: function (url) {
@@ -97,12 +97,14 @@ function loadPage() {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
+                    sessionStorage.setItem("username",load_result.username);
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
                 } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
+                    sessionStorage.setItem("username",data.user.username);
                     if (parseInt(data.user.authtype) != 2) {
                         v_head.isLDAP = false;
                     }

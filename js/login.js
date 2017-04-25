@@ -70,6 +70,7 @@ function iniLogin() {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/login",
+                type:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         setCookie(data.cookie);
