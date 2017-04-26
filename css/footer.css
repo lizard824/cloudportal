@@ -12,7 +12,7 @@
  margin: 0 auto;
 }
 .footer_center .footer_ul{
- width:230px;
+ width:250px;
  height:50px;
  clear:both;
  margin:auto;
@@ -23,11 +23,11 @@
  line-height:50px;
  font-size: 16px;
  color:#e3e3e3;
- float:left;
- margin-left:25px;
+ text-align: center;
 }
 .footer_center .footer_ul li a{
  color:#e3e3e3;
+ padding:0 20px;
 }
 .footer_center .footer_ul .footer_ul_first{
 	margin:0;
@@ -82,11 +82,11 @@
  line-height:1rem;
  font-size: 0.4rem;
  color:#e3e3e3;
- float:left;
- margin-left:25px;
+ text-align: center;
 }
 .footer_center .footer_ul li a{
  color:#e3e3e3;
+ padding:0 20px;
 }
 .footer_center .footer_ul .footer_ul_first{
 	margin:0;

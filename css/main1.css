@@ -276,7 +276,7 @@ body {
  width: 170px;
  height:145px;
  display: inline-block;
- margin-left:6%;
+ padding:0 28px;
  cursor: pointer;
  margin-top:38px;
 }
@@ -306,9 +306,6 @@ body {
  color: #000;
  text-align: left;
  margin-top:30px;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;
 }
 
 /*forth screen end*/
@@ -440,15 +437,7 @@ body {
 
 @media (min-width:991px) and (max-width:1366px){
 .forth_ul .ul_second {
- width: 225px;
- height: 45px;
- font-size: 14px;
- color: #000;
- text-align: left;
- margin-top:30px;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;
+ width: 186px;
 }	
 }
 /*--------------------------------- */
@@ -494,11 +483,6 @@ body {
 }
 .forth_ul .ul_second {
  width: 200px;
- height: 45px;
- font-size: 14px;
- color: #000;
- text-align: left;
- margin-top:30px;
  overflow: hidden;
  white-space: nowrap;
  text-overflow: ellipsis;

@@ -175,6 +175,11 @@
   padding: 2px 3px 5px 3px;
 }
 /*head end*/
+ @media (min-width:760px) and (max-width:989px){
+  .xnav{
+  	width:90%;
+  }	
+ }
 @media  (max-width:759px){
  /*head start*/
 .xhead {
