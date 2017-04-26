@@ -262,21 +262,27 @@ body {
 .for_cen {
  width: 80%;
  height:auto;
+ min-height:255px;
+ overflow-y: auto;
+ overflow-x:hidden;
  margin: auto;
  background:#fbfafa;
+ clear: both;
 }
 .forth_ul {
- width: 100%;
+ width:auto;
  height: auto;
+ min-height:200px;
+ overflow-y: auto;
+ overflow-x: hidden;
  margin: auto;
-
  clear:both;
 }
 .forth_ul li {
- width: 170px;
+ width: 21%;
  height:145px;
- display: inline-block;
- padding:0 28px;
+ float:left;
+ margin-left:4%;
  cursor: pointer;
  margin-top:38px;
 }
@@ -300,12 +306,14 @@ body {
  color: #000;
 }
 .forth_ul .ul_second {
- width: 300px;
+ width: 100%;
  height: 45px;
  font-size: 14px;
  color: #000;
  text-align: left;
  margin-top:30px;
+ word-wrap:break-word;
+ word-break:break-all;
 }
 
 /*forth screen end*/
@@ -436,8 +444,11 @@ body {
 /*serve end*/
 
 @media (min-width:991px) and (max-width:1366px){
-.forth_ul .ul_second {
- width: 186px;
+.forth_ul{
+ width:90%;
+}	
+.forth_ul li{
+	width:20%;
 }	
 }
 /*--------------------------------- */
@@ -454,15 +465,18 @@ body {
  height:200px;	
 }
 .forth_ul .ul_second {
- width: 210px;
+ width: 100%;
  height: 45px;
  font-size: 14px;
  color: #000;
  text-align: left;
  margin-top:30px;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;
+}
+.forth_ul{
+ width:90%;
+}
+.forth_ul li {
+	width:20%;
 }
  }
 /*-----------------------------------*/
@@ -482,10 +496,16 @@ body {
  height:170px;	
 }
 .forth_ul .ul_second {
- width: 200px;
+ width: 100%;
  overflow: hidden;
  white-space: nowrap;
  text-overflow: ellipsis;
+}
+.forth_ul{
+ width:100%;
+}
+.forth_ul li {
+	width:43%;
 }
  }
 /*-----------------------------------*/
@@ -678,12 +698,12 @@ margin-top: 0.4rem;
  margin: auto;
 }
 .forth_ul {
- width: 100%;
+ width: 90%;
  height: auto;
  clear:both;
 }
 .forth_ul li {
- width: 5rem;
+ width: 45%;
  height: 3.6rem;
  display:inline-block;
  margin-top:0.5rem;
