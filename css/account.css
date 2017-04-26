@@ -1,228 +1,255 @@
-	body,p,div,ul,ol,
-	h1,h2,h3,h4,h5,h6,
-	table,tr,td,dt,dd,
-	dl,video,input,img
-{
-	margin:0;
-	padding:0;
-	border:none;
-}
-a{
-	text-decoration: none;
-}
-a:hover{
-	text-decoration: none;
+body, p, div, ul, ol,
+h1, h2, h3, h4, h5, h6,
+table, tr, td, dt, dd,
+dl, video, input, img {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-li{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-img{
-	border:0;
-}
-body{
-	width:100%;
-	min-width: 320px;
-	height:auto;
-	background: #fff;
-	font-family: '微软雅黑','黑体';
+a {
+    text-decoration: none;
 }
 
-.account{
-	width:100%;
-	height:100%;
-	
+a:hover {
+    text-decoration: none;
 }
-.close{
-	display: block;
-	margin:auto;
-	margin-top: 50px;
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.acc-cen{
-	border-radius: 20px;
-	box-shadow:0 0 9px rgba(0,0,0,0.2);
-	margin:30px 20%;	
-	padding:40px 0 0;
-	height:100%;	
-	background: #fff;
+
+img {
+    border: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background: #fff;
+    font-family: '微软雅黑', '黑体';
+}
+
+.account {
+    width: 100%;
+    height: 100%;
+
+}
+
+.close {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.acc-cen {
+    border-radius: 20px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+    margin: 30px 20%;
+    padding: 40px 0 0;
+    height: 100%;
+    background: #fff;
 }
 
 /*head start*/
-.acc-top{
-	height:40px;
-	margin:0 30px;
+.acc-top {
+    height: 40px;
+    margin: 0 30px;
 }
 
 /*成功状态*/
-.acc-cen .acc-top .posssucce{
-	color:#3899eb;
-	border-color:#3899eb;
+.acc-cen .acc-top .posssucce {
+    color: #3899eb;
+    border-color: #3899eb;
 }
-.acc-cen .acc-top .posssucce .pos-num{
-	background: #3899eb;
-	color:#fff;
+
+.acc-cen .acc-top .posssucce .pos-num {
+    background: #3899eb;
+    color: #fff;
 }
+
 /*成功状态结束*/
 
-
-.acc-top .poss{
-	width:33.2%;
-	height:50%;
-	float: left;
-	font-size: 14px;
-	line-height: 40px;
-	color:#9bccf5;
-	text-align: center;
-	border-bottom: 1px solid #9bccf5;
-}
-.acc-top .poss .pos-num{
-	width:18px;
-	height:18px;
-	line-height: 18px;
-	background: #9bccf5;
-	border-radius: 18px;
-	-moz-border-radius: 18px;
-	-webkit-border-radius: 18px;
-	font-size: 14px;
-	text-align: center;
-	color:#fff;
-	margin:auto;
-	margin-top:12px;
+.acc-top .poss {
+    width: 33.2%;
+    height: 50%;
+    float: left;
+    font-size: 14px;
+    line-height: 40px;
+    color: #9bccf5;
+    text-align: center;
+    border-bottom: 1px solid #9bccf5;
 }
 
+.acc-top .poss .pos-num {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background: #9bccf5;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    margin-top: 12px;
+}
 
 /*head end*/
 
 /*Enter login account  start*/
-.acc-info{
-	display: block;
+.acc-info {
+    display: block;
 }
-.acc-form{
-	width:55%;
-	height:300px;
-	margin:auto;
-	margin-top: 50px;
-	clear: both;
-	margin-bottom: 20px;
+
+.acc-form {
+    width: 55%;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+    clear: both;
+    margin-bottom: 20px;
 }
-input{
-	background: none;
-	border:0;
-	outline: none;
+
+input {
+    background: none;
+    border: 0;
+    outline: none;
 }
-.input{
-	width:70%;
-	margin:auto;
-	margin-top: 20px;
-	height:70px;
+
+.input {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    height: 70px;
 }
-.input p{
-	font-size: 14px;
-	color:red;
+
+.input p {
+    font-size: 14px;
+    color: red;
 }
-.inpu{
-	width:100%;
-	height:62px;
-	margin:auto;
-	overflow: hidden;	
-	border-bottom:1px solid #3899eb;
+
+.inpu {
+    width: 100%;
+    height: 62px;
+    margin: auto;
+    overflow: hidden;
+    border-bottom: 1px solid #3899eb;
 }
-.error-border{
-	border-bottom:1px solid #f2564d;
+
+.error-border {
+    border-bottom: 1px solid #f2564d;
 }
-.inpu input{
-	width:88%;
+
+.inpu input {
+    width: 88%;
     font-size: 15px;
-    color:#3e3e3e;
-    padding-top:30px ;
+    color: #3e3e3e;
+    padding-top: 30px;
     padding-bottom: 30px;
     float: right;
     background: none;
-    border:0;
+    border: 0;
     outline: none;
 }
+
 .inpu input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
-    border: 0px solid #CCC!important;
-    }
-.inpu img{
-	float: left;
-	width:26px;
-	height:28px;
-	margin-top: 24px;
+    border: 0px solid #CCC !important;
 }
-button{
-	background: rgba(0,0,0,0);
+
+.inpu img {
+    float: left;
+    width: 26px;
+    height: 28px;
+    margin-top: 24px;
 }
-.buton{
-	width:174px;
-	height:40px;
-	background: #3899eb;
-	outline: none;
-	border:0;
-	font-size: 24px;
-	text-align: center;
-	margin:auto;
-	display: block;
-	margin-top: 55px;
-	color:#fff;
-	cursor: pointer;
+
+button {
+    background: rgba(0, 0, 0, 0);
 }
-.acc-alert{
-	font-size:16px ;
-	color:#3899eb;
-	text-align: center;
-	margin-top: 10px;
+
+.buton {
+    width: 174px;
+    height: 40px;
+    background: #3899eb;
+    outline: none;
+    border: 0;
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    margin-top: 55px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.acc-alert {
+    font-size: 16px;
+    color: #3899eb;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /*禁止点击*/
 .click-no {
-	background: #9bccf5;
+    background: #9bccf5;
 }
+
 /*禁止点击结束*/
 
-.acc-img{
-	display: block;
-	margin:auto;
+.acc-img {
+    display: block;
+    margin: auto;
 }
-.acc-right{
-	text-align: center;
-	font-size: 14px;
-	margin-top: 20px;
+
+.acc-right {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
 }
+
+[v-cloak] {
+    display: none;
+}
+
 /*Enter login account end*/
 
-@media (min-width:990px) and (max-width:1199px){
+@media (min-width: 990px) and (max-width: 1199px) {
 
-.acc-form{
-	width:60%;
-}
-
-}
-
-@media (min-width:760px) and (max-width:989px){
-.acc-cen{
-
-	margin:30px 12%;	
-	
-}
-.acc-form{
-	width:72%;
-}
+    .acc-form {
+        width: 60%;
+    }
 
 }
 
- @media  (max-width:759px){
+@media (min-width: 760px) and (max-width: 989px) {
+    .acc-cen {
 
-.acc-cen{
+        margin: 30px 12%;
 
-	margin:30px 10%;	
-	
+    }
+
+    .acc-form {
+        width: 72%;
+    }
+
 }
-.acc-form{
-	width:95%;
-}
 
- }
+@media (max-width: 759px) {
+
+    .acc-cen {
+
+        margin: 30px 10%;
+
+    }
+
+    .acc-form {
+        width: 95%;
+    }
+
+}

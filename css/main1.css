@@ -270,7 +270,7 @@ body {
  clear: both;
 }
 .forth_ul {
- width:auto;
+ width:90%;
  height: auto;
  min-height:200px;
  overflow-y: auto;
@@ -299,6 +299,7 @@ body {
 	float:left;
 }
 .forth_ul .ul_first p{
+ width:60%;
  height:100%;
  line-height:65px;
 }
