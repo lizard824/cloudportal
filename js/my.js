@@ -128,35 +128,11 @@ if(openLi[this.index].stq == 1){
    }
   };
  },
- 
- serIn:function(){
- 	// 产品图片进入方式
-    $(window).scroll(function () {
-        var a = document.getElementById("cen_right").offsetTop;
-      if (a >= $(window).scrollTop() && a < ($(window).scrollTop() + $(window).height())) {
-            $('.cen_right').addClass('opta')
-        } else {
-            $('.cen_right').removeClass('opta')
-        }
-    });
-$(window).scroll(function () {
-        var a = document.getElementById("cen_left").offsetTop;
-        if (a >= $(window).scrollTop() && a < ($(window).scrollTop() + $(window).height()) - 100) {
-            $('.th_right').addClass('ancen')
-            $('#cen_left').addClass('ancen')
-            $('.cen_left').addClass('ancen')
-        } else {
-            $('.cen_left').removeClass('ancen')
-            $('.th_right').removeClass('ancen')
-            $('#cen_left').removeClass('ancen')    
-        }
-    });
-  }
+
 }
 centerFn.banShow();
 centerFn.bannTab();
 centerFn.icoCli();
-centerFn.serIn();
 //动画-------------------------------------------
 //  var anMite = document.getElementById('animat');
 //  var anClos = document.getElementById('anclose');
