@@ -439,7 +439,7 @@ body {
  position: relative;
  top:2px;
  left:-8px;
-  box-sizing:border-box;
+ box-sizing:border-box;
 }
 /*serve end*/
 
@@ -653,9 +653,9 @@ margin-top: 0.4rem;
 }
 .cen_ban_left .cen_out, 
 .cen_ban_right .cen_out{
-	width:6rem;
-	height:4rem;
-	margin:auto;
+ width:6rem;
+ height:4rem;
+ margin:auto;
 }
 .cen_left {
  margin: auto;
@@ -736,16 +736,16 @@ margin-top: 0.4rem;
 /*forth screen end*/
 /*serve start*/
 .serve{
-	width:100%;
-	height:auto;
-	padding-bottom: 0;
-	background: #fff;
-	clear: both;
+ width:100%;
+ height:auto;
+ padding-bottom: 0;
+ background: #fff;
+ clear: both;
 }
 .serve .serve-cen{
-	width:80%;
-	height:100%;
-	margin:auto;
+ width:80%;
+ height:100%;
+ margin:auto;
 }
 .serve .serve-cen .serve-ul {
  margin-top:0.5rem;
