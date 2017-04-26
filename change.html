@@ -7,30 +7,38 @@
   	</div>
     <form class="mo-form" id="resetForm" v-cloak>
       <input type="hidden" name="username" v-model="username">
-      <div class="mo-input ">
-        <div>
+      <div class="mo-input">
+        <div class="{{!oldValid==true?'error-bor':''}}">
           <img src="images/password.png" alt="" />
           <input type="password" placeholder="Old password" id='old-word' v-model = "oldpass" name="oldPassword">
         </div>
-        <p  v-show="!oldValid" class="error-p">*Please input old password</p>
-        <p style="font-size:16px"  class="error-p"　v-show="error!==''">{{error}}</p>
+        <p v-show="!oldValid" class="error-p">*Please input old password</p>
       </div>
       <div class="mo-input ">
-          <div>
+          <div class="{{!passValid==true?'error-bor':''}}">
           	<img src="images/password.png" alt="" />
             <input type="password" placeholder="New password" id='new-word' v-model = "newpass" name="newPassword">
           </div>
-        <p  v-show="!passValid" class="error-p">*Please input password</p>
+        <p  v-show="!passValid" class="error-p">*Please input new password</p>
+        <div class="strength">
+          <span v-show="strength==''" class="sign-left"></span>
+          <span v-show="strength!==''" class="sign-left strength-bj"></span>
+          <span v-show="strength=='low'||strength==''" class="sign-left"></span>
+          <span v-show="strength=='medium'||strength=='high'" class="sign-left strength-bj"></span>
+          <span v-show="strength!=='high' " class="sign-left"></span>
+          <span v-show="strength=='high'" class="sign-left strength-bj"></span>
+        </div>
       </div>
       <div class="mo-input">
-          <div class="">
+          <div class="{{!conValid==true?'error-bor':''}}">
           	<img src="images/password.png" alt="" />
             <input type="password" placeholder="Confirm password" id="con-word" v-model = "conpass" >
           </div>
         <p v-show="!conValid" class="error-p">*Please confirm password</p>
+        <p style="font-size:16px"  class="error-p" v-show="error!==''">{{error}}</p>
       </div>
       <div class="mo-button">
-        <button type="submit" id="mo-sub"  >
+        <button type="submit" id="mo-sub">
           Reset Password
         </button>
       </div>                    

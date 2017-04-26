@@ -97,14 +97,12 @@ function loadPage() {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
-                    sessionStorage.setItem("username",load_result.username);
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
                 } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
-                    sessionStorage.setItem("username",data.user.username);
                     if (parseInt(data.user.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
