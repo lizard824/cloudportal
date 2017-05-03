@@ -53,7 +53,7 @@
                     Next
                 </button>
                 <p v-show="tipValid"  class="acc-alert">An email is sent to your email address.</p>
-                <p v-show="!error==''" class="acc-alert">{{error}}</p>
+                <p v-show="error!==''" class="acc-error">{{error}}</p>
 			</form>
 
 		</div>
@@ -65,7 +65,7 @@
                     	<img src="images/password.png" alt="">
                     	<input type="password" placeholder="New Password" v-model="newPasswd" name="newPassword">
                     </div>
-
+					<p v-show="!newValid" class="error-p">*Please input password!</p>
                 </div>
 				<input type="hidden" name="activeCode" v-model="activeCode">
 				<input type="hidden" name="username" v-model="userName">
@@ -79,13 +79,14 @@
 					<p v-show="!conValid" class="error-p">*Please confirm password!</p>
                 </div>
 
-                <button class="buton click-no" type="submit" id="nextTwo"  disabled="disabled">
+                <button class="buton" type="submit" id="nextTwo">
                     Next
                 </button>
+				<p v-show="error!==''" class="acc-error">{{error}}</p>
 			</form>
 		</div>
 		   <div class="acc-info" id="info-third" style="display:none;">
-			<form class="acc-form" v-cloak>
+			<form class="acc-form">
 				<img src="images/account.png" alt="" class="acc-img">
 				<p class="acc-right">Password settings success！</p>
 								

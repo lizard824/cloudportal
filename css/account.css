@@ -195,6 +195,13 @@ button {
     margin-top: 10px;
 }
 
+.acc-error{
+    font-size: 16px;
+    color: #f2564d;
+    text-align: center;
+    margin-top: 10px;
+}
+
 /*禁止点击*/
 .click-no {
     background: #9bccf5;

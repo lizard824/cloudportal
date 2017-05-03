@@ -68,7 +68,7 @@ function iniAccount() {
                         v_acc.tipValid = true;
                     } else {
                         hideMask();
-                        v_acc.error = "Can not find this User!";
+                        v_acc.error = "Can not find this user!";
                     }
                 }
             })
@@ -84,20 +84,20 @@ function iniNew() {
             newPasswd: '',
             conPasswd: '',
             conValid: true,
+            newValid:true,
             error: '',
             activeCode: activeCode,
             userName: username
-
         }
 
     });
-    var nextTwoButton = document.getElementById('nextTwo');
 
     v_new.$watch("newPasswd", function (val) {
         v_new.error = '';
         if (val === "") {
-            v_new.conValid = false;
-            nextTwoButton.disabled = 'disabled';
+            v_new.newValid = false;
+        }else{
+            v_new.newValid = true;
         }
     });
 
@@ -105,8 +105,6 @@ function iniNew() {
         v_new.error = '';
         if (val === v_new.newPasswd && val !== '') {
             v_new.conValid = true;
-            nextTwoButton.disabled = '';
-            $('#nextTwo').removeClass('click-no');
         }
         else {
             v_new.conValid = false;
@@ -115,7 +113,7 @@ function iniNew() {
 
     $('#resetForm').on('submit', function (e) {
         e.preventDefault();
-        if (v_new.conValid === true) {
+        if (v_new.conValid === true && v_new.newValid ===true) {
             showMask();
             $(this).ajaxSubmit({
                 url:CONFIG._CTX_+"/user/changePassword",
@@ -124,7 +122,7 @@ function iniNew() {
                     if (data.success == true) {
                         document.getElementById("info-second").style.display = "none";
                         document.getElementById("info-third").style.display = "block";
-                        $("#slidTree").addClass("posssucce");
+                        $("#slidThree").addClass("posssucce");
                     } else {
                         hideMask();
                         if (data.msg === "")
