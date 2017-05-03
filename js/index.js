@@ -140,28 +140,27 @@ function deleteCookie(logoutUser) {
                         callDestroy(domainObj.logout, v_head.username)
                     }
                 }
+                $.ajax({
+                    type: 'GET',
+                    url: CONFIG._CTX_ + "/ssoLogout",
+                    data: {ck: Cookies.get("LENOVOITS_TGC")},
+                    dateType: "json",
+                    success: function (data) {
+                        if (data.success == true) {
+                            Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
+                            if (logoutUser == undefined) {
+                                hideMask();
+                                loadPage();
+                            }
+                        } else {
+                            hideMask();
+                        }
+
+                    }
+                });
             } else {
                 return;
             }
         }
-    })).done(setTimeout(function () {
-        $.ajax({
-            type: 'GET',
-            url: CONFIG._CTX_ + "/ssoLogout",
-            data: {ck: Cookies.get("LENOVOITS_TGC")},
-            dateType: "json",
-            success: function (data) {
-                if (data.success == true) {
-                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
-                    if (logoutUser == undefined) {
-                        hideMask();
-                        loadPage();
-                    }
-                } else {
-                    hideMask();
-                }
-
-            }
-        });
-    },3000));
+    })).then(null,hideMask());
 }
