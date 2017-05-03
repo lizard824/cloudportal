@@ -121,28 +121,6 @@ function callDestroy(logoutUrl, logoutUser) {
 
 }
 
-function logOut(logoutUser) {
-    $.ajax({
-        type: 'GET',
-        url: CONFIG._CTX_ + "/ssoLogout",
-        data: {ck: Cookies.get("LENOVOITS_TGC")},
-        dateType: "json",
-        success: function (data) {
-            if (data.success == true) {
-                Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
-                if (logoutUser == undefined) {
-                    hideMask();
-                    loadPage();
-                }
-            } else {
-                hideMask();
-            }
-
-        }
-    });
-
-}
-
 function deleteCookie(logoutUser) {
     $.when($.ajax({
         type: 'GET',
@@ -166,5 +144,24 @@ function deleteCookie(logoutUser) {
                 return;
             }
         }
-    })).then(logOut(logoutUser),logOut(logoutUser));
+    })).done(setTimeout(function () {
+        $.ajax({
+            type: 'GET',
+            url: CONFIG._CTX_ + "/ssoLogout",
+            data: {ck: Cookies.get("LENOVOITS_TGC")},
+            dateType: "json",
+            success: function (data) {
+                if (data.success == true) {
+                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
+                    if (logoutUser == undefined) {
+                        hideMask();
+                        loadPage();
+                    }
+                } else {
+                    hideMask();
+                }
+
+            }
+        });
+    },3000));
 }
