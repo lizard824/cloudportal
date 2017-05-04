@@ -1,315 +1,293 @@
-	body,p,div,ul,ol,
-	h1,h2,h3,h4,h5,h6,
-	table,tr,td,dt,dd,
-	dl,video,input,img
+body,p,div,ul,ol,
+h1,h2,h3,h4,h5,h6,
+table,tr,td,dt,dd,
+dl,video,input,img
 {
-	margin:0;
-	padding:0;
-	border:none;
+ margin:0;
+ padding:0;
+ border:none;
 }
 a{
-	text-decoration: none;
+ text-decoration: none;
 }
 a:hover{
-	text-decoration: none;
+ text-decoration: none;
 }
 
 li{
-	list-style:none;
-	margin:0;
-	padding:0;
+ list-style:none;
+ margin:0;
+ padding:0;
 }
 img{
-	border:0;
+ border:0;
 }
 body{
-	width:100%;
-	min-width: 320px;
-	height:auto;
-	background: #fff;
-	font-family: '微软雅黑','黑体';
+ width:100%;
+ min-width: 320px;
+ height:auto;
+ background: #fff;
+ font-family: '微软雅黑','黑体';
 }
-
-	[v-cloak] {
-		display: none;
-	}
+[v-cloak] {
+ display: none;
+ }
 
 	/*登录*/
 .login{
-	width:100%;
-	height:100%;
-	background: #fff;
+ width:100%;
+ height:100%;
+ background: #fff;
 }
 .xlog{	
-	width:40%;
-	height:auto;
-	margin:0 auto;
-    background: #fff;	
+ padding:45px 31% 20px 31%;	
+ background: #fff;	
 }
-.close{
-	display: block;
-	margin:auto;
-	margin-top: 50px;
+.lo-img{
+ width:10%;
+ height:87px;
+ margin:auto;
+ margin-top:50px;
+}
+.lo-img img{
+ width:auto;
+ height:auto;
+ max-width: 100%;
+ max-height: 100%;
+ margin:auto;
 }
 
 .form{
-	width:45%;
-	height:400px;
-	background: #fff;
-	border-radius: 10px;
-	box-shadow: 0 0 9px rgba(0,0,0,0.2);
-	display: block;
-	margin:auto;
-	position: absolute;
-    left:0;
-    top:120px;
-    right:0;
-    bottom:0;
+ width:100%;
+ height:400px;
+ background: #fff;
+ border-radius: 10px;
+ box-shadow: 0 0 9px rgba(0,0,0,0.2);
+ display: block;
+ clear:both;
 }
 input{
-	background: none;
-	border:0;
-	outline: none;
+ background: none;
+ border:0;
+ outline: none;
 }
 .input{
-	width:70%;
-	margin:auto;
-	margin-top: 20px;
-	height:70px;
+ width:70%;
+ margin:auto;
+ padding-top: 20px;
+ height:70px;
 }
 .input p{
-	font-size: 14px;
-	color:red;
+ font-size: 14px;
+ color:red;
 }
 .inpu{
-	width:100%;
-	height:62px;
-	margin:auto;
-	overflow: hidden;	
-	border-bottom:1px solid #3899eb;
+ width:100%;
+ height:62px;
+ margin:auto;
+ overflow: hidden;	
+ border-bottom:1px solid #3899eb;
 }
 .error-border{
-	border-bottom:1px solid #f2564d;
+ border-bottom:1px solid #f2564d;
 }
 .inpu input{
-	width:88%;
-    font-size: 15px;
-    color:#3e3e3e;
-    padding-top:30px ;
-    padding-bottom: 30px;
-    float: right;
-    background: none;
-    border:0;
-    outline: none;
+ width:88%;
+ font-size: 15px;
+ color:#3e3e3e;
+ padding-top:30px ;
+ padding-bottom: 30px;
+ float: right;
+ background: none;
+ border:0;
+ outline: none;
 }
 .inpu input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    border: 0px solid #CCC!important;
-    }
+ -webkit-box-shadow: 0 0 0px 1000px white inset;
+ border: 0px solid #CCC!important;
+ }
 .inpu img{
-	float: left;
-	width:26px;
-	height:28px;
-	margin-top: 24px;
+ float: left;
+ width:26px;
+ height:28px;
+ margin-top: 24px;
 }
 .rember{
-	width:70%;
-	height:40px;
-	margin:0 auto;
-	margin-top: 65px;
+ width:70%;
+ height:40px;
+ margin:0 auto;
+ margin-top: 65px;
 }
 .rember p{
-	float: left;
-	margin-left: 10px;
-	margin-top: 4px;
-	color:#3e3e3e;
-	font-size: 16px;
+ float: left;
+ margin-left: 10px;
+ margin-top: 4px;
+ color:#3e3e3e;
+ font-size: 16px;
 }
 .rember .wite{
-	float: left;
-	display: block;
-	width:29px;
-	height:16px;
-	background: #3899eb;
-	border:1px solid #3899eb;
-	border-radius: 8px;
-	margin-top: 3px;
-	cursor:pointer;
+ float: left;
+ display: block;
+ width:29px;
+ height:16px;
+ background: #eeeeee;
+ border:1px solid #dcdcdc;
+ border-radius: 8px;
+ margin-top: 3px;
+ cursor:pointer;
 }
 .rember .wite .dot{
-	display: block;
-	width:16px;
-	height:16px;
-	background: #fff;
-	border-radius: 50px;
-	cursor: pointer;
-	float:right;
+ display: block;
+ width:16px;
+ height:16px;
+ background: #fff;
+ border-radius: 50px;
+ cursor: pointer;
+ float:left;
 }
 .rember .wite .dot input{
-		 background:none;
-		 outline:none;
-		 border:0;
-		 opacity:0;
-		 width:16px;
-		 height:16px;
-	 }
-	 .rember .rem-last{
-	float: left;
-}
+ background:none;
+ outline:none;
+ border:0;
+ opacity:0;
+ width:16px;
+ height:16px;
+ }
 .rember .forgot{
-	float: right;
+ float: right;
 }
-
 .rember .forgot a {
-	color:#3e3e3e;
+ color:#3899eb;
 }
 button{
-	background: rgba(0,0,0,0);
+ background: rgba(0,0,0,0);
 }
 .buton{
-	width:174px;
-	height:40px;
-	background: #3899eb;
-	outline: none;
-	border:0;
-	font-size: 24px;
-	text-align: center;
-	margin:auto;
-	display: block;
-	margin-top: 40px;
-	color:#fff;
-	cursor: pointer;
+ width:174px;
+ height:40px;
+ background: #3899eb;
+ outline: none;
+ border:0;
+ font-size: 24px;
+ text-align: center;
+ margin:auto;
+ display: block;
+ margin-top: 40px;
+ color:#fff;
+ cursor: pointer;
 }
-
 /*注册*/
-
 .sign .input{
-	height:60px;
-	margin-top: 5px;
-}
-.sign .inpu{
-	height:60px;
+ height:60px;
 }
 .sign .form{
-	height:530px;
-	top:200px;
+ height:auto;
+ padding-bottom: 20px;
 }
 .strength{
-	width:70%;
-	height:12px;
-	margin:auto;
-	margin-top:20px;
+ width:70%;
+ height:12px;
+ margin:auto;
+ margin-top:20px;
 }
 .strength .strength-bj{
-	background:#3899eb ;
-	border:1px solid #3899eb;
+ background:#3899eb ;
+ border:1px solid #3899eb;
 }
 .strength span{
-	width:38px;
-	height:8px;
-	display: block;
-	float: left;
-	border:1px solid #949494;
+ width:38px;
+ height:8px;
+ display: block;
+ float: left;
+ border:1px solid #949494;
 }
 .form .strength .no-left{
-	margin-left: 0;
+ margin-left: 0;
 }
 .strength .sign-left{
-	margin-left: 10px;
+ margin-left: 10px;
 }
 .sign .sign-mast{
-	height: 60px;
-	color:red;
-    line-height: 80px;
-    float: left;
-    margin-left: 11%;
+ height: 60px;
+ color:red;
+ line-height: 80px;
+ float: left;
+ margin-left: 11%;
+ padding-top: 20px;
 }
 
-
-
+@media(max-width: 1199px){
+.xlog{
+ padding:45px 30% 20px 30%;	
+ }
+}
 @media  (max-width:989px){
-	/*登录*/
-
-.form{
-	width:60%;
-
+/*登录*/
+.xlog{
+ padding:45px 23% 20px 23%;	
 }
-
-
+.lo-img{
+ width:12%;
+ height:77px;
 }
-
+}
 @media (max-width: 759px){
-	/*登录*/
-
-.close{
-	width:3.35rem;
-	height:2.175rem;
-	display: block;
-	margin:auto;
-	margin-top:30px;
+/*登录*/
+.xlog{
+ padding:40px 4%;
 }
-
+.lo-img{
+ width:20%;
+ height:50px;
+}
 .form{
-	width:85%;
-	height:310px;
+ height:320px;
 }
-
 .input{
-	width:75%;
-	height:50px;
+ width:75%;
+ height:50px;
 }
 .inpu{
-	height:44px;
-	margin-top: 7px;
+ height:44px;
+ margin-top: 7px;
 }
 .inpu input{
-	width:78%;
-    padding-top:15px ;
-    padding-bottom: 15px;
-
+ width:78%;
+ padding-top:15px ;
+ padding-bottom: 15px;
 }
 .inpu img{
-	margin-top: 6px;
+ margin-top: 6px;
 }
 .rember{
-	height:55px;
-	margin-top: 37px;
-}
-.rember .rem-last{
-	width:155px;
-	height:24px;
-	float:none;
-    margin:auto;
+ margin-top: 37px;
 }
 .rember .forgot{
-	text-align: center;
-	float: none;
-	clear: both;
+ float: left;
 }
 .buton{
-	width:125px;
-	height:40px;
-	font-size: 20px;
-	margin-top: 15px;
+ width:125px;
+ height:40px;
+ font-size: 20px;
+ margin-top: 15px;
 }
 /*sign in*/
 .sign .form form{
-	margin-top: 20px;
+margin-top: 20px;
 }
 .sign .inpu{
-	height:44px;
+height:44px;
 }
 .sign .sign-mast {
-    height: 60px;
-    color: red;
-    line-height: 55px;
-    float: left;
-    margin-left: 8%;
-
+ height: 60px;
+ color: red;
+ line-height: 55px;
+ float: left;
+ margin-left: 8%;
 }
 .strength{
-	width:75%;
-	margin-top: 5px;
+ width:75%;
+ margin-top: 5px;
 }
 
 

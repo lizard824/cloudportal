@@ -1,174 +1,195 @@
-	body,p,div,ul,ol,
-	h1,h2,h3,h4,h5,h6,
-	table,tr,td,dt,dd,
-	dl,video,input,img
+body,p,div,ul,ol,
+h1,h2,h3,h4,h5,h6,
+table,tr,td,dt,dd,
+dl,video,input,img
 {
-	margin:0;
-	padding:0;
-	border:none;
+ margin:0;
+ padding:0;
+ border:none;
 }
 a{
-	text-decoration: none;
+ text-decoration: none;
 }
 a:hover{
-	text-decoration: none;
+ text-decoration: none;
 }
-
 li{
-	list-style:none;
-	margin:0;
-	padding:0;
+list-style:none;
+margin:0;
+padding:0;
 }
 img{
-	border:0;
+border:0;
 }
 body{
-	width:100%;
-	height:100%;
-	font-family: '微软雅黑','黑体';
+width:100%;
+height:100%;
+font-family: '微软雅黑','黑体';
 }
-
+[v-cloak] {
+ /*display: none;*/
+}
 .modify{
-	width:100%;
-	height:100%;
-	position: fixed;
-	z-index: 1003;
-	overflow: hidden;
-	display: none;
-	background:rgba(0,0,0,0.3);
+ width:100%;
+ height:100%;
+ background:rgba(0,0,0,0.5);
+ position:fixed;
+ overflow: hidden;
+ z-index:1010;
+ /*display:none;*/
 }
 .modify .mo-cen{
-	padding:90px 35% 20% 35%;	
+	padding: 10% 31%;	
 }
-.modify .mo-top{
-	width:100%;
-	height:35px;
-	background: #bee0f3;
-	clear: both;
+.mo-log{
+ width:134px;
+ height:87px;
+ display: block;
+ margin:auto;
 }
 .modify .p-left{
-	height:100%;
-	color:#fff;
-	font-size: 20px;
-	line-height: 35px;
-	text-align: center;
-	margin:auto;
+ height:100%;
+ color:#fff;
+ font-size: 20px;
+ line-height: 35px;
+ text-align: center;
+ margin:auto;
 }
 .modify .mo-right{
-    width:100%;
-	height:360px;
-	clear: both;
-	overflow: hidden;
-	background: #fff;
-	border-radius: 15px;
-    box-shadow: 0 0 9px rgba(0,0,0,0.2);
-    margin:auto;
-
+ width:100%;
+ height:400px;
+ clear: both;
+ overflow: hidden;
+ background: #fff;
+ border-radius: 15px;
+ box-shadow: 0 0 9px rgba(0,0,0,0.8);
+ margin:auto;
+}
+.modify .mo-right .mo-top{
+ width:100%;
+ height:50px;
+ position:relative;
+}
+.modify .mo-right .mo-top #anclose{
+ position:absolute;
+ right:20px;
+ bottom:20px;
+ cursor:pointer;
 }
 .modify .mo-form{
-	width:70%;
-	height:70%;
-	margin:auto;
-	margin-top: 30px;
+ width:70%;
+ height:70%;
+ margin:auto;
 }
 .mo-input{
-	width:100%;
-	height:45px;
-	margin:auto;
-	margin-top: 25px;
-	border:0px solid #000;
+ width:100%;
+ height:90px;
+ margin:auto;
+ /*padding-top: 15px;*/
+ border:0px solid #000;
 }
 .modify .mo-input .error-bor{
-	border-bottom:1px solid #D90606;
+ border-bottom:1px solid #D90606;
 }
 .modify .mo-input div{
-	width:100%;
-	height:24px;
-	overflow: hidden;
-	margin:auto;
-	box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	border-bottom: 1px solid #cbe4f4;
-    position: relative;
-	top:0px;
-	left:0;
+ width:100%;
+ height:37px;
+ overflow: hidden;
+ margin:auto;
+ box-sizing:border-box;
+ -ms-box-sizing:border-box;
+ -moz-box-sizing:border-box;
+ border-bottom: 1px solid #3899eb;
+ position: relative;
+ top:0px;
+ left:0;
 }
-.modify .mo-p{
-	font-size: 16px;
-	color:#a3a3a3;
-	position: relative;
-	top:20px;
-	left:0;
-	z-index: 1;
-	transition:0.7s all ease;
+.modify .mo-input div img{
+ float:left;
+ margin-right:10px;
 }
 .modify .mo-input div input{
-	width:100%;
-	height:100%;
-	font-size: 16px;
-	color:#a3a3a3;
-	outline: none;
-	border:none;
-	display: block;
-	padding-top:1px;
-	padding-bottom:1px;
-	position: relative;
-	z-index: 2;
-	background: rgba(0,0,0,0);
+ width:80%;
+ height:100%;
+ font-size: 16px;
+ color:#3e3e3e;
+ outline: none;
+ border:none;
+ display: block;
+ padding-top:1px;
+ padding-bottom:6px;
+ background: rgba(0,0,0,0);
 }
 .modify .mo-input .error-p{
-	font-size: 14px;
-	color:#fd5a64;
-	clear: both;
-	text-align: left;
+ font-size: 14px;
+ color:#fd5a64;
+ clear: both;
+ text-align: left;
 }
 .modify .mo-button{
-   width:100%;
-   height:40px;
-	margin:auto;
-	margin-top: 40px;
-	clear: both;
+ width:100%;
+ height:40px;
+ margin:auto;
+ margin-top: 15px;
+ clear: both;
 }
 .modify .mo-form button{
-	width:100px;
-	height:40px;
-	color:#6a6a6a;
-	display: block;
-	margin:auto;
-	cursor: pointer;
-	font-size: 18px;
-	background: #fff;
-	border-radius: 10px;
-	outline: none;
-	border:1px solid #b4d5e3;
+width:150px;
+height:40px;
+color:#fff;
+display: block;
+margin:auto;
+cursor: pointer;
+font-size: 16px;
+background: #3899eb;
+outline: none;
+border:1px solid #3899eb;
 }
 .modify .mo-form button[type=submit]{
-	float: left;
+ margin:auto;
 }
-.modify .mo-form button[type=button]{
-	float: right;
-} 
 .modify .mo-form button[type=button]:hover{
-	color:#fff;
-	background: #bee0f3;
-	border:none;
+ color:#fff;
+ background: #3899eb;
+ border:none;
 }
 
+.modify .mo-input .strength{
+ width:70%;
+ height:12px;
+ margin:0;
+ margin-top:10px;
+ border:none;
+}
+.modify .mo-input .strength .strength-bj{
+ background:#3899eb ;
+ border:1px solid #3899eb;
+}
+.modify .mo-input .strength span{
+ width:38px;
+ height:8px;
+ display: block;
+ float: left;
+ border:1px solid #949494;
+}
+.form .modify .mo-input .strength .no-left{
+ margin-left: 0;
+}
+.modify .mo-input .strength .sign-left{
+ margin-left: 10px;
+}
 @media(max-width: 1199px){
 .modify .mo-cen{
-	padding:90px 30% 20% 30%;	
-}
-
+ padding:15% 30%;	
+ }
 }
 @media(max-width: 989px){
 .modify .mo-cen{
-	padding:90px 23% 20% 23%;	
+ padding:10% 23%;	
 }
-
 }
 @media(max-width: 759px){
 .modify .mo-cen{
-	padding:90px 4% 20% 4%;	
+ padding:25% 4%;	
 }
 }

@@ -1,0 +1,126 @@
+/*footer start*/
+.footer {
+ clear: both;
+ width: 100%;
+ height: 150px;
+ background: #787878;
+ margin-top: 107px;
+}
+.footer_center {
+ width: 57%;
+ height: 100%;
+ margin: 0 auto;
+}
+.footer_center .footer_ul{
+ width:250px;
+ height:50px;
+ clear:both;
+ margin:auto;
+ padding-top:20px;
+}
+.footer_center .footer_ul li{
+ height:100%;
+ line-height:50px;
+ font-size: 16px;
+ color:#e3e3e3;
+ text-align: center;
+}
+.footer_center .footer_ul li a{
+ color:#e3e3e3;
+ padding:0 20px;
+}
+.footer_center .footer_ul .footer_ul_first{
+	margin:0;
+}
+.footer_bottom {
+ width: 333px;
+ height: 50px;
+ clear: both;
+ margin: 0 auto;
+	 }
+.footer_bottom p {
+ font-size: 16px ;
+ color: #e3e3e3;
+ line-height: 73px;
+}
+.footer_bottom .last {
+ float: left;
+}
+.footer_bottom .forth_last {
+ float: right;
+}
+.footer_bottom .footer_middle{
+ text-align: center;
+}
+/*footer end*/
+@media (max-width: 759px){
+	
+ /*footer start*/
+.footer {
+ width: 100%;
+ height: 3.5rem;
+ background: #787878;
+ overflow: hidden;
+ margin-top: 2rem;
+}
+.footer_center {
+ width: 90%;
+ height: 3.5rem;
+ margin: 0 auto;
+ color: #fff;
+ clear: both;
+}
+.footer_center .footer_ul{
+ width:9rem;
+ height:1rem;
+ clear:both;
+ margin:auto;
+ padding-top:0.8rem;
+}
+.footer_center .footer_ul li{
+ height:100%;
+ line-height:1rem;
+ font-size: 0.4rem;
+ color:#e3e3e3;
+ text-align: center;
+}
+.footer_center .footer_ul li a{
+ color:#e3e3e3;
+ padding:0 20px;
+}
+.footer_center .footer_ul .footer_ul_first{
+	margin:0;
+}
+.footer_bottom {
+ width: 70%;
+ height: 1rem;
+ clear: both;
+}
+.footer_center .last {
+ width: 50%;
+ height: 100%;
+ line-height:1.5rem;
+ text-align: center;
+ font-size: 0.3rem;
+ color: #e3e3e3;
+ float: left;
+ margin:0;
+}
+.footer_center .forth_last {
+ width: 50%;
+ height: 100%;
+ line-height:1.5rem;
+ text-align: center;
+ font-size: 0.3rem;
+ color: #e3e3e3;
+ float: right;
+ margin:0;
+}
+.footer_bottom .footer_middle{
+ text-align: center;
+ font-size: 0.4rem;
+ line-height:1rem;
+ }
+/*footer end*/	
+	
+}

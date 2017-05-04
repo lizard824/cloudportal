@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Login</title>
     <link rel="shortcut icon" href="images/function.ico">
     <link rel="stylesheet" href="css/login.css">
@@ -26,13 +23,14 @@
 <!-- loding end -->
 <!-- 登录 -->
 <div class="login" id="wlog">
-    <div class="xlog logopt" id="log">
-        <a href="index.html">
-            <img src="images/loglo.png" alt="" class="close" id="close">
+	  <div class="lo-img">
+	  	<a href="index.html">
+          <img src="images/loglo.png" alt="" class="close" id="close">
         </a>
-
+	  </div>	    
+    <div class="xlog logopt" id="log">
         <div class="form">
-            <form id="loginForm" class="" method="post" action="http://sso.earth.xpaas.lenovo.com/login">
+            <form id="loginForm" v-cloak>
                 <div class="input ">
                     <div class="inpu {{!userValid==true?'error-border':''}}">
                         <img src="images/name.png" alt="">
@@ -56,7 +54,7 @@
 
                             <span class="wite" id="rember">
 		    		         <span class="dot" id="dot">
-                                 <input type="radio" v-model="rememberMe" name="rememberMe" value="1">
+                                 <input type="radio" v-model="rememberMe" name="rememberMe" value="0">
                              </span>
                             </span>
                     <p>Remember me</p>
@@ -85,7 +83,6 @@
 <script src="js/vue.min.js"></script>
 <script src="js/util.js"></script>
 <script src="js/index.js"></script>
-<script src="js/login.js?v=201704171612"></script>
-<script src="js/reset.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

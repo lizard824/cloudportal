@@ -1,10 +1,8 @@
 /**
  * Created by duanxc1 on 12/15/2016.
  */
-var v_head, v_sign, v_service, v_reset, v_acc, v_new;
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
-var SERVICE = "http://itscloud.xpaas.lenovo.com";
-var DOMAIN = '.itscloud.xpaas.lenovo.com';
+//@ sourceURL=index.js
+var v_head, v_sign, v_service,v_reset,v_acc,v_new;
 $(document).ready(function () {
     iniService();
     iniHead();
@@ -52,19 +50,29 @@ function iniHead() {
             hover: function (id) {
                 var self = this;
                 if (self.isLogged && !self.isLDAP) {
-                    $("#" + id).css({"transition": "1s all ease", "border-bottom": "1px solid #fff"});
+                    $("#" + id).css({"color":"#005aff","height":"64px"});
                     $("#change-word").stop().slideDown(50);
                 }
             },
             leave: function (id) {
-                $("#" + id).css({"transition": "0s all ease", "border-bottom": "0px solid #fff"});
+                $("#" + id).css({"color":"#fff","height":"64px"});
                 $("#change-word").stop().slideUp(50);
             },
             openUrl: function (url) {
                 var _self = this;
                 if (_self.isLogged) {
-                    window.open(url, "_blank");
-                } else {
+                    if (url.indexOf("gitlab") === -1) {
+                        window.open(url, "_blank");
+                    }
+                    else {
+                        var gitlab = url + "/users/auth/cas3/callback?url=" + url + "/users/sign_in";
+                        window.open(CONFIG._CTX_ + "/gitlabSso?service=" + gitlab + "&ck=" + Cookies.get("LENOVOITS_TGC"), "_blank");
+                    }
+                }
+                else if (url.indexOf("gitlab") !== -1) {
+                    window.location = 'login.html';
+                }
+                else {
                     window.location = 'login.html?refer=' + url;
                 }
             }
@@ -76,8 +84,8 @@ function iniHead() {
 function loadPage() {
     $.ajax({
         type: "GET",
-        url: _CTX_ + "/validate",
-        data: {service: SERVICE, ck: Cookies.get("LENOVOITS_TGC")},
+        url: CONFIG._CTX_ + "/validate",
+        data: {service: CONFIG.SERVICE, ck: Cookies.get("LENOVOITS_TGC")},
         dataType: "json",
         success: function (data) {
             if (data.success == false) {
@@ -89,14 +97,12 @@ function loadPage() {
                     var load_result = jwt_decode(data.response);
                     v_head.login = "Hello, " + load_result.username;
                     v_head.username = load_result.username;
-                    v_reset.username = load_result.username;
                     if (parseInt(load_result.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
                 } else {
                     v_head.login = "Hello, " + data.user.username;
                     v_head.username = data.user.username;
-                    v_reset.username = data.user.username;
                     if (parseInt(data.user.authtype) != 2) {
                         v_head.isLDAP = false;
                     }
@@ -112,24 +118,13 @@ function loadPage() {
 function callDestroy(logoutUrl, logoutUser) {
     var iframe = "<iframe style='display:none' src=" + logoutUrl + "?user=" + logoutUser + "></iframe>";
     $("body").append(iframe);
-    /* $.ajax({
-     type: 'GET',
-     url: logoutUrl,
-     dateType: "json",
-     success: function (data) {
-     if (data.success == true) {
-     console.log(data.msg);
-     } else {
-     return;
-     }
-     }
-     });*/
+
 }
 
 function deleteCookie(logoutUser) {
     $.when($.ajax({
         type: 'GET',
-        url: _CTX_ + "/getDomain",
+        url: CONFIG._CTX_ + "/getDomain",
         data: {ck: Cookies.get("LENOVOITS_TGC")},
         dateType: "json",
         success: function (data) {
@@ -145,28 +140,27 @@ function deleteCookie(logoutUser) {
                         callDestroy(domainObj.logout, v_head.username)
                     }
                 }
+                $.ajax({
+                    type: 'GET',
+                    url: CONFIG._CTX_ + "/ssoLogout",
+                    data: {ck: Cookies.get("LENOVOITS_TGC")},
+                    dateType: "json",
+                    success: function (data) {
+                        if (data.success == true) {
+                            Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: CONFIG.DOMAIN});
+                            if (logoutUser == undefined) {
+                                hideMask();
+                                loadPage();
+                            }
+                        } else {
+                            hideMask();
+                        }
+
+                    }
+                });
             } else {
                 return;
             }
         }
-    })).done(function () {
-        $.ajax({
-            type: 'GET',
-            url: _CTX_ + "/ssoLogout",
-            data: {ck: Cookies.get("LENOVOITS_TGC")},
-            dateType: "json",
-            success: function (data) {
-                if (data.success == true) {
-                    Cookies.expire('LENOVOITS_TGC', {expires: 0, domain: DOMAIN});
-                    if (logoutUser == undefined) {
-                        hideMask();
-                        loadPage();
-                    }
-                } else {
-                    hideMask();
-                }
-
-            }
-        });
-    });
+    })).then(null,hideMask());
 }

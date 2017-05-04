@@ -1,0 +1,142 @@
+
+<!--导航-->
+<div class="xhead" id="xhead" v-cloak>
+ <div class="xnav" id="xnav">
+<!-- 移动端导航logo -->
+  <div class="top_cli">
+    <a href="index.html">
+     <img src="images/logo.png" alt="">
+    </a>
+      <img src="images/topcli.png" id="ph_open" alt="logo">
+  </div>
+<!-- 移动端导航logo结束 -->
+<!-- pc端导航 -->
+  <ul class="xnav_ul nav-select" id="no_ul">
+   <li class="no_margin nav_li">
+     <a href="index.html" name="first">
+      <img src="images/logo.png" alt="logo" id="change_src">
+     </a>
+   </li>
+   <li class="nohover nav_li nav_down">
+     <a href="javascript:;">
+        Cloud Service
+     </a>
+     <div id="devser">
+       <div  class="ol_dot"></div>
+      <ol class="ol">
+      	<li>
+         <a href="#" @click="openUrl('http://earth.xpaas.lenovo.com')">
+           PaaS
+         </a>
+        </li>
+        <li>
+         <a href="http://dbss.lenovo.com/dbss/index"　target="_blank">
+           DBSS
+         </a>
+        </li>
+        <li class="devser_first">
+         <a href="#" @click="openUrl('http://apply.iaas.lenovo.com')">
+           IaaS
+         </a>
+        </li>
+        
+       </ol> 
+     </div>
+   </li>
+   <li class="nohover nav_li nav_down">
+     <a href="javascript:;">
+       DevOps  Service
+     </a>
+       <div id="poll_down">
+         <div  class="ol_dot"></div>
+         <ol class="ol">
+           <li>
+            <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com')">XOPS</a>
+           </li>
+           <li>
+            <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com')">XMSG</a>
+           </li>
+           <li>
+            <a href="http://gitlab.xpaas.lenovo.com" target="_blank">Gitlab</a>
+           </li>
+         </ol>
+       </div>
+   </li>
+  </ul>
+<!-- pc端导航结束 -->
+<!-- 移动端点击出现的导航 -->
+<div class="phonbj" id="phonbj">
+  <ul class="xnav_ul nav-select" id="xnav_ul">
+    <li class="nohover">
+      <a href="javascript:;">
+        <span class="d">Cloud Service</span>
+      </a>
+       <img src="images/up.png" alt="up" class="xnav_img">
+        <div class="ol device" id="device">
+        	<p>
+            <a href="#" @click="openUrl('http://earth.xpaas.lenovo.com')">
+            PaaS
+            </a>
+           </p>
+           <p>
+            <a href="http://dbss.lenovo.com/dbss/index"　target="_blank">
+            DBSS
+            </a>
+           </p>
+          <p class="device_first">
+            <a href="#" @click="openUrl('http://apply.iaas.lenovo.com')">
+             IaaS
+            </a>
+          </p>
+          
+        </div>
+    </li>
+    <li class="nohover">
+      <a href="javascript:;">
+        <span class="d">DevOps  Service</span>
+      </a>
+      <img src="images/up.png" alt="up" class="xnav_img">
+      <div id="clic_down" class="ol">
+        <p>
+          <a href="#" @click="openUrl('http://xops.xpaas.lenovo.com')">XOPS</a>
+        </p>
+        <p>
+          <a href="#" @click="openUrl('http://xmsg.xpaas.lenovo.com')">XMSG</a>
+        </p>
+        <p>
+          <a href="http://gitlab.xpaas.lenovo.com" target="_blank">Gitlab</a>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- 移动端点击出现的导航结束 -->  
+<!-- 登录入口 -->
+  <ul class="nav_log {{isLogged==true && isLDAP==false?'navlogin':''}}">
+    <li class="no_margin nohover nav_li " v-on:mouseenter="hover('local')" v-on:mouseleave="leave('local')" >
+      <a class="lo-hove" v-if="isLogged==false" href="login.html" id="login">
+        {{login}}
+      </a>
+      <a id="local" v-if="isLogged==true&&isLDAP==false" href="javascript:;">{{login}}</a>
+      <span class="lo-hove" v-if="isLogged==true&&isLDAP==true">{{login}}</span>
+        <div class="change-word" id="change-word">
+        	<div  class="ol_dot"></div>
+         <p>
+         <a href="javascript:;">
+          Reset Password
+         </a>
+         </p>
+        </div>
+    </li>
+    <li>&nbsp;</li>
+    <li><a class="lo-hove" v-show="isLogged" href="#" @click="logout()" style="padding:2px 3px 5px 3px;">Logout</a></li>
+    <li id="sign" v-show="!isLogged">
+      <a class="lo-hove" href="signin.html">
+        Sign in
+      </a>
+    </li>
+   </ul>
+<!-- 登录入口结束 -->
+ </div>
+</div>
+<!--导航结束-->
