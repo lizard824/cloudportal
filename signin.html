@@ -4,9 +4,6 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="0">
 	<title>Sign In</title>
 	 <link rel="shortcut icon" href="images/function.ico">
 	 <link rel="stylesheet" href="css/login.css">
@@ -26,25 +23,25 @@
 <!-- loding end -->
 	   <!-- 注册 -->
         <div class="login sign" id="signbj">
-            <div class="xlog logopt" id="sig">
-                <a href="index.html">
-                    <img src="images/loglo.png" alt="" class="close" id="close">
-                </a>
+        	<div class="lo-img">
+        	 <a href="index.html">
+              <img src="images/loglo.png" alt="" class="close" id="close">
+             </a>
+        	</div>
+            <div class="xlog logopt" id="sig">            
                 <div class="form">
-                    <form class="" id="signForm" action="http://sso.earth.xpaas.lenovo.com/user/signIn" method="post">
+                    <form class="" id="signForm" v-cloak>
                         <p class="sign-mast">*</p>
                         <div class="input">
-
-                            <div class="inpu">
-
+                            <div class="inpu {{!userValid==true?'error-border':''}}">
                                 <img src="images/name.png" alt="">
-                                <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username which only contains characters">
+                                <input type="text" name="username" v-model="username" id="uname" placeholder="Please input username which only contains non-numeric characters">
                             </div>
                             <p v-show="!userValid">*Please input valid username</p>
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
-                            <div class="inpu">
+                            <div class="inpu {{!emailValid==true?'error-border':''}}">
                                 <img src="images/email.png" alt="">
                                 <input type="text" name="email" v-model="email" id="email" placeholder="Please input email">
                             </div>
@@ -52,12 +49,12 @@
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
-                            <div class="inpu">
+                            <div class="inpu {{!passValid==true?'error-border':''}}">
                                 <img src="images/password.png" alt="">
                                 <input type="password" name="password" v-model="password" id="pword" placeholder="Please input password">
                             </div>
                             <p v-show="!passValid">*Please input password</p>
-                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
+                            <!--<p style="font-size:16px" 　v-show="error!==''">{{error}}</p>-->
                         </div>
                         <div class="strength">
                             <span v-show="strength==''" class="sign-left no-left"></span>
@@ -69,16 +66,15 @@
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
-                            <div class="inpu">
+                            <div class="inpu {{!conValid==true?'error-border':''}}">
                                 <img src="images/password.png" alt="">
                             <input type="password" name="conpword" v-model="conpword" id="conpword" placeholder="Please confirm password">
                         </div>
                         <p v-show="!conValid">*Please confirm password</p>
-                        <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
                         </div>
                         <p class="sign-mast">*</p>
                         <div class="input">
-                            <div class="inpu">
+                            <div class="inpu {{!nameValid==true?'error-border':''}}">
                                 <img src="images/name.png" alt="">
                                 <input type="text" name="realname" v-model="realname" id="rname" placeholder="Please input real name">
                             </div>
@@ -90,6 +86,7 @@
                                 <img src="images/phone.png" alt="">
                                 <input type="text" name="number" v-model="number" id="number" placeholder="Please input phone number">
                             </div>
+                            <p style="font-size:16px" 　v-show="error!==''">{{error}}</p>
 
                         </div>
                         <button class="buton sbuton" type="submit">

@@ -9,28 +9,24 @@ onresize = function () {
 
 var rem = document.getElementById('rember');
 var remInp = rem.getElementsByTagName('input')[0];
-
 var clic = true;
-rem.onclick = function () {
-    if (clic == true) {
-        dot.style.float = 'left';
-        rem.style.backgroundColor = '#eeeeee';
-        rem.style.borderColor = '#dcdcdc';
-        remInp.value = 0;
-        v_login.rememberMe = 0;
-        clic = false;
-    } else {
-        dot.style.float = 'right';
-        rem.style.backgroundColor = '#3899eb';
-        rem.style.borderColor = '#3899eb';
-        remInp.value = 1;
-        v_login.rememberMe = 1;
-        clic = true;
-    }
-};
-
-var _CTX_ = 'http://sso.earth.xpaas.lenovo.com';
-var DOMAIN = 'itscloud.xpaas.lenovo.com';
+ rem.onclick = function () {
+     if (clic == false) {
+         dot.style.float = 'left';
+         rem.style.backgroundColor = '#eeeeee';
+         rem.style.borderColor = '#dcdcdc';
+         remInp.value = 0;
+         v_login.rememberMe = 0;
+         clic = true;
+     } else {
+         dot.style.float = 'right';
+         rem.style.backgroundColor = '#3899eb';
+         rem.style.borderColor = '#3899eb';
+         remInp.value = 1;
+         v_login.rememberMe = 1;
+         clic = false;
+     }
+ };
 
 var v_login;
 var refer = getParameterByName("refer", window.location);
@@ -52,7 +48,7 @@ function iniLogin() {
             passValid: true,
             userValid: true,
             error: '',
-            rememberMe: 1
+            rememberMe: 0
         },
         methods: {}
     });
@@ -73,6 +69,8 @@ function iniLogin() {
         } else {
             showMask();
             $(this).ajaxSubmit({
+                url:CONFIG._CTX_+"/login",
+                type:'POST',
                 success: function (data) {
                     if (data.success == true) {
                         setCookie(data.cookie);
@@ -107,11 +105,11 @@ function iniLogin() {
 function setCookie(cookie) {
     var now = new Date().getTime();
     var exp = (cookie.exp - now) / 1000;
-    Cookies.set('LENOVOITS_TGC', cookie.val, {domain: DOMAIN});
+    Cookies.set('LENOVOITS_TGC', cookie.val, {domain: CONFIG.DOMAIN});
     $.when($.ajax({
         type: 'GET',
         async: false,
-        url: _CTX_ + "/getDomain",
+        url: CONFIG._CTX_ + "/getDomain",
         dateType: "json",
         data: {ck: cookie.val, isRememberMe: v_login.rememberMe},
         success: function (data) {
@@ -125,19 +123,20 @@ function setCookie(cookie) {
                 }
             } else {
                 if (null !== refer) {
-                    window.open(refer, "_self");
+                    window.open(refer,"_self");
                 } else {
-                    window.open("index.html", "_self");
+                    window.open("index.html","_self");
                 }
+                return false;
             }
         }
     })).done(setTimeout(function () {
         if (null !== refer) {
-            window.open(refer, "_self");
+            window.open(refer,"_self");
         } else {
-            window.open("index.html", "_self");
+            window.open("index.html","_self");
         }
-    }, 3000));
+    },3000));
 }
 
 function callSign(signUrl, cookieVal, cookieExp) {

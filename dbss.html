@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>DBSS</title>
+    <link rel="shortcut icon" href="images/function.ico">
+    <link rel="stylesheet" href="css/modify.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/mask.css">
+    <link rel="stylesheet" href="css/detail_head.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<!-- loding start -->
+<div id="loading">
+   <div id="loading-center">
+     <div id="loading-center-absolute">
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_one"></div>
+     </div>
+   </div>
+</div>
+<!-- loding end -->
+<!--nav start-->
+<div class="lodnav"></div>
+<div class="lodword"></div>
+<!--nav end-->
+<!-- detail start -->
+<div class="decenter" id="second">
+  <div class="dea_cen">
+<!--detail left start-->
+  <ul class="center_ul" id="cen_ul">
+    <li class="cen_ul_first active">
+      <a href="javascript:;">
+        Overview 
+      </a>                    
+    </li>
+    <li>
+      <a href="javascript:;">
+        Services Catalog
+      </a>
+    </li>              
+    <li>
+      <a href="javascript:;">
+        Contact Us
+      </a>
+    </li>
+  </ul>
+<!--detail left end-->
+<!--detail right start-->
+  <div class="center_right" id="cen_right">
+    <div class="cen_first" id="cen_first">
+      <p class="cen_p">                       
+        Overview    
+      </p>
+      <p class="cen-elplain">
+        DB Self-Servcie (DBSS) is handling daily frequent DB requests automatically, including new database, new account , add privileges ,reset password, search blocked process and so on. It can not only improve work efficiency, but also avoid manual mistakes .
+      </p>   
+   </div>
+   <div class="cen_one">
+    <p class="cen_p">                        
+       Services Catalog                                             
+    </p>
+    <p class="cen-elplain">
+       DBSS provides service lists as below including SQL Server , MySQL , Oracle ,PostgreSQL, DB2. 
+    </p>
+    <h3 class="cen-title cen-sub-title">      
+       New Database     
+    </h3>
+    <p class="cen-title-sec">
+       If want to new a database , please choose this feature.
+    </p> 
+      <h3 class="cen-title cen-sub-title">      
+       New Account     
+    </h3>
+    <p class="cen-title-sec">
+      If want to new a database account with needed privileges , please choose this feature.
+    </p> 
+      <h3 class="cen-title cen-sub-title">      
+       Add Privileges     
+    </h3>
+    <p class="cen-title-sec">
+       If want to add privileges for an exited database account , please choose this feature.
+    </p> 
+      <h3 class="cen-title cen-sub-title">      
+       Reset Password     
+    </h3>
+    <p class="cen-title-sec">
+       If forget the database account’s password, please choose this feature to reset password.
+    </p> 
+      <h3 class="cen-title cen-sub-title">      
+       Search Blocked Process   
+    </h3>
+    <p class="cen-title-sec">
+       If the performance of DB is poor, please choose this feature firstly to check the status of process.
+If blocked process exits, this feature can help check the detail information and kill the blocked process.
+    </p> 
+      <h3 class="cen-title cen-sub-title">      
+       Deploy Go-live    
+    </h3>
+    <p class="cen-title-sec">
+       If want to go-live sql scripts , please choose this feature.
+    </p>
+     <h3 class="cen-title cen-sub-title">      
+       More and more service will add on DBSS for better service. Updating…   
+    </h3>
+  </div>
+  <div class="cen_one">    
+    <p class="cen_p"> 
+       Contact Us       
+    </p>
+    <p class="cen-elplain">
+       For technical issue, please post your question to 
+       <a href="mailto:-Database_BASIS@lenovo.com">
+       	DBM 
+       </a>
+    </p>
+   </div>
+  </div>
+<!--detail right end-->
+  </div>
+</div>
+<!-- detail end -->
+<!-- footer start -->
+<div class="lodfooter"></div>
+    <!-- footer end -->
+</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jwt-decode.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/cookies.js"></script>
+<script src='js/detail.js'></script>
+<script src="js/jquery.transform.js"></script>
+<script src="js/vue.min.js"></script>
+<script>
+$(function(){
+ $(".lodnav").load("head.html",function(){
+ 	var $scr  = $("<script src='js/head.js'><\/script>");
+ 	var $scr1 = $("<script src='js/util.js'><\/script>");
+ 	var $scr2 = $("<script src='js/index.js'><\/script>");
+ 	var $parent = $(".lodnav"); 
+     $parent.append($scr,$scr1,$scr2); 
+   
+ //change password    
+    $('#change-word').click(function(){
+    	$('.lodword').load('change.html',function(){
+        function moClo(e,a){
+        	$(e).click(function(){
+    	    $(a).remove();   	      
+          });
+        };
+       moClo('#anclose','#modify');    		
+    var $mod = $("<script src='js/reset.js'><\/script>");
+    var $parent = $('.lodword');
+    	$parent.append($mod);
+    	});
+    });
+   
+ });
+ 
+ $(".lodfooter").load("footer.html",function(){
+ 	var $foot = $("<script src='js/footer.js'><\/script>");
+ 	var $parent = $(".lodfooter"); 
+     $parent.append($foot);  
+ })
+  
+})
+</script>
+</body>
+</html>

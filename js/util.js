@@ -1,6 +1,13 @@
 /**
  * Created by duanxc1 on 1/18/2017.
  */
+//@ sourceURL=until.js
+var CONFIG = {
+    _CTX_:"http://sso.earth.xpaas.lenovo.com",
+    SERVICE:"http://itscloud.xpaas.lenovo.com",
+    DOMAIN:"itscloud.xpaas.lenovo.com"
+};
+
 function getParameterByName(name, url) {
     if (!url) {
         url = window.location.href;

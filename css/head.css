@@ -1,0 +1,357 @@
+/*head start*/
+.lodnav {
+ width:100%;
+ height:auto;
+}
+.xhead {
+ width: 100%;
+ height: 60px;
+ position: fixed;
+ z-index: 1000;
+ top: 0;
+ left: 0;
+}
+.xnav {
+ width: 80%;
+ height: 100%;
+ margin: 0 auto;
+}
+.xnav_ul {
+ width: 66%;
+ height: 100%;
+ float: left;
+}
+.xnav_ul .no_margin a {
+ display: block;
+ width: 71px;
+ height: 45px;
+ margin-top: 15px;
+}
+.xnav .xnav_ul .no_margin,
+.nav_log .no_margin {
+ margin-left: 0;
+}
+#change_src {
+ width:61px;
+ height:35px;
+}
+.xnav_ul .nav_li {
+ float: left;
+ margin-left: 10%;
+ height: 100%;
+ line-height: 60px;
+ position: relative;
+}
+.nav_log .no_margin span {
+ color: #fff;
+ font-size: 20px;
+}
+.xnav_ul .nav_li a,
+.nav_log li a {
+ height:100%;
+ display:block;
+ color: #fff;
+ font-size: 18px;
+}
+.nav_log li span{
+ height:100%;
+ display:block;
+ color: #fff;
+ font-size: 18px;
+}
+.xnav_ul .nav_li:hover .xnav_ul .nav_li a,
+.nav_log li .lo-hove:hover{
+	color:#005aff;
+} 
+/*下拉列表*/
+.xnav_ul .nohover a:hover {
+ font-size: 18px;
+ color: #fff;
+}
+.xnav_ul .nohover .ol li a {
+ font-size: 14px;
+}
+.xnav .xnav_ul .nohover .ol {
+ height: auto;
+ padding: 5px 20px 20px 20px;	    
+ clear: both;
+ transition: 1s all ease;
+ -moz-transition: 1s all ease;
+ background: rgba(0,0,0,0.2);
+ border-radius: 4px;   
+	 }
+.xnav_ul .nohover #devser,
+.xnav_ul .nohover #poll_down {
+ width:auto;
+ height:auto;
+ position:absolute;
+ top:54px;
+ left:0px;
+ display:none;
+}
+.nav_log .nohover .ol_dot,	 
+.xnav_ul .nohover .ol_dot{
+ width: 0;
+ height: 0;
+ border-left: 10px solid transparent;
+ border-right: 10px solid transparent;
+ border-bottom: 10px solid rgba(0,0,0,0.2);
+ margin: auto;
+}
+#poll_down li,
+#devser li {
+ height:45px;
+ padding: 0 20px;
+ line-height: 45px;
+ font-size: 12px;
+ text-align: center;
+ clear: both;
+}
+#poll_down li a:hover,
+#devser li a:hover {
+ color: #005aff;
+}
+/*下拉列表结束*/
+.texttab {
+ width: 20%;
+ height: 100%;
+ font-size: 20px;
+ color: #fff;
+ line-height: 64px;
+ float: left;
+ margin-left: 2%;
+}
+.xnav .nav_log {
+ line-height: 11px;
+ float: right;
+ padding-left: 15px;
+ padding-right: 15px;
+}
+.xnav .nav_log li {
+ height: 60px;
+ float: left;
+ line-height: 60px;
+ position:relative;
+}
+.top_cli {
+ width: 40px;
+ height: 25px;
+ float: left;
+ display: none;
+}
+.top_cli img {
+ width: 40px;
+ height: 25px;
+ float: left;
+ padding-top: 15px;
+}
+#xnav_ul,.phonbj {
+ display: none;
+}
+/*change password start*/
+.change-word {
+ position: absolute;
+ width: 170px;
+ height: auto;
+ left: 0;
+ top: 54px;
+ display:none;
+}
+.change-word p {
+ height: 64px;
+ text-align: center;
+ background: rgba(0,0,0,0.2);
+ border-radius: 4px;
+ display:block;
+}
+.change-word p a {
+ font-size: 18px;
+}
+.change-word p a:hover {
+ color: #005aff;
+}
+/*change password end*/
+#sign a {
+  padding: 2px 3px 5px 3px;
+}
+/*head end*/
+ @media (min-width:760px) and (max-width:989px){
+  .xnav{
+  	width:90%;
+  }	
+ }
+@media  (max-width:759px){
+ /*head start*/
+.xhead {
+ width: 100%;
+ height: 1.6rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+}
+.xnav {
+ width: 15rem;
+ height: 100%;
+ margin: 0 auto;
+}
+#no_ul {
+ display: none;
+}
+#xnav_ul{
+ position: fixed;
+ transition: 0.5s all ease;
+ -moz-transition: 1s all ease;
+ top: 1.6rem;
+ left: 0rem;
+ width: 100%;
+ height: 0;
+ overflow: hidden;
+}
+.xnav_ul li {
+ font-size: 0.475rem;
+ height: 1.5rem;
+ border-top: 1px solid #3e3e3e;
+ border-bottom: 1px solid #282828;
+ box-sizing: border-box;
+ position: relative;
+ cursor: pointer;
+}
+.xnav_ul li .d {
+ height: 1.5rem;
+ line-height: 1.5rem;
+ padding-left: 0.5rem;
+}
+.xnav_ul li .xnav_img {
+ position: absolute;
+ top: 0.4rem;
+ left: auto;
+ right: 0;
+ bottom: 0;
+ display: block;
+ padding-right: 0.5rem;
+}
+.xnav_ul .no_margin,
+.nav_log .no_margin {
+ margin-left: 0;
+}
+.nav_log .no_margin span {
+ color: #fff;
+}
+.xnav_ul li a {
+ color: #fff;
+}
+.xnav_ul .no_margin a img {
+ display: block;
+ width: 1.55rem;
+ height: 1rem;
+ margin-top: 0.55rem;
+}
+/*下拉列表*/
+#clic_down,.device {
+ width: 100%;
+ height: 0;
+ clear: both;
+ transition: 1s all ease;
+ -moz-transition: 1s all ease;
+ background: #6F6F6F;
+ display: none;
+ overflow: hidden;
+}
+#clic_down p,.device p {
+ width: 100%;
+ height: 1.5rem;
+ line-height: 1.5rem;
+ font-size: 0.4rem;
+ text-align: left;
+ padding-left: 0.8rem;
+ border-top: 1px solid #616161;
+ border-bottom: 1px solid #7d7d7d;
+}
+/*下拉列表结束*/
+.top_cli {
+ width: 5rem;
+ height: 1.625rem;
+ float: left;
+ display: block;
+}
+.top_cli img {
+ width: 1.55rem;
+ height: 1rem;
+ float: left;
+ padding-top: 0.3rem;
+ cursor: pointer;
+ display: block;
+ padding: 8px;
+}
+.top_cli #ph_open {
+ margin-left: 0.5rem;
+ width: 1rem;
+ height: 0.6rem;
+ margin-top: 0.3rem;
+}
+.texttab {
+ width: 3.7rem;
+ height: 2.2rem;
+ text-align: center;
+ line-height: 2.2rem;
+ font-size: 0.4rem;
+ color: #fff;
+ float: left;
+}
+.xnav .nav_log {
+ font-size: 0.475rem;
+ float: right;
+ line-height: 1.5rem;
+ padding-left: 0.25rem ;
+ padding-right: 0.25rem;
+}
+.xnav .nav_log li {
+ height: 1.625rem;
+ float: left;
+ line-height: 1.5rem;
+ position:relative;
+}
+.xnav .nav_log li a {
+ font-size: 0.5rem;
+ color: #fff;
+}
+.phonbj {
+ width: 100%;
+ height: 100%;
+ background: #333;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ display: none;
+}
+/*change password start*/
+.change-word {
+ position: absolute;
+ left:-1.5rem;
+ width:4rem;
+ height: 2rem;
+ top: 1.6rem;;
+ display: none;
+}
+.nav_log .nohover .ol_dot{
+	border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgba(0,0,0,0.2);
+}
+.change-word p {
+ height: 1rem;
+ line-height: 1rem;
+ text-align: center;
+ padding-bottom:24px;
+}
+.change-word p a {
+ font-size: 0.35rem;
+}
+/*change password end*/
+#sign a {
+  padding: 2px 3px 5px 3px;
+}
+/*head end*/	
+}
